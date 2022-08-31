@@ -10,7 +10,7 @@
   <meta name="author" content="Guillaume Witz" />
   <meta name="author" content="Jakob B. Sørensen" />
   <meta name="author" content="Benoît Zuber" />
-  <meta name="dcterms.date" content="2022-08-09" />
+  <meta name="dcterms.date" content="2022-08-31" />
   <meta name="keywords" content="synapse, cryo-electron tomography, synaptic vesicles, deep learning, segmentation, post-processing, automation" />
   <title>Deep-learning based automatic segmentation of vesicles in cryo-electron tomograms</title>
   <style>
@@ -20,6 +20,69 @@
     div.column{display: inline-block; vertical-align: top; width: 50%;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
     div.csl-bib-body { }
     div.csl-entry {
       clear: both;
@@ -52,8 +115,8 @@
   <meta name="citation_title" content="Deep-learning based automatic segmentation of vesicles in cryo-electron tomograms" />
   <meta property="og:title" content="Deep-learning based automatic segmentation of vesicles in cryo-electron tomograms" />
   <meta property="twitter:title" content="Deep-learning based automatic segmentation of vesicles in cryo-electron tomograms" />
-  <meta name="dc.date" content="2022-08-09" />
-  <meta name="citation_publication_date" content="2022-08-09" />
+  <meta name="dc.date" content="2022-08-31" />
+  <meta name="citation_publication_date" content="2022-08-31" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -83,15 +146,15 @@
   <meta name="citation_author" content="Benoît Zuber" />
   <meta name="citation_author_institution" content="Institute of Anatomy, University of Bern, Bern, Switzerland" />
   <meta name="citation_author_orcid" content="0000-0001-7725-5579" />
-  <link rel="canonical" href="https://elatella.github.io/deep-prepyto-paper/" />
-  <meta property="og:url" content="https://elatella.github.io/deep-prepyto-paper/" />
-  <meta property="twitter:url" content="https://elatella.github.io/deep-prepyto-paper/" />
-  <meta name="citation_fulltext_html_url" content="https://elatella.github.io/deep-prepyto-paper/" />
-  <meta name="citation_pdf_url" content="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="application/pdf" href="https://elatella.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://elatella.github.io/deep-prepyto-paper/v/2cb0b3ebf0f027cae71a4b6753b7c074d244ed16/" />
-  <meta name="manubot_html_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/2cb0b3ebf0f027cae71a4b6753b7c074d244ed16/" />
-  <meta name="manubot_pdf_url_versioned" content="https://elatella.github.io/deep-prepyto-paper/v/2cb0b3ebf0f027cae71a4b6753b7c074d244ed16/manuscript.pdf" />
+  <link rel="canonical" href="https://aseedb.github.io/deep-prepyto-paper/" />
+  <meta property="og:url" content="https://aseedb.github.io/deep-prepyto-paper/" />
+  <meta property="twitter:url" content="https://aseedb.github.io/deep-prepyto-paper/" />
+  <meta name="citation_fulltext_html_url" content="https://aseedb.github.io/deep-prepyto-paper/" />
+  <meta name="citation_pdf_url" content="https://aseedb.github.io/deep-prepyto-paper/manuscript.pdf" />
+  <link rel="alternate" type="application/pdf" href="https://aseedb.github.io/deep-prepyto-paper/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://aseedb.github.io/deep-prepyto-paper/v/c04a3266911cf1a22ddd43b90164429e81407a5d/" />
+  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/deep-prepyto-paper/v/c04a3266911cf1a22ddd43b90164429e81407a5d/" />
+  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/deep-prepyto-paper/v/c04a3266911cf1a22ddd43b90164429e81407a5d/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -112,10 +175,10 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://elatella.github.io/deep-prepyto-paper/v/2cb0b3ebf0f027cae71a4b6753b7c074d244ed16/">permalink</a>)
+(<a href="https://aseedb.github.io/deep-prepyto-paper/v/c04a3266911cf1a22ddd43b90164429e81407a5d/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/elatella/deep-prepyto-paper/tree/2cb0b3ebf0f027cae71a4b6753b7c074d244ed16">elatella/deep-prepyto-paper@2cb0b3e</a>
-on August 9, 2022.
+from <a href="https://github.com/aseedb/deep-prepyto-paper/tree/c04a3266911cf1a22ddd43b90164429e81407a5d">aseedb/deep-prepyto-paper@c04a326</a>
+on August 31, 2022.
 </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
@@ -244,16 +307,306 @@ This leads to a substantial accuracy improvement, which are reflected in better 
 Additionally, we designed a multivariate ranking procedure, highlighting possibly wrongly segmented SVs.
 We also introduce a semi-automatic method to very quickly fix wrongly segmented and missed SVs.</p>
 <p>Although our set of procedures was developed with the use case of SV segmentation in mind, it can be used to segment any other types of biological spherical vesicles, such as transport vesicles, secretory vesicles, endocytic vesicles, and extracellular vesicles.</p>
+<p>This manuscript is a template (aka “rootstock”) for <a href="https://manubot.org/" title="Manubot">Manubot</a>, a tool for writing scholarly manuscripts.
+Use this template as a starting point for your manuscript.</p>
+<p>The rest of this document is a full list of formatting elements/features supported by Manubot.
+Compare the input (<code>.md</code> files in the <code>/content</code> directory) to the output you see below.</p>
+<h2 id="basic-formatting">Basic formatting</h2>
+<p><strong>Bold</strong> <strong>text</strong></p>
+<p><span class="semibold">Semi-bold text</span></p>
+<p><span class="center">Centered text</span></p>
+<p><span class="right">Right-aligned text</span></p>
+<p><em>Italic</em> <em>text</em></p>
+<p>Combined <em>italics and <strong>bold</strong></em></p>
+<p><del>Strikethrough</del></p>
+<ol type="1">
+<li>Ordered list item</li>
+<li>Ordered list item
+<ol type="a">
+<li>Sub-item</li>
+<li>Sub-item
+<ol type="i">
+<li>Sub-sub-item</li>
+</ol></li>
+</ol></li>
+<li>Ordered list item
+<ol type="a">
+<li>Sub-item</li>
+</ol></li>
+</ol>
+<ul>
+<li>List item</li>
+<li>List item</li>
+<li>List item</li>
+</ul>
+<p>subscript: H<sub>2</sub>O is a liquid</p>
+<p>superscript: 2<sup>10</sup> is 1024.</p>
+<p><a href="https://www.google.com/search?q=superscript+generator">unicode superscripts</a>⁰¹²³⁴⁵⁶⁷⁸⁹</p>
+<p><a href="https://www.google.com/search?q=superscript+generator">unicode subscripts</a>₀₁₂₃₄₅₆₇₈₉</p>
+<p>A long paragraph of text.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>Putting each sentence on its own line has numerous benefits with regard to <a href="https://asciidoctor.org/docs/asciidoc-recommended-practices/#one-sentence-per-line">editing</a> and <a href="https://rhodesmill.org/brandon/2012/one-sentence-per-line/">version control</a>.</p>
+<p>Line break without starting a new paragraph by putting<br />
+two spaces at end of line.</p>
+<h2 id="document-organization">Document organization</h2>
+<p>Document section headings:</p>
+<h1 id="heading-1">Heading 1</h1>
+<h2 id="heading-2">Heading 2</h2>
+<h3 id="heading-3">Heading 3</h3>
+<h4 id="heading-4">Heading 4</h4>
+<h5 id="heading-5">Heading 5</h5>
+<h6 id="heading-6">Heading 6</h6>
+<h3 class="center page_center" id="a-heading-centered-on-its-own-printed-page">A heading centered on its own printed page</h3>
+<!-- an arbitrary comment. visible in input, but not visible in output. -->
+<p>Horizontal rule:</p>
+<hr />
+<p><code>Heading 1</code>’s are recommended to be reserved for the title of the manuscript.</p>
+<p><code>Heading 2</code>’s are recommended for broad sections such as <em>Abstract</em>, <em>Methods</em>, <em>Conclusion</em>, etc.</p>
+<p><code>Heading 3</code>’s and <code>Heading 4</code>’s are recommended for sub-sections.</p>
+<h2 id="links">Links</h2>
+<p>Bare URL link: <a href="https://manubot.org" class="uri">https://manubot.org</a></p>
+<p><a href="https://manubot.org">Long link with lots of words and stuff and junk and bleep and blah and stuff and other stuff and more stuff yeah</a></p>
+<p><a href="https://manubot.org">Link with text</a></p>
+<p><a href="https://manubot.org" title="Manubot Homepage">Link with hover text</a></p>
+<p><a href="https://manubot.org">Link by reference</a></p>
+<h2 id="citations">Citations</h2>
+<p>Citation by DOI <span class="citation" data-cites="IhliSZDo">[<a href="#ref-IhliSZDo" role="doc-biblioref">13</a>]</span>.</p>
+<p>Citation by PubMed Central ID <span class="citation" data-cites="mSMVRkoc">[<a href="#ref-mSMVRkoc" role="doc-biblioref">14</a>]</span>.</p>
+<p>Citation by PubMed ID <span class="citation" data-cites="126Wi5Us4">[<a href="#ref-126Wi5Us4" role="doc-biblioref">15</a>]</span>.</p>
+<p>Citation by Wikidata ID <span class="citation" data-cites="QhC8yJ7V">[<a href="#ref-QhC8yJ7V" role="doc-biblioref">16</a>]</span>.</p>
+<p>Citation by ISBN <span class="citation" data-cites="zBPP9YKu">[<a href="#ref-zBPP9YKu" role="doc-biblioref">17</a>]</span>.</p>
+<p>Citation by URL <span class="citation" data-cites="1GGGHdsew">[<a href="#ref-1GGGHdsew" role="doc-biblioref">18</a>]</span>.</p>
+<p>Citation by alias <span class="citation" data-cites="PZMP42Ak">[<a href="#ref-PZMP42Ak" role="doc-biblioref">19</a>]</span>.</p>
+<p>Multiple citations can be put inside the same set of brackets <span class="citation" data-cites="IhliSZDo PZMP42Ak zBPP9YKu">[<a href="#ref-IhliSZDo" role="doc-biblioref">13</a>,<a href="#ref-zBPP9YKu" role="doc-biblioref">17</a>,<a href="#ref-PZMP42Ak" role="doc-biblioref">19</a>]</span>.
+Manubot plugins provide easier, more convenient visualization of and navigation between citations <span class="citation" data-cites="YuJbg3zO 126Wi5Us4 mSMVRkoc PZMP42Ak">[<a href="#ref-mSMVRkoc" role="doc-biblioref">14</a>,<a href="#ref-126Wi5Us4" role="doc-biblioref">15</a>,<a href="#ref-PZMP42Ak" role="doc-biblioref">19</a>,<a href="#ref-YuJbg3zO" role="doc-biblioref">20</a>]</span>.</p>
+<p>Citation tags (i.e. aliases) can be defined in their own paragraphs using Markdown’s reference link syntax:</p>
+<h2 id="referencing-figures-tables-equations">Referencing figures, tables, equations</h2>
+<p>Figure <a href="#fig:square-image">1</a></p>
+<p>Figure <a href="#fig:wide-image">2</a></p>
+<p>Figure <a href="#fig:tall-image">3</a></p>
+<p>Figure <a href="#fig:vector-image">4</a></p>
+<p>Table <a href="#tbl:bowling-scores">1</a></p>
+<p>Equation <a href="#eq:regular-equation">3</a></p>
+<p>Equation <a href="#eq:long-equation">2</a></p>
+<h2 id="quotes-and-code">Quotes and code</h2>
+<blockquote>
+<p>Quoted text</p>
+</blockquote>
+<blockquote>
+<p>Quoted block of text</p>
+<p>Two roads diverged in a wood, and I—<br />
+I took the one less traveled by,<br />
+And that has made all the difference.</p>
+</blockquote>
+<p>Code <code>in the middle</code> of normal text, aka <code>inline code</code>.</p>
+<p>Code block with Python syntax highlighting:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> manubot.cite.doi <span class="im">import</span> expand_short_doi</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> test_expand_short_doi():</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    doi <span class="op">=</span> expand_short_doi(<span class="st">&quot;10/c3bp&quot;</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="co"># a string too long to fit within page:</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> doi <span class="op">==</span> <span class="st">&quot;10.25313/2524-2695-2018-3-vliyanie-enhansera-copia-i-insulyatora-gypsy-na-sintez-ernk-modifikatsii-hromatina-i-svyazyvanie-insulyatornyh-belkov-vtransfetsirovannyh-geneticheskih-konstruktsiyah&quot;</span></span></code></pre></div>
+<p>Code block with no syntax highlighting:</p>
+<pre><code>Exporting HTML manuscript
+Exporting DOCX manuscript
+Exporting PDF manuscript</code></pre>
+<h2 id="figures">Figures</h2>
+<div id="fig:square-image" class="fignos">
+<figure>
+<img src="https://github.com/manubot/resources/raw/15493970f8882fce22bef829619d3fb37a613ba5/test/square.png" alt="Figure 1: A square image at actual size and with a bottom caption. Loaded from the latest version of image on GitHub." /><figcaption aria-hidden="true"><span>Figure 1:</span> <strong>A square image at actual size and with a bottom caption.</strong>
+Loaded from the latest version of image on GitHub.</figcaption>
+</figure>
+</div>
+<div id="fig:wide-image" class="fignos">
+<figure>
+<img src="https://github.com/manubot/resources/raw/15493970f8882fce22bef829619d3fb37a613ba5/test/wide.png" alt="Figure 2: An image too wide to fit within page at full size. Loaded from a specific (hashed) version of the image on GitHub." /><figcaption aria-hidden="true"><span>Figure 2:</span> <strong>An image too wide to fit within page at full size.</strong>
+Loaded from a specific (hashed) version of the image on GitHub.</figcaption>
+</figure>
+</div>
+<div id="fig:tall-image" class="fignos">
+<figure>
+<img src="https://github.com/manubot/resources/raw/15493970f8882fce22bef829619d3fb37a613ba5/test/tall.png" style="height:3in" alt="Figure 3: A tall image with a specified height. Loaded from a specific (hashed) version of the image on GitHub." /><figcaption aria-hidden="true"><span>Figure 3:</span> <strong>A tall image with a specified height.</strong>
+Loaded from a specific (hashed) version of the image on GitHub.</figcaption>
+</figure>
+</div>
+<div id="fig:vector-image" class="fignos">
+<figure>
+<img src="https://raw.githubusercontent.com/manubot/resources/main/test/vector.svg?sanitize=true" class="white" style="height:2.5in" alt="Figure 4: A vector .svg image loaded from GitHub. The parameter sanitize=true is necessary to properly load SVGs hosted via GitHub URLs. White background specified to serve as a backdrop for transparent sections of the image." /><figcaption aria-hidden="true"><span>Figure 4:</span> <strong>A vector <code>.svg</code> image loaded from GitHub.</strong>
+The parameter <code>sanitize=true</code> is necessary to properly load SVGs hosted via GitHub URLs.
+White background specified to serve as a backdrop for transparent sections of the image.</figcaption>
+</figure>
+</div>
+<h2 id="tables">Tables</h2>
+<div id="tbl:bowling-scores" class="tablenos">
+<table id="tbl:bowling-scores">
+<caption><span>Table 1:</span> A table with a top caption and specified relative column widths.
+</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;"><em>Bowling Scores</em></th>
+<th style="text-align: center;">Jane</th>
+<th style="text-align: center;">John</th>
+<th style="text-align: center;">Alice</th>
+<th style="text-align: center;">Bob</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Game 1</td>
+<td style="text-align: center;">150</td>
+<td style="text-align: center;">187</td>
+<td style="text-align: center;">210</td>
+<td style="text-align: center;">105</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Game 2</td>
+<td style="text-align: center;">98</td>
+<td style="text-align: center;">202</td>
+<td style="text-align: center;">197</td>
+<td style="text-align: center;">102</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Game 3</td>
+<td style="text-align: center;">123</td>
+<td style="text-align: center;">180</td>
+<td style="text-align: center;">238</td>
+<td style="text-align: center;">134</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="tbl:constant-digits" class="tablenos">
+<table id="tbl:constant-digits">
+<caption><span>Table 2:</span> A table too wide to fit within page.
+</caption>
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 20%" />
+<col style="width: 19%" />
+<col style="width: 19%" />
+<col style="width: 34%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: left;">Digits 1-33</th>
+<th style="text-align: left;">Digits 34-66</th>
+<th style="text-align: left;">Digits 67-99</th>
+<th style="text-align: left;">Ref.</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">pi</td>
+<td style="text-align: left;">3.14159265358979323846264338327950</td>
+<td style="text-align: left;">288419716939937510582097494459230</td>
+<td style="text-align: left;">781640628620899862803482534211706</td>
+<td style="text-align: left;"><a href="https://www.piday.org/million/"><code>piday.org</code></a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">e</td>
+<td style="text-align: left;">2.71828182845904523536028747135266</td>
+<td style="text-align: left;">249775724709369995957496696762772</td>
+<td style="text-align: left;">407663035354759457138217852516642</td>
+<td style="text-align: left;"><a href="https://apod.nasa.gov/htmltest/gifcity/e.2mil"><code>nasa.gov</code></a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="tbl:bcb33d30-f272-4370-a54d-c4327cc9b7ff" class="tablenos">
+<table id="tbl:">
+<caption><span>Table 3:</span> A table with merged cells using the <code>attributes</code> plugin.
+</caption>
+<thead>
+<tr class="header">
+<th style="text-align: center;"></th>
+<th style="text-align: center;"><strong>Colors</strong> <!-- $colspan="2" --></th>
+<th style="text-align: center;"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><strong>Size</strong></td>
+<td style="text-align: center;"><strong>Text Color</strong></td>
+<td style="text-align: center;"><strong>Background Color</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">big</td>
+<td style="text-align: center;">blue</td>
+<td style="text-align: center;">orange</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">small</td>
+<td style="text-align: center;">black</td>
+<td style="text-align: center;">white</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="equations">Equations</h2>
+<p>A LaTeX equation:</p>
+<p><span id="eq:regular-equation" class="eqnos"><span class="math display">\[\int_0^\infty e^{-x^2} dx=\frac{\sqrt{\pi}}{2}\]</span><span class="eqnos-number">(1)</span></span> </p>
+<p>An equation too long to fit within page:</p>
+<p><span id="eq:long-equation" class="eqnos"><span class="math display">\[x = a + b + c + d + e + f + g + h + i + j + k + l + m + n + o + p + q + r + s + t + u + v + w + x + y + z + 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9\]</span><span class="eqnos-number">(2)</span></span> </p>
+<h2 id="special">Special</h2>
+<p><i class="fas fa-exclamation-triangle"></i> <span class="semibold">WARNING</span> <em>The following features are only supported and intended for <code>.html</code> and <code>.pdf</code> exports.</em>
+<em>Journals are not likely to support them, and they may not display correctly when converted to other formats such as <code>.docx</code>.</em></p>
+<p><a href="https://manubot.org" class="button" title="Manubot Homepage">Link styled as a button</a></p>
+<p>Adding arbitrary HTML attributes to an element using Pandoc’s attribute syntax:</p>
+<div id="some_id_1" class="some_class" style="background: #ad1457; color: white; margin-left: 40px;" title="a paragraph of text" data-color="white" disabled="true">
+<p>Manubot Manubot Manubot Manubot Manubot.
+Manubot Manubot Manubot Manubot.
+Manubot Manubot Manubot.
+Manubot Manubot.
+Manubot.</p>
+</div>
+<p>Adding arbitrary HTML attributes to an element with the Manubot <code>attributes</code> plugin (more flexible than Pandoc’s method in terms of which elements you can add attributes to):</p>
+<p>Manubot Manubot Manubot Manubot Manubot.
+Manubot Manubot Manubot Manubot.
+Manubot Manubot Manubot.
+Manubot Manubot.
+Manubot.
+<!-- $id="element_id" class="some_class" $style="color: #ad1457; margin-left: 40px;" $disabled="true" $title="a paragraph of text" $data-color="red" --></p>
+<p>Available background colors for text, images, code, banners, etc:</p>
+<p><code class="white">white</code>
+<code class="lightgrey">lightgrey</code>
+<code class="grey">grey</code>
+<code class="darkgrey">darkgrey</code>
+<code class="black">black</code>
+<code class="lightred">lightred</code>
+<code class="lightyellow">lightyellow</code>
+<code class="lightgreen">lightgreen</code>
+<code class="lightblue">lightblue</code>
+<code class="lightpurple">lightpurple</code>
+<code class="red">red</code>
+<code class="orange">orange</code>
+<code class="yellow">yellow</code>
+<code class="green">green</code>
+<code class="blue">blue</code>
+<code class="purple">purple</code></p>
+<p>Using the <a href="https://fontawesome.com/">Font Awesome</a> icon set:</p>
+<!-- include the Font Awesome library, per: https://fontawesome.com/start -->
+<p><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"></p>
+<p><i class="fas fa-check"></i> <i class="fas fa-question"></i> <i class="fas fa-star"></i> <i class="fas fa-bell"></i> <i class="fas fa-times-circle"></i> <i class="fas fa-ellipsis-h"></i></p>
+<p><span class="banner lightgrey"><i class="fas fa-scroll fa-lg"></i> <strong>Light Grey Banner</strong><br>
+useful for <em>general information</em> - <a href="https://manubot.org/">manubot.org</a></span></p>
+<p><span class="banner lightblue"><i class="fas fa-info-circle fa-lg"></i> <strong>Blue Banner</strong><br>
+useful for <em>important information</em> - <a href="https://manubot.org/">manubot.org</a></span></p>
+<p><span class="banner lightred"><i class="fas fa-ban fa-lg"></i> <strong>Light Red Banner</strong><br>
+useful for <em>warnings</em> - <a href="https://manubot.org/">manubot.org</a></span></p>
 <h2 id="results">Results</h2>
 <p>Cellular cryo-electron tomography is an upcoming field with a multitude of possible applications.
 The manual segmentation of the cellular features is a major bottleneck of this method.
 When segmenting cryo-electron tomograms from presynaptic terminals, the manual segmentation of synaptic vesicles is one of the most time-intensive steps.
 Synaptic vesicles constitute a large, homogeneous group, constituting a large training set for deep learning applications.
 Therefore, we decided to initially develop the automatic segmentation for synaptic vesicles.
-The used tomograms were previously manually segmented with IMOD, these manual segmentations were further treated as the ground truth <span class="citation" data-cites="136NHHp17">[<a href="#ref-136NHHp17" role="doc-biblioref">13</a>]</span>.
+The used tomograms were previously manually segmented with IMOD, these manual segmentations were further treated as the ground truth <span class="citation" data-cites="136NHHp17">[<a href="#ref-136NHHp17" role="doc-biblioref">21</a>]</span>.
 <code class="green">\_maybe add this somewhere else: In a next step, filaments connecting the synaptic vesicles with each other (connectors) and to the active zone (AZ) were automatically segmented with the algorithm application Pyto [@doi:10.1016/j.jsb.2016.10.004].*</code></p>
 <p>The U-Net neural network was used to train its mask prediction on a training set of 9 tomograms containing untreated synaptosomes.
-The learning progress was tracked by calculating the Dice coefficient and the loss value after each training epoch (Figure <a href="#fig:dice">1</a>).
+The learning progress was tracked by calculating the Dice coefficient and the loss value after each training epoch (Figure <a href="#fig:dice">5</a>).
 The dice value for the training dataset started at a value of ~0.25 and rose to a value of over 0.9 after the initial 50 epoches.
 The loss value of the training dataset had an initial value of over 0.55 and declined to values below 0.05 after the initial 50 epochs and further striving towards 0 in the following depicted epochs.
 <code>\_Validation Dice and loss from treated synaptosome dataset?*</code>
@@ -262,43 +615,43 @@ The dice value for the validation dataset started at a value of ~0.27 and rose t
 The loss value of the validation dataset had an initial value 1 and declined to values below 0.3 after the initial 50 epochs.</p>
 <div id="fig:dice" class="fignos">
 <figure>
-<img src="images/blinddice.png" style="width:7cm" alt="Figure 1: Dice coefficient and loss value for training and validation set. \_legend in figure should say &quot;Training Dice&quot;*" /><figcaption aria-hidden="true"><span>Figure 1:</span> <strong>Dice coefficient and loss value for training and validation set.</strong> <code class="green">\_legend in figure should say "Training Dice"*</code></figcaption>
+<img src="images/blinddice.png" style="width:7cm" alt="Figure 5: Dice coefficient and loss value for training and validation set. \_legend in figure should say &quot;Training Dice&quot;*" /><figcaption aria-hidden="true"><span>Figure 5:</span> <strong>Dice coefficient and loss value for training and validation set.</strong> <code class="green">\_legend in figure should say "Training Dice"*</code></figcaption>
 </figure>
 </div>
 <p><code class="green">\_----&gt;add figures of local measurements such as diameter or center error as an extra figure, why else listed in M&amp;M??"*</code></p>
 <p>After the neural network is trained to recognize the synaptic vesicles with a sufficient probability, the trained U-Net was implemented into a pipeline.
-The pipeline for automatic segmentation of vesicles consists of two major parts: the neural network consisting of a U-Net neural network, and the post-processing steps refining the labels generated by the U-Net (Figure <a href="#fig:pipeline">2</a>).
+The pipeline for automatic segmentation of vesicles consists of two major parts: the neural network consisting of a U-Net neural network, and the post-processing steps refining the labels generated by the U-Net (Figure <a href="#fig:pipeline">6</a>).
 The three batches of tomograms (synaptosome control, synaptosome treatment and neuron) were each handed to the pipeline.</p>
 <div id="fig:pipeline" class="fignos">
 <figure>
-<img src="images/pipeline.svg" style="width:15cm" alt="Figure 2: Pipeline of automatic segmentation. a) tomograms b) patchify the tomograms into 3D patches c) Segmentation Network/ trained U-Net d) probability masks e) stitching patches back together f) thresholding g) adaptive localized thresholding h) outlier removal i) radial profile" /><figcaption aria-hidden="true"><span>Figure 2:</span> <strong>Pipeline of automatic segmentation.</strong> a) tomograms b) patchify the tomograms into 3D patches c) Segmentation Network/ trained U-Net d) probability masks e) stitching patches back together f) thresholding g) adaptive localized thresholding h) outlier removal i) radial profile</figcaption>
+<img src="images/pipeline.svg" style="width:15cm" alt="Figure 6: Pipeline of automatic segmentation. a) tomograms b) patchify the tomograms into 3D patches c) Segmentation Network/ trained U-Net d) probability masks e) stitching patches back together f) thresholding g) adaptive localized thresholding h) outlier removal i) radial profile" /><figcaption aria-hidden="true"><span>Figure 6:</span> <strong>Pipeline of automatic segmentation.</strong> a) tomograms b) patchify the tomograms into 3D patches c) Segmentation Network/ trained U-Net d) probability masks e) stitching patches back together f) thresholding g) adaptive localized thresholding h) outlier removal i) radial profile</figcaption>
 </figure>
 </div>
 <p>Each tomogram is split into patches of 32x32x32 <code class="green">\_unit?*</code>.
 These patches are the fed into the trained U-Net, which outputs a probability mask for those patches.
 To obtain a complete probability mask, the patches are stitched back together.
-The probability mask is further refined by applying global and adaptive localized thresholding steps (Figure <a href="#fig:pipeline">2</a>, Figure <a href="#fig:tom">3</a>).</p>
+The probability mask is further refined by applying global and adaptive localized thresholding steps (Figure <a href="#fig:pipeline">6</a>, Figure <a href="#fig:tom">7</a>).</p>
 <div id="fig:tom" class="fignos">
 <figure>
-<img src="images/tomo-sclae.svg" style="width:15cm" alt="Figure 3: 2D Slices A) a section from z axis of a tomogram’s presynaptic terminal of a neuron B) instance mask of the vesicles after post processing; purple corresponds to a low probability of SVs and yellow corresponds to a high probability of synaptic vesicles C) predicted probability mask by the segmentation network" /><figcaption aria-hidden="true"><span>Figure 3:</span> <strong>2D Slices</strong> A) a section from z axis of a tomogram’s presynaptic terminal of a neuron B) instance mask of the vesicles after post processing; purple corresponds to a low probability of SVs and yellow corresponds to a high probability of synaptic vesicles C) predicted probability mask by the segmentation network</figcaption>
+<img src="images/tomo-sclae.svg" style="width:15cm" alt="Figure 7: 2D Slices A) a section from z axis of a tomogram’s presynaptic terminal of a neuron B) instance mask of the vesicles after post processing; purple corresponds to a low probability of SVs and yellow corresponds to a high probability of synaptic vesicles C) predicted probability mask by the segmentation network" /><figcaption aria-hidden="true"><span>Figure 7:</span> <strong>2D Slices</strong> A) a section from z axis of a tomogram’s presynaptic terminal of a neuron B) instance mask of the vesicles after post processing; purple corresponds to a low probability of SVs and yellow corresponds to a high probability of synaptic vesicles C) predicted probability mask by the segmentation network</figcaption>
 </figure>
 </div>
 <p><code class="green">\_more detail about global and adaptive localized threshold*</code>
 For further optimization of the mask, outliers were removed.
 Removed outliers mostly consisted of vesicles which were only partially segmented, and vesicles which maks were adjacent due to proximity.
-The removed masks, which only partially traced the vesicles, were reevaluated by reducing or expanding their radius (Figure <a href="#fig:radial_profile">4</a>).
+The removed masks, which only partially traced the vesicles, were reevaluated by reducing or expanding their radius (Figure <a href="#fig:radial_profile">8</a>).
 <code class="green">\_was the center of the vesicles also reevaluated?*</code> <code class="green">\_Its not clear or might be false sentence we didnt remove or re evaluate the mask?*</code></p>
 <div id="fig:radial_profile" class="fignos">
 <figure>
-<img src="images/radial_avg_115-099.svg" style="width:15cm" alt="Figure 4: Vesicle radius and position through radial profile and cross-correlation Radial Profile Refinement A) couple of vesicles are not centered B) Radial Profile. Blue range is from membrane center to outer white halo center, this is the search range for the optimal radius. (smoothed by gaussian filtering) C) second derivative of radial profile E, F, H, G) Same as above columns after refinement" /><figcaption aria-hidden="true"><span>Figure 4:</span> <strong>Vesicle radius and position through radial profile and cross-correlation</strong> Radial Profile Refinement A) couple of vesicles are not centered B) Radial Profile. Blue range is from membrane center to outer white halo center, this is the search range for the optimal radius. (smoothed by gaussian filtering) C) second derivative of radial profile E, F, H, G) Same as above columns after refinement</figcaption>
+<img src="images/radial_avg_115-099.svg" style="width:15cm" alt="Figure 8: Vesicle radius and position through radial profile and cross-correlation Radial Profile Refinement A) couple of vesicles are not centered B) Radial Profile. Blue range is from membrane center to outer white halo center, this is the search range for the optimal radius. (smoothed by gaussian filtering) C) second derivative of radial profile E, F, H, G) Same as above columns after refinement" /><figcaption aria-hidden="true"><span>Figure 8:</span> <strong>Vesicle radius and position through radial profile and cross-correlation</strong> Radial Profile Refinement A) couple of vesicles are not centered B) Radial Profile. Blue range is from membrane center to outer white halo center, this is the search range for the optimal radius. (smoothed by gaussian filtering) C) second derivative of radial profile E, F, H, G) Same as above columns after refinement</figcaption>
 </figure>
 </div>
 <p>The adjacent vesicle masks were seperated (Figure <code class="green">\_missing*</code>). <code class="green">\_how?*</code></p>
 <p><code class="green">\_**missing Figure- Splitting adjacent vesicles. A) Examples of tomogram, no labels; B) raw label with connected vesicle-labels; C) modified label with seperated vesicles ---&gt; for software: IMOD**</code></p>
-<p>The Dice coefficient was used to track the global congruence between the manually segmented mask and the predicted mask within the different tomograms (Figure <a href="#fig:dice-improv">5</a>).</p>
+<p>The Dice coefficient was used to track the global congruence between the manually segmented mask and the predicted mask within the different tomograms (Figure <a href="#fig:dice-improv">9</a>).</p>
 <div id="fig:dice-improv" class="fignos">
 <figure>
-<img src="images/improvment-post-processing-dice.svg" style="width:15cm" alt="Figure 5: Dice developement during post-processing Dice developement at different post processing steps of initial predicted mask (different colors correspond to different tomograms): A) synaptosomal training datasets B) synaptosomal test datasets c) neuron test datasets" /><figcaption aria-hidden="true"><span>Figure 5:</span> <strong>Dice developement during post-processing</strong> Dice developement at different post processing steps of initial predicted mask (different colors correspond to different tomograms): A) synaptosomal training datasets B) synaptosomal test datasets c) neuron test datasets</figcaption>
+<img src="images/improvment-post-processing-dice.svg" style="width:15cm" alt="Figure 9: Dice developement during post-processing Dice developement at different post processing steps of initial predicted mask (different colors correspond to different tomograms): A) synaptosomal training datasets B) synaptosomal test datasets c) neuron test datasets" /><figcaption aria-hidden="true"><span>Figure 9:</span> <strong>Dice developement during post-processing</strong> Dice developement at different post processing steps of initial predicted mask (different colors correspond to different tomograms): A) synaptosomal training datasets B) synaptosomal test datasets c) neuron test datasets</figcaption>
 </figure>
 </div>
 <h3 id="final-eval-tables">Final Eval Tables</h3>
@@ -760,7 +1113,7 @@ The removed masks, which only partially traced the vesicles, were reevaluated by
 <h3 id="comparison-of-manual-segmentation-with-automatic-deep-learning-based-segmentation">Comparison of manual segmentation with automatic deep-learning based segmentation</h3>
 <div id="fig:3d" class="fignos">
 <figure>
-<img src="images/3d.png" style="width:10cm" alt="Figure 6: 3D model of manual segmented and automatically segmented synaptosome." /><figcaption aria-hidden="true"><span>Figure 6:</span> <strong>3D model of manual segmented and automatically segmented synaptosome.</strong></figcaption>
+<img src="images/3d.png" style="width:10cm" alt="Figure 10: 3D model of manual segmented and automatically segmented synaptosome." /><figcaption aria-hidden="true"><span>Figure 10:</span> <strong>3D model of manual segmented and automatically segmented synaptosome.</strong></figcaption>
 </figure>
 </div>
 <h2 id="discussion">Discussion</h2>
@@ -779,9 +1132,9 @@ implement automatic connector and tether segmentation as a deep leaning workflow
 <h2 id="materials-and-methods">Materials and methods</h2>
 <h3 id="cryo-electron-tomography-datasets">Cryo-electron Tomography Datasets</h3>
 <p>Two datasets of different origin were used as input and test subjects for the automatic segmentation pipeline, rat synaptosomes as well as astrocytic and neural cell cultures derived from mice.
-Both datasets have been previously analyzed <span class="citation" data-cites="CERJ8H0p">[<a href="#ref-CERJ8H0p" role="doc-biblioref">14</a>]</span>.</p>
+Both datasets have been previously analyzed <span class="citation" data-cites="CERJ8H0p">[<a href="#ref-CERJ8H0p" role="doc-biblioref">22</a>]</span>.</p>
 <h4 id="rat-synaptosomes">Rat synaptosomes</h4>
-<p>The preparation of the rat synaptosomes were previously described <span class="citation" data-cites="7sGZgtQa">[<a href="#ref-7sGZgtQa" role="doc-biblioref">15</a>]</span>.
+<p>The preparation of the rat synaptosomes were previously described <span class="citation" data-cites="7sGZgtQa">[<a href="#ref-7sGZgtQa" role="doc-biblioref">23</a>]</span>.
 After the purification, the synaptosomes were incubated for 30 min at room temperature.
 1.3mM CaCl_2_ and 10 nm gold fiducials were added (gold fiducials, #s10110/8. AURION Immuno Gold Reagents &amp; Accessories. Wageningen, The Neatherlands).
 The synaptosome solution was applied to a 200-mesh lacey finder carbon film grid (#AGS166-H2. Agar Scientific. Elektron Technology UK Ltd. Stansted, UK).
@@ -790,18 +1143,18 @@ Thereafter, the grid was immediately plunge frozen in liquid ethane using a home
 The grids coated with rat synaptosomes were mounted in a cryo-holder (Gatan, Pleasonton, CA, USA) and transferred to a Tecnai F20 (FEI, Eindhoven, The Netherlands) which was set to low dose conditions, operated at 200 kV, and equipped with a field emission gun.
 Images were recorded with a 2k x 2k CCD camera (Gatan) mounted after a GIF Tridiem post-column filter (Gatan) operated in zero-loss mode.
 The sample was kept at about -180 °C.
-Tilt series were acquired using SerialEM <span class="citation" data-cites="19ZFerhph">[<a href="#ref-19ZFerhph" role="doc-biblioref">16</a>]</span> for automated acquisition recorded typically from -50° to 50° with a 2° angular increment and an unbinned pixel size of 0.75 or 1.2 nm.
+Tilt series were acquired using SerialEM <span class="citation" data-cites="19ZFerhph">[<a href="#ref-19ZFerhph" role="doc-biblioref">24</a>]</span> for automated acquisition recorded typically from -50° to 50° with a 2° angular increment and an unbinned pixel size of 0.75 or 1.2 nm.
 Due to sample thickness (400-700 nm), tomograms were usually not recorded with higher tilt angles.
 Defocus was set between -8 to -12 µm and the total electron dose used was about 80-100 e<sup>-</sup>/Å<sup>2</sup>.
 Some tomograms were acquired at a Titan Krios equipped with a K2 direct electron detector (Gatan) without energy filter.
 The K2 camera was operated in super-resolution counting mode and between 8-40 frames per tilt angle were taken.
 Tilt series were acquired using the Latitude software (Gatan) for automated acquisition recorded typically from -60° to 60° with a 2° angular increment and an unbinned pixel size of 0.6 nm.
 Defocus was set between -8 to -12 µm and the total electron dose used was about 80-100 e<sup>-</sup>/Å<sup>2</sup>.
-Before image processing the frames at each tilt angle, frames were aligned and averaged in 2dx MC_Automator <span class="citation" data-cites="7UkCfakv">[<a href="#ref-7UkCfakv" role="doc-biblioref">17</a>]</span> with motioncor <span class="citation" data-cites="4rVTIFyw">[<a href="#ref-4rVTIFyw" role="doc-biblioref">18</a>]</span>.
-3D reconstruction was done in IMOD <span class="citation" data-cites="136NHHp17">[<a href="#ref-136NHHp17" role="doc-biblioref">13</a>]</span>.
+Before image processing the frames at each tilt angle, frames were aligned and averaged in 2dx MC_Automator <span class="citation" data-cites="7UkCfakv">[<a href="#ref-7UkCfakv" role="doc-biblioref">25</a>]</span> with motioncor <span class="citation" data-cites="4rVTIFyw">[<a href="#ref-4rVTIFyw" role="doc-biblioref">26</a>]</span>.
+3D reconstruction was done in IMOD <span class="citation" data-cites="136NHHp17">[<a href="#ref-136NHHp17" role="doc-biblioref">21</a>]</span>.
 The alignments were done using the automated fiducial tracking function and the 3D reconstructions were done using the weighted back projection followed by a nonlinear anisotropic diffusion (NAD) filtering.</p>
 <h4 id="astrocytic-and-neuronal-mouse-culture">Astrocytic and neuronal mouse culture</h4>
-<p>The preparation of astrocytic and neuronal culture has been published before <span class="citation" data-cites="5DZLPDB7">[<a href="#ref-5DZLPDB7" role="doc-biblioref">19</a>]</span>.
+<p>The preparation of astrocytic and neuronal culture has been published before <span class="citation" data-cites="5DZLPDB7">[<a href="#ref-5DZLPDB7" role="doc-biblioref">27</a>]</span>.
 After 12 to 14 days of incubation, grids with mouse neurons were plunge frozen with a Vitrobot (Thermofisher Scientific, Mark IV) with a blot time of 3 s and a blot force of -10.
 Wait time and drain time were not used.
 Humidity was set to 100% at 4 °C.
@@ -850,12 +1203,12 @@ These were passed through the U-Net in a total of 200 epochs.
 Batch normalization was applied before Rectified Linear Unit (ReLU) activation <code class="green">\_was it? cite Ioffe &amp; Szegedy, maybe? [@doi:10.48550/arXiv.1502.03167]*</code>.</p>
 <p><code class="green">\_we do not use deconv layers, instead we upsample (by repeating the data) and then apply a convolution.*</code>
 <code class="green">\_as far as I know, nobody uses analysis/expantion path, encoder/decoder is the common and correct term.*</code>
-The 3D U-Net architecture is composed of a contracting or analysis path!! (convolutional layers), and an expanding or synthesis path (deconvolutional!! layers) (Figure <a href="#fig:unet">7</a>).
+The 3D U-Net architecture is composed of a contracting or analysis path!! (convolutional layers), and an expanding or synthesis path (deconvolutional!! layers) (Figure <a href="#fig:unet">11</a>).
 <code class="green">\_did we wrote our own U-Net or do we need to quote someones github for the original framework*</code>
 <code class="green">\_we used CSBDeep for Convoultion blocks Benoit mentioned it in the introdction we can bring it here but github licence is BSD 3-Clause License whihc it means we dont need to reference *</code></p>
 <div id="fig:unet" class="fignos">
 <figure>
-<img src="images/unet.png" style="width:10cm" alt="Figure 7: Segmentation Network: U-Net. Input Size is 32^3 \_voxels??*, in each resolution we have two convolution layers followed by batch normalization layer and rectified Linear Units (ReLU) activation function. Intermediate sizes are written on top of arrows, number of convolution filters is written bottom of boxes. Skip connections show concatenation of the features from contracting path (left side of the network) and expansive path (right side of the network).\_explain different colors, do they correspond with the different steps? for example: red- max pooling 2x2x2? add figure legend?*" /><figcaption aria-hidden="true"><span>Figure 7:</span> <strong>Segmentation Network: U-Net.</strong> Input Size is 32^3 <code>\_voxels??*</code>, in each resolution we have two convolution layers followed by batch normalization layer and rectified Linear Units (ReLU) activation function. Intermediate sizes are written on top of arrows, number of convolution filters is written bottom of boxes. Skip connections show concatenation of the features from contracting path (left side of the network) and expansive path (right side of the network).<code class="green">\_explain different colors, do they correspond with the different steps? for example: red- max pooling 2x2x2? add figure legend?*</code></figcaption>
+<img src="images/unet.png" style="width:10cm" alt="Figure 11: Segmentation Network: U-Net. Input Size is 32^3 \_voxels??*, in each resolution we have two convolution layers followed by batch normalization layer and rectified Linear Units (ReLU) activation function. Intermediate sizes are written on top of arrows, number of convolution filters is written bottom of boxes. Skip connections show concatenation of the features from contracting path (left side of the network) and expansive path (right side of the network).\_explain different colors, do they correspond with the different steps? for example: red- max pooling 2x2x2? add figure legend?*" /><figcaption aria-hidden="true"><span>Figure 11:</span> <strong>Segmentation Network: U-Net.</strong> Input Size is 32^3 <code>\_voxels??*</code>, in each resolution we have two convolution layers followed by batch normalization layer and rectified Linear Units (ReLU) activation function. Intermediate sizes are written on top of arrows, number of convolution filters is written bottom of boxes. Skip connections show concatenation of the features from contracting path (left side of the network) and expansive path (right side of the network).<code class="green">\_explain different colors, do they correspond with the different steps? for example: red- max pooling 2x2x2? add figure legend?*</code></figcaption>
 </figure>
 </div>
 <p><code class="green">\_what do we use as initial encoder weights and backbone*</code>
@@ -870,12 +1223,12 @@ With every layer of the U-Net, the input size thereby halves, while the number o
 <p>While the analysis path focuses on the identification of the areas of interest, the synthesis part focuses on their localization.
 The synthesis path of the U-Net uses the same basic architecture as the analysis path, with a slight variation of using up convolution operation and implementing skip connections, where feature maps of the analysis part are concatenated to the output of the transposed convolutions of the same level.</p>
 <p><code class="green">\_code checked:final = Conv3D(n_channel_out, (1,) * n_dim, activation='sigmoid')(unet) *</code>
-The sigmoid/Softmax <code class="green">\_in the image you write Sigmoid but in the text Softmax, which activation function was used?*</code> activation function is the last block of the U-Net (Figure <a href="#fig:unet">7</a>), it triggers the loss function, which converts the output from the decoder path into a mask, where each voxel is assigned as either vesicle or not-vesicle.
+The sigmoid/Softmax <code class="green">\_in the image you write Sigmoid but in the text Softmax, which activation function was used?*</code> activation function is the last block of the U-Net (Figure <a href="#fig:unet">11</a>), it triggers the loss function, which converts the output from the decoder path into a mask, where each voxel is assigned as either vesicle or not-vesicle.
 As the segmentation of vesicles can be considered a binary classification task, binary cross-entropy was implemented as a loss function.</p>
 <p><span class="math display">\[Loss= -\frac{1}{output  size}\sum_{i=1}^{output size} y_i * log  ŷ_i + (1-y_1) * log  (1-ŷ_1)\]</span></p>
 <p>with the <em>output size</em> being the number of scalar values in the model output, <em>ŷ_1_</em> being the <em>i</em>-th scalar value in the model output and <em>y_i_</em> being the corresponding target value.
 <code class="green">\_publication to cite?*</code></p>
-<p>To optimize the weights and reduce the loss function during training, the Adam optimizer was used <span class="citation" data-cites="1G9auqG3f">[<a href="#ref-1G9auqG3f" role="doc-biblioref">20</a>]</span>.
+<p>To optimize the weights and reduce the loss function during training, the Adam optimizer was used <span class="citation" data-cites="1G9auqG3f">[<a href="#ref-1G9auqG3f" role="doc-biblioref">28</a>]</span>.
 200 epochs were run until the loss function reached a global minimum.
 <code class="green">\_it's a local minima, we are optimizing a non-convex function with thousands of parameters*</code></p>
 <h5 id="mask-prediction">Mask prediction</h5>
@@ -925,7 +1278,7 @@ Note that soft-dice is equivalent to dice, when the input is binarized (which we
 <code class="green">\_which diameters are we using in this evaluation as input, pre- or post-outlier removal?*</code>
 <code class="green">\_after! I meant from that perentesis that radius or dimater we assume as one charectiristic of vesicle we might can write it better *</code>
 The error of diameter estimation of true-detected vesicle is defined as 1 minus the proportion of diameters</p>
-<p><span id="eq:regular-equation" class="eqnos"><span class="math display">\[\delta d=1-\frac{min(dSi,dGTi)}{max(dSi,dGTi)}\]</span><span class="eqnos-number">(1)</span></span> </p>
+<p><span id="eq:regular-equation" class="eqnos"><span class="math display">\[\delta d=1-\frac{min(dSi,dGTi)}{max(dSi,dGTi)}\]</span><span class="eqnos-number">(3)</span></span> </p>
 <p>where dGTi is the diameter of each true manual segmented vesicle, and dSi is the diameter of its estimation.</p>
 <h4 id="center-error">Center error</h4>
 <p>The center error is an euclidean distance of ground truth and corresponds to true predicted vesicles <code class="green">\_true pos or true neg*</code>.
@@ -935,7 +1288,7 @@ A vesicle was defined as a true-detected vesicle if the predicted center was loc
 This means the volume of intersection of the estimated vesicle with the distance of d to a ground truth vesicle with radius R is:</p>
 <p><span class="math display">\[V=\frac{1}{12}\pi(4R+d)(2R-d)\]</span></p>
 <h3 id="manuscript-preparation">Manuscript preparation</h3>
-<p>The manuscript was written with the open and collaborative scientific writing package Manubot <span class="citation" data-cites="YuJbg3zO">[<a href="#ref-YuJbg3zO" role="doc-biblioref">21</a>]</span>.
+<p>The manuscript was written with the open and collaborative scientific writing package Manubot <span class="citation" data-cites="YuJbg3zO">[<a href="#ref-YuJbg3zO" role="doc-biblioref">20</a>]</span>.
 The source code and data for this manuscript are available at <a href="https://github.com/aseedb/synaptic_tomo_ms" class="uri">https://github.com/aseedb/synaptic_tomo_ms</a>.</p>
 <h2 class="page_break_before" id="references">References</h2>
 <!-- Explicitly insert bibliography here -->
@@ -944,10 +1297,10 @@ The source code and data for this manuscript are available at <a href="https://g
 <div class="csl-left-margin">1. </div><div class="csl-right-inline"><strong>Towards Visual Proteomics at High Resolution</strong> <div class="csl-block">Felix JB Bäuerlein, Wolfgang Baumeister</div> <em>Journal of Molecular Biology</em> (2021-10) <a href="https://doi.org/gn9t3v">https://doi.org/gn9t3v</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1016/j.jmb.2021.167187">10.1016/j.jmb.2021.167187</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/34384780">34384780</a></div></div>
 </div>
 <div id="ref-2TrAHWcN" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">2. </div><div class="csl-right-inline"><strong>Exploring high-resolution cryo-ET and subtomogram averaging capabilities of contemporary DEDs</strong> <div class="csl-block">Martin Obr, Wim JH Hagen, Robert A Dick, Lingbo Yu, Abhay Kotecha, Florian KM Schur</div> <em>Molecular Biology</em> (2022-01-10) <a href="https://doi.org/gn92pd">https://doi.org/gn92pd</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1101/2022.01.10.475481">10.1101/2022.01.10.475481</a></div></div>
+<div class="csl-left-margin">2. </div><div class="csl-right-inline"><strong>Exploring high-resolution cryo-ET and subtomogram averaging capabilities of contemporary DEDs</strong> <div class="csl-block">Martin Obr, Wim JH Hagen, Robert A Dick, Lingbo Yu, Abhay Kotecha, Florian KM Schur</div> <em>Cold Spring Harbor Laboratory</em> (2022-01-10) <a href="https://doi.org/gn92pd">https://doi.org/gn92pd</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1101/2022.01.10.475481">10.1101/2022.01.10.475481</a></div></div>
 </div>
 <div id="ref-EGfvt7aR" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">3. </div><div class="csl-right-inline"><strong>High-resolution in situ structure determination by cryo-electron tomography and subtomogram averaging using emClarity</strong> <div class="csl-block">Tao Ni, Thomas Frosio, Luiza Mendonça, Yuewen Sheng, Daniel Clare, Benjamin A Himes, Peijun Zhang</div> <em>Nature Protocols</em> (2022-02) <a href="https://doi.org/gn92pc">https://doi.org/gn92pc</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1038/s41596-021-00648-5">10.1038/s41596-021-00648-5</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/35022621">35022621</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9251519">PMC9251519</a></div></div>
+<div class="csl-left-margin">3. </div><div class="csl-right-inline"><strong>High-resolution in situ structure determination by cryo-electron tomography and subtomogram averaging using emClarity</strong> <div class="csl-block">Tao Ni, Thomas Frosio, Luiza Mendonça, Yuewen Sheng, Daniel Clare, Benjamin A Himes, Peijun Zhang</div> <em>Nature Protocols</em> (2022-01-12) <a href="https://doi.org/gn92pc">https://doi.org/gn92pc</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1038/s41596-021-00648-5">10.1038/s41596-021-00648-5</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/35022621">35022621</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9251519">PMC9251519</a></div></div>
 </div>
 <div id="ref-WmTa9taa" class="csl-entry" role="doc-biblioentry">
 <div class="csl-left-margin">4. </div><div class="csl-right-inline"><strong>STRUCTURAL STUDIES BY ELECTRON TOMOGRAPHY: From Cells to Molecules</strong> <div class="csl-block">Vladan Lučić, Friedrich Förster, Wolfgang Baumeister</div> <em>Annual Review of Biochemistry</em> (2005-06-01) <a href="https://doi.org/cfd27f">https://doi.org/cfd27f</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1146/annurev.biochem.73.011303.074112">10.1146/annurev.biochem.73.011303.074112</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/15952904">15952904</a></div></div>
@@ -962,7 +1315,7 @@ The source code and data for this manuscript are available at <a href="https://g
 <div class="csl-left-margin">7. </div><div class="csl-right-inline"><strong>Robust membrane detection based on tensor voting for electron tomography</strong> <div class="csl-block">Antonio Martinez-Sanchez, Inmaculada Garcia, Shoh Asano, Vladan Lucic, Jose-Jesus Fernandez</div> <em>Journal of Structural Biology</em> (2014-04) <a href="https://doi.org/f5zkj8">https://doi.org/f5zkj8</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1016/j.jsb.2014.02.015">10.1016/j.jsb.2014.02.015</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/24625523">24625523</a></div></div>
 </div>
 <div id="ref-GNLHO53d" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">8. </div><div class="csl-right-inline"><strong>Convolutional neural networks for automated annotation of cellular cryo-electron tomograms</strong> <div class="csl-block">Muyuan Chen, Wei Dai, Stella Y Sun, Darius Jonasch, Cynthia Y He, Michael F Schmid, Wah Chiu, Steven J Ludtke</div> <em>Nature Methods</em> (2017-10) <a href="https://doi.org/gkpj62">https://doi.org/gkpj62</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1038/nmeth.4405">10.1038/nmeth.4405</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/28846087">28846087</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5623144">PMC5623144</a></div></div>
+<div class="csl-left-margin">8. </div><div class="csl-right-inline"><strong>Convolutional neural networks for automated annotation of cellular cryo-electron tomograms</strong> <div class="csl-block">Muyuan Chen, Wei Dai, Stella Y Sun, Darius Jonasch, Cynthia Y He, Michael F Schmid, Wah Chiu, Steven J Ludtke</div> <em>Nature Methods</em> (2017-08-28) <a href="https://doi.org/gkpj62">https://doi.org/gkpj62</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1038/nmeth.4405">10.1038/nmeth.4405</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/28846087">28846087</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5623144">PMC5623144</a></div></div>
 </div>
 <div id="ref-RdPTGoZx" class="csl-entry" role="doc-biblioentry">
 <div class="csl-left-margin">9. </div><div class="csl-right-inline"><strong>Automated Detection and Localization of Synaptic Vesicles in Electron Microscopy Images</strong> <div class="csl-block">Barbara Imbrosci, Dietmar Schmitz, Marta Orlando</div> <em>eneuro</em> (2022-01) <a href="https://doi.org/gn9n8k">https://doi.org/gn9n8k</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1523/eneuro.0400-20.2021">10.1523/eneuro.0400-20.2021</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/34983830">34983830</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8805189">PMC8805189</a></div></div>
@@ -974,34 +1327,55 @@ The source code and data for this manuscript are available at <a href="https://g
 <div class="csl-left-margin">11. </div><div class="csl-right-inline"><strong>3D U-Net: Learning Dense Volumetric Segmentation from Sparse Annotation</strong> <div class="csl-block">Özgün Çiçek, Ahmed Abdulkadir, Soeren S Lienkamp, Thomas Brox, Olaf Ronneberger</div> <em>arXiv</em> (2016-06-22) <a href="https://arxiv.org/abs/1606.06650">https://arxiv.org/abs/1606.06650</a></div>
 </div>
 <div id="ref-12G712Zky" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">12. </div><div class="csl-right-inline"><strong>Content-aware image restoration: pushing the limits of fluorescence microscopy</strong> <div class="csl-block">Martin Weigert, Uwe Schmidt, Tobias Boothe, Andreas Müller, Alexandr Dibrov, Akanksha Jain, Benjamin Wilhelm, Deborah Schmidt, Coleman Broaddus, Siân Culley, … Eugene W Myers</div> <em>Nature Methods</em> (2018-12) <a href="https://doi.org/gfkkfd">https://doi.org/gfkkfd</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1038/s41592-018-0216-7">10.1038/s41592-018-0216-7</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/30478326">30478326</a></div></div>
+<div class="csl-left-margin">12. </div><div class="csl-right-inline"><strong>Content-aware image restoration: pushing the limits of fluorescence microscopy</strong> <div class="csl-block">Martin Weigert, Uwe Schmidt, Tobias Boothe, Andreas Müller, Alexandr Dibrov, Akanksha Jain, Benjamin Wilhelm, Deborah Schmidt, Coleman Broaddus, Siân Culley, … Eugene W Myers</div> <em>Nature Methods</em> (2018-11-26) <a href="https://doi.org/gfkkfd">https://doi.org/gfkkfd</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1038/s41592-018-0216-7">10.1038/s41592-018-0216-7</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/30478326">30478326</a></div></div>
 </div>
-<div id="ref-136NHHp17" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">13. </div><div class="csl-right-inline"><strong>Computer Visualization of Three-Dimensional Image Data Using IMOD</strong> <div class="csl-block">James R Kremer, David N Mastronarde, JRichard McIntosh</div> <em>Journal of Structural Biology</em> (1996-01) <a href="https://doi.org/d9nfzw">https://doi.org/d9nfzw</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1006/jsbi.1996.0013">10.1006/jsbi.1996.0013</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/8742726">8742726</a></div></div>
+<div id="ref-IhliSZDo" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">13. </div><div class="csl-right-inline"><strong>Sci-Hub provides access to nearly all scholarly literature</strong> <div class="csl-block">Daniel S Himmelstein, Ariel Rodriguez Romero, Jacob G Levernier, Thomas Anthony Munro, Stephen Reid McLaughlin, Bastian Greshake Tzovaras, Casey S Greene</div> <em>eLife</em> (2018-03-01) <a href="https://doi.org/ckcj">https://doi.org/ckcj</a> <div class="csl-block">DOI: <a href="https://doi.org/10.7554/elife.32822">10.7554/elife.32822</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/29424689">29424689</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5832410">PMC5832410</a></div></div>
 </div>
-<div id="ref-CERJ8H0p" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">14. </div><div class="csl-right-inline"><strong>Morphofunctional changes at the active zone during synaptic vesicle exocytosis</strong> <div class="csl-block">Julika Radecke, Raphaela Seeger, Anna Kádková, Ulrike Laugks, Amin Khosrozadeh, Kenneth N Goldie, Vladan Lučić, Jakob B Sørensen, Benoît Zuber</div> <em>Neuroscience</em> (2022-03-07) <a href="https://doi.org/gpm26v">https://doi.org/gpm26v</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1101/2022.03.07.483217">10.1101/2022.03.07.483217</a></div></div>
+<div id="ref-mSMVRkoc" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">14. </div><div class="csl-right-inline"><strong>Reproducibility of computational workflows is automated using continuous analysis</strong> <div class="csl-block">Brett K Beaulieu-Jones, Casey S Greene</div> <em>Nature biotechnology</em> (2017-04) <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6103790/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6103790/</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1038/nbt.3780">10.1038/nbt.3780</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/28288103">28288103</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6103790">PMC6103790</a></div></div>
 </div>
-<div id="ref-7sGZgtQa" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">15. </div><div class="csl-right-inline"><strong>A rapid Percoll gradient procedure for preparation of synaptosomes</strong> <div class="csl-block">Peter R Dunkley, Paula E Jarvie, Phillip J Robinson</div> <em>Nature Protocols</em> (2008-11) <a href="https://doi.org/b7zwh8">https://doi.org/b7zwh8</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1038/nprot.2008.171">10.1038/nprot.2008.171</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/18927557">18927557</a></div></div>
+<div id="ref-126Wi5Us4" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">15. </div><div class="csl-right-inline"><strong>Bitcoin for the biological literature.</strong> <div class="csl-block">Douglas Heaven</div> <em>Nature</em> (2019-02) <a href="https://www.ncbi.nlm.nih.gov/pubmed/30718888">https://www.ncbi.nlm.nih.gov/pubmed/30718888</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1038/d41586-019-00447-9">10.1038/d41586-019-00447-9</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/30718888">30718888</a></div></div>
 </div>
-<div id="ref-19ZFerhph" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">16. </div><div class="csl-right-inline"><strong>Automated electron microscope tomography using robust prediction of specimen movements</strong> <div class="csl-block">David N Mastronarde</div> <em>Journal of Structural Biology</em> (2005-10) <a href="https://doi.org/ff7gzx">https://doi.org/ff7gzx</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1016/j.jsb.2005.07.007">10.1016/j.jsb.2005.07.007</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/16182563">16182563</a></div></div>
+<div id="ref-QhC8yJ7V" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">16. </div><div class="csl-right-inline"><strong>Plan S: Accelerating the transition to full and immediate Open Access to scientific publications</strong> <div class="csl-block">cOAlition S</div> (2018-09-04) <a href="https://www.wikidata.org/wiki/Q56458321">https://www.wikidata.org/wiki/Q56458321</a></div>
 </div>
-<div id="ref-7UkCfakv" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">17. </div><div class="csl-right-inline"><strong>2dx_automator: Implementation of a semiautomatic high-throughput high-resolution cryo-electron crystallography pipeline</strong> <div class="csl-block">Sebastian Scherer, Julia Kowal, Mohamed Chami, Venkata Dandey, Marcel Arheit, Philippe Ringler, Henning Stahlberg</div> <em>Journal of Structural Biology</em> (2014-05) <a href="https://doi.org/f522h3">https://doi.org/f522h3</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1016/j.jsb.2014.03.016">10.1016/j.jsb.2014.03.016</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/24680783">24680783</a></div></div>
+<div id="ref-zBPP9YKu" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">17. </div><div class="csl-right-inline"><strong>Open access</strong> <div class="csl-block">Peter Suber</div> <em>MIT Press</em> (2012) <div class="csl-block">ISBN: 9780262517638</div></div>
 </div>
-<div id="ref-4rVTIFyw" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">18. </div><div class="csl-right-inline"><strong>Electron counting and beam-induced motion correction enable near-atomic-resolution single-particle cryo-EM</strong> <div class="csl-block">Xueming Li, Paul Mooney, Shawn Zheng, Christopher R Booth, Michael B Braunfeld, Sander Gubbens, David A Agard, Yifan Cheng</div> <em>Nature Methods</em> (2013-06) <a href="https://doi.org/f4zpjf">https://doi.org/f4zpjf</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1038/nmeth.2472">10.1038/nmeth.2472</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/23644547">23644547</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3684049">PMC3684049</a></div></div>
+<div id="ref-1GGGHdsew" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">18. </div><div class="csl-right-inline"><strong>Open collaborative writing with Manubot</strong> <div class="csl-block">Daniel S Himmelstein, Vincent Rubinetti, David R Slochower, Dongbo Hu, Venkat S Malladi, Casey S Greene, Anthony Gitter</div> <em>Manubot</em> (2020-05-25) <a href="https://greenelab.github.io/meta-review/">https://greenelab.github.io/meta-review/</a></div>
 </div>
-<div id="ref-5DZLPDB7" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">19. </div><div class="csl-right-inline"><strong>Preparation of Primary Neurons for Visualizing Neurites in a Frozen-hydrated State Using Cryo-Electron Tomography</strong> <div class="csl-block">Sarah H Shahmoradian, Mauricio R Galiano, Chengbiao Wu, Shurui Chen, Matthew N Rasband, William C Mobley, Wah Chiu</div> <em>Journal of Visualized Experiments</em> (2014-02-12) <a href="https://doi.org/gmh9w3">https://doi.org/gmh9w3</a> <div class="csl-block">DOI: <a href="https://doi.org/10.3791/50783">10.3791/50783</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/24561719">24561719</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4089403">PMC4089403</a></div></div>
-</div>
-<div id="ref-1G9auqG3f" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">20. </div><div class="csl-right-inline"><strong>Adam: A Method for Stochastic Optimization</strong> <div class="csl-block">Diederik P Kingma, Jimmy Ba</div> <em>arXiv</em> (2014) <a href="https://doi.org/hnkr">https://doi.org/hnkr</a> <div class="csl-block">DOI: <a href="https://doi.org/10.48550/arxiv.1412.6980">10.48550/arxiv.1412.6980</a></div></div>
+<div id="ref-PZMP42Ak" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">19. </div><div class="csl-right-inline"><strong>Opportunities and obstacles for deep learning in biology and medicine</strong> <div class="csl-block">Travers Ching, Daniel S Himmelstein, Brett K Beaulieu-Jones, Alexandr A Kalinin, Brian T Do, Gregory P Way, Enrico Ferrero, Paul-Michael Agapow, Michael Zietz, Michael M Hoffman, … Casey S Greene</div> <em>Journal of The Royal Society Interface</em> (2018-04) <a href="https://doi.org/gddkhn">https://doi.org/gddkhn</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1098/rsif.2017.0387">10.1098/rsif.2017.0387</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/29618526">29618526</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5938574">PMC5938574</a></div></div>
 </div>
 <div id="ref-YuJbg3zO" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">21. </div><div class="csl-right-inline"><strong>Open collaborative writing with Manubot</strong> <div class="csl-block">Daniel S Himmelstein, Vincent Rubinetti, David R Slochower, Dongbo Hu, Venkat S Malladi, Casey S Greene, Anthony Gitter</div> <em>PLOS Computational Biology</em> (2019-06-24) <a href="https://doi.org/c7np">https://doi.org/c7np</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1371/journal.pcbi.1007128">10.1371/journal.pcbi.1007128</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/31233491">31233491</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6611653">PMC6611653</a></div></div>
+<div class="csl-left-margin">20. </div><div class="csl-right-inline"><strong>Open collaborative writing with Manubot</strong> <div class="csl-block">Daniel S Himmelstein, Vincent Rubinetti, David R Slochower, Dongbo Hu, Venkat S Malladi, Casey S Greene, Anthony Gitter</div> <em>PLOS Computational Biology</em> (2019-06-24) <a href="https://doi.org/c7np">https://doi.org/c7np</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1371/journal.pcbi.1007128">10.1371/journal.pcbi.1007128</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/31233491">31233491</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6611653">PMC6611653</a></div></div>
+</div>
+<div id="ref-136NHHp17" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">21. </div><div class="csl-right-inline"><strong>Computer Visualization of Three-Dimensional Image Data Using IMOD</strong> <div class="csl-block">James R Kremer, David N Mastronarde, JRichard McIntosh</div> <em>Journal of Structural Biology</em> (1996-01) <a href="https://doi.org/d9nfzw">https://doi.org/d9nfzw</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1006/jsbi.1996.0013">10.1006/jsbi.1996.0013</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/8742726">8742726</a></div></div>
+</div>
+<div id="ref-CERJ8H0p" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">22. </div><div class="csl-right-inline"><strong>Morphofunctional changes at the active zone during synaptic vesicle exocytosis</strong> <div class="csl-block">Julika Radecke, Raphaela Seeger, Anna Kádková, Ulrike Laugks, Amin Khosrozadeh, Kenneth N Goldie, Vladan Lučić, Jakob B Sørensen, Benoît Zuber</div> <em>Cold Spring Harbor Laboratory</em> (2022-03-07) <a href="https://doi.org/gpm26v">https://doi.org/gpm26v</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1101/2022.03.07.483217">10.1101/2022.03.07.483217</a></div></div>
+</div>
+<div id="ref-7sGZgtQa" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">23. </div><div class="csl-right-inline"><strong>A rapid Percoll gradient procedure for preparation of synaptosomes</strong> <div class="csl-block">Peter R Dunkley, Paula E Jarvie, Phillip J Robinson</div> <em>Nature Protocols</em> (2008-10-16) <a href="https://doi.org/b7zwh8">https://doi.org/b7zwh8</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1038/nprot.2008.171">10.1038/nprot.2008.171</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/18927557">18927557</a></div></div>
+</div>
+<div id="ref-19ZFerhph" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">24. </div><div class="csl-right-inline"><strong>Automated electron microscope tomography using robust prediction of specimen movements</strong> <div class="csl-block">David N Mastronarde</div> <em>Journal of Structural Biology</em> (2005-10) <a href="https://doi.org/ff7gzx">https://doi.org/ff7gzx</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1016/j.jsb.2005.07.007">10.1016/j.jsb.2005.07.007</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/16182563">16182563</a></div></div>
+</div>
+<div id="ref-7UkCfakv" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">25. </div><div class="csl-right-inline"><strong>2dx_automator: Implementation of a semiautomatic high-throughput high-resolution cryo-electron crystallography pipeline</strong> <div class="csl-block">Sebastian Scherer, Julia Kowal, Mohamed Chami, Venkata Dandey, Marcel Arheit, Philippe Ringler, Henning Stahlberg</div> <em>Journal of Structural Biology</em> (2014-05) <a href="https://doi.org/f522h3">https://doi.org/f522h3</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1016/j.jsb.2014.03.016">10.1016/j.jsb.2014.03.016</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/24680783">24680783</a></div></div>
+</div>
+<div id="ref-4rVTIFyw" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">26. </div><div class="csl-right-inline"><strong>Electron counting and beam-induced motion correction enable near-atomic-resolution single-particle cryo-EM</strong> <div class="csl-block">Xueming Li, Paul Mooney, Shawn Zheng, Christopher R Booth, Michael B Braunfeld, Sander Gubbens, David A Agard, Yifan Cheng</div> <em>Nature Methods</em> (2013-05-05) <a href="https://doi.org/f4zpjf">https://doi.org/f4zpjf</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1038/nmeth.2472">10.1038/nmeth.2472</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/23644547">23644547</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3684049">PMC3684049</a></div></div>
+</div>
+<div id="ref-5DZLPDB7" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">27. </div><div class="csl-right-inline"><strong>Preparation of Primary Neurons for Visualizing Neurites in a Frozen-hydrated State Using Cryo-Electron Tomography</strong> <div class="csl-block">Sarah H Shahmoradian, Mauricio R Galiano, Chengbiao Wu, Shurui Chen, Matthew N Rasband, William C Mobley, Wah Chiu</div> <em>Journal of Visualized Experiments</em> (2014-02-12) <a href="https://doi.org/gmh9w3">https://doi.org/gmh9w3</a> <div class="csl-block">DOI: <a href="https://doi.org/10.3791/50783">10.3791/50783</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/24561719">24561719</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4089403">PMC4089403</a></div></div>
+</div>
+<div id="ref-1G9auqG3f" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">28. </div><div class="csl-right-inline"><strong>Adam: A Method for Stochastic Optimization</strong> <div class="csl-block">Diederik P Kingma, Jimmy Ba</div> <em>arXiv</em> (2014) <a href="https://doi.org/hnkr">https://doi.org/hnkr</a> <div class="csl-block">DOI: <a href="https://doi.org/10.48550/arxiv.1412.6980">10.48550/arxiv.1412.6980</a></div></div>
 </div>
 </div>
 <!-- default theme -->
@@ -1820,7 +2194,8 @@ The source code and data for this manuscript are available at <a href="https://g
       // start expanded/collapsed based on option
       if (
         startCollapsed === "true" ||
-        (startCollapsed === "auto" && isSmallScreen())
+        (startCollapsed === "auto" && isSmallScreen()) ||
+        heading.dataset.collapsed === "true"
       )
         collapseHeading(heading);
       else expandElement(heading);
@@ -2153,8 +2528,9 @@ The source code and data for this manuscript are available at <a href="https://g
     }
   }
 
-  // start script when document is finished loading
-  window.addEventListener("load", start);
+  // start script on DOMContentLoaded instead of load to ensure this plugins
+  // runs before other plugins
+  window.addEventListener("DOMContentLoaded", start);
 </script>
 <!--
   Jump to First Plugin
@@ -3999,7 +4375,7 @@ The source code and data for this manuscript are available at <a href="https://g
   Allows public annotation of the  manuscript. See https://web.hypothes.is/.
 -->
 
-<script>
+<script type="module">
   // configuration
   window.hypothesisConfig = function () {
     return {
