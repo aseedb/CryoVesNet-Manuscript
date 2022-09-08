@@ -9,7 +9,7 @@ keywords:
 - post-processing
 - automation
 lang: en-US
-date-meta: '2022-08-31'
+date-meta: '2022-09-08'
 author-meta:
 - Amin Khosrozadeh
 - Raphaela Seeger
@@ -27,8 +27,8 @@ header-includes: |-
   <meta name="citation_title" content="Deep-learning based automatic segmentation of vesicles in cryo-electron tomograms" />
   <meta property="og:title" content="Deep-learning based automatic segmentation of vesicles in cryo-electron tomograms" />
   <meta property="twitter:title" content="Deep-learning based automatic segmentation of vesicles in cryo-electron tomograms" />
-  <meta name="dc.date" content="2022-08-31" />
-  <meta name="citation_publication_date" content="2022-08-31" />
+  <meta name="dc.date" content="2022-09-08" />
+  <meta name="citation_publication_date" content="2022-09-08" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -64,9 +64,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://aseedb.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://aseedb.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://aseedb.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://aseedb.github.io/deep-prepyto-paper/v/c04a3266911cf1a22ddd43b90164429e81407a5d/" />
-  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/deep-prepyto-paper/v/c04a3266911cf1a22ddd43b90164429e81407a5d/" />
-  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/deep-prepyto-paper/v/c04a3266911cf1a22ddd43b90164429e81407a5d/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://aseedb.github.io/deep-prepyto-paper/v/9c916f8dd36aab3aa40e8f649e9362f17890dfd0/" />
+  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/deep-prepyto-paper/v/9c916f8dd36aab3aa40e8f649e9362f17890dfd0/" />
+  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/deep-prepyto-paper/v/9c916f8dd36aab3aa40e8f649e9362f17890dfd0/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -88,10 +88,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://aseedb.github.io/deep-prepyto-paper/v/c04a3266911cf1a22ddd43b90164429e81407a5d/))
+([permalink](https://aseedb.github.io/deep-prepyto-paper/v/9c916f8dd36aab3aa40e8f649e9362f17890dfd0/))
 was automatically generated
-from [aseedb/deep-prepyto-paper@c04a326](https://github.com/aseedb/deep-prepyto-paper/tree/c04a3266911cf1a22ddd43b90164429e81407a5d)
-on August 31, 2022.
+from [aseedb/deep-prepyto-paper@9c916f8](https://github.com/aseedb/deep-prepyto-paper/tree/9c916f8dd36aab3aa40e8f649e9362f17890dfd0)
+on September 8, 2022.
 </em></small>
 
 ## Authors
@@ -213,331 +213,22 @@ To alleviate this situation, we considered applying deep learning methods.
 
 Convolutional neural networks (CNN) have been successfully employed to segment cryo-ET data [@doi:10.1038/nmeth.4405]. 
 Although entirely satisfying for visualization purposes, this approach has not met the requirements of pyto.
-A recent publication described accurate SV segmentation of transmission electron microscopy images using CNN, but it is limited to 2-dimensional images of resin-embedded synapses [@doi:10.1523/ENEURO.0400-20.2021]. 
-For our use-case, a common issue is that the input data consists of 2-dimensional images.
-In the first study, cryo-ET data are decomposed in individual 2-dimensional slices, which are handed as seperate input to the CNN. 
-The independent output prediction images are re-assembled in a 3-dimensional stack.[@doi:10.1038/nmeth.4405]
-As discussed above, membranes oriented approximately parallel to the plane of the 2-dimensional tomographic images are not resolved.
-In the absence of contextual knowledge of the other 2-dimensional images, the CNN fails to segment these regions of the vesicles.
+A recent publication described accurate SV segmentation of transmission electron microscopy images using CNN, but it is limited to 2-dimensional (2D) images of resin-embedded synapses [@doi:10.1523/ENEURO.0400-20.2021].
+In the first study, cryo-ET data are decomposed in individual 2D slices, which are handed as separate input to the CNN. 
+The independent output 2D prediction images are reassembled in a 3-dimensional(3D) stack.[@doi:10.1038/nmeth.4405]
+As discussed above, membranes oriented approximately parallel to the plane of the 2D tomographic images are not resolved.
+In the absence of contextual knowledge of the other 2D images, the CNN fails to segment these regions of the vesicles.
 Hence, spherical vesicles appear open, whereas we expect closed spherical objects.
-To overcome this limitation, we used a U-Net CNN that takes 3-dimensional images as input.
-U-Net architecture has been introduced in 2015 by Ronenberger et al. [@arxiv:1505.04597].
-It consists of a contracting path, typical of CNN, and a symmetric expanding path. 
-At each expansion step, the correspondingly cropped feature map of the contracting path is concatenated. 
-The contracting path captures context, while the expanding path coupled with concatenation enables precise localization.
-The U-Net architecture was developed to achieve a fast and accurate segmentation of biomedical two-dimensional images, with the requirement of only a small fraction of training data in comparison to previous CNNs.
-*might be redundant*
-Arranging the sequence of convolution layers in the contraction path along with skip connection and concatenating into the expansion path bring significant privilege for medical and semantic segmentation.
-Concurrent with the appearance of 3D convolutional neural networks (CNN) three-dimensional form of U-Net was also developed for volumetric image analysis.
-
-It was then extended to segment 3-dimensional biomedical images (3D U-Net) [@arxiv:1606.06650].
-Weigert et al. [@doi:10.1038/s41592-018-0216-7] implemented a U-Net for content-aware restoration (CARE) of 3-dimensional fluorescence microscopy datasets. They showed that it can restore information from anisotropic and very noisy datasets.
-
+To overcome this limitation, we used a U-Net CNN that takes 3D images as input [@arxiv:1606.06650].
+Weigert et al. [@doi:10.1038/s41592-018-0216-7] implemented a U-Net for content-aware restoration (CARE) of 3D fluorescence microscopy datasets. They showed that it can restore information from anisotropic and very noisy datasets.
 We implemented a 3D U-Net based on CARE building blocks and trained it with manually segmented datasets. 
 This method provided good accuracy and was only slightly affected by the missing wedge artifact. 
-Nevertheless, it was not quite sufficient for our downstream pyto analysis.
-Hence, we developed a post-processing method, which transforms the segmented objects into spheres and refines their radius and center location.
-This leads to a substantial accuracy improvement, which are reflected in better pyto performance.
-Additionally, we designed a multivariate ranking procedure, highlighting possibly wrongly segmented SVs. 
-We also introduce a semi-automatic method to very quickly fix wrongly segmented and missed SVs.
+Nevertheless, it was not sufficient for our downstream pyto analysis.
+Hence, we developed a post-processing method, which transforms the segmented objects into spheres and refines their radius and center location. The procedure includes an outlier detection procedure.
+This lead to a substantial accuracy improvement, which are reflected in better pyto performance.
+We also introduce a semi-automatic method to very quickly fix wrongly segmented or missed SVs.
 
 Although our set of procedures was developed with the use case of SV segmentation in mind, it can be used to segment any other types of biological spherical vesicles, such as transport vesicles, secretory vesicles, endocytic vesicles, and extracellular vesicles.
-
-
-This manuscript is a template (aka "rootstock") for [Manubot](https://manubot.org/ "Manubot"), a tool for writing scholarly manuscripts.
-Use this template as a starting point for your manuscript.
-
-The rest of this document is a full list of formatting elements/features supported by Manubot.
-Compare the input (`.md` files in the `/content` directory) to the output you see below.
-
-## Basic formatting
-
-**Bold** __text__
-
-[Semi-bold text]{.semibold}
-
-[Centered text]{.center}
-
-[Right-aligned text]{.right}
-
-*Italic* _text_
-
-Combined *italics and __bold__*
-
-~~Strikethrough~~
-
-1. Ordered list item
-2. Ordered list item
-    a. Sub-item
-    b. Sub-item
-        i. Sub-sub-item
-3. Ordered list item
-    a. Sub-item
-
-- List item
-- List item
-- List item
-
-subscript: H~2~O is a liquid
-
-superscript: 2^10^ is 1024.
-
-[unicode superscripts](https://www.google.com/search?q=superscript+generator)⁰¹²³⁴⁵⁶⁷⁸⁹
-
-[unicode subscripts](https://www.google.com/search?q=superscript+generator)₀₁₂₃₄₅₆₇₈₉
-
-A long paragraph of text.
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-Putting each sentence on its own line has numerous benefits with regard to [editing](https://asciidoctor.org/docs/asciidoc-recommended-practices/#one-sentence-per-line) and [version control](https://rhodesmill.org/brandon/2012/one-sentence-per-line/).
-
-Line break without starting a new paragraph by putting  
-two spaces at end of line.
-
-## Document organization
-
-Document section headings:
-
-# Heading 1
-
-## Heading 2
-
-### Heading 3
-
-#### Heading 4
-
-##### Heading 5
-
-###### Heading 6
-
-### A heading centered on its own printed page{.center .page_center}
-
-<!-- an arbitrary comment. visible in input, but not visible in output. -->
-
-Horizontal rule:
-
----
-
-`Heading 1`'s are recommended to be reserved for the title of the manuscript.
-
-`Heading 2`'s are recommended for broad sections such as *Abstract*, *Methods*, *Conclusion*, etc.
-
-`Heading 3`'s and `Heading 4`'s are recommended for sub-sections.
-
-## Links
-
-Bare URL link: <https://manubot.org>
-
-[Long link with lots of words and stuff and junk and bleep and blah and stuff and other stuff and more stuff yeah](https://manubot.org)
-
-[Link with text](https://manubot.org)
-
-[Link with hover text](https://manubot.org "Manubot Homepage")
-
-[Link by reference][manubot homepage]
-
-[Manubot Homepage]: https://manubot.org
-
-## Citations
-
-Citation by DOI [@doi:10.7554/eLife.32822].
-
-Citation by PubMed Central ID [@pmc:PMC6103790].
-
-Citation by PubMed ID [@pubmed:30718888].
-
-Citation by Wikidata ID [@wikidata:Q56458321].
-
-Citation by ISBN [@isbn:9780262517638].
-
-Citation by URL [@{https://greenelab.github.io/meta-review/}].
-
-Citation by alias [@deep-review].
-
-Multiple citations can be put inside the same set of brackets [@doi:10.7554/eLife.32822; @deep-review; @isbn:9780262517638].
-Manubot plugins provide easier, more convenient visualization of and navigation between citations [@doi:10.1371/journal.pcbi.1007128; @pubmed:30718888; @pmc:PMC6103790; @deep-review].
-
-Citation tags (i.e. aliases) can be defined in their own paragraphs using Markdown's reference link syntax:
-
-[@deep-review]: doi:10.1098/rsif.2017.0387
-
-## Referencing figures, tables, equations
-
-Figure @fig:square-image
-
-Figure @fig:wide-image
-
-Figure @fig:tall-image
-
-Figure @fig:vector-image
-
-Table @tbl:bowling-scores
-
-Equation @eq:regular-equation
-
-Equation @eq:long-equation
-
-## Quotes and code
-
-> Quoted text
-
-> Quoted block of text
->
-> Two roads diverged in a wood, and I—  
-> I took the one less traveled by,  
-> And that has made all the difference.
-
-Code `in the middle` of normal text, aka `inline code`.
-
-Code block with Python syntax highlighting:
-
-```python
-from manubot.cite.doi import expand_short_doi
-
-def test_expand_short_doi():
-    doi = expand_short_doi("10/c3bp")
-    # a string too long to fit within page:
-    assert doi == "10.25313/2524-2695-2018-3-vliyanie-enhansera-copia-i-insulyatora-gypsy-na-sintez-ernk-modifikatsii-hromatina-i-svyazyvanie-insulyatornyh-belkov-vtransfetsirovannyh-geneticheskih-konstruktsiyah"
-```
-
-Code block with no syntax highlighting:
-
-```
-Exporting HTML manuscript
-Exporting DOCX manuscript
-Exporting PDF manuscript
-```
-
-## Figures
-
-![
-**A square image at actual size and with a bottom caption.**
-Loaded from the latest version of image on GitHub.
-](https://github.com/manubot/resources/raw/15493970f8882fce22bef829619d3fb37a613ba5/test/square.png "Square image"){#fig:square-image}
-
-![
-**An image too wide to fit within page at full size.**
-Loaded from a specific (hashed) version of the image on GitHub.
-](https://github.com/manubot/resources/raw/15493970f8882fce22bef829619d3fb37a613ba5/test/wide.png "Wide image"){#fig:wide-image}
-
-![
-**A tall image with a specified height.**
-Loaded from a specific (hashed) version of the image on GitHub.
-](https://github.com/manubot/resources/raw/15493970f8882fce22bef829619d3fb37a613ba5/test/tall.png "Tall image"){#fig:tall-image height=3in}
-
-![
-**A vector `.svg` image loaded from GitHub.**
-The parameter `sanitize=true` is necessary to properly load SVGs hosted via GitHub URLs.
-White background specified to serve as a backdrop for transparent sections of the image.
-](https://raw.githubusercontent.com/manubot/resources/main/test/vector.svg?sanitize=true "Vector image"){#fig:vector-image height=2.5in .white}
-
-## Tables
-
-| *Bowling Scores* | Jane          | John          | Alice         | Bob           |
-|:-----------------|:-------------:|:-------------:|:-------------:|:-------------:|
-| Game 1 | 150 | 187 | 210 | 105 |
-| Game 2 |  98 | 202 | 197 | 102 |
-| Game 3 | 123 | 180 | 238 | 134 |
-
-Table: A table with a top caption and specified relative column widths.
-{#tbl:bowling-scores}
-
-|         | Digits 1-33                        | Digits 34-66                      | Digits 67-99                      | Ref.                                                        |
-|:--------|:-----------------------------------|:----------------------------------|:----------------------------------|:------------------------------------------------------------|
-| pi      | 3.14159265358979323846264338327950 | 288419716939937510582097494459230 | 781640628620899862803482534211706 | [`piday.org`](https://www.piday.org/million/)               |
-| e       | 2.71828182845904523536028747135266 | 249775724709369995957496696762772 | 407663035354759457138217852516642 | [`nasa.gov`](https://apod.nasa.gov/htmltest/gifcity/e.2mil) |
-
-Table: A table too wide to fit within page.
-{#tbl:constant-digits}
-
-|          | **Colors** <!-- $colspan="2" --> |                      |
-|:--------:|:--------------------------------:|:--------------------:|
-| **Size** | **Text Color**                   | **Background Color** |
-| big      | blue                             | orange               |
-| small    | black                            | white                |
-
-Table: A table with merged cells using the `attributes` plugin.
-{#tbl: merged-cells}
-
-## Equations
-
-A LaTeX equation:
-
-$$\int_0^\infty e^{-x^2} dx=\frac{\sqrt{\pi}}{2}$$ {#eq:regular-equation}
-
-An equation too long to fit within page:
-
-$$x = a + b + c + d + e + f + g + h + i + j + k + l + m + n + o + p + q + r + s + t + u + v + w + x + y + z + 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9$$ {#eq:long-equation}
-
-## Special
-
-<i class="fas fa-exclamation-triangle"></i> [WARNING]{.semibold} _The following features are only supported and intended for `.html` and `.pdf` exports._
-_Journals are not likely to support them, and they may not display correctly when converted to other formats such as `.docx`._
-
-[Link styled as a button](https://manubot.org "Manubot Homepage"){.button}
-
-Adding arbitrary HTML attributes to an element using Pandoc's attribute syntax:
-
-::: {#some_id_1 .some_class style="background: #ad1457; color: white; margin-left: 40px;" title="a paragraph of text" data-color="white" disabled="true"}
-Manubot Manubot Manubot Manubot Manubot.
-Manubot Manubot Manubot Manubot.
-Manubot Manubot Manubot.
-Manubot Manubot.
-Manubot.
-:::
-
-Adding arbitrary HTML attributes to an element with the Manubot `attributes` plugin (more flexible than Pandoc's method in terms of which elements you can add attributes to):
-
-Manubot Manubot Manubot Manubot Manubot.
-Manubot Manubot Manubot Manubot.
-Manubot Manubot Manubot.
-Manubot Manubot.
-Manubot.
-<!-- $id="element_id" class="some_class" $style="color: #ad1457; margin-left: 40px;" $disabled="true" $title="a paragraph of text" $data-color="red" -->
-
-Available background colors for text, images, code, banners, etc:  
-
-`white`{.white}
-`lightgrey`{.lightgrey}
-`grey`{.grey}
-`darkgrey`{.darkgrey}
-`black`{.black}
-`lightred`{.lightred}
-`lightyellow`{.lightyellow}
-`lightgreen`{.lightgreen}
-`lightblue`{.lightblue}
-`lightpurple`{.lightpurple}
-`red`{.red}
-`orange`{.orange}
-`yellow`{.yellow}
-`green`{.green}
-`blue`{.blue}
-`purple`{.purple}
-
-Using the [Font Awesome](https://fontawesome.com/) icon set:
-
-<!-- include the Font Awesome library, per: https://fontawesome.com/start -->
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
-
-<i class="fas fa-check"></i> <i class="fas fa-question"></i> <i class="fas fa-star"></i> <i class="fas fa-bell"></i> <i class="fas fa-times-circle"></i> <i class="fas fa-ellipsis-h"></i>
-
-[
-<i class="fas fa-scroll fa-lg"></i> **Light Grey Banner**<br>
-useful for *general information* - [manubot.org](https://manubot.org/)
-]{.banner .lightgrey}
-
-[
-<i class="fas fa-info-circle fa-lg"></i> **Blue Banner**<br>
-useful for *important information* - [manubot.org](https://manubot.org/)
-]{.banner .lightblue}
-
-[
-<i class="fas fa-ban fa-lg"></i> **Light Red Banner**<br>
-useful for *warnings* - [manubot.org](https://manubot.org/)
-]{.banner .lightred}
 
 
 ## Results
@@ -679,166 +370,66 @@ implement automatic connector and tether segmentation as a deep leaning workflow
 
 ### Cryo-electron Tomography Datasets
 
-Two datasets of different origin were used as input and test subjects for the automatic segmentation pipeline, rat synaptosomes as well as astrocytic and neural cell cultures derived from mice.
-Both datasets have been previously analyzed [@doi:10.1101/2022.03.07.483217].
+Two datasets of different origin were used as input and test subjects for the automatic segmentation pipeline, respectively.
+They consisted in rat synaptosomes primary neuron cultures derived from mice.
+The preparation procedure of the samples from which the datasets were obtained as well as the biological analysis of these datasets was previously reported  [@doi:10.1101/2022.03.07.483217].
 
-#### Rat synaptosomes
+### Manual segmentation and automatic interboundary segment detection
 
-The preparation of the rat synaptosomes were previously described [@doi:10.1038/nprot.2008.171].
-After the purification, the synaptosomes were incubated for 30 min at room temperature.
-1.3mM CaCl_2_ and 10 nm gold fiducials were added (gold fiducials, #s10110/8. AURION Immuno Gold Reagents & Accessories. Wageningen, The Neatherlands).
-The synaptosome solution was applied to a 200-mesh lacey finder carbon film grid (#AGS166-H2. Agar Scientific. Elektron Technology UK Ltd. Stansted, UK).
-Manual blotting was used to remove excess liquid with a filter paper.
-Thereafter, the grid was immediately plunge frozen in liquid ethane using a home built plunge freezer controlled with a LabView script (National Instruments Corporation. Mopac Expwy Austin, TX, USA).
-The grids coated with rat synaptosomes were mounted in a cryo-holder (Gatan, Pleasonton, CA, USA) and transferred to a Tecnai F20 (FEI, Eindhoven, The Netherlands) which was set to low dose conditions, operated at 200 kV, and equipped with a field emission gun.
-Images were recorded with a 2k x 2k CCD camera (Gatan) mounted after a GIF Tridiem post-column filter (Gatan) operated in zero-loss mode.
-The sample was kept at about -180 °C.
-Tilt series were acquired using SerialEM [@doi:10.1016/j.jsb.2005.07.007] for automated acquisition recorded typically from -50° to 50° with a 2° angular increment and an unbinned pixel size of 0.75 or 1.2 nm.
-Due to sample thickness (400-700 nm), tomograms were usually not recorded with higher tilt angles.
-Defocus was set between -8 to -12 µm and the total electron dose used was about 80-100 e^-^/Å^2^.
-Some tomograms were acquired at a Titan Krios equipped with a K2 direct electron detector (Gatan) without energy filter.
-The K2 camera was operated in super-resolution counting mode and between 8-40 frames per tilt angle were taken.
-Tilt series were acquired using the Latitude software (Gatan) for automated acquisition recorded typically from -60° to 60° with a 2° angular increment and an unbinned pixel size of 0.6 nm.
-Defocus was set between -8 to -12 µm and the total electron dose used was about 80-100 e^-^/Å^2^.
-Before image processing the frames at each tilt angle, frames were aligned and averaged in 2dx MC_Automator [@doi:10.1016/j.jsb.2014.03.016] with motioncor [@doi:10.1038/nmeth.2472].
-3D reconstruction was done in IMOD [@doi:10.1006/jsbi.1996.0013].
-The alignments were done using the automated fiducial tracking function and the 3D reconstructions were done using the weighted back projection followed by a nonlinear anisotropic diffusion (NAD) filtering.
-
-#### Astrocytic and neuronal mouse culture
-
-The preparation of astrocytic and neuronal culture has been published before [@doi:10.3791/50783].
-After 12 to 14 days of incubation, grids with mouse neurons were plunge frozen with a Vitrobot (Thermofisher Scientific, Mark IV) with a blot time of 3 s and a blot force of -10.
-Wait time and drain time were not used. 
-Humidity was set to 100% at 4 °C. 
-4 µl undiluted 10 nm BSA gold tracer (Aurion) was added directly onto the grid prior to plunge freezing.
-Cultured mouse neurons tilt series were acquired at a Titan Krios, equipped with a Falcon 3 direct electron detector (Thermofisher Scientific) without energy filter.
-The Falcon camera was operated in linear mode.
-Tilt series were acquired using the TEM Tomography software (TFS) for automated acquisition, recorded typically from -60° to 60° with a 2° angular increment and an unbinned pixel size of 0.37 nm.
-Defocus was set between -6 to -10 µm and the total electron dose used was about 80-100 e^-^/Å^2^.
-Tomogram reconstruction was done in the same way as for the synaptosome datasets.
-
-### Manual segmentation procedures
-
-Manual segmentation of SVs, mitochondria, and the active zone PM was done in IMOD (Figure S4A&B).
-The boundary marked the region to be analyzed by Pyto [@doi:10.1016/j.jsb.2016.10.004].
+Manual segmentation of SVs, mitochondria, the active zone PM, and of the segmentation region was done in IMOD (???Figure S4A&B???) [@10.1006/jsbi.1996.0013]. SVs were segmented as spheres.
+The segmentation region marked the region to be analyzed by Pyto [@doi:10.1016/j.jsb.2016.10.004].
 The analysis by Pyto was essentially the same as described previously [@doi:10.1083/jcb.200908082; @doi:10.1016/j.jsb.2016.10.004].
-
-In short, the segmented area is divided in 1 voxel thick layers parallel to the active zone for distance calculations.
-A hierarchical connectivity segmentation detects densities interconnecting vesicles (so-called connectors) and densities connecting vesicles to the active zone PM (so-called tethers) (Figure `\_add figure number*`{.green}).
-Distance calculations are done with the center of the vesicle.
-Mainly default settings were used.
+In short, the segmented region is divided in 1 voxel thick layers parallel to the active zone for distance calculations.
+A hierarchical connectivity segmentation detects densities interconnecting boundaries.
+The boundaries were synaptic vesicles and the active zone PM. Detected intervesicular segments are termed connectors and segments connecting vesicles to the active zone PM are called tethers (Figure `\_add figure number*`{.green}).
+Distance calculations respective to SVs were done from SV center.
 The segmentation procedure is conservative and tends to miss some tethers and connectors because of noise.
 Consequently, the numbers of tethers and connectors should not be considered as absolute values, but rather to compare experimental groups.
 As it was done before, an upper limit was set between 2100 and 3200 nm^3^ on segment volume.
 The tomograms that were used for this analysis were binned by a factor of 2 to 3, resulting in voxel sizes between 2.1 and 2.4 nm.
 
 ### Pre-processing of manual segmentation outputs from IMOD for further use (jupyter notebook pre-pyto)
+`probably not necessary to mention output from IMOD to prepyto input label file procedure`
+
+`put this somewhere else`.{green}
+The used datasets included a total of 30 tomograms with heterogeneous pixel sizes, defocus and resolution. 
+
+1. 9 synaptosome datasets were used for training and validation.
+2. 9 synaptosome datasets was used for test.
+3. 12 Neuron dataset were used for assessing transfer learning potential. 
+
+### Network architecture and training procedure
+
+We used a U-Net of depth 2, two convolutional layers per depth, a convolutional kernel size of 3, and ReLU activation function based on the open-source CARE framework (Figure {@fig:unet}) [@doi:10.1038/s41592-018-0216-7]. 
+Datasets were prepared by splitting the 3D tomographic volume of synaptosomes into 32^3^ voxels subvolumes and keeping only subvolumes occupied by a sufficient amount (> 1000 voxels) of binarized vesicle label.
+860 subvolumes were used for training and 100 subvolumes were used for validation.
+We used the Adam optimizer on a binary cross-entropy loss function.
 
 
-
-### Description of Machine Learning 
-
-This experiment was conducted on a workstation with an AMD Ryzen Threadripper 3970X CPU with an NVIDIA GeForce RTX 2080 Ti GPU. 
-All the framework has been implemented in Python using the Keras library (2.4.3) and TensorFlow (2.4.1). 
-The workflow includes a GUI based on a multidimensional image viewer, Napari (0.4.15), enabling the user to add and remove vesicles.
-`\_any other packages required?*`{.green}
+![**Network architecture used for vesicle segmentation.** We used a U-Net based on the CARE framework [@doi:10.1038/s41592-018-0216-7]. The input is a cubic volume of 32^3^ voxels. The output is a per-prix probabilty cube of the same size as the input. ](images/unet.png){#fig:unet width="10cm"}
 
 
-The used datasets included a total of 30 tomograms with heterogeneous pixel sizes, defocus and resolution.
+### U-Net output threshold refinement
 
-1. All 9 tomograms Dataset: partially segmented and used for training (Synaptosome)
-2. A single tomogram with the exactly same setup and sample preparation like the train dataset
-3. 8 Synaptosome tomograms Dataset:  with ground truth (with an exceeding treatment on the samples)
-4. 12 Neuron fully segmented tomograms Dataset: with completely different sample preparation and microscope setup
-
-`\_this is not good place to talk about evalution *`{.green}
-
-
-#### Deep Model Training with a 3D U-Net
-
-##### Create an Input Voxel Patch
-
-The training set was prepared by splitting the 3D tomographic volume into 32x32x32 `\_voxels??*`{.green} sub volumes and keeping only volumes occupied by a sufficient amount (> 1000 voxels) of binarized vesicle labels.
-The obtained sub volumes were randomly divided into ten subsets of the training set, this method is termed k-fold cross-validation in the field of machine learning. 
-`\_this is a wrong statment we dont do cross validation just split(fold) data *`{.green}
-All of these subsets or "folds" were used as training sets, as an entirely separate set of tomographic subvolumes was used for validation, to avoid overfitting.
-
-`\_are the folds overlapping? are the tomograms normalized any further than the NAD from previous segmentation before feeding it to the deeplearning model? add image from odt??, the 2D slices of the subset are supposed to be 32x32x32, but seem to have a different size... padding?? ---> results*`{.green}
-
-##### 3D U-Net architecture
-
-The previously prepared subsets are fed into the 3D U-Net in batches of 50. `\_cite Ronneberger, what was changed compared to the original U-Net, is there a better publication to cite?*`{.green}
-These were passed through the U-Net in a total of 200 epochs.
-Batch normalization was applied before Rectified Linear Unit (ReLU) activation `\_was it? cite Ioffe & Szegedy, maybe? [@doi:10.48550/arXiv.1502.03167]*`{.green}.
-
-`\_we do not use deconv layers, instead we upsample (by repeating the data) and then apply a convolution.*`{.green}
-`\_as far as I know, nobody uses analysis/expantion path, encoder/decoder is the common and correct term.*`{.green}
-The 3D U-Net architecture is composed of a contracting or analysis path!! (convolutional layers), and an expanding or synthesis path (deconvolutional!! layers) (Figure {@fig:unet}).
-`\_did we wrote our own U-Net or do we need to quote someones github for the original framework*`{.green}
-`\_we used CSBDeep for Convoultion blocks Benoit mentioned it in the introdction we can bring it here but github licence is BSD 3-Clause License whihc it means we dont need to reference *`{.green} 
-
-![**Segmentation Network: U-Net.** Input Size is 32^3 `\_voxels??*`, in each resolution we have two convolution layers followed by batch normalization layer and rectified Linear Units (ReLU) activation function. Intermediate sizes are written on top of arrows, number of convolution filters is written bottom of boxes. Skip connections show concatenation of the features from contracting path (left side of the network) and expansive path (right side of the network).`\_explain different colors, do they correspond with the different steps? for example: red- max pooling 2x2x2? add figure legend?*`{.green} ](images/unet.png){#fig:unet width="10cm"}
-
-`\_what do we use as initial encoder weights and backbone*`{.green} 
-`\_code checked: keras- The Glorot uniform initializer, also called Xavier uniform initializer.*`{.green} 
-During each layer of the analysis path, the convolution filter consisting of a 3x3x3 kernel, with randomly initialized weights, was moved over all the voxels in each subset twice `\_what do you mean by "twice"?  *`{.green}, each time taking their dot product.
-This kernel extracts and enhances the features in different parts of the image.
-This is followed by a ReLU function, which can be described as 
-
-$$f(x)=max(0,x)$$
-
-which will output the positive input directly, while setting the negative input to 0.
-
-Between each layer, the voxels were condensed, or down sampled, via a max-pooling step of 2x2x2, in which the maximum value of the 2x2x2 voxel cube is put forth.
-With every layer of the U-Net, the input size thereby halves, while the number of channels doubles.
-
-While the analysis path focuses on the identification of the areas of interest, the synthesis part focuses on their localization.
-The synthesis path of the U-Net uses the same basic architecture as the analysis path, with a slight variation of using up convolution operation and implementing skip connections, where feature maps of the analysis part are concatenated to the output of the transposed convolutions of the same level. 
-
-`\_code checked:final = Conv3D(n_channel_out, (1,) * n_dim, activation='sigmoid')(unet) *`{.green} 
-The sigmoid/Softmax `\_in the image you write Sigmoid but in the text Softmax, which activation function was used?*`{.green} activation function is the last block of the U-Net (Figure {@fig:unet}), it triggers the loss function, which converts the output from the decoder path into a mask, where each voxel is assigned as either vesicle or not-vesicle.
-As the segmentation of vesicles can be considered a binary classification task, binary cross-entropy was implemented as a loss function.
-
-$$Loss= -\frac{1}{output  size}\sum_{i=1}^{output size} y_i * log  ŷ_i + (1-y_1) * log  (1-ŷ_1)$$
-
-with the *output size* being the number of scalar values in the model output, *ŷ_1_* being the *i*-th scalar value in the model output and *y_i_* being the corresponding target value.
-`\_publication to cite?*`{.green}
-
-To optimize the weights and reduce the loss function during training, the Adam optimizer was used [@doi:10.48550/arXiv.1412.6980].
-200 epochs were run until the loss function reached a global minimum.
-`\_it's a local minima, we are optimizing a non-convex function with thousands of parameters*`{.green}
+The probability mask output by the U-Net was first made binary by determining a global threshold value. To this end, the mask was binarized for a range of threshold values comprised between 0.8 and 1. For each probability value a 1-voxel thick label shell  was computed. 
+The shell mask was then applied on the input data and the average masked voxel intensity was computed.
+Since the shell of correctly segmented vesicles corresponds to the vesicle membrane, we expect low intensity pixels.
+The threshold value resulting in the minimal average intensity of the shell masked voxels was used as the global threshold.  
+`Amin please write the equations for these steps`.{green}.
+The probability mask was binarized using the global threshold and was each separate segment was assigned an individual label with `scikit-image label` method.
 
 
-##### Mask prediction
-
-The tomograms are large, 3D volumes.
-They therefore were split into 32x32x32 patches with a step size of 24 (stride) before the U-Net. 
-The small prediction patches, which were the output of the U-Net, were then stitched together to get the final probability mask.
-
-#### Transfer Learning / Neuron Dataset
-
-
-### Postprocessing
-
-
-#### Estimating Global Threshold
-
-In electron microscopic images, dense areas of the specimen appear darker, as fewer electrons are able to pass through that area of the sample.
-Therefore, the cellular and vesicular membrane, among other features, appear darker than the background.
-Binary cross-entropy was utilized to binarize the obtained probability mask. 
-To determine the required threshold, several threshold values (between 0.8 and 1.0) were tested and the one that minimized the average of luminance of all marginal voxels was selected.(srounnd of vesicles)
-`\_add image from odt??*`{.green}
-
-#### Adaptive Localized Threshold
-
-The global threshold identifies the majority synaptic vesicles.
-Some vesicles, however, are more difficult to detect.
-This might be, due to high intensity variations within the tomogram, or because the predicted binarized labels are do not match the spherical shape of vesicles. `\_should go to results?*`{.green}
-
-In terms of binarized lables not matching the spherical shape of vesicles, two main classes were identified: vesicles that were in close proximity to another and got connected, and vesicles, which were only partially captured. 
-These two classes were then separated from the rightfully identified vesicles by comparing their label sizes and their extent value  (Ratio of pixels in the region to pixels in the total bounding box computed as area / (rows * cols)). `\_write this into a clean formula*`{.green}
-In the next step, probability masks of the partially detected vesicles were expanded in an effort to find the correct mask.
-The probability masks of the connected vesicles, however, were minimized by searching for a more precise threshold, with the goal of separating the vesicles.
+A majority of vesicles were correctly segmented but we noticed some segments included two vesicles.
+We therefore evaluated each segment with two criteria based on the fact that synaptic vesicles have a homogenous size and are spherical. 
+Firstly we calculated the volume z-score $z$ for each segment:
+$$z(i) = \frac{v(i) - \mu(v)}{\sigma(v)}$$ {#eq:z-score-volume}
+where $v(i)$ is the volume of segment $i$, $\mu(v)\$ the average segment volume, and $\sigma(v)$ the standard deviation of the segment volumes.
+Secondly, we computed the segment extent $e$:
+$$e(i) = \frac{v(i)}{b(i)}$$ {#eq:extent}
+where $v(i)$ is the segment volume and $b_i$ is the volume of segment bounding box.
+The extent of a sphere equals $\frac{\pi}{6}$.
+Segments with both a z-score $z > 1$ and an extent $e < 0.25$ were considered as potentially comprising two vesicles.
+For each of these segments, the probability mask threshold was increased until two distinct segments were generated.
 
 
 #### Radial Profile
