@@ -89,9 +89,9 @@
   <meta name="citation_fulltext_html_url" content="https://aseedb.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://aseedb.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://aseedb.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://aseedb.github.io/deep-prepyto-paper/v/e19c63357c2d5f65d0460bd9a7fcaa10a7837a1f/" />
-  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/deep-prepyto-paper/v/e19c63357c2d5f65d0460bd9a7fcaa10a7837a1f/" />
-  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/deep-prepyto-paper/v/e19c63357c2d5f65d0460bd9a7fcaa10a7837a1f/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://aseedb.github.io/deep-prepyto-paper/v/b379e00dc190e2828ec3cc6fc20819b029053166/" />
+  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/deep-prepyto-paper/v/b379e00dc190e2828ec3cc6fc20819b029053166/" />
+  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/deep-prepyto-paper/v/b379e00dc190e2828ec3cc6fc20819b029053166/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -112,9 +112,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://aseedb.github.io/deep-prepyto-paper/v/e19c63357c2d5f65d0460bd9a7fcaa10a7837a1f/">permalink</a>)
+(<a href="https://aseedb.github.io/deep-prepyto-paper/v/b379e00dc190e2828ec3cc6fc20819b029053166/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/aseedb/deep-prepyto-paper/tree/e19c63357c2d5f65d0460bd9a7fcaa10a7837a1f">aseedb/deep-prepyto-paper@e19c633</a>
+from <a href="https://github.com/aseedb/deep-prepyto-paper/tree/b379e00dc190e2828ec3cc6fc20819b029053166">aseedb/deep-prepyto-paper@b379e00</a>
 on September 11, 2022.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -827,7 +827,7 @@ Initial spherical conversion was done by setting the center of the sphere <span 
 The segment position and radius was iteratively refined as follows.
 1. The radial average <span class="math inline">\(\langle I(d)\rangle\)</span> was computed:
 <span id="eq:radial_average" class="eqnos"><span class="math display">\[\langle I(d)\rangle = \frac{1}{4\pi ^2 r^2} \int_{0}^{2\pi}\int_{0}^{2\pi}I(d,\theta ,\phi) \, d\phi \, d\theta\]</span><span class="eqnos-number">(3)</span></span> 
-where <span class="math inline">\(d\)</span> is the radial distance from the segment center, <span class="math inline">\(\theta\)</span> the polar angle, and <span class="math inline">\(phi\)</span> the azimuthal angle.
+where <span class="math inline">\(d\)</span> is the radial distance from the segment center, <span class="math inline">\(\theta\)</span> the polar angle, and <span class="math inline">\(\phi\)</span> the azimuthal angle.
 2. The radius of the vesicle <span class="math inline">\(r\)</span> was updated as:
 <span id="eq:vesicle_radius" class="eqnos"><span class="math display">\[r = d_m + \frac{t_m}{2}\]</span><span class="eqnos-number">(4)</span></span> 
 where <span class="math inline">\(d_m\)</span> is the radial distance of center of the vesicle membrane, and <span class="math inline">\(t_m\)</span> the thickness of the vesicle membrane.
@@ -839,11 +839,11 @@ where <span class="math inline">\((x,y,z)=(0,0,0)\)</span> is the coordinate of 
 4. We computed by cross-correlation the shift between the obtained 3-D average and the 3-D image in the cubic box with central coordinates <span class="math inline">\(C\)</span> and edge length <span class="math inline">\(l = 2r + c\)</span>, where <span class="math inline">\(c\)</span> is a constant.
 <span class="math inline">\(C\)</span> was updated by subtraction of the shift.
 5. Steps 1 to 4 were repeated for a maximum of 10 iterations until convergence or until a total shift of <span class="math inline">\(\frac{1}{2}\sqrt{3l_o^2}\)</span>, where $l_o is the edge length of the initial box.
-The feature space of predicted vesicle labels was computed, containing membrane thickness <span class="math inline">\(t_m\)</span>, membrane intensity $, and vesicle radius <span class="math inline">\(r\)</span>.
-Membrane intensity <span class="math inline">\(\rho\)</span> was defined as the mean intensity of the radial average over the radial distance range <span class="math inline">\([d_m - \frac{t_m}{2}\,,\,d_m + \frac{t_m}{2}]\)</span>.</p>
+The feature space of predicted vesicle labels was computed, containing membrane thickness <span class="math inline">\(t_m\)</span>, membrane intensity <span class="math inline">\(\rho\)</span>, and vesicle radius <span class="math inline">\(r\)</span>.
+<span class="math inline">\(\rho\)</span> was defined as the mean intensity of the radial average within the radial distance interval <span class="math inline">\([d_m - \frac{t_m}{2}\,,\,d_m + \frac{t_m}{2}]\)</span>.</p>
 <p>Using this multivariate feature space, we detect outliers by computing Mahalanobis Distances (MD) on normalized variables using the covariance matrix of observation and obtaining The p-value of MD.
 <code class="yellow">The sphere segments with a p-value higher than a defined threshold were discarded and the process was repeated iteratively. If the MD p-value of a specific vesicle was not in a specific margin range (0-10), their radial profile was recalculated, and the label entirely removed if they again failed to pass the margin of the p-value.</code>
-<code class="green">Amin, please check what exactly was done with the outliers.  And p-value cannot be higher than 1, while you wrote (0-10</code></p>
+<code class="green">Amin, please check what exactly was done with the outliers.  And p-value cannot be higher than 1, while you wrote (0-10)</code></p>
 <h3 id="analysis-of-results">Analysis of Results</h3>
 <p>The evaluation framework was designed to assess the capabilities of the proposed toolbox for automatic synaptic vesicle segmentation.
 The framework was not only designed to evaluate quantitatively performance of the neural network, but rather assay the segmentation of vesicles in practice <code class="green">\_unsure what the last part means*</code>. <code class="green">\_I tried to say we develop the software rather than an algorithm paper with ablation study kinda more trasnfer learning but however for tranfer learning we might need add finetunning the network or say this sentence in other way*</code>.

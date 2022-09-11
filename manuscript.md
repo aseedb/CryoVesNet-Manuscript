@@ -64,9 +64,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://aseedb.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://aseedb.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://aseedb.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://aseedb.github.io/deep-prepyto-paper/v/e19c63357c2d5f65d0460bd9a7fcaa10a7837a1f/" />
-  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/deep-prepyto-paper/v/e19c63357c2d5f65d0460bd9a7fcaa10a7837a1f/" />
-  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/deep-prepyto-paper/v/e19c63357c2d5f65d0460bd9a7fcaa10a7837a1f/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://aseedb.github.io/deep-prepyto-paper/v/b379e00dc190e2828ec3cc6fc20819b029053166/" />
+  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/deep-prepyto-paper/v/b379e00dc190e2828ec3cc6fc20819b029053166/" />
+  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/deep-prepyto-paper/v/b379e00dc190e2828ec3cc6fc20819b029053166/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -88,9 +88,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://aseedb.github.io/deep-prepyto-paper/v/e19c63357c2d5f65d0460bd9a7fcaa10a7837a1f/))
+([permalink](https://aseedb.github.io/deep-prepyto-paper/v/b379e00dc190e2828ec3cc6fc20819b029053166/))
 was automatically generated
-from [aseedb/deep-prepyto-paper@e19c633](https://github.com/aseedb/deep-prepyto-paper/tree/e19c63357c2d5f65d0460bd9a7fcaa10a7837a1f)
+from [aseedb/deep-prepyto-paper@b379e00](https://github.com/aseedb/deep-prepyto-paper/tree/b379e00dc190e2828ec3cc6fc20819b029053166)
 on September 11, 2022.
 </em></small>
 
@@ -439,7 +439,7 @@ Initial spherical conversion was done by setting the center of the sphere $C$ at
 The segment position and radius was iteratively refined as follows. 
 1. The radial average $\langle I(d)\rangle$ was computed:
 $$\langle I(d)\rangle = \frac{1}{4\pi ^2 r^2} \int_{0}^{2\pi}\int_{0}^{2\pi}I(d,\theta ,\phi) \, d\phi \, d\theta$$ {#eq:radial_average}
-where $d$ is the radial distance from the segment center, $\theta$ the polar angle, and $phi$ the azimuthal angle.
+where $d$ is the radial distance from the segment center, $\theta$ the polar angle, and $\phi$ the azimuthal angle.
 2. The radius of the vesicle $r$ was updated as:
 $$r = d_m + \frac{t_m}{2}$$ {#eq:vesicle_radius}
 where $d_m$ is the radial distance of center of the vesicle membrane, and $t_m$ the thickness of the vesicle membrane.
@@ -451,14 +451,14 @@ where $(x,y,z)=(0,0,0)$ is the coordinate of the segment center.
 4. We computed by cross-correlation the shift between the obtained 3-D average and the 3-D image in the cubic box with central coordinates $C$ and edge length $l = 2r + c$, where $c$ is a constant.
 $C$ was updated by subtraction of the shift. 
 5. Steps 1 to 4 were repeated for a maximum of 10 iterations until convergence or until a total shift of $\frac{1}{2}\sqrt{3l_o^2}$, where $l_o is the edge length of the initial box. 
-The feature space of predicted vesicle labels was computed, containing membrane thickness $t_m$, membrane intensity $\rho, and vesicle radius $r$.
-Membrane intensity $\rho$ was defined as the mean intensity of the radial average over the radial distance range $[d_m - \frac{t_m}{2}\,,\,d_m + \frac{t_m}{2}]$.
+The feature space of predicted vesicle labels was computed, containing membrane thickness $t_m$, membrane intensity $\rho$, and vesicle radius $r$.
+$\rho$ was defined as the mean intensity of the radial average within the radial distance interval $[d_m - \frac{t_m}{2}\,,\,d_m + \frac{t_m}{2}]$.
 
 Using this multivariate feature space, we detect outliers by computing Mahalanobis Distances (MD) on normalized variables using the covariance matrix of observation and obtaining The p-value of MD.
 `The sphere segments with a p-value higher than a defined threshold were discarded and the process was repeated iteratively.
 If the MD p-value of a specific vesicle was not in a specific margin range (0-10), their radial profile was recalculated, and the label entirely removed if they again failed to pass the margin of the p-value.`{.yellow}
 `Amin, please check what exactly was done with the outliers. 
-And p-value cannot be higher than 1, while you wrote (0-10`{.green}
+And p-value cannot be higher than 1, while you wrote (0-10)`{.green}
 
 ### Analysis of Results
 
