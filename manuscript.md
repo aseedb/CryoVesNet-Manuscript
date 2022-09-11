@@ -9,7 +9,7 @@ keywords:
 - post-processing
 - automation
 lang: en-US
-date-meta: '2022-09-08'
+date-meta: '2022-09-11'
 author-meta:
 - Amin Khosrozadeh
 - Raphaela Seeger
@@ -27,8 +27,8 @@ header-includes: |-
   <meta name="citation_title" content="Deep-learning based automatic segmentation of vesicles in cryo-electron tomograms" />
   <meta property="og:title" content="Deep-learning based automatic segmentation of vesicles in cryo-electron tomograms" />
   <meta property="twitter:title" content="Deep-learning based automatic segmentation of vesicles in cryo-electron tomograms" />
-  <meta name="dc.date" content="2022-09-08" />
-  <meta name="citation_publication_date" content="2022-09-08" />
+  <meta name="dc.date" content="2022-09-11" />
+  <meta name="citation_publication_date" content="2022-09-11" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -64,9 +64,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://aseedb.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://aseedb.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://aseedb.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://aseedb.github.io/deep-prepyto-paper/v/9c916f8dd36aab3aa40e8f649e9362f17890dfd0/" />
-  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/deep-prepyto-paper/v/9c916f8dd36aab3aa40e8f649e9362f17890dfd0/" />
-  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/deep-prepyto-paper/v/9c916f8dd36aab3aa40e8f649e9362f17890dfd0/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://aseedb.github.io/deep-prepyto-paper/v/e19c63357c2d5f65d0460bd9a7fcaa10a7837a1f/" />
+  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/deep-prepyto-paper/v/e19c63357c2d5f65d0460bd9a7fcaa10a7837a1f/" />
+  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/deep-prepyto-paper/v/e19c63357c2d5f65d0460bd9a7fcaa10a7837a1f/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -88,10 +88,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://aseedb.github.io/deep-prepyto-paper/v/9c916f8dd36aab3aa40e8f649e9362f17890dfd0/))
+([permalink](https://aseedb.github.io/deep-prepyto-paper/v/e19c63357c2d5f65d0460bd9a7fcaa10a7837a1f/))
 was automatically generated
-from [aseedb/deep-prepyto-paper@9c916f8](https://github.com/aseedb/deep-prepyto-paper/tree/9c916f8dd36aab3aa40e8f649e9362f17890dfd0)
-on September 8, 2022.
+from [aseedb/deep-prepyto-paper@e19c633](https://github.com/aseedb/deep-prepyto-paper/tree/e19c63357c2d5f65d0460bd9a7fcaa10a7837a1f)
+on September 11, 2022.
 </em></small>
 
 ## Authors
@@ -391,7 +391,7 @@ The tomograms that were used for this analysis were binned by a factor of 2 to 3
 ### Pre-processing of manual segmentation outputs from IMOD for further use (jupyter notebook pre-pyto)
 `probably not necessary to mention output from IMOD to prepyto input label file procedure`
 
-`put this somewhere else`.{green}
+`put this somewhere else`{.green}
 The used datasets included a total of 30 tomograms with heterogeneous pixel sizes, defocus and resolution. 
 
 1. 9 synaptosome datasets were used for training and validation.
@@ -401,7 +401,7 @@ The used datasets included a total of 30 tomograms with heterogeneous pixel size
 ### Network architecture and training procedure
 
 We used a U-Net of depth 2, two convolutional layers per depth, a convolutional kernel size of 3, and ReLU activation function based on the open-source CARE framework (Figure {@fig:unet}) [@doi:10.1038/s41592-018-0216-7]. 
-Datasets were prepared by splitting the 3D tomographic volume of synaptosomes into 32^3^ voxels subvolumes and keeping only subvolumes occupied by a sufficient amount (> 1000 voxels) of binarized vesicle label.
+Datasets were prepared by splitting the 3D tomographic volume of synaptosomes into 32^3^-voxel subvolumes and keeping only subvolumes occupied by a sufficient amount (> 1000 voxels) of binarized vesicle label.
 860 subvolumes were used for training and 100 subvolumes were used for validation.
 We used the Adam optimizer on a binary cross-entropy loss function.
 
@@ -415,37 +415,50 @@ The probability mask output by the U-Net was first made binary by determining a 
 The shell mask was then applied on the input data and the average masked voxel intensity was computed.
 Since the shell of correctly segmented vesicles corresponds to the vesicle membrane, we expect low intensity pixels.
 The threshold value resulting in the minimal average intensity of the shell masked voxels was used as the global threshold.  
-`Amin please write the equations for these steps`.{green}.
+`Amin please write the equations for these steps`{.green}.
 The probability mask was binarized using the global threshold and was each separate segment was assigned an individual label with `scikit-image label` method.
 
 
 A majority of vesicles were correctly segmented but we noticed some segments included two vesicles.
 We therefore evaluated each segment with two criteria based on the fact that synaptic vesicles have a homogenous size and are spherical. 
 Firstly we calculated the volume z-score $z$ for each segment:
-$$z(i) = \frac{v(i) - \mu(v)}{\sigma(v)}$$ {#eq:z-score-volume}
-where $v(i)$ is the volume of segment $i$, $\mu(v)\$ the average segment volume, and $\sigma(v)$ the standard deviation of the segment volumes.
+$$z(S_i) = \frac{V(S_i) - \mu}{\sigma}$$ {#eq:z-score-volume}
+where $S_i$ is the segment $i$, $V(S_i)$ is the volume of $S_i$, $\mu$ the average volume of all segments, and $\sigma$ the standard deviation of the segment volumes.
 Secondly, we computed the segment extent $e$:
-$$e(i) = \frac{v(i)}{b(i)}$$ {#eq:extent}
-where $v(i)$ is the segment volume and $b_i$ is the volume of segment bounding box.
+$$e(S_i) = \frac{V(S_i)}{B(S_i)}$$ {#eq:extent}
+where $B(S_i)$ is the volume of segment $i$ bounding box.
 The extent of a sphere equals $\frac{\pi}{6}$.
 Segments with both a z-score $z > 1$ and an extent $e < 0.25$ were considered as potentially comprising two vesicles.
 For each of these segments, the probability mask threshold was increased until two distinct segments were generated.
+Subsequently, the extent and volume of all segments was evaluated again. Any segment with $e < 0.25$, or $e > 0.75$, or $V < k$ was discarded. 
+This ensured that segments deviating highly from spherical shape and segments with a volume smaller than an acceptable volume $k$ were removed.
 
+Even if most synaptic vesicles were detected and well segmented, segmentation accuracy was not sufficient for our downstream application.
+To improve accuracy, each segment was converted to a spherical segment and its radius and position was refined.
+Initial spherical conversion was done by setting the center of the sphere $C$ at the position of the centroid of the segment, while the radius $r$ was defined as half the length of the bounding box longest edge. 
+The segment position and radius was iteratively refined as follows. 
+1. The radial average $\langle I(d)\rangle$ was computed:
+$$\langle I(d)\rangle = \frac{1}{4\pi ^2 r^2} \int_{0}^{2\pi}\int_{0}^{2\pi}I(d,\theta ,\phi) \, d\phi \, d\theta$$ {#eq:radial_average}
+where $d$ is the radial distance from the segment center, $\theta$ the polar angle, and $phi$ the azimuthal angle.
+2. The radius of the vesicle $r$ was updated as:
+$$r = d_m + \frac{t_m}{2}$$ {#eq:vesicle_radius}
+where $d_m$ is the radial distance of center of the vesicle membrane, and $t_m$ the thickness of the vesicle membrane.
+$d_m$ was defined as the radial distance for which the radial average was minimal.
+$\frac{t_m}{2}$ was calculated as the distance between the center of the vesicle membrane and the minimum of the second derivative of the radial profile in the interval between the center of the vesicle membrane and the maximum of the Fresnel fringe outside the membrane.
+3. The radial average was back projected in 3-dimension:
+$$I(x,y,z) =  \langle I(\sqrt{x^2+y^2+z^2})\rangle$$ {#eq:3d-average}
+where $(x,y,z)=(0,0,0)$ is the coordinate of the segment center.
+4. We computed by cross-correlation the shift between the obtained 3-D average and the 3-D image in the cubic box with central coordinates $C$ and edge length $l = 2r + c$, where $c$ is a constant.
+$C$ was updated by subtraction of the shift. 
+5. Steps 1 to 4 were repeated for a maximum of 10 iterations until convergence or until a total shift of $\frac{1}{2}\sqrt{3l_o^2}$, where $l_o is the edge length of the initial box. 
+The feature space of predicted vesicle labels was computed, containing membrane thickness $t_m$, membrane intensity $\rho, and vesicle radius $r$.
+Membrane intensity $\rho$ was defined as the mean intensity of the radial average over the radial distance range $[d_m - \frac{t_m}{2}\,,\,d_m + \frac{t_m}{2}]$.
 
-#### Radial Profile
-
-`\_@Benoit?*`{.green}
-
-#### Outlier Removal
-
-The feature space of predicted vesicle labels was defined, containing thickness, membrane density, and estimated radius of a vesicle. `\_@Benoit: after radial profile, we can add the definition of thinness and membrane as well*`{.blue}
-To detect outliers in this multivariate space, Mahalanobis Distance (MD) was applied to calculate L2 norm distance on normalized variables using the covariance matrix of observation.
-As an additional way to detect outliers, the p-value of MD was calculated, bringing this evaluation setup in iterative form.
-If the MD p-value of a specific vesicle was not in a specific margin range (0-10), their radial profile was recalculated, and the label entirely removed if they again failed to pass the margin of the p-value.
-
-#### Radius Estimation (Cross Correlation through Radial Profile)
-
-`\_@Benoit?*`{.green}
+Using this multivariate feature space, we detect outliers by computing Mahalanobis Distances (MD) on normalized variables using the covariance matrix of observation and obtaining The p-value of MD.
+`The sphere segments with a p-value higher than a defined threshold were discarded and the process was repeated iteratively.
+If the MD p-value of a specific vesicle was not in a specific margin range (0-10), their radial profile was recalculated, and the label entirely removed if they again failed to pass the margin of the p-value.`{.yellow}
+`Amin, please check what exactly was done with the outliers. 
+And p-value cannot be higher than 1, while you wrote (0-10`{.green}
 
 ### Analysis of Results
 

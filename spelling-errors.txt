@@ -3,14 +3,16 @@ ameen
 Amin
 anisotropic
 aseedb
+azimuthal
 Benoît
 binarized
 Blegdamsvej
 Carlsbergfondet
-Convolutional
+centroid
+convolutional
 cryo
 dataset
-datasets
+Datasets
 DeepFinder
 defocus
 developement
@@ -35,6 +37,7 @@ improv
 interboundary
 intercellular
 intervesicular
+iteratively
 Jakob
 JBSorensen
 Julika
@@ -56,7 +59,7 @@ pre
 presynaptic
 prix
 probabilty
-pyto
+Pyto
 Radecke
 Raphaela
 recruitability
@@ -73,7 +76,7 @@ subvolumes
 SV
 SVs
 synaptosomal
-synaptosome
+Synaptosome
 synaptosomes
 thresholding
 tomogram
