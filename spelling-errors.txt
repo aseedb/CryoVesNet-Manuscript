@@ -9,9 +9,9 @@ binarized
 Blegdamsvej
 Carlsbergfondet
 centroid
-convolutional
+Convolutional
 Cryo
-Dataset
+dataset
 datasets
 DeepFinder
 defocus
@@ -59,7 +59,7 @@ pre
 presynaptic
 prix
 probabilty
-Pyto
+pyto
 Radecke
 Raphaela
 recruitability

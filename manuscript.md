@@ -9,7 +9,7 @@ keywords:
 - post-processing
 - automation
 lang: en-US
-date-meta: '2022-09-11'
+date-meta: '2022-09-13'
 author-meta:
 - Amin Khosrozadeh
 - Raphaela Seeger
@@ -27,8 +27,8 @@ header-includes: |-
   <meta name="citation_title" content="Deep-learning based automatic segmentation of vesicles in cryo-electron tomograms" />
   <meta property="og:title" content="Deep-learning based automatic segmentation of vesicles in cryo-electron tomograms" />
   <meta property="twitter:title" content="Deep-learning based automatic segmentation of vesicles in cryo-electron tomograms" />
-  <meta name="dc.date" content="2022-09-11" />
-  <meta name="citation_publication_date" content="2022-09-11" />
+  <meta name="dc.date" content="2022-09-13" />
+  <meta name="citation_publication_date" content="2022-09-13" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -64,9 +64,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://aseedb.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://aseedb.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://aseedb.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://aseedb.github.io/deep-prepyto-paper/v/b379e00dc190e2828ec3cc6fc20819b029053166/" />
-  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/deep-prepyto-paper/v/b379e00dc190e2828ec3cc6fc20819b029053166/" />
-  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/deep-prepyto-paper/v/b379e00dc190e2828ec3cc6fc20819b029053166/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://aseedb.github.io/deep-prepyto-paper/v/50c7b718a416b32c311f2d8c47757f1ebfb6b980/" />
+  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/deep-prepyto-paper/v/50c7b718a416b32c311f2d8c47757f1ebfb6b980/" />
+  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/deep-prepyto-paper/v/50c7b718a416b32c311f2d8c47757f1ebfb6b980/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -88,10 +88,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://aseedb.github.io/deep-prepyto-paper/v/b379e00dc190e2828ec3cc6fc20819b029053166/))
+([permalink](https://aseedb.github.io/deep-prepyto-paper/v/50c7b718a416b32c311f2d8c47757f1ebfb6b980/))
 was automatically generated
-from [aseedb/deep-prepyto-paper@b379e00](https://github.com/aseedb/deep-prepyto-paper/tree/b379e00dc190e2828ec3cc6fc20819b029053166)
-on September 11, 2022.
+from [aseedb/deep-prepyto-paper@50c7b71](https://github.com/aseedb/deep-prepyto-paper/tree/50c7b718a416b32c311f2d8c47757f1ebfb6b980)
+on September 13, 2022.
 </em></small>
 
 ## Authors
@@ -177,6 +177,7 @@ Cryo-ET study of the spatial organization of SVs and of their interconnections a
 To obtain a faithful representation of SV connectivity state, an absolutely vital prerequisite is an extremely accurate SV segmentation.
 Hundreds to thousands of SVs are present in a typical synapse, and their manual segmentation is a burden.
 Typically accurately segmenting all SVs in one synapse takes between 3 to 8 days.
+`Amin: Personaly I do not like this sentcene casue its a bit relative I rather to mention each tomogram contains several hundered vesicles`{.green}.
 This segmentation process has been widely recognized as a bottleneck by the community.
 
 Several attempts to automate vesicle segmentation by classical computer vision or machine learning algorithms have not yielded very robust results.
