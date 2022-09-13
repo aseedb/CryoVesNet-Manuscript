@@ -64,9 +64,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://aseedb.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://aseedb.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://aseedb.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://aseedb.github.io/deep-prepyto-paper/v/50c7b718a416b32c311f2d8c47757f1ebfb6b980/" />
-  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/deep-prepyto-paper/v/50c7b718a416b32c311f2d8c47757f1ebfb6b980/" />
-  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/deep-prepyto-paper/v/50c7b718a416b32c311f2d8c47757f1ebfb6b980/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://aseedb.github.io/deep-prepyto-paper/v/ad043b4a23b9b4b6d57c943ff61612e3d385be4c/" />
+  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/deep-prepyto-paper/v/ad043b4a23b9b4b6d57c943ff61612e3d385be4c/" />
+  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/deep-prepyto-paper/v/ad043b4a23b9b4b6d57c943ff61612e3d385be4c/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -88,9 +88,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://aseedb.github.io/deep-prepyto-paper/v/50c7b718a416b32c311f2d8c47757f1ebfb6b980/))
+([permalink](https://aseedb.github.io/deep-prepyto-paper/v/ad043b4a23b9b4b6d57c943ff61612e3d385be4c/))
 was automatically generated
-from [aseedb/deep-prepyto-paper@50c7b71](https://github.com/aseedb/deep-prepyto-paper/tree/50c7b718a416b32c311f2d8c47757f1ebfb6b980)
+from [aseedb/deep-prepyto-paper@ad043b4](https://github.com/aseedb/deep-prepyto-paper/tree/ad043b4a23b9b4b6d57c943ff61612e3d385be4c)
 on September 13, 2022.
 </em></small>
 
