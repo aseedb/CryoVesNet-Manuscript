@@ -64,9 +64,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://aseedb.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://aseedb.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://aseedb.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://aseedb.github.io/deep-prepyto-paper/v/ad043b4a23b9b4b6d57c943ff61612e3d385be4c/" />
-  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/deep-prepyto-paper/v/ad043b4a23b9b4b6d57c943ff61612e3d385be4c/" />
-  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/deep-prepyto-paper/v/ad043b4a23b9b4b6d57c943ff61612e3d385be4c/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://aseedb.github.io/deep-prepyto-paper/v/f0e19494ae7b3744447e972ae4eb04ac8de1bf20/" />
+  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/deep-prepyto-paper/v/f0e19494ae7b3744447e972ae4eb04ac8de1bf20/" />
+  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/deep-prepyto-paper/v/f0e19494ae7b3744447e972ae4eb04ac8de1bf20/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -88,9 +88,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://aseedb.github.io/deep-prepyto-paper/v/ad043b4a23b9b4b6d57c943ff61612e3d385be4c/))
+([permalink](https://aseedb.github.io/deep-prepyto-paper/v/f0e19494ae7b3744447e972ae4eb04ac8de1bf20/))
 was automatically generated
-from [aseedb/deep-prepyto-paper@ad043b4](https://github.com/aseedb/deep-prepyto-paper/tree/ad043b4a23b9b4b6d57c943ff61612e3d385be4c)
+from [aseedb/deep-prepyto-paper@f0e1949](https://github.com/aseedb/deep-prepyto-paper/tree/f0e19494ae7b3744447e972ae4eb04ac8de1bf20)
 on September 13, 2022.
 </em></small>
 
@@ -251,7 +251,7 @@ The validation dataset showed much more fluctuations during both validation and 
 The dice value for the validation dataset started at a value of ~0.27 and rose to an average value of over 0.75 after the initial 50 epoches. 
 The loss value of the validation dataset had an initial value 1 and declined to values below 0.3 after the initial 50 epochs.
 
-![**Dice coefficient and loss value for training and validation set.** `\_legend in figure should say "Training Dice"*`{.green} ](images/blinddice.png){#fig:dice width="7cm"}
+![**Dice coefficient and loss value for training and validation set.** `\_legend in figure should say "Training Dice"*`{.green} ](images/traindice.png){#fig:dice width="7cm"}
 
 `\_---->add figures of local measurements such as diameter or center error as an extra figure, why else listed in M&M??"*`{.green}
 

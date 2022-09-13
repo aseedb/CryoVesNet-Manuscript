@@ -9,8 +9,8 @@ binarized
 Blegdamsvej
 Carlsbergfondet
 centroid
-Convolutional
-cryo
+convolutional
+Cryo
 Dataset
 datasets
 DeepFinder
@@ -55,11 +55,11 @@ Novo
 OC
 Oxfordshire
 patchify
-Pre
+pre
 presynaptic
 prix
 probabilty
-Pyto
+pyto
 Radecke
 Raphaela
 recruitability
