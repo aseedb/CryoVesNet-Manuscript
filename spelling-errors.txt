@@ -9,7 +9,7 @@ binarized
 Blegdamsvej
 Carlsbergfondet
 centroid
-convolutional
+Convolutional
 Cryo
 Dataset
 datasets
@@ -59,7 +59,7 @@ pre
 presynaptic
 prix
 probabilty
-pyto
+Pyto
 Radecke
 Raphaela
 recruitability
@@ -83,7 +83,7 @@ tomogram
 tomogram’s
 tomograms
 TP
-unet
+UNet
 untilted
 voxel
 voxels

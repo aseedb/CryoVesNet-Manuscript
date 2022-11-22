@@ -9,7 +9,7 @@ keywords:
 - post-processing
 - automation
 lang: en-US
-date-meta: '2022-09-13'
+date-meta: '2022-11-22'
 author-meta:
 - Amin Khosrozadeh
 - Raphaela Seeger
@@ -23,12 +23,16 @@ header-includes: |-
   Suggest improvements at https://github.com/manubot/manubot/blob/main/manubot/process/header-includes-template.html
   -->
   <meta name="dc.format" content="text/html" />
+  <meta property="og:type" content="article" />
   <meta name="dc.title" content="Deep-learning based automatic segmentation of vesicles in cryo-electron tomograms" />
   <meta name="citation_title" content="Deep-learning based automatic segmentation of vesicles in cryo-electron tomograms" />
   <meta property="og:title" content="Deep-learning based automatic segmentation of vesicles in cryo-electron tomograms" />
   <meta property="twitter:title" content="Deep-learning based automatic segmentation of vesicles in cryo-electron tomograms" />
-  <meta name="dc.date" content="2022-09-13" />
-  <meta name="citation_publication_date" content="2022-09-13" />
+  <meta name="dc.date" content="2022-11-22" />
+  <meta name="citation_publication_date" content="2022-11-22" />
+  <meta property="article:published_time" content="2022-11-22" />
+  <meta name="dc.modified" content="2022-11-22T14:23:10+00:00" />
+  <meta property="article:modified_time" content="2022-11-22T14:23:10+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -64,9 +68,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://aseedb.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://aseedb.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://aseedb.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://aseedb.github.io/deep-prepyto-paper/v/f0e19494ae7b3744447e972ae4eb04ac8de1bf20/" />
-  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/deep-prepyto-paper/v/f0e19494ae7b3744447e972ae4eb04ac8de1bf20/" />
-  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/deep-prepyto-paper/v/f0e19494ae7b3744447e972ae4eb04ac8de1bf20/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://aseedb.github.io/deep-prepyto-paper/v/bf5b22bccd978715025f0f78380db9692fcfd0e2/" />
+  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/deep-prepyto-paper/v/bf5b22bccd978715025f0f78380db9692fcfd0e2/" />
+  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/deep-prepyto-paper/v/bf5b22bccd978715025f0f78380db9692fcfd0e2/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -88,68 +92,82 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://aseedb.github.io/deep-prepyto-paper/v/f0e19494ae7b3744447e972ae4eb04ac8de1bf20/))
+([permalink](https://aseedb.github.io/deep-prepyto-paper/v/bf5b22bccd978715025f0f78380db9692fcfd0e2/))
 was automatically generated
-from [aseedb/deep-prepyto-paper@f0e1949](https://github.com/aseedb/deep-prepyto-paper/tree/f0e19494ae7b3744447e972ae4eb04ac8de1bf20)
-on September 13, 2022.
+from [aseedb/deep-prepyto-paper@bf5b22b](https://github.com/aseedb/deep-prepyto-paper/tree/bf5b22bccd978715025f0f78380db9692fcfd0e2)
+on November 22, 2022.
 </em></small>
+
+
 
 ## Authors
 
 
 
-+ **Amin Khosrozadeh**^[\*](#equal_contribution)^<br>
-    ![ORCID icon](images/orcid.svg){.inline_icon}
++ **Amin Khosrozadeh**
+  <br>
+    ![ORCID icon](images/orcid.svg){.inline_icon width=16 height=16}
     [XXXX-XXXX-XXXX-XXXX](https://orcid.org/XXXX-XXXX-XXXX-XXXX)
-    · ![GitHub icon](images/github.svg){.inline_icon}
-    [ameen-khosrowzadeh](https://github.com/ameen-khosrowzadeh)<br>
+    · ![GitHub icon](images/github.svg){.inline_icon width=16 height=16}
+    [ameen-khosrowzadeh](https://github.com/ameen-khosrowzadeh)
+    <br>
   <small>
      Institute of Anatomy, University of Bern, Bern, Switzerland; Graduate School for Cellular and Biomedical Sciences, University of Bern
      · Funded by Grant XXXXXXXX
   </small>
 
-+ **Raphaela Seeger**^[\*](#equal_contribution)^<br>
-    ![ORCID icon](images/orcid.svg){.inline_icon}
++ **Raphaela Seeger**
+  <br>
+    ![ORCID icon](images/orcid.svg){.inline_icon width=16 height=16}
     [XXXX-XXXX-XXXX-XXXX](https://orcid.org/XXXX-XXXX-XXXX-XXXX)
-    · ![GitHub icon](images/github.svg){.inline_icon}
-    [elatella](https://github.com/elatella)<br>
+    · ![GitHub icon](images/github.svg){.inline_icon width=16 height=16}
+    [elatella](https://github.com/elatella)
+    <br>
   <small>
      Institute of Anatomy, University of Bern, Bern, Switzerland; Graduate School for Cellular and Biomedical Sciences, University of Bern
   </small>
 
-+ **Julika Radecke**<br>
-    ![ORCID icon](images/orcid.svg){.inline_icon}
++ **Julika Radecke**
+  <br>
+    ![ORCID icon](images/orcid.svg){.inline_icon width=16 height=16}
     [0000-0002-5815-5537](https://orcid.org/0000-0002-5815-5537)
-    · ![GitHub icon](images/github.svg){.inline_icon}
-    [julikaradecke](https://github.com/julikaradecke)<br>
+    · ![GitHub icon](images/github.svg){.inline_icon width=16 height=16}
+    [julikaradecke](https://github.com/julikaradecke)
+    <br>
   <small>
      Institute of Anatomy, University of Bern, Bern, Switzerland; Department of Neuroscience, Faculty of Health and Medical Science , 2200 Copenhagen N, University of Copenhagen, Copenhagen, Denmark; Diamond Light Source Ltd, Didcot, Oxfordshire, United Kingdom
   </small>
 
-+ **Guillaume Witz**<br>
-    ![ORCID icon](images/orcid.svg){.inline_icon}
++ **Guillaume Witz**
+  <br>
+    ![ORCID icon](images/orcid.svg){.inline_icon width=16 height=16}
     [0000-0003-1562-4265](https://orcid.org/0000-0003-1562-4265)
-    · ![GitHub icon](images/github.svg){.inline_icon}
-    [guiwitz](https://github.com/guiwitz)<br>
+    · ![GitHub icon](images/github.svg){.inline_icon width=16 height=16}
+    [guiwitz](https://github.com/guiwitz)
+    <br>
   <small>
      Science IT Service, University of Bern, Bern, Switzerland; Microscopy Imaging Center, University of Bern, Bern, Switzerland
   </small>
 
-+ **Jakob B. Sørensen**<br>
-    ![ORCID icon](images/orcid.svg){.inline_icon}
++ **Jakob B. Sørensen**
+  <br>
+    ![ORCID icon](images/orcid.svg){.inline_icon width=16 height=16}
     [0000-0001-5465-3769](https://orcid.org/0000-0001-5465-3769)
-    · ![GitHub icon](images/github.svg){.inline_icon}
-    [JBSorensen](https://github.com/JBSorensen)<br>
+    · ![GitHub icon](images/github.svg){.inline_icon width=16 height=16}
+    [JBSorensen](https://github.com/JBSorensen)
+    <br>
   <small>
      Department of Neuroscience, University of Copenhagen, Blegdamsvej 3B, 2200 Copenhagen N, Denmark
      · Funded by Novo Nordisk Fonden, NNF17OC0028516.; Carlsbergfondet, CF17-0875; Independent Research Fond Denmark, 8020-00228A; Lundbeckfonden, R277-2018-802
   </small>
 
-+ **Benoît Zuber**^[✉](#correspondence)^<br>
-    ![ORCID icon](images/orcid.svg){.inline_icon}
++ **Benoît Zuber**
+  <br>
+    ![ORCID icon](images/orcid.svg){.inline_icon width=16 height=16}
     [0000-0001-7725-5579](https://orcid.org/0000-0001-7725-5579)
-    · ![GitHub icon](images/github.svg){.inline_icon}
-    [aseedb](https://github.com/aseedb)<br>
+    · ![GitHub icon](images/github.svg){.inline_icon width=16 height=16}
+    [aseedb](https://github.com/aseedb)
+    <br>
   <small>
      Institute of Anatomy, University of Bern, Bern, Switzerland
      · Funded by Swiss National Science Foundation, 179520; ERA-NET NEURON, NEURON-119
@@ -157,10 +175,8 @@ on September 13, 2022.
 
 
 ::: {#correspondence}
-✉ Address correspondence to <benoit.zuber@ana.unibe.ch>.
-:::
-::: {#equal_contribution}
-\* These authors contributed equally.
+✉ — Correspondence possible via [GitHub Issues](https://github.com/aseedb/deep-prepyto-paper/issues)
+
 :::
 
 
