@@ -9,7 +9,7 @@ keywords:
 - post-processing
 - automation
 lang: en-US
-date-meta: '2022-11-22'
+date-meta: '2022-11-23'
 author-meta:
 - Amin Khosrozadeh
 - Raphaela Seeger
@@ -28,11 +28,11 @@ header-includes: |-
   <meta name="citation_title" content="Deep-learning based automatic segmentation of vesicles in cryo-electron tomograms" />
   <meta property="og:title" content="Deep-learning based automatic segmentation of vesicles in cryo-electron tomograms" />
   <meta property="twitter:title" content="Deep-learning based automatic segmentation of vesicles in cryo-electron tomograms" />
-  <meta name="dc.date" content="2022-11-22" />
-  <meta name="citation_publication_date" content="2022-11-22" />
-  <meta property="article:published_time" content="2022-11-22" />
-  <meta name="dc.modified" content="2022-11-22T14:23:10+00:00" />
-  <meta property="article:modified_time" content="2022-11-22T14:23:10+00:00" />
+  <meta name="dc.date" content="2022-11-23" />
+  <meta name="citation_publication_date" content="2022-11-23" />
+  <meta property="article:published_time" content="2022-11-23" />
+  <meta name="dc.modified" content="2022-11-23T14:32:42+00:00" />
+  <meta property="article:modified_time" content="2022-11-23T14:32:42+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -68,9 +68,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://aseedb.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://aseedb.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://aseedb.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://aseedb.github.io/deep-prepyto-paper/v/bf5b22bccd978715025f0f78380db9692fcfd0e2/" />
-  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/deep-prepyto-paper/v/bf5b22bccd978715025f0f78380db9692fcfd0e2/" />
-  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/deep-prepyto-paper/v/bf5b22bccd978715025f0f78380db9692fcfd0e2/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://aseedb.github.io/deep-prepyto-paper/v/d1bae491dd1716d9c760d29740bd065635cd0fe0/" />
+  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/deep-prepyto-paper/v/d1bae491dd1716d9c760d29740bd065635cd0fe0/" />
+  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/deep-prepyto-paper/v/d1bae491dd1716d9c760d29740bd065635cd0fe0/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -92,10 +92,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://aseedb.github.io/deep-prepyto-paper/v/bf5b22bccd978715025f0f78380db9692fcfd0e2/))
+([permalink](https://aseedb.github.io/deep-prepyto-paper/v/d1bae491dd1716d9c760d29740bd065635cd0fe0/))
 was automatically generated
-from [aseedb/deep-prepyto-paper@bf5b22b](https://github.com/aseedb/deep-prepyto-paper/tree/bf5b22bccd978715025f0f78380db9692fcfd0e2)
-on November 22, 2022.
+from [aseedb/deep-prepyto-paper@d1bae49](https://github.com/aseedb/deep-prepyto-paper/tree/d1bae491dd1716d9c760d29740bd065635cd0fe0)
+on November 23, 2022.
 </em></small>
 
 
@@ -190,11 +190,8 @@ For this reason, cryo-ET researchers have mostly performed manual segmentation.
 Communication between neurons rely on neurotransmitter-filled synaptic vesicle (SV) exocytosis.
 Recruitment of SVs to the plasma membrane is an important means of regulating exocytosis and is influenced by interactions between SVs.
 Cryo-ET study of the spatial organization of SVs and of their interconnections allows a better understanding of the mechanisms of exocytosis regulation.
-To obtain a faithful representation of SV connectivity state, an absolutely vital prerequisite is an extremely accurate SV segmentation.
-Hundreds to thousands of SVs are present in a typical synapse, and their manual segmentation is a burden.
-Typically accurately segmenting all SVs in one synapse takes between 3 to 8 days.
-`Amin: Personaly I do not like this sentcene casue its a bit relative I rather to mention each tomogram contains several hundered vesicles`{.green}.
-This segmentation process has been widely recognized as a bottleneck by the community.
+Extremely accurate SV segmentation is a prerequisite to obtain a faithful representation of SV state of connectivity.
+Hundreds to thousands of SVs are present in a typical synapse, and their manual segmentation is a time-consuming exercice, which has been recognized as a bottleneck by the community.
 
 Several attempts to automate vesicle segmentation by classical computer vision or machine learning algorithms have not yielded very robust results.
 We addressed this problem by designing a workflow consisting of a U-Net convolutional network followed by post-processing steps.
@@ -217,22 +214,22 @@ The resolution in the directions close to the axis of the electron beam incident
 This effect, commonly referred to as the missing-wedge artifact, further complicates data analysis. 
 In particular, organelles fully bounded by a membrane appear to have holes at their top and bottom (relative to the electron beam axis) [@doi:10.1146/annurev.biochem.73.011303.074112].
 
-The synapse is the functional cellular contact at which information is transmitted from a neuron to another. 
+The synapse is a specialized cellular contact at which information is transmitted from a neuron to another. 
 The former neuron is called presynaptic and the latter is postsynaptic. 
 In most cases, the signal is transmitted by the release of neurotransmitters into the intercellular space.
-Neurotransmitters are stored in SVs and are released following the fusion of a vesicle with the presynaptic plasma membrane.
+Neurotransmitters are stored in SVs and are released following the fusion of an SV with the presynaptic plasma membrane.
 A synapse contains hundreds of SVs and their mobility and recruitability for neurotransmitter release depends on inter-vesicle interactions through so-called connector structures [@doi:10.1083/jcb.200908082 ]. 
-The characterization of these interactions can be performed automatically with the pyto software, which implements a hierarchical connectivity approach to detect and annotate connectors [@doi:10.1016/j.jsb.2016.10.004]. For accurate connector segmentation, an exceptionally precise segmentation of SVs is prerequisite.
-To date, this SV segmentation has been achieved manually, but given the massive number of SVs per dataset, it is an extremely time-consuming process. 
+The characterization of these interactions can be performed automatically with the pyto package, which implements a hierarchical connectivity approach to segment connectors [@doi:10.1016/j.jsb.2016.10.004]. For accurate connector segmentation, an accurate segmentation of SVs is prerequisite.
+To date, SV segmentation has been performed manually, but given the large number of SVs per dataset, it is an extremely time-consuming process. 
 Typically, one person spends 3 to 8 working days to segment a single dataset.
 Attempts to perform this task automatically based on classical computer vision algorithms have not yielded sufficiently accurate performance [@doi:10.1016/j.jsb.2014.02.015].  
-To alleviate this situation, we considered applying deep learning methods.
+To alleviate this situation, we decided to develop an approach based on deep learning-based.
 
 Convolutional neural networks (CNN) have been successfully employed to segment cryo-ET data [@doi:10.1038/nmeth.4405]. 
 Although entirely satisfying for visualization purposes, this approach has not met the requirements of pyto.
 A recent publication described accurate SV segmentation of transmission electron microscopy images using CNN, but it is limited to 2-dimensional (2D) images of resin-embedded synapses [@doi:10.1523/ENEURO.0400-20.2021].
 In the first study, cryo-ET data are decomposed in individual 2D slices, which are handed as separate input to the CNN. 
-The independent output 2D prediction images are reassembled in a 3-dimensional(3D) stack.[@doi:10.1038/nmeth.4405]
+The independent output 2D prediction images are reassembled in a 3-dimensional (3D) stack [@doi:10.1038/nmeth.4405].
 As discussed above, membranes oriented approximately parallel to the plane of the 2D tomographic images are not resolved.
 In the absence of contextual knowledge of the other 2D images, the CNN fails to segment these regions of the vesicles.
 Hence, spherical vesicles appear open, whereas we expect closed spherical objects.
@@ -242,45 +239,35 @@ We implemented a 3D U-Net based on CARE building blocks and trained it with manu
 This method provided good accuracy and was only slightly affected by the missing wedge artifact. 
 Nevertheless, it was not sufficient for our downstream pyto analysis.
 Hence, we developed a post-processing method, which transforms the segmented objects into spheres and refines their radius and center location. The procedure includes an outlier detection procedure.
-This lead to a substantial accuracy improvement, which are reflected in better pyto performance.
-We also introduce a semi-automatic method to very quickly fix wrongly segmented or missed SVs.
+This lead to a substantial accuracy improvement, which is reflected in pyto performances comparable to those obtained after manual SV segmentation.
+We also introduce a semi-automatic method to quickly fix wrongly segmented or missed SVs.
 
 Although our set of procedures was developed with the use case of SV segmentation in mind, it can be used to segment any other types of biological spherical vesicles, such as transport vesicles, secretory vesicles, endocytic vesicles, and extracellular vesicles.
 
 
 ## Results
 
-Cellular cryo-electron tomography is an upcoming field with a multitude of possible applications.
-The manual segmentation of the cellular features is a major bottleneck of this method.
-When segmenting cryo-electron tomograms from presynaptic terminals, the manual segmentation of synaptic vesicles is one of the most time-intensive steps.
-Synaptic vesicles constitute a large, homogeneous group, constituting a large training set for deep learning applications.
-Therefore, we decided to initially develop the automatic segmentation for synaptic vesicles.
-The used tomograms were previously manually segmented with IMOD, these manual segmentations were further treated as the ground truth [@doi:10.1006/jsbi.1996.0013].
+In view of the effort required for the manual segmentation of SVs, we decided to develop an automatic segmentation procedure.
+Since we had previously manually segmented a number of tomograms with the program IMOD, we could use these segmentations as the ground truth [@doi:10.1006/jsbi.1996.0013].
 `\_maybe add this somewhere else: In a next step, filaments connecting the synaptic vesicles with each other (connectors) and to the active zone (AZ) were automatically segmented with the algorithm application Pyto [@doi:10.1016/j.jsb.2016.10.004].*`{.green}
-
-The U-Net neural network was used to train its mask prediction on a training set of 9 tomograms containing untreated synaptosomes.
+We trained a U-Net with a set of 9 segmented tomograms of rat synaptosomes (see Materials and Methods).
 The learning progress was tracked by calculating the Dice coefficient and the loss value after each training epoch (Figure {@fig:dice}).
-The dice value for the training dataset started at a value of ~0.25 and rose to a value of over 0.9 after the initial 50 epoches. 
-The loss value of the training dataset had an initial value of over 0.55 and declined to values below 0.05 after the initial 50 epochs and further striving towards 0 in the following depicted epochs.
-`\_Validation Dice and loss from treated synaptosome dataset?*`
-The validation dataset showed much more fluctuations during both validation and loss progression.
-The dice value for the validation dataset started at a value of ~0.27 and rose to an average value of over 0.75 after the initial 50 epoches. 
-The loss value of the validation dataset had an initial value 1 and declined to values below 0.3 after the initial 50 epochs.
+The Dice coefficient for the training set was initially ~0.25 and rose to over 0.9 after approximately 50 epochs, while for the validation set, it rose to 0.8. 
+The loss for the training set went from 0.55 and to values below 0.05 after 50 epochs while for the validation set it went from 1 and to slightly below 0.3 after the initial 50 epochs and then rose slightly.
 
-![**Dice coefficient and loss value for training and validation set.** `\_legend in figure should say "Training Dice"*`{.green} ](images/traindice.png){#fig:dice width="7cm"}
+![**Dice coefficient and loss value for training and validation set.** ](images/traindice.png){#fig:dice width="7cm"}
 
 `\_---->add figures of local measurements such as diameter or center error as an extra figure, why else listed in M&M??"*`{.green}
 
-After the neural network is trained to recognize the synaptic vesicles with a sufficient probability, the trained U-Net was implemented into a pipeline. 
-The pipeline for automatic segmentation of vesicles consists of two major parts: the neural network consisting of a U-Net neural network, and the post-processing steps refining the labels generated by the U-Net (Figure {@fig:pipeline}).
-The three batches of tomograms (synaptosome control, synaptosome treatment and neuron) were each handed to the pipeline. 
+We seeked to further improve segmentation accuracy by feeding the probability mask output by the U-Net to a series of postprocess steps (Figure {@fig:pipeline}).
+Three batches of tomograms were used to assess the performances of the pipeline: 1) The 9 rat synaptosome tomograms that had been used for U-Net training, 2) Another 9 rat synaptosome tomograms, 3) 12 mouse primary neuronal culture tomograms). 
 
-![**Pipeline of automatic segmentation.** a) tomograms b) patchify the tomograms into 3D patches c) Segmentation Network/ trained U-Net d) probability masks e) stitching patches back together f) thresholding g) adaptive localized thresholding h) outlier removal i) radial profile](images/pipeline.svg){#fig:pipeline width="15cm"}
+![**Pipeline of automatic segmentation.** a) tomograms b) splitting in 3D patches c) Segmentation Network/ trained U-Net d) probability masks e) stitching patches back together f) thresholding g) adaptive localized thresholding h) outlier removal i) radial profile](images/pipeline.svg){#fig:pipeline width="15cm"}
 
-Each tomogram is split into patches of 32x32x32 `\_unit?*`{.green}.
-These patches are the fed into the trained U-Net, which outputs a probability mask for those patches.
+Each tomogram was split into patches of 32^3^ voxels.
+These patches were fed in the U-Net, which output a probability mask for those patches.
 To obtain a complete probability mask, the patches are stitched back together.
-The probability mask is further refined by applying global and adaptive localized thresholding steps (Figure {@fig:pipeline}, Figure {@fig:tom}).
+The probability mask was binarized first with a global threshold value and then with an adaptative localized thresholding steps (Figure {@fig:pipeline}, Figure {@fig:tom}).
 
 ![**2D Slices** A) a section from z axis of a tomogram’s presynaptic terminal of a neuron B) instance mask of the vesicles after post processing; purple corresponds to a low probability of SVs and yellow corresponds to a high probability of synaptic vesicles C) predicted probability mask by the segmentation network](images/tomo-sclae.svg){#fig:tom width="15cm"}
 

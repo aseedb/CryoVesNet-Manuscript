@@ -1,4 +1,5 @@
 accurracy
+adaptative
 ameen
 Amin
 anisotropic
@@ -9,7 +10,7 @@ binarized
 Blegdamsvej
 Carlsbergfondet
 centroid
-Convolutional
+convolutional
 Cryo
 Dataset
 datasets
@@ -23,8 +24,8 @@ dSi
 elatella
 endocytic
 Engel
-epoches
 Eval
+exercice
 exocytosis
 FN
 Fonden
@@ -54,17 +55,18 @@ Nordisk
 Novo
 OC
 Oxfordshire
-patchify
+postprocess
 pre
 presynaptic
 prix
 probabilty
-Pyto
+pyto
 Radecke
 Raphaela
 recruitability
 Relion
 ReLU
+seeked
 segmentations
 seperated
 situ
