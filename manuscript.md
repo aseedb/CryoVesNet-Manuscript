@@ -31,8 +31,8 @@ header-includes: |-
   <meta name="dc.date" content="2022-11-24" />
   <meta name="citation_publication_date" content="2022-11-24" />
   <meta property="article:published_time" content="2022-11-24" />
-  <meta name="dc.modified" content="2022-11-24T10:05:14+00:00" />
-  <meta property="article:modified_time" content="2022-11-24T10:05:14+00:00" />
+  <meta name="dc.modified" content="2022-11-24T10:18:14+00:00" />
+  <meta property="article:modified_time" content="2022-11-24T10:18:14+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -68,9 +68,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://aseedb.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://aseedb.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://aseedb.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://aseedb.github.io/deep-prepyto-paper/v/49ee71b14b4be8134d5a1829a4de00707601ce70/" />
-  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/deep-prepyto-paper/v/49ee71b14b4be8134d5a1829a4de00707601ce70/" />
-  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/deep-prepyto-paper/v/49ee71b14b4be8134d5a1829a4de00707601ce70/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://aseedb.github.io/deep-prepyto-paper/v/e7a2b7f02c95fce871a940ddcf7e3c57532cc7fc/" />
+  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/deep-prepyto-paper/v/e7a2b7f02c95fce871a940ddcf7e3c57532cc7fc/" />
+  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/deep-prepyto-paper/v/e7a2b7f02c95fce871a940ddcf7e3c57532cc7fc/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -92,9 +92,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://aseedb.github.io/deep-prepyto-paper/v/49ee71b14b4be8134d5a1829a4de00707601ce70/))
+([permalink](https://aseedb.github.io/deep-prepyto-paper/v/e7a2b7f02c95fce871a940ddcf7e3c57532cc7fc/))
 was automatically generated
-from [aseedb/deep-prepyto-paper@49ee71b](https://github.com/aseedb/deep-prepyto-paper/tree/49ee71b14b4be8134d5a1829a4de00707601ce70)
+from [aseedb/deep-prepyto-paper@e7a2b7f](https://github.com/aseedb/deep-prepyto-paper/tree/e7a2b7f02c95fce871a940ddcf7e3c57532cc7fc)
 on November 24, 2022.
 </em></small>
 
@@ -307,6 +307,8 @@ Table 1- Evaluation of the segmentation: Mask Dice: Mask Dice coefficient for th
 | Synaptosome C9 |      0.59       |          0.87          |     |   0.05    |   1.87±0.91    |         135          |    132     |     3     |    14     |
 | **Average**    |  **0.64±0.11**  |     **0.86±0.05**      |     | **0.05**  | **1.95±1.08**  |      **152.22**      | **97.00%** | **3.00%** | **7.30%** |
 
+{#tbl:train-tomograms tag="S1"}
+
 #### Test Dataset (Same preparation and microscope with training set)
 
 | **_Dataset_**   | **_Mask DICE_** | **_Final Label DICE_** |     | **_δ d_** | **_Δ c (nm)_** | **_\# of Vesicles_** |   **TP**   |  **FN**   |  **FP**   |
@@ -321,6 +323,10 @@ Table 1- Evaluation of the segmentation: Mask Dice: Mask Dice coefficient for th
 | Synaptosome T8  |      0.83       |          0.91          |     |   0.04    |   2.09±1.04    |         100          |     99     |     1     |     2     |
 | Synaptosome T10 |      0.77       |          0.86          |     |   0.05    |   1.96±1.04    |          77          |     74     |     3     |     6     |
 | **Average**     |  **0.75±0.06**  |     **0.83±0.05**      |     | **0.08**  | **2.32±1.43**  |      **286.56**      | **96.30%** | **3.70%** | **6.10%** |
+
+
+{#tbl:test-tomograms tag="S2"}
+
 
 #### Test Dataset 3 (Neuron Dataset)
 
@@ -340,6 +346,7 @@ Table 1- Evaluation of the segmentation: Mask Dice: Mask Dice coefficient for th
 | Neuron 116    |      0.62       |          0.73          |     |   0.07    |   2.38±1.82    |         296          |    207     |     89     |    35     |
 | **Average**   |  **0.69±0.09**  |     **0.79±0.09**      |     | **0.06**  | **2.35±1.83**  |      **287.42**      | **83.60%** | **16.40%** | **7.90%** |
 
+{#tbl:neuron-tomograms tag="S3"}
 
 Our method transfers well across datasets even without fine-tuning which show robustness and generalization.
 
