@@ -9,7 +9,7 @@ keywords:
 - post-processing
 - automation
 lang: en-US
-date-meta: '2022-11-23'
+date-meta: '2022-11-24'
 author-meta:
 - Amin Khosrozadeh
 - Raphaela Seeger
@@ -28,11 +28,11 @@ header-includes: |-
   <meta name="citation_title" content="Deep-learning based automatic segmentation of vesicles in cryo-electron tomograms" />
   <meta property="og:title" content="Deep-learning based automatic segmentation of vesicles in cryo-electron tomograms" />
   <meta property="twitter:title" content="Deep-learning based automatic segmentation of vesicles in cryo-electron tomograms" />
-  <meta name="dc.date" content="2022-11-23" />
-  <meta name="citation_publication_date" content="2022-11-23" />
-  <meta property="article:published_time" content="2022-11-23" />
-  <meta name="dc.modified" content="2022-11-23T14:32:42+00:00" />
-  <meta property="article:modified_time" content="2022-11-23T14:32:42+00:00" />
+  <meta name="dc.date" content="2022-11-24" />
+  <meta name="citation_publication_date" content="2022-11-24" />
+  <meta property="article:published_time" content="2022-11-24" />
+  <meta name="dc.modified" content="2022-11-24T10:05:14+00:00" />
+  <meta property="article:modified_time" content="2022-11-24T10:05:14+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -68,9 +68,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://aseedb.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://aseedb.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://aseedb.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://aseedb.github.io/deep-prepyto-paper/v/d1bae491dd1716d9c760d29740bd065635cd0fe0/" />
-  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/deep-prepyto-paper/v/d1bae491dd1716d9c760d29740bd065635cd0fe0/" />
-  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/deep-prepyto-paper/v/d1bae491dd1716d9c760d29740bd065635cd0fe0/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://aseedb.github.io/deep-prepyto-paper/v/49ee71b14b4be8134d5a1829a4de00707601ce70/" />
+  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/deep-prepyto-paper/v/49ee71b14b4be8134d5a1829a4de00707601ce70/" />
+  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/deep-prepyto-paper/v/49ee71b14b4be8134d5a1829a4de00707601ce70/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -92,10 +92,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://aseedb.github.io/deep-prepyto-paper/v/d1bae491dd1716d9c760d29740bd065635cd0fe0/))
+([permalink](https://aseedb.github.io/deep-prepyto-paper/v/49ee71b14b4be8134d5a1829a4de00707601ce70/))
 was automatically generated
-from [aseedb/deep-prepyto-paper@d1bae49](https://github.com/aseedb/deep-prepyto-paper/tree/d1bae491dd1716d9c760d29740bd065635cd0fe0)
-on November 23, 2022.
+from [aseedb/deep-prepyto-paper@49ee71b](https://github.com/aseedb/deep-prepyto-paper/tree/49ee71b14b4be8134d5a1829a4de00707601ce70)
+on November 24, 2022.
 </em></small>
 
 
@@ -269,7 +269,7 @@ These patches were fed in the U-Net, which output a probability mask for those p
 To obtain a complete probability mask, the patches are stitched back together.
 The probability mask was binarized first with a global threshold value and then with an adaptative localized thresholding steps (Figure {@fig:pipeline}, Figure {@fig:tom}).
 
-![**2D Slices** A) a section from z axis of a tomogram’s presynaptic terminal of a neuron B) instance mask of the vesicles after post processing; purple corresponds to a low probability of SVs and yellow corresponds to a high probability of synaptic vesicles C) predicted probability mask by the segmentation network](images/tomo-sclae.svg){#fig:tom width="15cm"}
+![**2D Slices** A) a section from z axis of a tomogram’s presynaptic terminal of a neuron B) predicted probability mask of the cytoplasm, the purple corresponds to a low probability of SVs and yellow corresponds to a high probability of synaptic vesicles C) instance mask of the vesicles after post processing; ](images/tomo-sclae.svg){#fig:tom width="15cm"}
 
 `\_more detail about global and adaptive localized threshold*`{.green}
 For further optimization of the mask, outliers were removed. 

@@ -10,10 +10,10 @@ binarized
 Blegdamsvej
 Carlsbergfondet
 centroid
-convolutional
+Convolutional
 Cryo
 Dataset
-datasets
+Datasets
 DeepFinder
 defocus
 developement
@@ -60,7 +60,7 @@ pre
 presynaptic
 prix
 probabilty
-pyto
+Pyto
 Radecke
 Raphaela
 recruitability
@@ -78,7 +78,7 @@ subvolumes
 SV
 SVs
 synaptosomal
-synaptosome
+Synaptosome
 synaptosomes
 thresholding
 tomogram
