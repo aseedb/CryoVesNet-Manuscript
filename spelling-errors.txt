@@ -12,8 +12,8 @@ Carlsbergfondet
 centroid
 convolutional
 Cryo
-Dataset
-datasets
+dataset
+Datasets
 DeepFinder
 defocus
 developement
@@ -24,7 +24,6 @@ dSi
 elatella
 endocytic
 Engel
-Eval
 exercice
 exocytosis
 FN
@@ -60,7 +59,7 @@ pre
 presynaptic
 prix
 probabilty
-Pyto
+pyto
 Radecke
 Raphaela
 recruitability
@@ -82,10 +81,9 @@ synaptosome
 synaptosomes
 thresholding
 tomogram
-tomogram’s
 tomograms
 TP
-unet
+UNet
 untilted
 voxel
 voxels

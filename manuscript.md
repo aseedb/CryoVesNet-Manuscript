@@ -9,7 +9,7 @@ keywords:
 - post-processing
 - automation
 lang: en-US
-date-meta: '2022-11-24'
+date-meta: '2022-11-28'
 author-meta:
 - Amin Khosrozadeh
 - Raphaela Seeger
@@ -28,11 +28,11 @@ header-includes: |-
   <meta name="citation_title" content="Deep-learning based automatic segmentation of vesicles in cryo-electron tomograms" />
   <meta property="og:title" content="Deep-learning based automatic segmentation of vesicles in cryo-electron tomograms" />
   <meta property="twitter:title" content="Deep-learning based automatic segmentation of vesicles in cryo-electron tomograms" />
-  <meta name="dc.date" content="2022-11-24" />
-  <meta name="citation_publication_date" content="2022-11-24" />
-  <meta property="article:published_time" content="2022-11-24" />
-  <meta name="dc.modified" content="2022-11-24T10:18:14+00:00" />
-  <meta property="article:modified_time" content="2022-11-24T10:18:14+00:00" />
+  <meta name="dc.date" content="2022-11-28" />
+  <meta name="citation_publication_date" content="2022-11-28" />
+  <meta property="article:published_time" content="2022-11-28" />
+  <meta name="dc.modified" content="2022-11-28T09:49:22+00:00" />
+  <meta property="article:modified_time" content="2022-11-28T09:49:22+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -68,9 +68,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://aseedb.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://aseedb.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://aseedb.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://aseedb.github.io/deep-prepyto-paper/v/e7a2b7f02c95fce871a940ddcf7e3c57532cc7fc/" />
-  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/deep-prepyto-paper/v/e7a2b7f02c95fce871a940ddcf7e3c57532cc7fc/" />
-  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/deep-prepyto-paper/v/e7a2b7f02c95fce871a940ddcf7e3c57532cc7fc/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://aseedb.github.io/deep-prepyto-paper/v/bd6c15e96d627369a6c8fa40c1a3bb104d3eec5f/" />
+  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/deep-prepyto-paper/v/bd6c15e96d627369a6c8fa40c1a3bb104d3eec5f/" />
+  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/deep-prepyto-paper/v/bd6c15e96d627369a6c8fa40c1a3bb104d3eec5f/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -92,10 +92,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://aseedb.github.io/deep-prepyto-paper/v/e7a2b7f02c95fce871a940ddcf7e3c57532cc7fc/))
+([permalink](https://aseedb.github.io/deep-prepyto-paper/v/bd6c15e96d627369a6c8fa40c1a3bb104d3eec5f/))
 was automatically generated
-from [aseedb/deep-prepyto-paper@e7a2b7f](https://github.com/aseedb/deep-prepyto-paper/tree/e7a2b7f02c95fce871a940ddcf7e3c57532cc7fc)
-on November 24, 2022.
+from [aseedb/deep-prepyto-paper@bd6c15e](https://github.com/aseedb/deep-prepyto-paper/tree/bd6c15e96d627369a6c8fa40c1a3bb104d3eec5f)
+on November 28, 2022.
 </em></small>
 
 
@@ -249,15 +249,12 @@ Although our set of procedures was developed with the use case of SV segmentatio
 
 In view of the effort required for the manual segmentation of SVs, we decided to develop an automatic segmentation procedure.
 Since we had previously manually segmented a number of tomograms with the program IMOD, we could use these segmentations as the ground truth [@doi:10.1006/jsbi.1996.0013].
-`\_maybe add this somewhere else: In a next step, filaments connecting the synaptic vesicles with each other (connectors) and to the active zone (AZ) were automatically segmented with the algorithm application Pyto [@doi:10.1016/j.jsb.2016.10.004].*`{.green}
 We trained a U-Net with a set of 9 segmented tomograms of rat synaptosomes (see Materials and Methods).
 The learning progress was tracked by calculating the Dice coefficient and the loss value after each training epoch (Figure {@fig:dice}).
 The Dice coefficient for the training set was initially ~0.25 and rose to over 0.9 after approximately 50 epochs, while for the validation set, it rose to 0.8. 
 The loss for the training set went from 0.55 and to values below 0.05 after 50 epochs while for the validation set it went from 1 and to slightly below 0.3 after the initial 50 epochs and then rose slightly.
 
 ![**Dice coefficient and loss value for training and validation set.** ](images/traindice.png){#fig:dice width="7cm"}
-
-`\_---->add figures of local measurements such as diameter or center error as an extra figure, why else listed in M&M??"*`{.green}
 
 We seeked to further improve segmentation accuracy by feeding the probability mask output by the U-Net to a series of postprocess steps (Figure {@fig:pipeline}).
 Three batches of tomograms were used to assess the performances of the pipeline: 1) The 9 rat synaptosome tomograms that had been used for U-Net training, 2) Another 9 rat synaptosome tomograms, 3) 12 mouse primary neuronal culture tomograms). 
@@ -269,7 +266,7 @@ These patches were fed in the U-Net, which output a probability mask for those p
 To obtain a complete probability mask, the patches are stitched back together.
 The probability mask was binarized first with a global threshold value and then with an adaptative localized thresholding steps (Figure {@fig:pipeline}, Figure {@fig:tom}).
 
-![**2D Slices** A) a section from z axis of a tomogram’s presynaptic terminal of a neuron B) predicted probability mask of the cytoplasm, the purple corresponds to a low probability of SVs and yellow corresponds to a high probability of synaptic vesicles C) instance mask of the vesicles after post processing; ](images/tomo-sclae.svg){#fig:tom width="15cm"}
+![**A 2D slice of an automatically segmented dataset**. A) A section through a presynaptic terminal in a neuron tomogram. B) Predicted probability mask restricted to the segmentation region.  Purple corresponds to a low SV probability and yellow to a high SV probability. C) Instance mask of the vesicles after post processing.](images/tomo-sclae.svg){#fig:tom width="15cm"}
 
 `\_more detail about global and adaptive localized threshold*`{.green}
 For further optimization of the mask, outliers were removed. 
@@ -288,65 +285,55 @@ The Dice coefficient was used to track the global congruence between the manuall
 ![**Dice developement during post-processing** Dice developement at different post processing steps of initial predicted mask (different colors correspond to different tomograms): A) synaptosomal training datasets B) synaptosomal test datasets c) neuron test datasets](images/improvment-post-processing-dice.svg){#fig:dice-improv width="15cm"}
 
 
-### Final Eval Tables
 
-Table 1- Evaluation of the segmentation: Mask Dice: Mask Dice coefficient for the predicted mask; Final Label Dice: Dice coefficient after post-processing; δ d: diameter error on correctly detected vesicle; Δ c: average error center (nm); # of Vesicles: number of expected vesicles; TP: True Positive; FN: False Negative; FP: False Positive
-
-#### Train Dataset
-
-| **_Dataset_**  | **_Mask DICE_** | **_Final Label DICE_** |     | **_δ d_** | **_Δ c (nm)_** | **_\# of Vesicles_** |   **TP**   |  **FN**   |  **FP**   |
-| -------------- | :-------------: | :--------------------: | :-: | :-------: | :------------: | :------------------: | :--------: | :-------: | :-------: |
-| Synaptosome C1 |      0.44       |          0.73          |     |   0.07    |   2.55±1.56    |         223          |    198     |    26     |    49     |
-| Synaptosome C2 |       0.8       |          0.9           |     |   0.05    |   2.12±1.06    |         105          |    103     |     2     |     1     |
-| Synaptosome C3 |      0.67       |          0.9           |     |   0.05    |   1.86±1.24    |         128          |    127     |     1     |     6     |
-| Synaptosome C4 |      0.62       |          0.89          |     |   0.03    |   1.78±0.92    |         144          |    141     |     3     |     4     |
-| Synaptosome C5 |      0.58       |          0.87          |     |   0.04    |   1.86±1.00    |         214          |    209     |     5     |    13     |
-| Synaptosome C6 |      0.56       |          0.84          |     |   0.04    |   1.92±1.05    |         104          |    102     |     2     |    16     |
-| Synaptosome C7 |      0.78       |          0.88          |     |   0.06    |   1.86±0.90    |         184          |    184     |     0     |    16     |
-| Synaptosome C8 |      0.75       |          0.9           |     |   0.05    |   1.70±0.93    |         132          |    126     |     6     |     1     |
-| Synaptosome C9 |      0.59       |          0.87          |     |   0.05    |   1.87±0.91    |         135          |    132     |     3     |    14     |
-| **Average**    |  **0.64±0.11**  |     **0.86±0.05**      |     | **0.05**  | **1.95±1.08**  |      **152.22**      | **97.00%** | **3.00%** | **7.30%** |
-
-{#tbl:train-tomograms tag="S1"}
-
-#### Test Dataset (Same preparation and microscope with training set)
-
-| **_Dataset_**   | **_Mask DICE_** | **_Final Label DICE_** |     | **_δ d_** | **_Δ c (nm)_** | **_\# of Vesicles_** |   **TP**   |  **FN**   |  **FP**   |
-| --------------- | :-------------: | :--------------------: | :-: | :-------: | :------------: | :------------------: | :--------: | :-------: | :-------: |
-| Synaptosome C10 |      0.75       |          0.88          |     |   0.07    |   1.86±1.18    |         129          |    123     |     6     |     5     |
-| Synaptosome T1  |      0.75       |          0.83          |     |   0.11    |   2.66±1.52    |         699          |    687     |    12     |    33     |
-| Synaptosome T2  |      0.74       |          0.77          |     |   0.11    |   2.27±1.84    |         122          |    117     |     5     |     2     |
-| Synaptosome T3  |      0.72       |          0.74          |     |   0.11    |   3.64±2.22    |         434          |    397     |    37     |    57     |
-| Synaptosome T5  |      0.77       |          0.85          |     |   0.08    |   2.20±1.26    |         535          |    526     |     9     |    25     |
-| Synaptosome T6  |       0.6       |          0.83          |     |   0.07    |   2.02±1.12    |         373          |    353     |    20     |    42     |
-| Synaptosome T7  |       0.8       |          0.83          |     |   0.06    |   2.22±1.14    |         110          |    107     |     3     |     9     |
-| Synaptosome T8  |      0.83       |          0.91          |     |   0.04    |   2.09±1.04    |         100          |     99     |     1     |     2     |
-| Synaptosome T10 |      0.77       |          0.86          |     |   0.05    |   1.96±1.04    |          77          |     74     |     3     |     6     |
-| **Average**     |  **0.75±0.06**  |     **0.83±0.05**      |     | **0.08**  | **2.32±1.43**  |      **286.56**      | **96.30%** | **3.70%** | **6.10%** |
+| **_Dataset_**  | **_Mask Dice_** | **_Final Label Dice_** | **_δ d_** | **_Δ c (nm)_** | **_Number of Vesicles_**  | **_TP_**   | **_FN_**   | **_FP_**  |
+| -------------- | :-------------: | :--------------------: | :-------: | :------------: |:-------------------------:|:----------:|:----------:|:---------:|
+| Synaptosome C1 |      0.44       |          0.73          |   0.07    |   2.55±1.56    |            223            |    198     |     26     |    49     |
+| Synaptosome C2 |       0.8       |          0.9           |   0.05    |   2.12±1.06    |            105            |    103     |     2      |     1     |
+| Synaptosome C3 |      0.67       |          0.9           |   0.05    |   1.86±1.24    |            128            |    127     |     1      |     6     |
+| Synaptosome C4 |      0.62       |          0.89          |   0.03    |   1.78±0.92    |            144            |    141     |     3      |     4     |
+| Synaptosome C5 |      0.58       |          0.87          |   0.04    |   1.86±1.00    |            214            |    209     |     5      |    13     |
+| Synaptosome C6 |      0.56       |          0.84          |   0.04    |   1.92±1.05    |            104            |    102     |     2      |    16     |
+| Synaptosome C7 |      0.78       |          0.88          |   0.06    |   1.86±0.90    |            184            |    184     |     0      |    16     |
+| Synaptosome C8 |      0.75       |          0.9           |   0.05    |   1.70±0.93    |            132            |    126     |     6      |     1     |
+| Synaptosome C9 |      0.59       |          0.87          |   0.05    |   1.87±0.91    |            135            |    132     |     3      |    14     |
+| **Average**    |  **0.64±0.11**  |     **0.86±0.05**      | **0.05**  | **1.95±1.08**  |        **152.22**         | **97.00%** | **3.00%**  | **7.30%** |
+Table: Evaluation of the segmentation on the synaptosome train set. Mask Dice: Mask Dice coefficient for the predicted mask; Final Label Dice: Dice coefficient after post-processing; δ d: diameter error on correctly detected vesicle; Δ c: average error center (nm); Number of Vesicles: number of expected vesicles; TP: True Positive; FN: False Negative; FP: False Positive
+{#tbl:train-tomograms}
 
 
-{#tbl:test-tomograms tag="S2"}
+| **_Dataset_**   | **_Mask Dice_** | **_Final Label Dice_** | **_δ d_** | **_Δ c (nm)_** | **_Number of Vesicles_** |  **_TP_**  | **_FN_**  | **_FP_**  |
+| --------------- |:---------------:|:----------------------:| :-------: | :------------: |:------------------------:|:----------:|:---------:|:---------:|
+| Synaptosome C10 |      0.75       |          0.88          |   0.07    |   1.86±1.18    |           129            |    123     |     6     |     5     |
+| Synaptosome T1  |      0.75       |          0.83          |   0.11    |   2.66±1.52    |           699            |    687     |    12     |    33     |
+| Synaptosome T2  |      0.74       |          0.77          |   0.11    |   2.27±1.84    |           122            |    117     |     5     |     2     |
+| Synaptosome T3  |      0.72       |          0.74          |   0.11    |   3.64±2.22    |           434            |    397     |    37     |    57     |
+| Synaptosome T5  |      0.77       |          0.85          |   0.08    |   2.20±1.26    |           535            |    526     |     9     |    25     |
+| Synaptosome T6  |       0.6       |          0.83          |   0.07    |   2.02±1.12    |           373            |    353     |    20     |    42     |
+| Synaptosome T7  |       0.8       |          0.83          |   0.06    |   2.22±1.14    |           110            |    107     |     3     |     9     |
+| Synaptosome T8  |      0.83       |          0.91          |   0.04    |   2.09±1.04    |           100            |     99     |     1     |     2     |
+| Synaptosome T10 |      0.77       |          0.86          |   0.05    |   1.96±1.04    |            77            |     74     |     3     |     6     |
+| **Average**     |  **0.75±0.06**  |     **0.83±0.05**      | **0.08**  | **2.32±1.43**  |        **286.56**        | **96.30%** | **3.70%** | **6.10%** |
+Table: Evaluation of the segmentation on the synaptosome test set (same sample type as the train set). For the meaning of the columns, see Table @tbl:train-tomograms.
+{#tbl:test-tomograms}
 
-
-#### Test Dataset 3 (Neuron Dataset)
-
-| **_Dataset_** | **_Mask DICE_** | **_Final Label DICE_** |     | **_δ d_** | **_Δ c (nm)_** | **_\# of Vesicles_** |   **TP**   |   **FN**   |  **FP**   |
-| ------------- | :-------------: | :--------------------: | :-: | :-------: | :------------: | :------------------: | :--------: | :--------: | :-------: |
-| Neuron 133    |      0.76       |          0.86          |     |   0.05    |   2.16±1.32    |         523          |    467     |     56     |     8     |
-| Neuron 123    |      0.64       |          0.71          |     |   0.05    |   2.05±1.18    |          66          |     58     |     8      |     2     |
-| Neuron 84     |      0.86       |          0.89          |     |   0.06    |   1.44±0.75    |         498          |    484     |     14     |     1     |
-| Neuron 134    |      0.56       |          0.67          |     |   0.09    |   2.87±2.50    |         638          |    384     |    254     |    63     |
-| Neuron 115    |      0.57       |          0.63          |     |   0.08    |   3.56±3.23    |         170          |    123     |     47     |    32     |
-| Neuron 102    |      0.73       |          0.86          |     |   0.05    |   1.47±0.79    |         103          |     86     |     17     |     1     |
-| Neuron 80     |       0.7       |          0.81          |     |   0.07    |   2.67±2.00    |         111          |    102     |     9      |     3     |
-| Neuron 114    |      0.65       |          0.73          |     |   0.07    |   2.68±1.79    |         131          |     93     |     38     |     9     |
-| Neuron 132    |      0.69       |          0.87          |     |   0.03    |   1.65±1.26    |         135          |    129     |     6      |    32     |
-| Neuron 73     |      0.78       |          0.83          |     |   0.06    |   2.93±2.00    |         526          |    483     |     43     |     2     |
-| Neuron 128    |      0.67       |          0.85          |     |   0.04    |   2.33±1.70    |         252          |    232     |     20     |    19     |
-| Neuron 116    |      0.62       |          0.73          |     |   0.07    |   2.38±1.82    |         296          |    207     |     89     |    35     |
-| **Average**   |  **0.69±0.09**  |     **0.79±0.09**      |     | **0.06**  | **2.35±1.83**  |      **287.42**      | **83.60%** | **16.40%** | **7.90%** |
-
-{#tbl:neuron-tomograms tag="S3"}
+| **_Dataset_** | **_Mask Dice_** | **_Final Label Dice_** | **_δ d_** | **_Δ c (nm)_** | **_Number of Vesicles_** |  **_TP_**  |  **_FN_**  | **_FP_**  |
+| ------------- |:---------------:|:----------------------:| :-------: | :------------: |:------------------------:|:----------:|:----------:|:---------:|
+| Neuron 133    |      0.76       |          0.86          |   0.05    |   2.16±1.32    |           523            |    467     |     56     |     8     |
+| Neuron 123    |      0.64       |          0.71          |   0.05    |   2.05±1.18    |            66            |     58     |     8      |     2     |
+| Neuron 84     |      0.86       |          0.89          |   0.06    |   1.44±0.75    |           498            |    484     |     14     |     1     |
+| Neuron 134    |      0.56       |          0.67          |   0.09    |   2.87±2.50    |           638            |    384     |    254     |    63     |
+| Neuron 115    |      0.57       |          0.63          |   0.08    |   3.56±3.23    |           170            |    123     |     47     |    32     |
+| Neuron 102    |      0.73       |          0.86          |   0.05    |   1.47±0.79    |           103            |     86     |     17     |     1     |
+| Neuron 80     |       0.7       |          0.81          |   0.07    |   2.67±2.00    |           111            |    102     |     9      |     3     |
+| Neuron 114    |      0.65       |          0.73          |   0.07    |   2.68±1.79    |           131            |     93     |     38     |     9     |
+| Neuron 132    |      0.69       |          0.87          |   0.03    |   1.65±1.26    |           135            |    129     |     6      |    32     |
+| Neuron 73     |      0.78       |          0.83          |   0.06    |   2.93±2.00    |           526            |    483     |     43     |     2     |
+| Neuron 128    |      0.67       |          0.85          |   0.04    |   2.33±1.70    |           252            |    232     |     20     |    19     |
+| Neuron 116    |      0.62       |          0.73          |   0.07    |   2.38±1.82    |           296            |    207     |     89     |    35     |
+| **Average**   |  **0.69±0.09**  |     **0.79±0.09**      | **0.06**  | **2.35±1.83**  |        **287.42**        | **83.60%** | **16.40%** | **7.90%** |
+Table: Evaluation of the segmentation on the neuron test set (different sample type as the train set). For the meaning of the columns, see Table @tbl:train-tomograms.
+{#tbl:neuron-tomograms}
 
 Our method transfers well across datasets even without fine-tuning which show robustness and generalization.
 
