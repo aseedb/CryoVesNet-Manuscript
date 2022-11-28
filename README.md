@@ -1,7 +1,7 @@
 # Output directory containing the formatted manuscript
 
 The [`gh-pages`](https://github.com/aseedb/deep-prepyto-paper/tree/gh-pages) branch hosts the contents of this directory at <https://aseedb.github.io/deep-prepyto-paper/>.
-The permalink for this webpage version is <https://aseedb.github.io/deep-prepyto-paper/v/e7a2b7f02c95fce871a940ddcf7e3c57532cc7fc/>.
+The permalink for this webpage version is <https://aseedb.github.io/deep-prepyto-paper/v/bd6c15e96d627369a6c8fa40c1a3bb104d3eec5f/>.
 To redirect to the permalink for the latest manuscript version at anytime, use the link <https://aseedb.github.io/deep-prepyto-paper/v/freeze/>.
 
 ## Files
@@ -35,4 +35,4 @@ Verifying timestamps with the `ots verify` command requires running a local bitc
 ## Source
 
 The manuscripts in this directory were built from
-[`e7a2b7f02c95fce871a940ddcf7e3c57532cc7fc`](https://github.com/aseedb/deep-prepyto-paper/commit/e7a2b7f02c95fce871a940ddcf7e3c57532cc7fc).
+[`bd6c15e96d627369a6c8fa40c1a3bb104d3eec5f`](https://github.com/aseedb/deep-prepyto-paper/commit/bd6c15e96d627369a6c8fa40c1a3bb104d3eec5f).
