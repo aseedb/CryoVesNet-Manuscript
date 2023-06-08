@@ -31,8 +31,8 @@ header-includes: |-
   <meta name="dc.date" content="2023-06-08" />
   <meta name="citation_publication_date" content="2023-06-08" />
   <meta property="article:published_time" content="2023-06-08" />
-  <meta name="dc.modified" content="2023-06-08T11:50:00+00:00" />
-  <meta property="article:modified_time" content="2023-06-08T11:50:00+00:00" />
+  <meta name="dc.modified" content="2023-06-08T11:51:48+00:00" />
+  <meta property="article:modified_time" content="2023-06-08T11:51:48+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -68,9 +68,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://aseedb.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://aseedb.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://aseedb.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://aseedb.github.io/deep-prepyto-paper/v/7cb8016616044bb9ba0c8858ccabe9b9ff9a4754/" />
-  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/deep-prepyto-paper/v/7cb8016616044bb9ba0c8858ccabe9b9ff9a4754/" />
-  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/deep-prepyto-paper/v/7cb8016616044bb9ba0c8858ccabe9b9ff9a4754/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://aseedb.github.io/deep-prepyto-paper/v/d3361973a45e1130e4c63498192cebdfdd6aa746/" />
+  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/deep-prepyto-paper/v/d3361973a45e1130e4c63498192cebdfdd6aa746/" />
+  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/deep-prepyto-paper/v/d3361973a45e1130e4c63498192cebdfdd6aa746/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -92,9 +92,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://aseedb.github.io/deep-prepyto-paper/v/7cb8016616044bb9ba0c8858ccabe9b9ff9a4754/))
+([permalink](https://aseedb.github.io/deep-prepyto-paper/v/d3361973a45e1130e4c63498192cebdfdd6aa746/))
 was automatically generated
-from [aseedb/deep-prepyto-paper@7cb8016](https://github.com/aseedb/deep-prepyto-paper/tree/7cb8016616044bb9ba0c8858ccabe9b9ff9a4754)
+from [aseedb/deep-prepyto-paper@d336197](https://github.com/aseedb/deep-prepyto-paper/tree/d3361973a45e1130e4c63498192cebdfdd6aa746)
 on June 8, 2023.
 </em></small>
 
@@ -223,7 +223,7 @@ The characterization of these interactions can be performed automatically with t
 To date, SV segmentation has been performed manually, but given the large number of SVs per dataset, it is an extremely time-consuming process. 
 Typically, one person spends 3 to 8 working days to segment a single dataset.
 Attempts to perform this task automatically based on classical computer vision algorithms have not yielded sufficiently accurate performance [@doi:10.1016/j.jsb.2014.02.015].  
-To alleviate this situation, we decided to develop an approach based on deep learning-based.
+To alleviate this situation, we decided to develop an approach based on deep learning.
 
 Convolutional neural networks (CNN) have been successfully employed to segment cryo-ET data [@doi:10.1038/nmeth.4405]. 
 Although entirely satisfying for visualization purposes, this approach has not met the requirements of pyto.
@@ -233,7 +233,7 @@ The independent output 2D prediction images are reassembled in a 3-dimensional (
 As discussed above, membranes oriented approximately parallel to the plane of the 2D tomographic images are not resolved.
 In the absence of contextual knowledge of the other 2D images, the CNN fails to segment these regions of the vesicles.
 Hence, spherical vesicles appear open, whereas we expect closed spherical objects.
-To overcome this limitation, we used a U-Net CNN that takes 3D images as input [@arxiv:1606.06650].
+To overcome this limitation, we used a 3D U-Net CNN that takes 3D images as input [@arxiv:1606.06650].
 Weigert et al. [@doi:10.1038/s41592-018-0216-7] implemented a U-Net for content-aware restoration (CARE) of 3D fluorescence microscopy datasets. They showed that it can restore information from anisotropic and very noisy datasets.
 We implemented a 3D U-Net based on CARE building blocks and trained it with manually segmented datasets. 
 This method provided good accuracy and was only slightly affected by the missing wedge artifact. 
