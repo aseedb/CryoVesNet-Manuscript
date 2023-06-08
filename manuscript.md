@@ -31,8 +31,8 @@ header-includes: |-
   <meta name="dc.date" content="2023-06-08" />
   <meta name="citation_publication_date" content="2023-06-08" />
   <meta property="article:published_time" content="2023-06-08" />
-  <meta name="dc.modified" content="2023-06-08T11:43:07+00:00" />
-  <meta property="article:modified_time" content="2023-06-08T11:43:07+00:00" />
+  <meta name="dc.modified" content="2023-06-08T11:50:00+00:00" />
+  <meta property="article:modified_time" content="2023-06-08T11:50:00+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -68,9 +68,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://aseedb.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://aseedb.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://aseedb.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://aseedb.github.io/deep-prepyto-paper/v/88ab2c6a9b90349e6a868eac7a1afce8fb3f9208/" />
-  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/deep-prepyto-paper/v/88ab2c6a9b90349e6a868eac7a1afce8fb3f9208/" />
-  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/deep-prepyto-paper/v/88ab2c6a9b90349e6a868eac7a1afce8fb3f9208/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://aseedb.github.io/deep-prepyto-paper/v/7cb8016616044bb9ba0c8858ccabe9b9ff9a4754/" />
+  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/deep-prepyto-paper/v/7cb8016616044bb9ba0c8858ccabe9b9ff9a4754/" />
+  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/deep-prepyto-paper/v/7cb8016616044bb9ba0c8858ccabe9b9ff9a4754/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -92,9 +92,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://aseedb.github.io/deep-prepyto-paper/v/88ab2c6a9b90349e6a868eac7a1afce8fb3f9208/))
+([permalink](https://aseedb.github.io/deep-prepyto-paper/v/7cb8016616044bb9ba0c8858ccabe9b9ff9a4754/))
 was automatically generated
-from [aseedb/deep-prepyto-paper@88ab2c6](https://github.com/aseedb/deep-prepyto-paper/tree/88ab2c6a9b90349e6a868eac7a1afce8fb3f9208)
+from [aseedb/deep-prepyto-paper@7cb8016](https://github.com/aseedb/deep-prepyto-paper/tree/7cb8016616044bb9ba0c8858ccabe9b9ff9a4754)
 on June 8, 2023.
 </em></small>
 
@@ -257,7 +257,7 @@ The loss for the training set went from 0.55 and to values below 0.05 after 50 e
 ![**Dice coefficient and loss value for training and validation set.** ](images/traindice.png){#fig:dice width="7cm"}
 
 We seeked to further improve segmentation accuracy by feeding the probability mask output by the U-Net to a series of postprocess steps (Figure {@fig:pipeline}).
-Three batches of tomograms were used to assess the performances of the pipeline: 1) The 9 rat synaptosome tomograms that had been used for U-Net training, 2) Another 9 rat synaptosome tomograms, 3) 12 mouse primary neuronal culture tomograms). 
+Three sets of tomograms were used to assess the performances of the pipeline: 1) Traning dataset : The 9 rat synaptosome tomograms that had been used for U-Net training, 2) Testing dataset: Another 9 rat synaptosome tomograms, 3) Testing dataset for generizibility: 12 mouse primary neuronal culture tomograms). 
 
 ![**Pipeline of automatic segmentation.** a) tomograms b) splitting in 3D patches c) Segmentation Network/ trained U-Net d) probability masks e) stitching patches back together f) thresholding g) adaptive localized thresholding h) outlier removal i) radial profile](images/pipeline.svg){#fig:pipeline width="15cm"}
 
@@ -335,7 +335,7 @@ Table: Evaluation of the segmentation on the synaptosome test set (same sample t
 Table: Evaluation of the segmentation on the neuron test set (different sample type as the train set). For the meaning of the columns, see Table @tbl:train-tomograms.
 {#tbl:neuron-tomograms}
 
-Our method transfers well across datasets even without fine-tuning which show robustness and generalization.
+Our method transfers well across datasets even without fine-tuning which shows robustness and generalization.
 
 ### Comparison of manual segmentation with automatic deep-learning based segmentation
 

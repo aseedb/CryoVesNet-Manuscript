@@ -11,7 +11,7 @@ Blegdamsvej
 Carlsbergfondet
 centroid
 Convolutional
-Cryo
+cryo
 dataset
 datasets
 DeepFinder
@@ -30,6 +30,7 @@ exocytosis
 FN
 Fonden
 FP
+generizibility
 Guillaume
 guiwitz
 homogenous
@@ -60,7 +61,7 @@ pre
 presynaptic
 prix
 probabilty
-pyto
+Pyto
 Radecke
 Raphaela
 recruitability
@@ -78,13 +79,14 @@ subvolumes
 SV
 SVs
 synaptosomal
-Synaptosome
+synaptosome
 synaptosomes
 thresholding
 tomogram
 tomograms
 TP
-unet
+Traning
+UNet
 untilted
 voxel
 voxels

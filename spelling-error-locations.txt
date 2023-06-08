@@ -67,12 +67,17 @@ content/03.results.md:5:synaptosomes
 content/03.results.md:5:tomograms
 content/03.results.md:12:postprocess
 content/03.results.md:12:seeked
+content/03.results.md:13:dataset
+content/03.results.md:13:dataset
+content/03.results.md:13:dataset
+content/03.results.md:13:generizibility
 content/03.results.md:13:synaptosome
 content/03.results.md:13:synaptosome
 content/03.results.md:13:tomograms
 content/03.results.md:13:tomograms
 content/03.results.md:13:tomograms
 content/03.results.md:13:tomograms
+content/03.results.md:13:Traning
 content/03.results.md:15:thresholding
 content/03.results.md:15:thresholding
 content/03.results.md:15:tomograms
