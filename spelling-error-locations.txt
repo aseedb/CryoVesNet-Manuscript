@@ -173,7 +173,7 @@ content/05.materials_and_methods.md:30:datasets
 content/05.materials_and_methods.md:30:synaptosome
 content/05.materials_and_methods.md:31:dataset
 content/05.materials_and_methods.md:35:convolutional
-content/05.materials_and_methods.md:35:convolutional
+content/05.materials_and_methods.md:35:downsampling
 content/05.materials_and_methods.md:35:ReLU
 content/05.materials_and_methods.md:35:unet
 content/05.materials_and_methods.md:36:binarized

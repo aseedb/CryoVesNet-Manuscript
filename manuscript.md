@@ -9,7 +9,7 @@ keywords:
 - post-processing
 - automation
 lang: en-US
-date-meta: '2022-11-28'
+date-meta: '2023-06-08'
 author-meta:
 - Amin Khosrozadeh
 - Raphaela Seeger
@@ -28,11 +28,11 @@ header-includes: |-
   <meta name="citation_title" content="Deep-learning based automatic segmentation of vesicles in cryo-electron tomograms" />
   <meta property="og:title" content="Deep-learning based automatic segmentation of vesicles in cryo-electron tomograms" />
   <meta property="twitter:title" content="Deep-learning based automatic segmentation of vesicles in cryo-electron tomograms" />
-  <meta name="dc.date" content="2022-11-28" />
-  <meta name="citation_publication_date" content="2022-11-28" />
-  <meta property="article:published_time" content="2022-11-28" />
-  <meta name="dc.modified" content="2022-11-28T09:49:22+00:00" />
-  <meta property="article:modified_time" content="2022-11-28T09:49:22+00:00" />
+  <meta name="dc.date" content="2023-06-08" />
+  <meta name="citation_publication_date" content="2023-06-08" />
+  <meta property="article:published_time" content="2023-06-08" />
+  <meta name="dc.modified" content="2023-06-08T11:43:07+00:00" />
+  <meta property="article:modified_time" content="2023-06-08T11:43:07+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -68,9 +68,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://aseedb.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://aseedb.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://aseedb.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://aseedb.github.io/deep-prepyto-paper/v/bd6c15e96d627369a6c8fa40c1a3bb104d3eec5f/" />
-  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/deep-prepyto-paper/v/bd6c15e96d627369a6c8fa40c1a3bb104d3eec5f/" />
-  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/deep-prepyto-paper/v/bd6c15e96d627369a6c8fa40c1a3bb104d3eec5f/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://aseedb.github.io/deep-prepyto-paper/v/88ab2c6a9b90349e6a868eac7a1afce8fb3f9208/" />
+  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/deep-prepyto-paper/v/88ab2c6a9b90349e6a868eac7a1afce8fb3f9208/" />
+  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/deep-prepyto-paper/v/88ab2c6a9b90349e6a868eac7a1afce8fb3f9208/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -92,10 +92,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://aseedb.github.io/deep-prepyto-paper/v/bd6c15e96d627369a6c8fa40c1a3bb104d3eec5f/))
+([permalink](https://aseedb.github.io/deep-prepyto-paper/v/88ab2c6a9b90349e6a868eac7a1afce8fb3f9208/))
 was automatically generated
-from [aseedb/deep-prepyto-paper@bd6c15e](https://github.com/aseedb/deep-prepyto-paper/tree/bd6c15e96d627369a6c8fa40c1a3bb104d3eec5f)
-on November 28, 2022.
+from [aseedb/deep-prepyto-paper@88ab2c6](https://github.com/aseedb/deep-prepyto-paper/tree/88ab2c6a9b90349e6a868eac7a1afce8fb3f9208)
+on June 8, 2023.
 </em></small>
 
 
@@ -398,7 +398,7 @@ The used datasets included a total of 30 tomograms with heterogeneous pixel size
 
 ### Network architecture and training procedure
 
-We used a U-Net of depth 2, two convolutional layers per depth, a convolutional kernel size of 3, and ReLU activation function based on the open-source CARE framework (Figure {@fig:unet}) [@doi:10.1038/s41592-018-0216-7]. 
+We used a U-Net with two downsampling stages and two convolutional layers per stages, with a kernel size of 3, and ReLU activation function based on the open-source CARE framework (Figure {@fig:unet}) [@doi:10.1038/s41592-018-0216-7]. 
 Datasets were prepared by splitting the 3D tomographic volume of synaptosomes into 32^3^-voxel subvolumes and keeping only subvolumes occupied by a sufficient amount (> 1000 voxels) of binarized vesicle label.
 860 subvolumes were used for training and 100 subvolumes were used for validation.
 We used the Adam optimizer on a binary cross-entropy loss function.
