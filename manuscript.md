@@ -9,7 +9,7 @@ keywords:
 - post-processing
 - automation
 lang: en-US
-date-meta: '2023-06-14'
+date-meta: '2023-06-15'
 author-meta:
 - Amin Khosrozadeh
 - Raphaela Seeger
@@ -28,11 +28,11 @@ header-includes: |-
   <meta name="citation_title" content="Deep-learning based automatic segmentation of vesicles in cryo-electron tomograms" />
   <meta property="og:title" content="Deep-learning based automatic segmentation of vesicles in cryo-electron tomograms" />
   <meta property="twitter:title" content="Deep-learning based automatic segmentation of vesicles in cryo-electron tomograms" />
-  <meta name="dc.date" content="2023-06-14" />
-  <meta name="citation_publication_date" content="2023-06-14" />
-  <meta property="article:published_time" content="2023-06-14" />
-  <meta name="dc.modified" content="2023-06-14T15:32:24+00:00" />
-  <meta property="article:modified_time" content="2023-06-14T15:32:24+00:00" />
+  <meta name="dc.date" content="2023-06-15" />
+  <meta name="citation_publication_date" content="2023-06-15" />
+  <meta property="article:published_time" content="2023-06-15" />
+  <meta name="dc.modified" content="2023-06-15T09:50:30+00:00" />
+  <meta property="article:modified_time" content="2023-06-15T09:50:30+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -68,9 +68,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://aseedb.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://aseedb.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://aseedb.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://aseedb.github.io/deep-prepyto-paper/v/d0aec6f8ab7c81b226397f5b1d25635b96c15461/" />
-  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/deep-prepyto-paper/v/d0aec6f8ab7c81b226397f5b1d25635b96c15461/" />
-  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/deep-prepyto-paper/v/d0aec6f8ab7c81b226397f5b1d25635b96c15461/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://aseedb.github.io/deep-prepyto-paper/v/171046aa0fcb44260ea678d5c87a041a36815d9d/" />
+  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/deep-prepyto-paper/v/171046aa0fcb44260ea678d5c87a041a36815d9d/" />
+  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/deep-prepyto-paper/v/171046aa0fcb44260ea678d5c87a041a36815d9d/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -92,10 +92,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://aseedb.github.io/deep-prepyto-paper/v/d0aec6f8ab7c81b226397f5b1d25635b96c15461/))
+([permalink](https://aseedb.github.io/deep-prepyto-paper/v/171046aa0fcb44260ea678d5c87a041a36815d9d/))
 was automatically generated
-from [aseedb/deep-prepyto-paper@d0aec6f](https://github.com/aseedb/deep-prepyto-paper/tree/d0aec6f8ab7c81b226397f5b1d25635b96c15461)
-on June 14, 2023.
+from [aseedb/deep-prepyto-paper@171046a](https://github.com/aseedb/deep-prepyto-paper/tree/171046aa0fcb44260ea678d5c87a041a36815d9d)
+on June 15, 2023.
 </em></small>
 
 
@@ -233,13 +233,16 @@ The independent output 2D prediction images are reassembled in a 3-dimensional (
 As discussed above, membranes oriented approximately parallel to the plane of the 2D tomographic images are not resolved.
 In the absence of contextual knowledge of the other 2D images, the CNN fails to segment these regions of the vesicles.
 Hence, spherical vesicles appear open, whereas we expect closed spherical objects.
-To overcome this limitation, we used a 3D U-Net CNN that takes 3D images as input [@arxiv:1606.06650].
-Weigert et al. [@doi:10.1038/s41592-018-0216-7] implemented a U-Net for content-aware restoration (CARE) of 3D fluorescence microscopy datasets. They showed that it can restore information from anisotropic and very noisy datasets.
+A recent publication addressed this issue by implementing a downstream fitting step based on Gaussian process, allowing for the smooth closure of the membranes [@doi:10.1016/j.jocs.2022.101904].
+We followed a different approach and used a 3D U-Net CNN that takes 3D images as input [@arxiv:1606.06650]. 
+Weigert et al. [@doi:10.1038/s41592-018-0216-7] implemented a U-Net for content-aware restoration (CARE) of 3D fluorescence microscopy datasets.
+They showed that it can restore information from anisotropic and very noisy datasets.
+Such networks have been used in the last couple of years in cryo-ET analysis, mainly to perform denoising and object detection [@arxiv:1810.05420;@doi:10.1038/s41592-021-01275-4;@doi:10.1038/s41592-022-01746-2]. 
 We implemented a 3D U-Net based on CARE building blocks and trained it with manually segmented datasets. 
 This method provided good accuracy and was only slightly affected by the missing wedge artifact. 
 Nevertheless, it was not sufficient for our downstream pyto analysis.
 Hence, we developed a post-processing method, which transforms the segmented objects into spheres and refines their radius and center location. The procedure includes an outlier detection procedure.
-This lead to a substantial accuracy improvement, which is reflected in pyto performances comparable to those obtained after manual SV segmentation.
+This leads to a substantial improvement in accuracy, which is reflected in pyto performances comparable to those obtained after manual SV segmentation.
 We also introduce a semi-automatic method to quickly fix wrongly segmented or missed SVs.
 
 Although our set of procedures was developed with the use case of SV segmentation in mind, it can be used to segment any other types of biological spherical vesicles, such as transport vesicles, secretory vesicles, endocytic vesicles, and extracellular vesicles.

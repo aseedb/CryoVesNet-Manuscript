@@ -10,12 +10,13 @@ binarized
 Blegdamsvej
 Carlsbergfondet
 centroid
-convolutional
-Cryo
+Convolutional
+cryo
 dataset
 datasets
 DeepFinder
 defocus
+denoising
 developement
 dGTi
 Didcot
@@ -86,7 +87,7 @@ tomogram
 tomograms
 TP
 Traning
-unet
+UNet
 untilted
 voxel
 voxels
