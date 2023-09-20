@@ -9,7 +9,7 @@ keywords:
 - post-processing
 - automation
 lang: en-US
-date-meta: '2023-08-15'
+date-meta: '2023-09-20'
 author-meta:
 - Amin Khosrozadeh
 - Raphaela Seeger
@@ -28,11 +28,11 @@ header-includes: |-
   <meta name="citation_title" content="CryoVesNet: A Dedicated Framework for Synaptic Vesicle Analysis in Cryo-Tomograms" />
   <meta property="og:title" content="CryoVesNet: A Dedicated Framework for Synaptic Vesicle Analysis in Cryo-Tomograms" />
   <meta property="twitter:title" content="CryoVesNet: A Dedicated Framework for Synaptic Vesicle Analysis in Cryo-Tomograms" />
-  <meta name="dc.date" content="2023-08-15" />
-  <meta name="citation_publication_date" content="2023-08-15" />
-  <meta property="article:published_time" content="2023-08-15" />
-  <meta name="dc.modified" content="2023-08-15T13:12:16+00:00" />
-  <meta property="article:modified_time" content="2023-08-15T13:12:16+00:00" />
+  <meta name="dc.date" content="2023-09-20" />
+  <meta name="citation_publication_date" content="2023-09-20" />
+  <meta property="article:published_time" content="2023-09-20" />
+  <meta name="dc.modified" content="2023-09-20T18:08:30+00:00" />
+  <meta property="article:modified_time" content="2023-09-20T18:08:30+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -68,9 +68,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://aseedb.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://aseedb.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://aseedb.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://aseedb.github.io/deep-prepyto-paper/v/edd83ad8ad4a8cf7f8b50a433d7b263cfe1898c4/" />
-  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/deep-prepyto-paper/v/edd83ad8ad4a8cf7f8b50a433d7b263cfe1898c4/" />
-  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/deep-prepyto-paper/v/edd83ad8ad4a8cf7f8b50a433d7b263cfe1898c4/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://aseedb.github.io/deep-prepyto-paper/v/59530d76adfaf5d0760a7a5f314e42bfaf6ae174/" />
+  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/deep-prepyto-paper/v/59530d76adfaf5d0760a7a5f314e42bfaf6ae174/" />
+  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/deep-prepyto-paper/v/59530d76adfaf5d0760a7a5f314e42bfaf6ae174/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -92,10 +92,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://aseedb.github.io/deep-prepyto-paper/v/edd83ad8ad4a8cf7f8b50a433d7b263cfe1898c4/))
+([permalink](https://aseedb.github.io/deep-prepyto-paper/v/59530d76adfaf5d0760a7a5f314e42bfaf6ae174/))
 was automatically generated
-from [aseedb/deep-prepyto-paper@edd83ad](https://github.com/aseedb/deep-prepyto-paper/tree/edd83ad8ad4a8cf7f8b50a433d7b263cfe1898c4)
-on August 15, 2023.
+from [aseedb/deep-prepyto-paper@59530d7](https://github.com/aseedb/deep-prepyto-paper/tree/59530d76adfaf5d0760a7a5f314e42bfaf6ae174)
+on September 20, 2023.
 </em></small>
 
 
@@ -394,6 +394,8 @@ We have developed a software that is designed to be compatible with programs lik
 
 ## Discussion
 
+
+## OLD
 While the Dice coefficient is a good global measure to assess the predictions in comparison to the ground truth, it is difficult to asses local segmentation accurracy. 
 For example, a single generated vesicle label containing several close connected vesicles would not be practical for further analysis for the researcher although it could have almost the same dice value. 
 What is important for actual usage of the software would be the number and percentage of true-detected vesicles, false-positive and false-negative rates. 
@@ -405,6 +407,150 @@ If we measure each axis error it will reveal that human bias in segmentation is 
 3d unet good for 3D processing
 recent Nature methods paper by Ben Engel, DeepFinder -> Relion for STA creates mask to find more using dl
 -what are they doing, maybe compare that in the text, different aims; we might compare results we achieve (keep as bonus, revision)
+## SUMMARY
+Synaptic Vesicles: Molecular Interactions and Functions
+
+Synaptic vesicles (SVs) play a central role in neurotransmission, facilitating the release of neurotransmitters into the synaptic cleft. These vesicles undergo a series of molecular interactions with various protein complexes, transitioning from tethering to priming, and eventually to neurotransmitter release. Proteins such as Munc13 are integral to these processes, aiding in the localization and preparation of vesicles near the plasma membrane. Additionally, synapsins have been identified as key proteins in maintaining the reserve pool of SVs in presynaptic terminals. The mechanisms through which synapsins achieve this, whether by cross-linking vesicles or creating a distinct liquid phase, remain subjects of active research and debate.
+
+Synaptic Studies and the Need for CryoET
+
+The intricate nature of synapses and their associated structures has posed numerous challenges for researchers. Cryo-electron tomography (cryoET) emerges as a powerful tool to address these challenges, offering unparalleled insights into the molecular architecture of synapses. Accurate segmentation of structures such as vesicles, connectors, and tethers is essential for a comprehensive understanding of synaptic function. CryoET, however, is not without its challenges. The technique often grapples with issues like noise and the 'missing wedge' phenomenon, which can introduce artifacts and reduce the resolution of the reconstructed volume. Addressing these challenges is crucial for obtaining clear and accurate tomographic reconstructions.
+
+CryoVesSeg: Integrating Deep Learning with CryoET
+
+Harnessing the capabilities of deep learning, CryoVesSeg represents a synergistic approach to SV studies in cryoET. Deep learning, with its ability to process vast datasets and identify complex patterns, complements the precision of cryoET. The U-Net architecture, central to CryoVesSeg, has been trained on a curated dataset of manually segmented tomograms. This training ensures that the model can effectively segment SVs, connectors, and tethers, even in the presence of the aforementioned challenges like noise and the missing wedge phenomenon.
+
+Conclusion
+
+In the realm of cellular biology, the study of synaptic vesicles and their interactions is of paramount importance. With the integration of deep learning and cryoET, tools like CryoVesSeg are poised to revolutionize our understanding of these structures. As we continue to refine our methodologies and address the challenges inherent to cryoET, the promise of deeper insights and a more comprehensive understanding of synaptic function beckons.
+
+
+
+
+### NEXT
+
+Synaptic Vesicles: Beyond Basic Understanding
+
+The intricate molecular dynamics of synaptic vesicles (SVs) have long been a focal point in neuroscientific research. Their pivotal role in neurotransmission, particularly in the release of neurotransmitters into the synaptic cleft, necessitates a deeper understanding of their interactions with various protein complexes. As they transition through states from tethering to priming, proteins such as Munc13 play a crucial role in their localization and preparation adjacent to the plasma membrane. Concurrently, the role of synapsins in maintaining the reserve pool of SVs in presynaptic terminals has been a subject of extensive debate, with theories ranging from vesicle cross-linking to the creation of a distinct liquid phase.
+
+The Imperative of CryoET in Synaptic Studies
+
+The complexity of synapses and their associated molecular structures has consistently presented challenges that traditional microscopy techniques struggle to address. Cryo-electron tomography (cryoET) emerges as a beacon in this landscape, offering a resolution and depth previously unattainable. However, the inherent challenges of cryoET, such as noise and the 'missing wedge' phenomenon, have been significant barriers to obtaining pristine tomographic reconstructions. These challenges underscore the need for advanced methodologies that can navigate the intricacies of cryoET data while preserving the integrity of the molecular structures under study.
+
+CryoVesSeg: Bridging Deep Learning and CryoET
+
+In light of the challenges and the pressing need for accurate segmentation, CryoVesSeg integrates the power of deep learning with the precision of cryoET. Drawing inspiration from the methodologies and findings of recent studies, our approach leverages the U-Net architecture, trained on a meticulously curated dataset of manually segmented tomograms. This integration ensures not only the effective segmentation of SVs, connectors, and tethers but also addresses the challenges intrinsic to cryoET, such as noise and the missing wedge phenomenon. The adaptability of CryoVesSeg, as evidenced by its performance across diverse datasets, underscores its potential as a versatile tool in synaptic studies.
+
+Conclusion
+
+The journey of understanding synaptic vesicles and their myriad interactions is far from complete. With tools like CryoVesSeg, which seamlessly blend the capabilities of deep learning and cryoET, we are better equipped to delve into the molecular intricacies of synapses. As we continue to refine our approach and draw insights from ongoing research, the promise of unveiling deeper layers of synaptic function and molecular interactions remains an exciting prospect for the future of cellular biology research.
+
+
+### Version One:
+Discussion
+
+The realm of synaptic vesicles (SVs) and their interactions at the synapse is a fascinating and complex area of study in cellular biology. These vesicles play a pivotal role in neurotransmission, and understanding their behavior, interactions, and associated protein complexes is crucial for a comprehensive grasp of synaptic function.
+
+Synaptic Vesicles and Their Interactions
+
+At the heart of synaptic transmission lies the process of neurotransmitter release, which is orchestrated by a series of coordinated actions involving multiple protein complexes. Synaptic vesicles undergo a series of states, from tethering to priming, before they release their neurotransmitter contents into the synaptic cleft. This process is not just about the vesicles themselves but also about the intricate dance of protein complexes that facilitate these states.
+
+Tethering represents the initial stage where vesicles are held close to the plasma membrane, readying them for the subsequent steps. This is followed by priming, a state where vesicles are molecularly prepared for neurotransmitter release. The transition between these states involves specific protein bridges, with proteins like Munc13 playing a role in localizing vesicles close to the plasma membrane. The orchestration of these transitions is further modulated by other proteins and enzymes, such as protein kinase C, which influences vesicle interactions.
+
+The Role of Synapsins in Vesicle Clustering
+
+Beyond the protein complexes that facilitate vesicle states, there are proteins like synapsins that play a crucial role in maintaining the reserve pool of SVs in presynaptic terminals. This reserve pool is essential as it ensures that there are always vesicles available for neurotransmission, especially during heightened synaptic activity. The exact mechanism through which synapsins maintain this reserve pool has been a topic of debate. Some theories suggest that synapsins might cross-link vesicles, anchoring them to each other, while others propose that synapsins create a unique liquid phase, allowing vesicles to float within a synapsin droplet. Both models offer intriguing insights into the potential mechanisms of vesicle clustering and reserve pool maintenance.
+
+CryoVesSeg: A New Frontier in Synaptic Studies
+
+Enter CryoVesSeg, our cutting-edge tool that leverages the power of cryo-electron tomography and deep learning. With CryoVesSeg, we can delve deeper into the molecular intricacies of synaptic vesicles and their associated structures. Traditional methods, while precise, often lacked efficiency. CryoVesSeg, with its U-Net architecture, offers a solution that marries precision with speed.
+
+The ability to accurately segment vesicles, connectors, tethers, and other associated structures in their native environment opens up new avenues for research. By visualizing these structures at a molecular resolution, we can gain insights into their functional dynamics, interactions, and the roles of various protein complexes in the process. Furthermore, the adaptability of CryoVesSeg means that it can be trained on diverse datasets, making it a versatile tool for various cellular biology studies.
+
+Conclusion
+
+In conclusion, the world of synaptic vesicles is rich with molecular interactions and processes that are vital for synaptic function. With tools like CryoVesSeg, we are poised to uncover the mysteries of these interactions, offering a deeper understanding of synaptic transmission and the myriad protein complexes that facilitate it. As we continue our journey in this field, the promise of new discoveries and insights beckons, paving the way for a brighter future in cellular biology research.
+
+### Version two:
+
+CryoVesSeg: Harnessing the Power of Deep Learning for Synaptic Studies
+
+Integration with Deep Learning Paradigms
+
+Deep learning, a specialized branch of machine learning, has revolutionized the way we approach complex data-driven tasks. Its ability to sift through vast datasets and discern intricate patterns is unparalleled, making it an ideal tool for cellular structure segmentation in cryoET. CryoVesSeg, our innovative tool, is not just about synaptic vesicles (SVs) but a broader testament to the transformative potential of deep learning in cellular biology. By utilizing a meticulously curated set of manually segmented tomograms, our model undergoes rigorous training phases. The result? A segmentation that is both precise and nuanced, going beyond the rudimentary masking often seen in traditional methods.
+
+Comparative Insights
+
+Historically, cryoET methodologies have relied heavily on techniques like template matching and subtomogram classification. While effective, these methods often lack the flexibility and adaptability that modern research demands. CryoVesSeg, with its deep learning foundation, introduces a dynamic shift. By integrating post-processing steps such as adaptive thresholding, our approach ensures that segmentation is not just accurate but refined. This adaptability, deeply rooted in machine learning principles, emphasizes the versatility of CryoVesSeg, making it suitable for diverse datasets, including those beyond SVs.
+
+Applications and Future Directions
+
+The versatility of deep learning is evident in CryoVesSeg's potential applications. Beyond SV segmentation, our methodology shows promise in particle picking, a crucial step in cryoET data analysis. This dual functionality, encompassing both segmentation and particle picking, enhances the value of CryoVesSeg in the realm of cellular biology.
+
+Moreover, drawing from the results and methods you provided, our deep learning approach is poised to make significant strides in synaptic studies. The potential to gain insights into synaptic vesicle pool formation, the interactions of vesicles with connectors and tethers, and the broader synaptic landscape is immense. Given well-annotated tomograms, there's an exciting possibility to extend CryoVesSeg's capabilities to other cellular structures, offering a holistic view of the cellular microenvironment.
+
+Challenges and Adaptations
+
+Like all machine learning models, deep learning networks are data-hungry. While CryoVesSeg benefits from a comprehensive training regimen, the ever-evolving nature of data and the unique variability inherent to SVs highlight the need for continuous model updates. As we chart our path forward, our primary goal is to enhance the model's generalizability. By integrating feedback, refining training datasets, and adapting to the latest in machine learning research, we aim to ensure that CryoVesSeg remains a cutting-edge tool in the ever-evolving landscape of cellular biology research.
+
+
+
+### Version three:
+
+Discussion
+
+The intricate world of synaptic vesicles (SVs) and their associated structures has been a central focus in cellular biology. Accurate segmentation of these structures in cryo-electron tomography (cryoET) is essential for delving deeper into their functional dynamics and molecular complexities. Historically, segmentation in cryoET has leaned heavily on manual processes, ensuring precision but often at the cost of efficiency. Our approach, leveraging the capabilities of deep learning and the U-Net architecture, offers a solution that balances precision with efficiency.
+
+Synaptic Studies and the Need for CryoET
+The study of synapses has raised numerous questions that cryoET is uniquely positioned to answer. Accurate segmentation of vesicles, connectors, and tethers is paramount in this endeavor. Our proposed methodology addresses this need, providing tools that can significantly advance our understanding of synapses, synaptic vesicle pools, and the ongoing debates in the field, such as the liquid phase versus cross-linking theories centered around synapsin.
+
+Versatility and Applicability
+Many research groups possess vast amounts of manually segmented and annotated data. Our network is designed to be adaptable, allowing these groups to utilize their datasets and train the network for other membranes and organelles. Beyond synaptic studies, the capabilities of our network extend to other areas, such as particle picking, showcasing its versatility.
+
+Conclusion
+In essence, the methodology and tools we present here serve as a bridge to the biological interpretation of membrane-bound molecular complexes. They pave the way for a deeper understanding of their function and molecular identity, thereby broadening the horizons of quantitative structural methods in cell biology. As we move forward, our focus remains on refining our approach, ensuring it remains both robust and relevant, and continues to contribute significantly to the field.
+
+
+### SUME UP
+
+The intricate world of synaptic vesicles (SVs) has long captivated the attention of cellular biologists. These tiny vesicles, pivotal in neurotransmission, are a testament to the complexity and beauty of cellular processes. As we delve deeper into their molecular intricacies, the need for precise and efficient tools becomes paramount. Enter CryoVesSeg, our state-of-the-art solution that marries the precision of cryo-electron tomography (cryoET) with the efficiency and adaptability of deep learning.
+
+The Synaptic Landscape: A Dance of Vesicles and Proteins
+
+At the heart of synaptic function lies the SVs and their orchestrated interactions with various protein complexes. From the initial tethering, where vesicles are held in readiness near the plasma membrane, to the primed state, where they are molecularly prepared for neurotransmitter release, every step is a coordinated dance of molecular interactions. Proteins like Munc13 and synapsins play crucial roles in these processes, ensuring that neurotransmission occurs seamlessly. The debates around synapsins, whether they cross-link vesicles or create a unique liquid phase, further underscore the depth of our quest for understanding.
+
+Harnessing the Power of Deep Learning with CryoVesSeg
+
+Deep learning, a transformative branch of machine learning, has redefined how we approach data-intensive tasks. CryoVesSeg stands as a testament to this transformation. By leveraging a curated dataset of manually segmented tomograms, our model undergoes intensive training, ensuring that the segmentation of SVs, connectors, and tethers is both nuanced and precise.
+
+Historical methods in cryoET, while effective, often lacked the dynamism that modern research demands. CryoVesSeg, with its foundation in deep learning, offers a refreshing departure from these traditional methods. Its adaptability ensures that it can be tailored to diverse datasets, making it a versatile tool not just for SVs but for a broader spectrum of cellular structures.
+
+Applications, Challenges, and the Road Ahead
+
+The potential applications of CryoVesSeg are vast. Beyond SV segmentation, it shows promise in particle picking, a critical step in cryoET data analysis. This dual functionality amplifies its value in cellular biology research.
+
+However, like all machine learning models, CryoVesSeg thrives on data. The dynamic nature of data and the inherent variability in SVs necessitate continuous updates to the model. As we navigate this evolving landscape, our goal remains clear: to ensure CryoVesSeg remains at the cutting edge, offering researchers a tool that is both robust and relevant.
+
+Conclusion
+
+In the realm of cellular biology, where every molecule tells a story, tools like CryoVesSeg offer a window into these narratives. By combining the precision of cryoET with the efficiency of deep learning, we are poised to uncover the mysteries of synaptic vesicles and their interactions. As we continue this journey, the promise of new discoveries and deeper insights beckons, heralding a new era in our understanding of cellular processes.
+
+
+
+### More technical
+Our methodological approach to automatic segmentation in cryoET represents a significant advancement in the field. By utilizing a U-Net architecture trained on manually segmented tomograms, we have developed a system that can efficiently and accurately segment synaptic vesicles, connectors, and tethers in tomographic datasets.
+
+The results obtained from our method, as evidenced by the Dice coefficient and other evaluation metrics, demonstrate its robustness and accuracy. Notably, our method's ability to generalize across different datasets, including those from rat synaptosomes and mouse astrocytic and primary neuronal cultures, underscores its versatility and potential for widespread application.
+
+The segmentation pipeline, which includes steps such as splitting the tomogram into 3D patches, training the U-Net, generating probability masks, and stitching patches back together, has been optimized to ensure high-quality segmentation outcomes. The use of both global and adaptive localized thresholding techniques further refines the segmentation, addressing challenges posed by closely packed vesicles and complex scenarios.
+
+Our results also highlight the effectiveness of our post-processing steps, including radial profile refinement and the removal of outliers. The radial profile, in particular, ensures that the segmented vesicles closely match their actual structure in the tomogram, providing a more accurate representation.
+
+Furthermore, our method's compatibility with software like Pyto, which is designed for the analysis of pleomorphic membrane-bound molecular complexes in 3D images, enhances its utility. By integrating our segmentation approach with tools like Pyto, researchers can gain deeper insights into synaptic vesicle regulation and other cellular processes.
+
+In terms of dataset preparation and network training, our approach is systematic and comprehensive. The use of different datasets for training, testing, and assessing transfer learning potential ensures that our model is well-trained and capable of handling a variety of tomographic data. The network architecture, based on the CARE framework, has been optimized for vesicle segmentation, and the results obtained validate its effectiveness.
+
+In conclusion, our method for automatic segmentation in cryoET represents a significant step forward in the study of synaptic vesicles and their associated structures. By combining the power of deep learning with optimized post-processing techniques, we offer a solution that is both efficient and precise. As the field of cellular biology continues to evolve, tools like ours will play a crucial role in advancing our understanding of complex cellular structures and processes.
 
 ### Outlook
 implement automatic cell-outline and active zone segmentation as deep learning workflow using UNet
