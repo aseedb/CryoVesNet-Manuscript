@@ -17,9 +17,9 @@ Carlsbergfondet
 CDF
 centroid
 ChimeraX
-Convolutional
-cryo
-cryoET
+convolutional
+Cryo
+CryoET
 CryoVesSeg
 CryoVesSeg’s
 CUDA
