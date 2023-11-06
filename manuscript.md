@@ -31,8 +31,8 @@ header-includes: |-
   <meta name="dc.date" content="2023-11-06" />
   <meta name="citation_publication_date" content="2023-11-06" />
   <meta property="article:published_time" content="2023-11-06" />
-  <meta name="dc.modified" content="2023-11-06T16:35:15+00:00" />
-  <meta property="article:modified_time" content="2023-11-06T16:35:15+00:00" />
+  <meta name="dc.modified" content="2023-11-06T17:32:50+00:00" />
+  <meta property="article:modified_time" content="2023-11-06T17:32:50+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -68,9 +68,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://aseedb.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://aseedb.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://aseedb.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://aseedb.github.io/deep-prepyto-paper/v/aa067d32a573d3267b9aade971779cb7583a7425/" />
-  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/deep-prepyto-paper/v/aa067d32a573d3267b9aade971779cb7583a7425/" />
-  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/deep-prepyto-paper/v/aa067d32a573d3267b9aade971779cb7583a7425/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://aseedb.github.io/deep-prepyto-paper/v/b30c2539c0249614ea42f9dcd1cb927815739a5a/" />
+  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/deep-prepyto-paper/v/b30c2539c0249614ea42f9dcd1cb927815739a5a/" />
+  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/deep-prepyto-paper/v/b30c2539c0249614ea42f9dcd1cb927815739a5a/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -92,9 +92,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://aseedb.github.io/deep-prepyto-paper/v/aa067d32a573d3267b9aade971779cb7583a7425/))
+([permalink](https://aseedb.github.io/deep-prepyto-paper/v/b30c2539c0249614ea42f9dcd1cb927815739a5a/))
 was automatically generated
-from [aseedb/deep-prepyto-paper@aa067d3](https://github.com/aseedb/deep-prepyto-paper/tree/aa067d32a573d3267b9aade971779cb7583a7425)
+from [aseedb/deep-prepyto-paper@b30c253](https://github.com/aseedb/deep-prepyto-paper/tree/b30c2539c0249614ea42f9dcd1cb927815739a5a)
 on November 6, 2023.
 </em></small>
 

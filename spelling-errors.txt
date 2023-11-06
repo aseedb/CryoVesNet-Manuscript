@@ -24,7 +24,7 @@ CryoVesSeg
 CryoVesSeg’s
 CUDA
 dataset
-datasets
+Datasets
 DeepFinder
 defocus
 denoising
@@ -84,7 +84,7 @@ Preproscessing
 presynaptic
 prix
 probabilty
-pyto
+Pyto
 Radecke
 Raphaela
 recalibration
