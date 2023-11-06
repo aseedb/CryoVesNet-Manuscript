@@ -18,7 +18,7 @@ CDF
 centroid
 ChimeraX
 convolutional
-Cryo
+cryo
 cryoET
 CryoVesSeg
 CryoVesSeg’s
@@ -111,7 +111,7 @@ synapsins
 synaptasome
 synaptasomes
 synaptosomal
-Synaptosome
+synaptosome
 synaptosomes
 threeshold
 thresholding
@@ -121,7 +121,7 @@ TP
 Traning
 transformative
 UCSF
-UNet
+unet
 untilted
 VesPy
 voxel
