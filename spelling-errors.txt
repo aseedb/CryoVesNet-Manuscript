@@ -84,7 +84,7 @@ Preproscessing
 presynaptic
 prix
 probabilty
-Pyto
+pyto
 Radecke
 Raphaela
 recalibration
@@ -107,7 +107,7 @@ SUME
 SV
 SVs
 synapsin
-Synapsins
+synapsins
 synaptasome
 synaptasomes
 synaptosomal
