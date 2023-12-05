@@ -13,24 +13,25 @@ authors:
   - github: amineuron
     name: Amin Khosrozadeh
     initials: AK
-    orcid: XXXX-XXXX-XXXX-XXXX
+    orcid: 0000-0001-9480-5915
     email: amin.khosrozadeh@unibe.ch
     affiliations:
       - Institute of Anatomy, University of Bern, Bern, Switzerland
       - Graduate School for Cellular and Biomedical Sciences, University of Bern
-    funders:
-      - Grant XXXXXXXX
-    symbol_str: "*"
     equal_contribution: true
-  - github: elatella
-    name: Raphaela Seeger
+  - name: Guillaume Witz
+    initials: GW
+    orcid: 0000-0003-1562-4265
+    email: guillaume.witz@math.unibe.ch
+    affiliations:
+      - Science IT Service, University of Bern, Bern, Switzerland
+      - Microscopy Imaging Center, University of Bern, Bern, Switzerland
+  - name: Raphaela Seeger
     initials: RS
-    orcid: XXXX-XXXX-XXXX-XXXX
     email: raphaela.seeger@unibe.ch
     affiliations:
       - Institute of Anatomy, University of Bern, Bern, Switzerland
       - Graduate School for Cellular and Biomedical Sciences, University of Bern
-    symbol_str: "*"
     equal_contribution: true
   - github: julikaradecke
     name: Julika Radecke
@@ -41,35 +42,17 @@ authors:
       - Institute of Anatomy, University of Bern, Bern, Switzerland
       - Department of Neuroscience, Faculty of Health and Medical Science , 2200 Copenhagen N, University of Copenhagen, Copenhagen, Denmark
       - Diamond Light Source Ltd, Didcot, Oxfordshire, United Kingdom
-  - github: guiwitz
-    name: Guillaume Witz
-    initials: GW
-    orcid: 0000-0003-1562-4265
-    email: guillaume.witz@math.unibe.ch
-    affiliations:
-      - Science IT Service, University of Bern, Bern, Switzerland
-      - Microscopy Imaging Center, University of Bern, Bern, Switzerland
-  - github: JBSorensen
-    name: Jakob B. Sørensen
+  - name: Jakob B. Sørensen
     initials: JBS
     orcid: 0000-0001-5465-3769
     email: jakobbs@sund.ku.dk
     affiliations:
       - Department of Neuroscience, University of Copenhagen, Blegdamsvej 3B, 2200 Copenhagen N, Denmark
-    funders:
-      - Novo Nordisk Fonden, NNF17OC0028516.
-      - Carlsbergfondet, CF17-0875
-      - Independent Research Fond Denmark, 8020-00228A
-      - Lundbeckfonden, R277-2018-802
-  - github: aseedb
-    name: Benoît Zuber
+  - name: Benoît Zuber
     initials: BZ
     orcid: 0000-0001-7725-5579
     email: benoit.zuber@unibe.ch
     affiliations:
       - Institute of Anatomy, University of Bern, Bern, Switzerland
-    funders:
-      - Swiss National Science Foundation, 179520
-      - ERA-NET NEURON, NEURON-119
     symbol_str: "†"
     correspondence: true
