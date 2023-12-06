@@ -75,7 +75,7 @@
 | Local vs Outlier       | **0.041731**  | 0.417627  | **0.002915** |
 | Sphere vs Outlier      | 0.359798  | 0.728289  | 0.591689 |
 
-### Corrected p-values of Dice for all steps
+### Benjamini-Hochberg Corrected p-values of Dice for all steps
 | Comparison             | SC        | ST        | Neuron   |
 |------------------------|-----------|-----------|----------|
 | Probability vs Global  | **0.014577**  | 0.101150  | 0.551700 |
