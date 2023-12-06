@@ -10,8 +10,7 @@ keywords:
   - automation
 lang: en-US
 authors:
-  - github: amineuron
-    name: Amin Khosrozadeh
+  - name: Amin Khosrozadeh
     initials: AK
     orcid: 0000-0001-9480-5915
     email: amin.khosrozadeh@unibe.ch
