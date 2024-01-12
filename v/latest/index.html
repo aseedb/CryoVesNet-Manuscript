@@ -5,14 +5,14 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content="Amin Khosrozadeh" />
+  <meta name="author" content="Guillaume Witz" />
   <meta name="author" content="Raphaela Seeger" />
   <meta name="author" content="Julika Radecke" />
-  <meta name="author" content="Guillaume Witz" />
   <meta name="author" content="Jakob B. Sørensen" />
   <meta name="author" content="Benoît Zuber" />
-  <meta name="dcterms.date" content="2023-11-06" />
+  <meta name="dcterms.date" content="2024-01-12" />
   <meta name="keywords" content="synapse, cryo-electron tomography, synaptic vesicles, deep learning, segmentation, post-processing, automation" />
-  <title>CryoVesNet: A Dedicated Framework for Synaptic Vesicle Analysis in Cryo-Tomograms</title>
+  <title>CryoVesNet: A Dedicated Framework for Vesicle Segmentation in Cryo-Tomograms</title>
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -48,8 +48,8 @@
   <!--
   Manubot generated metadata rendered from header-includes-template.html.
   Suggest improvements at https://github.com/manubot/manubot/blob/main/manubot/process/header-includes-template.html
-  --> ¶ <meta name="dc.format" content="text/html" /> ¶ <meta property="og:type" content="article" /> ¶ <meta name="dc.title" content="CryoVesNet: A Dedicated Framework for Synaptic Vesicle Analysis in Cryo-Tomograms" /> ¶ <meta name="citation_title" content="CryoVesNet: A Dedicated Framework for Synaptic Vesicle Analysis in Cryo-Tomograms" /> ¶ <meta property="og:title" content="CryoVesNet: A Dedicated Framework for Synaptic Vesicle Analysis in Cryo-Tomograms" /> ¶ <meta property="twitter:title" content="CryoVesNet: A Dedicated Framework for Synaptic Vesicle Analysis in Cryo-Tomograms" /> ¶ <meta name="dc.date" content="2023-11-06" /> ¶ <meta name="citation_publication_date" content="2023-11-06" /> ¶ <meta property="article:published_time" content="2023-11-06" /> ¶ <meta name="dc.modified" content="2023-11-06T18:14:42+00:00" /> ¶ <meta property="article:modified_time" content="2023-11-06T18:14:42+00:00" /> ¶ <meta name="dc.language" content="en-US" /> ¶ <meta name="citation_language" content="en-US" /> ¶ <meta name="dc.relation.ispartof" content="Manubot" /> ¶ <meta name="dc.publisher" content="Manubot" /> ¶ <meta name="citation_journal_title" content="Manubot" /> ¶ <meta name="citation_technical_report_institution" content="Manubot" /> ¶ <meta name="citation_author" content="Amin Khosrozadeh" /> ¶ <meta name="citation_author_institution" content="Institute of Anatomy, University of Bern, Bern, Switzerland" /> ¶ <meta name="citation_author_institution" content="Graduate School for Cellular and Biomedical Sciences, University of Bern" /> ¶ <meta name="citation_author_orcid" content="XXXX-XXXX-XXXX-XXXX" /> ¶ <meta name="citation_author" content="Raphaela Seeger" /> ¶ <meta name="citation_author_institution" content="Institute of Anatomy, University of Bern, Bern, Switzerland" /> ¶ <meta name="citation_author_institution" content="Graduate School for Cellular and Biomedical Sciences, University of Bern" /> ¶ <meta name="citation_author_orcid" content="XXXX-XXXX-XXXX-XXXX" /> ¶ <meta name="citation_author" content="Julika Radecke" /> ¶ <meta name="citation_author_institution" content="Institute of Anatomy, University of Bern, Bern, Switzerland" /> ¶ <meta name="citation_author_institution" content="Department of Neuroscience, Faculty of Health and Medical Science , 2200 Copenhagen N, University of Copenhagen, Copenhagen, Denmark" /> ¶ <meta name="citation_author_institution" content="Diamond Light Source Ltd, Didcot, Oxfordshire, United Kingdom" /> ¶ <meta name="citation_author_orcid" content="0000-0002-5815-5537" /> ¶ <meta name="citation_author" content="Guillaume Witz" /> ¶ <meta name="citation_author_institution" content="Science IT Service, University of Bern, Bern, Switzerland" /> ¶ <meta name="citation_author_institution" content="Microscopy Imaging Center, University of Bern, Bern, Switzerland" /> ¶ <meta name="citation_author_orcid" content="0000-0003-1562-4265" /> ¶ <meta name="citation_author" content="Jakob B. Sørensen" /> ¶ <meta name="citation_author_institution" content="Department of Neuroscience, University of Copenhagen, Blegdamsvej 3B, 2200 Copenhagen N, Denmark" /> ¶ <meta name="citation_author_orcid" content="0000-0001-5465-3769" /> ¶ <meta name="citation_author" content="Benoît Zuber" /> ¶ <meta name="citation_author_institution" content="Institute of Anatomy, University of Bern, Bern, Switzerland" /> ¶ <meta name="citation_author_orcid" content="0000-0001-7725-5579" /> ¶ <link rel="canonical" href="https://aseedb.github.io/deep-prepyto-paper/" /> ¶ <meta property="og:url" content="https://aseedb.github.io/deep-prepyto-paper/" /> ¶ <meta property="twitter:url" content="https://aseedb.github.io/deep-prepyto-paper/" /> ¶ <meta name="citation_fulltext_html_url" content="https://aseedb.github.io/deep-prepyto-paper/" /> ¶ <meta name="citation_pdf_url" content="https://aseedb.github.io/deep-prepyto-paper/manuscript.pdf" /> ¶ <link rel="alternate" type="application/pdf" href="https://aseedb.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://aseedb.github.io/deep-prepyto-paper/v/8f8b4af945919990d4e5f588f6f328c763e87c40/" /> ¶ <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/deep-prepyto-paper/v/8f8b4af945919990d4e5f588f6f328c763e87c40/" /> ¶ <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/deep-prepyto-paper/v/8f8b4af945919990d4e5f588f6f328c763e87c40/manuscript.pdf" /> ¶ <meta property="og:type" content="article" /> ¶ <meta property="twitter:card" content="summary_large_image" /> ¶ <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
+  --> ¶ <meta name="dc.format" content="text/html" /> ¶ <meta property="og:type" content="article" /> ¶ <meta name="dc.title" content="CryoVesNet: A Dedicated Framework for Vesicle Segmentation in Cryo-Tomograms" /> ¶ <meta name="citation_title" content="CryoVesNet: A Dedicated Framework for Vesicle Segmentation in Cryo-Tomograms" /> ¶ <meta property="og:title" content="CryoVesNet: A Dedicated Framework for Vesicle Segmentation in Cryo-Tomograms" /> ¶ <meta property="twitter:title" content="CryoVesNet: A Dedicated Framework for Vesicle Segmentation in Cryo-Tomograms" /> ¶ <meta name="dc.date" content="2024-01-12" /> ¶ <meta name="citation_publication_date" content="2024-01-12" /> ¶ <meta property="article:published_time" content="2024-01-12" /> ¶ <meta name="dc.modified" content="2024-01-12T14:23:37+00:00" /> ¶ <meta property="article:modified_time" content="2024-01-12T14:23:37+00:00" /> ¶ <meta name="dc.language" content="en-US" /> ¶ <meta name="citation_language" content="en-US" /> ¶ <meta name="dc.relation.ispartof" content="Manubot" /> ¶ <meta name="dc.publisher" content="Manubot" /> ¶ <meta name="citation_journal_title" content="Manubot" /> ¶ <meta name="citation_technical_report_institution" content="Manubot" /> ¶ <meta name="citation_author" content="Amin Khosrozadeh" /> ¶ <meta name="citation_author_institution" content="Institute of Anatomy, University of Bern, Bern, Switzerland" /> ¶ <meta name="citation_author_institution" content="Graduate School for Cellular and Biomedical Sciences, University of Bern" /> ¶ <meta name="citation_author_orcid" content="0000-0001-9480-5915" /> ¶ <meta name="citation_author" content="Guillaume Witz" /> ¶ <meta name="citation_author_institution" content="Science IT Service, University of Bern, Bern, Switzerland" /> ¶ <meta name="citation_author_institution" content="Microscopy Imaging Center, University of Bern, Bern, Switzerland" /> ¶ <meta name="citation_author_orcid" content="0000-0003-1562-4265" /> ¶ <meta name="citation_author" content="Raphaela Seeger" /> ¶ <meta name="citation_author_institution" content="Institute of Anatomy, University of Bern, Bern, Switzerland" /> ¶ <meta name="citation_author_institution" content="Graduate School for Cellular and Biomedical Sciences, University of Bern" /> ¶ <meta name="citation_author" content="Julika Radecke" /> ¶ <meta name="citation_author_institution" content="Institute of Anatomy, University of Bern, Bern, Switzerland" /> ¶ <meta name="citation_author_institution" content="Department of Neuroscience, Faculty of Health and Medical Science , 2200 Copenhagen N, University of Copenhagen, Copenhagen, Denmark" /> ¶ <meta name="citation_author_institution" content="Diamond Light Source Ltd, Didcot, Oxfordshire, United Kingdom" /> ¶ <meta name="citation_author_orcid" content="0000-0002-5815-5537" /> ¶ <meta name="citation_author" content="Jakob B. Sørensen" /> ¶ <meta name="citation_author_institution" content="Department of Neuroscience, University of Copenhagen, Blegdamsvej 3B, 2200 Copenhagen N, Denmark" /> ¶ <meta name="citation_author_orcid" content="0000-0001-5465-3769" /> ¶ <meta name="citation_author" content="Benoît Zuber" /> ¶ <meta name="citation_author_institution" content="Institute of Anatomy, University of Bern, Bern, Switzerland" /> ¶ <meta name="citation_author_orcid" content="0000-0001-7725-5579" /> ¶ <link rel="canonical" href="https://aseedb.github.io/deep-prepyto-paper/" /> ¶ <meta property="og:url" content="https://aseedb.github.io/deep-prepyto-paper/" /> ¶ <meta property="twitter:url" content="https://aseedb.github.io/deep-prepyto-paper/" /> ¶ <meta name="citation_fulltext_html_url" content="https://aseedb.github.io/deep-prepyto-paper/" /> ¶ <meta name="citation_pdf_url" content="https://aseedb.github.io/deep-prepyto-paper/manuscript.pdf" /> ¶ <link rel="alternate" type="application/pdf" href="https://aseedb.github.io/deep-prepyto-paper/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://aseedb.github.io/deep-prepyto-paper/v/26c254e4befcff50efdf6ce27c1d1a6cde55d3aa/" /> ¶ <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/deep-prepyto-paper/v/26c254e4befcff50efdf6ce27c1d1a6cde55d3aa/" /> ¶ <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/deep-prepyto-paper/v/26c254e4befcff50efdf6ce27c1d1a6cde55d3aa/manuscript.pdf" /> ¶ <meta property="og:type" content="article" /> ¶ <meta property="twitter:card" content="summary_large_image" /> ¶ <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
   <link rel="mask-icon" href="https://manubot.org/safari-pinned-tab.svg" color="#ad1457" /> ¶ <meta name="theme-color" content="#ad1457" /> ¶ <!-- end Manubot generated metadata -->
   
   <!-- pandoc-eqnos: equation style -->
@@ -64,34 +64,34 @@
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">CryoVesNet: A Dedicated Framework for Synaptic Vesicle Analysis in Cryo-Tomograms</h1>
+<h1 class="title">CryoVesNet: A Dedicated Framework for Vesicle Segmentation in Cryo-Tomograms</h1>
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://aseedb.github.io/deep-prepyto-paper/v/8f8b4af945919990d4e5f588f6f328c763e87c40/">permalink</a>)
+(<a href="https://aseedb.github.io/deep-prepyto-paper/v/26c254e4befcff50efdf6ce27c1d1a6cde55d3aa/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/aseedb/deep-prepyto-paper/tree/8f8b4af945919990d4e5f588f6f328c763e87c40">aseedb/deep-prepyto-paper@8f8b4af</a>
-on November 6, 2023.
+from <a href="https://github.com/aseedb/deep-prepyto-paper/tree/26c254e4befcff50efdf6ce27c1d1a6cde55d3aa">aseedb/deep-prepyto-paper@26c254e</a>
+on January 12, 2024.
 </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
 <li><p><strong>Amin Khosrozadeh</strong>
 <br>
 <img src="images/orcid.svg" class="inline_icon" width="16" height="16" alt="ORCID icon" />
-<a href="https://orcid.org/XXXX-XXXX-XXXX-XXXX">XXXX-XXXX-XXXX-XXXX</a>
-· <img src="images/github.svg" class="inline_icon" width="16" height="16" alt="GitHub icon" />
-<a href="https://github.com/amineuron">amineuron</a>
+<a href="https://orcid.org/0000-0001-9480-5915">0000-0001-9480-5915</a>
 <br>
 <small>
 Institute of Anatomy, University of Bern, Bern, Switzerland; Graduate School for Cellular and Biomedical Sciences, University of Bern
-· Funded by Grant XXXXXXXX
 </small></p></li>
-<li><p><strong>Raphaela Seeger</strong>
+<li><p><strong>Guillaume Witz</strong>
 <br>
 <img src="images/orcid.svg" class="inline_icon" width="16" height="16" alt="ORCID icon" />
-<a href="https://orcid.org/XXXX-XXXX-XXXX-XXXX">XXXX-XXXX-XXXX-XXXX</a>
-· <img src="images/github.svg" class="inline_icon" width="16" height="16" alt="GitHub icon" />
-<a href="https://github.com/elatella">elatella</a>
+<a href="https://orcid.org/0000-0003-1562-4265">0000-0003-1562-4265</a>
+<br>
+<small>
+Science IT Service, University of Bern, Bern, Switzerland; Microscopy Imaging Center, University of Bern, Bern, Switzerland
+</small></p></li>
+<li><p><strong>Raphaela Seeger</strong>
 <br>
 <small>
 Institute of Anatomy, University of Bern, Bern, Switzerland; Graduate School for Cellular and Biomedical Sciences, University of Bern
@@ -106,37 +106,21 @@ Institute of Anatomy, University of Bern, Bern, Switzerland; Graduate School for
 <small>
 Institute of Anatomy, University of Bern, Bern, Switzerland; Department of Neuroscience, Faculty of Health and Medical Science , 2200 Copenhagen N, University of Copenhagen, Copenhagen, Denmark; Diamond Light Source Ltd, Didcot, Oxfordshire, United Kingdom
 </small></p></li>
-<li><p><strong>Guillaume Witz</strong>
-<br>
-<img src="images/orcid.svg" class="inline_icon" width="16" height="16" alt="ORCID icon" />
-<a href="https://orcid.org/0000-0003-1562-4265">0000-0003-1562-4265</a>
-· <img src="images/github.svg" class="inline_icon" width="16" height="16" alt="GitHub icon" />
-<a href="https://github.com/guiwitz">guiwitz</a>
-<br>
-<small>
-Science IT Service, University of Bern, Bern, Switzerland; Microscopy Imaging Center, University of Bern, Bern, Switzerland
-</small></p></li>
 <li><p><strong>Jakob B. Sørensen</strong>
 <br>
 <img src="images/orcid.svg" class="inline_icon" width="16" height="16" alt="ORCID icon" />
 <a href="https://orcid.org/0000-0001-5465-3769">0000-0001-5465-3769</a>
-· <img src="images/github.svg" class="inline_icon" width="16" height="16" alt="GitHub icon" />
-<a href="https://github.com/JBSorensen">JBSorensen</a>
 <br>
 <small>
 Department of Neuroscience, University of Copenhagen, Blegdamsvej 3B, 2200 Copenhagen N, Denmark
-· Funded by Novo Nordisk Fonden, NNF17OC0028516.; Carlsbergfondet, CF17-0875; Independent Research Fond Denmark, 8020-00228A; Lundbeckfonden, R277-2018-802
 </small></p></li>
 <li><p><strong>Benoît Zuber</strong>
 <br>
 <img src="images/orcid.svg" class="inline_icon" width="16" height="16" alt="ORCID icon" />
 <a href="https://orcid.org/0000-0001-7725-5579">0000-0001-7725-5579</a>
-· <img src="images/github.svg" class="inline_icon" width="16" height="16" alt="GitHub icon" />
-<a href="https://github.com/aseedb">aseedb</a>
 <br>
 <small>
 Institute of Anatomy, University of Bern, Bern, Switzerland
-· Funded by Swiss National Science Foundation, 179520; ERA-NET NEURON, NEURON-119
 </small></p></li>
 </ul>
 <div id="correspondence">
@@ -173,119 +157,126 @@ In particular, organelles fully bounded by a membrane appear to have holes at th
 The former neuron is called presynaptic and the latter is postsynaptic.
 In most cases, the signal is transmitted by the release of neurotransmitters into the intercellular space.
 Neurotransmitters are stored in SVs and are released following the fusion of an SV with the presynaptic plasma membrane.
-A synapse contains hundreds of SVs and their mobility and recruitability for neurotransmitter release depends on inter-vesicle interactions through so-called connector structures <span class="citation" data-cites="XQJ3R1HJ">[<a href="#ref-XQJ3R1HJ" role="doc-biblioref">5</a> ]</span>.
-The characterization of these interactions can be performed automatically with the Pyto package, which implements a hierarchical connectivity approach to segment connectors <span class="citation" data-cites="1HtRUUZQi">[<a href="#ref-1HtRUUZQi" role="doc-biblioref">6</a>]</span>. For accurate connector segmentation, accurate segmentation of SVs is a prerequisite.
+A synapse contains hundreds of SVs and their mobility and recruitability for neurotransmitter release depends on inter-vesicle interactions through so-called connector structures <span class="citation" data-cites="XQJ3R1HJ kjMcXSJ3 K10hpz3n Lw7FpxSz">[<a href="#ref-XQJ3R1HJ" role="doc-biblioref">5</a>,<a href="#ref-kjMcXSJ3" role="doc-biblioref">6</a>,<a href="#ref-K10hpz3n" role="doc-biblioref">7</a>,<a href="#ref-Lw7FpxSz" role="doc-biblioref">8</a>]</span>.
+The characterization of these interactions can be performed automatically with the Pyto package, which implements a hierarchical connectivity approach to segment connectors <span class="citation" data-cites="1HtRUUZQi">[<a href="#ref-1HtRUUZQi" role="doc-biblioref">9</a>]</span>.
+For accurate connector segmentation, accurate segmentation of SVs is a prerequisite.
 To date, SV segmentation has been performed manually, but given the large number of SVs per dataset, it is an extremely time-consuming process.
 Typically, one person spends 3 to 8 working days segmenting a single dataset.
-Attempts to perform this task automatically based on classical computer vision algorithms have not yielded sufficiently accurate performance <span class="citation" data-cites="JWuvfT0Z">[<a href="#ref-JWuvfT0Z" role="doc-biblioref">7</a>]</span>.<br />
+Attempts to perform this task automatically based on classical computer vision algorithms have not yielded sufficiently accurate performance <span class="citation" data-cites="JWuvfT0Z">[<a href="#ref-JWuvfT0Z" role="doc-biblioref">10</a>]</span>.<br />
 To alleviate this situation, we decided to develop an approach based on deep learning.</p>
-<p>Convolutional neural networks (CNN) have been successfully employed to segment cryo-ET data <span class="citation" data-cites="GNLHO53d">[<a href="#ref-GNLHO53d" role="doc-biblioref">8</a>]</span>.
+<p>Convolutional neural networks (CNN) have been successfully employed to segment cryo-ET data <span class="citation" data-cites="GNLHO53d">[<a href="#ref-GNLHO53d" role="doc-biblioref">11</a>]</span>.
 Although entirely satisfying for visualization purposes, this approach has not met the requirements of Pyto.
-A recent publication described accurate SV segmentation of transmission electron microscopy images using CNN, but it is limited to 2-dimensional (2D) images of resin-embedded synapses <span class="citation" data-cites="RdPTGoZx">[<a href="#ref-RdPTGoZx" role="doc-biblioref">9</a>]</span>.
+A recent publication described accurate SV segmentation of transmission electron microscopy images using CNN, but it is limited to 2-dimensional (2D) images of resin-embedded synapses <span class="citation" data-cites="RdPTGoZx">[<a href="#ref-RdPTGoZx" role="doc-biblioref">12</a>]</span>.
 In the first study, cryo-ET data are decomposed in individual 2D slices, which are handed as separate inputs to the CNN.
-The independent output 2D prediction images are reassembled in a 3-dimensional (3D) stack <span class="citation" data-cites="GNLHO53d">[<a href="#ref-GNLHO53d" role="doc-biblioref">8</a>]</span>.
+The independent output 2D prediction images are reassembled in a 3-dimensional (3D) stack <span class="citation" data-cites="GNLHO53d">[<a href="#ref-GNLHO53d" role="doc-biblioref">11</a>]</span>.
 As discussed above, membranes oriented approximately parallel to the plane of the 2D tomographic images are not resolved.
 In the absence of contextual knowledge of the other 2D images, the CNN fails to segment these regions of the vesicles.
 Hence, spherical vesicles appear open, whereas we expect closed spherical objects.
-A recent publication addressed this issue by implementing a downstream fitting step based on the Gaussian process, allowing for the smooth closure of the membranes <span class="citation" data-cites="pMX2OxF7">[<a href="#ref-pMX2OxF7" role="doc-biblioref">10</a>]</span>.
-We followed a different approach and used a 3D U-Net CNN that takes 3D images as input <span class="citation" data-cites="D7hXMn0y">[<a href="#ref-D7hXMn0y" role="doc-biblioref">11</a>]</span>.
-Weigert et al. <span class="citation" data-cites="12G712Zky">[<a href="#ref-12G712Zky" role="doc-biblioref">12</a>]</span> implemented a U-Net for content-aware restoration (CARE) of 3D fluorescence microscopy datasets.
+A recent publication addressed this issue by implementing a downstream fitting step based on the Gaussian process, allowing for the smooth closure of the membranes <span class="citation" data-cites="pMX2OxF7">[<a href="#ref-pMX2OxF7" role="doc-biblioref">13</a>]</span>.
+Ideally, 3D networks should be used to segment 3D cryo-ET data.
+Recently, several groups have published applications of 3D networks in cryo-ET for other tasks, such as particle picking and classification, in order to perform subtomogram averaging <span class="citation" data-cites="xhywoibB VobzV1Lb NGTzBMdU">[<a href="#ref-xhywoibB" role="doc-biblioref">14</a>,<a href="#ref-VobzV1Lb" role="doc-biblioref">15</a>,<a href="#ref-NGTzBMdU" role="doc-biblioref">16</a>]</span>.
+However, these papers have not focused on accurately segmenting membranes in cryo-ET data.</p>
+<p>We opted to employ a 3D U-Net CNN to process 3D images as input <span class="citation" data-cites="arxiv:1606.06650">[<a href="#ref-arxiv:1606.06650" role="doc-biblioref"><strong>arxiv:1606.06650?</strong></a>]</span>.
+Weigert et al. <span class="citation" data-cites="12G712Zky">[<a href="#ref-12G712Zky" role="doc-biblioref">17</a>]</span> implemented a U-Net for content-aware restoration (CARE) of 3D fluorescence microscopy datasets.
 They showed that it can restore information from anisotropic and very noisy datasets.
-Such networks have been used in the last couple of years in cryo-ET analysis, mainly to perform denoising and object detection <span class="citation" data-cites="vFGVscEl VobzV1Lb xhywoibB">[<a href="#ref-vFGVscEl" role="doc-biblioref">13</a>,<a href="#ref-VobzV1Lb" role="doc-biblioref">14</a>,<a href="#ref-xhywoibB" role="doc-biblioref">15</a>]</span>.
+Such networks have been used in the last couple of years in cryo-ET analysis, mainly to perform denoising and object detection <span class="citation" data-cites="arxiv:1810.05420 VobzV1Lb xhywoibB">[<a href="#ref-xhywoibB" role="doc-biblioref">14</a>,<a href="#ref-VobzV1Lb" role="doc-biblioref">15</a>,<a href="#ref-arxiv:1810.05420" role="doc-biblioref"><strong>arxiv:1810.05420?</strong></a>]</span>.
 We implemented a 3D U-Net based on CARE building blocks and trained it with manually segmented datasets.
-This method provided good accuracy and was only slightly affected by the missing wedge artifact.
+This method provided good accuracy and was not strongly affected by the missing wedge artifact.
 Nevertheless, it was not sufficient for our downstream Pyto analysis.
 Hence, we developed a post-processing method, which transforms the segmented objects into spheres and refines their radius and center location. The procedure includes an outlier detection procedure.
 This leads to a substantial improvement in accuracy, which is reflected in Pyto performances comparable to those obtained after manual SV segmentation.
 We also introduce a semi-automatic method to quickly fix wrongly segmented or missed SVs.</p>
-<p>Although our set of procedures was developed with the use case of SV segmentation in mind, it can be used to segment any other types of biological spherical vesicles, such as transport vesicles, secretory vesicles, endocytic vesicles, and extracellular vesicles.</p>
+<p>Although our set of procedures was developed with the use case of SV segmentation in mind, it can be used to segment any other types of biological spherical vesicles, such as transport vesicles, secretory vesicles, endocytic vesicles, and extracellular vesicles.
+Furthermore, with only small modifications it could be extended to extremely accurate segmentation of other membrane-bound organelles or to the plasma membrane.</p>
 <h2 id="results">Results</h2>
+<h3 id="u-net-output-thresholding">U-Net output thresholding</h3>
 <p>In view of the effort required for the manual segmentation of SVs, we decided to develop an automatic segmentation procedure.
-Since we had previously manually segmented a number of tomograms with the program IMOD, we could use these segmentations as the ground truth <span class="citation" data-cites="136NHHp17">[<a href="#ref-136NHHp17" role="doc-biblioref">16</a>]</span>.
+Since we had previously manually segmented a number of tomograms with the program IMOD, we could use these segmentations as the ground truth <span class="citation" data-cites="136NHHp17">[<a href="#ref-136NHHp17" role="doc-biblioref">18</a>]</span>.
 We trained a U-Net with a set of 9 segmented tomograms of rat synaptosomes (see Materials and Methods).</p>
 <p>We seeked to further improve segmentation accuracy by feeding the probability mask output by the U-Net to a series of postprocess steps (Figure <a href="#fig:pipeline">1</a>).
 Three sets of tomograms were used to assess the performances of the pipeline:</p>
 <ol type="1">
-<li><p>Traning dataset : The 9 rat synaptosome tomograms that had been used for U-Net training</p></li>
-<li><p>Testing dataset: Another 9 rat synaptosome tomograms</p></li>
-<li><p>Testing dataset for generizibility: 12 mouse astrocytic and primary neuronal culture tomograms).</p></li>
+<li>Train tomograms : The 9 rat synaptosome tomograms that have been used for U-Net training</li>
+<li>Test tomograms: 9 additional rat synaptosome tomograms</li>
+<li>Generalization test tomograms: 12 mouse primary neuronal culture tomograms.</li>
 </ol>
 <p>Each tomogram was split into patches of 32<sup>3</sup> voxels.
 These patches were fed in the U-Net, which output a probability mask for those patches.
-To obtain a complete probability mask, the patches are stitched back together.
-The probability mask was binarized first with a global threshold value and then with an adaptative localized thresholding steps (Figure <a href="#fig:pipeline">1</a>, Figure <a href="#fig:tom">2</a>).</p>
+To obtain a complete probability mask, the patches are stitched back together (Figure <a href="#fig:pipeline">1</a>, Figure <a href="#fig:suppl_tom_slice">EV1</a>).
+The performance of all steps of was quantitatively assessed by comparing the obtained segmentation with the ground truth using the DICE coefficient metric (see Materials and Methods).
+The Dice coefficient of the probability mask was 0.64±0.11 for the train tomograms, 0.75±0.06 for the test tomograms, and 0.69±0.09 for the generalization test tomograms (Table <a href="#tbl:train-tomograms">1</a>, Table <a href="#tbl:test-tomograms">2</a>, Table <a href="#tbl:neuron-tomograms">3</a>, Table <a href="#tbl:dice-statistics">EV1</a>, Table <a href="#tbl:dice-pvalues">EV2</a>, and Figure <a href="#fig:dice-improv">3</a>).
+The probability mask was then binarized with a global threshold step, which led to a Dice of 0.78±0.04 and 0.80±0.04 in the train and test datasets, respectively, while it led to a slight decrease dice of 0.66±0.09 in the generalization test dataset.</p>
 <div id="fig:pipeline" class="fignos">
 <figure>
-<img src="images/pipeline_new.png" style="width:20cm" alt="Figure 1: Pipeline of automatic segmentation. a) Tomograms b) Splitting in 3D patches c) Segmentation Network/ trained U-Net d) probability masks e) stitching patches back together f) thresholding h) radial profile i) outlier removal j)Segmented Vesicles" />
+<img src="images/latest_pipline.png" style="width:20cm" alt="Figure 1: Pipeline of automatic segmentation. a) Tomograms b) Splitting in 3D patches c) Segmentation Network/ trained U-Net d) probability masks e) stitching patches back together f) thresholding h) radial profile i) outlier removal j)Segmented Vesicles" />
 <figcaption aria-hidden="true"><span>Figure 1:</span> <strong>Pipeline of automatic segmentation.</strong> a) Tomograms b) Splitting in 3D patches c) Segmentation Network/ trained U-Net d) probability masks e) stitching patches back together f) thresholding h) radial profile i) outlier removal j)Segmented Vesicles</figcaption>
 </figure>
 </div>
-<p>While a global threshold serves as an initial step in vesicle segmentation, it often falls short in complex scenarios, especially when vesicles are in close proximity or exhibit overlap. To enhance the segmentation accuracy in such cases, we employ an adaptive thresholding methodology that capitalizes on the probability mask generated by our deep learning architecture.</p>
-<h4 id="initial-segmentation-and-thresholding">Initial Segmentation and Thresholding:</h4>
-<p>The segmentation journey commences with the alignment of the image with its associated deep labels and the probability mask. To ensure a comprehensive segmentation, the probability mask’s edges are meticulously cropped, safeguarding against inadvertent truncation of boundary-residing vesicles. An optimal threshold, derived from the image and the probability mask, undergoes fine-tuning through a coefficient adjustment. This refined threshold then serves to binarize the mask, with connected components subsequently labeled, delineating individual vesicles.</p>
-<h4 id="collision-resolution-through-adaptive-thresholding">Collision Resolution through Adaptive Thresholding:</h4>
-<p>In scenarios where vesicles are densely packed, collisions become a challenge, often leading to the amalgamation of multiple vesicles into a singular segmented entity. Addressing this, potential collision vesicles are pinpointed based on specific geometric attributes, such as their extent and area z-score. For each vesicle identified under this criterion, a localized region surrounding the vesicle is extracted. This region is then subjected to a masking process, ensuring focus remains solely on the vesicle in question.</p>
-<p>The essence of collision resolution revolves around the iterative modulation of the threshold to attain a more granular segmentation. Commencing from the established threshold, it’s progressively augmented until the connected components within the localized region amplify, signaling a potential vesicle separation. This adaptive modulation persists until a threshold is identified that adeptly segregates the vesicles or until a set precision threshold is attained.</p>
-<h4 id="expansion-and-removal-of-minuscule-vesicles">Expansion and Removal of Minuscule Vesicles:</h4>
-<p>Post-segmentation, certain vesicles might be represented as notably smaller than anticipated. To address this, an expansion strategy is employed, iteratively lowering the threshold to encapsulate more of the vesicle’s structure. If expansion fails to achieve the desired size, these diminutive vesicles are removed, ensuring the final segmentation remains representative of genuine vesicle structures.
-In conclusion, our adaptive thresholding technique, combined with collision resolution, ensures a more accurate and refined segmentation of vesicles in cryo-ET data. This approach capitalizes on the rich information present in the probability mask, providing a robust solution to the challenges posed by closely packed vesicles.</p>
-<p><code class="green">\_more detail about global and adaptive localized threshold*</code>
-For further optimization of the mask, outliers were removed.
-Removed outliers mostly consisted of vesicles which were only partially segmented, and vesicles which maks were adjacent due to proximity.
-The removed masks, which only partially traced the vesicles, were reevaluated by reducing or expanding their radius (Figure <a href="#fig:radial_profile">3</a>).
-<code class="green">\_was the center of the vesicles also reevaluated?*</code> <code class="green">\_Its not clear or might be false sentence we didnt remove or re evaluate the mask?*</code></p>
-<div id="fig:tom" class="fignos">
-<figure>
-<img src="images/tomo-sclae.svg" style="width:15cm" alt="Figure 2: A 2D slice of an automatically segmented dataset. A) A section through a presynaptic terminal in a neuron tomogram. B) Predicted probability mask restricted to the segmentation region. Purple corresponds to a low SV probability and yellow to a high SV probability. C) Instance mask of the vesicles after post processing." />
-<figcaption aria-hidden="true"><span>Figure 2:</span> <strong>A 2D slice of an automatically segmented dataset</strong>. A) A section through a presynaptic terminal in a neuron tomogram. B) Predicted probability mask restricted to the segmentation region. Purple corresponds to a low SV probability and yellow to a high SV probability. C) Instance mask of the vesicles after post processing.</figcaption>
-</figure>
-</div>
-<p>Each segmented vesicle undergoes a radial profile refinement. Representing vesicles as spheres, their position and radius are iteratively adjusted to mirror their actual structure in the tomogram. By computing the radial average and updating the vesicle’s radius, this method ensures the segmented vesicles are a true representation of their form in the tomogram.</p>
-<p>The radial profile serves as a pivotal tool in refining the segmentation of vesicles. By analyzing the radial distribution of intensity around the vesicle’s centroid, we can discern the vesicle’s true boundary. This method ensures that the segmented vesicles closely match their actual structure in the tomogram by iteratively adjusting their position and radius. The radial average is computed, and the vesicle’s radius is updated based on the radial distance of the vesicle membrane’s center and its thickness. This iterative refinement continues until the vesicle’s representation aligns with its true structure.</p>
+<p>We noticed that some vesicles were not segmented accurately.
+Indeed, some vesicles that were in close proximity were misidentified as a single entity.
+Separating them necessitated adjusting the detection threshold to a more stringent value.
+Additionally, there were instances where the detection captured only a fraction of a vesicle, which required loosening the threshold for a more accurate segmentation.
+Overall, the localized thresholding step did not significantly affect the Dice coefficient.
+It changed to 0.79±0.03, 0.81±0.04, and 0.66±0.10.
+Yet the assignment of the correct label to each segmented vesicle was essential for the next steps.</p>
+<h3 id="sphericalization-and-radial-profile-based-refinement">Sphericalization and radial profile-based refinement</h3>
+<p>Although at first glance the segmentation looked good after these steps, we noticed that it was not extremely accurate.
+For example, the vesicles were not always centered in the segment or the radius of the segment was inexact.
+Very often, the vesicle segment looked shrunk in the z-direction, whereas the actual vesicles were spherical.
+This would be highly problematic for automatic connector and tether segmentation.
+To address these issues, we represented each vesicle as a sphere.
+We determined the center and radius of the sphere as described in the Materials and Methods section.
+We then performed a radial averaging of the intensity around the center of the sphere.
+And we adjusted iteratively the position and radius of the sphere to match the actual structure in the tomogram (Figure <a href="#fig:radial_profile">2</a>). The radial profile refinement is a pivotal tool as it ensures that the segmented vesicles are a true representation of their form in the tomogram.
+The Dice coefficient after this step was 0.82±0.09, 0.82±0.06, and 0.77±0.09, respectively (Figure <a href="#fig:dice-improv">3</a>).</p>
 <div id="fig:radial_profile" class="fignos">
 <figure>
-<img src="images/radial_avg_115-099.svg" style="width:15cm" alt="Figure 3: Vesicle radius and position through radial profile and cross-correlation Radial Profile Refinement A) couple of vesicles are not centered B) Radial Profile. Blue range is from membrane center to outer white halo center, this is the search range for the optimal radius. (smoothed by gaussian filtering) C) second derivative of radial profile E, F, H, G) Same as above columns after refinement" />
-<figcaption aria-hidden="true"><span>Figure 3:</span> <strong>Vesicle radius and position through radial profile and cross-correlation</strong> Radial Profile Refinement A) couple of vesicles are not centered B) Radial Profile. Blue range is from membrane center to outer white halo center, this is the search range for the optimal radius. (smoothed by gaussian filtering) C) second derivative of radial profile E, F, H, G) Same as above columns after refinement</figcaption>
+<img src="images/radial_avg_115-139.svg" style="width:15cm" alt="Figure 2: Vesicle radius and position refinment through radial profile and cross-correlation. (A) Initial segmentation of a vesicle. (B) Radial Profile. Blue range is from membrane center to outer white halo center. This is defined as the search range for the optimal radius. (C) second derivative of radial profile, used to define the exact edge of the membrane. (D) Central cross-section in the three-dimensional radial average of the vesicle in its initial position. (E-H) Same as (A-D) after refinement." />
+<figcaption aria-hidden="true"><span>Figure 2:</span> <strong>Vesicle radius and position refinment through radial profile and cross-correlation</strong>. (A) Initial segmentation of a vesicle. (B) Radial Profile. Blue range is from membrane center to outer white halo center. This is defined as the search range for the optimal radius. (C) second derivative of radial profile, used to define the exact edge of the membrane. (D) Central cross-section in the three-dimensional radial average of the vesicle in its initial position. (E-H) Same as (A-D) after refinement.</figcaption>
 </figure>
 </div>
-<p>The adjacent vesicle masks were seperated (Figure <code class="green">\_missing*</code>). <code class="green">\_how?*</code></p>
-<p><code class="green">\_**missing Figure- Splitting adjacent vesicles. A) Examples of tomogram, no labels; B) raw label with connected vesicle-labels; C) modified label with seperated vesicles ---&gt; for software: IMOD**</code></p>
-<p>The Dice coefficient was used to track the global congruence between the manually segmented mask and the predicted mask within the different tomograms (Figure <a href="#fig:dice-improv">4</a>).
-To quantitatively assess the accuracy of our segmentation approach, we employed the Dice coefficient. This metric gauges the similarity between the manually annotated vesicle masks and the masks predicted by our model.
-A higher Dice coefficient indicates a closer match between the manual and predicted segmentations, providing a measure of the model’s performance.
-The results, visualized in Figure <a href="#fig:dice-improv">4</a>, showcase the global congruence across different tomograms, highlighting the efficacy of our segmentation pipeline.</p>
+<h3 id="outlier-detection-and-refinement">Outlier detection and refinement</h3>
+<p>Despite the improvement brought by the radial profile refinement, some vesicles were still not segmented accurately.
+By quantifying several parameters of the segmented vesicles, such as radius, membrane thickness, membrane intensity, lumen intensity, we were able to spot outliers using multivariate statistics (see Materials and Methods).
+We could then refine these outliers or remove them if refinement failed.
+This final step led to a Dice coefficient of 0.86±0.05, 0.83±0.05, and 0.79±0.09, respectively (Figure <a href="#fig:dice-improv">3</a>, Table <a href="#tbl:train-tomograms">1</a>, Table <a href="#tbl:test-tomograms">2</a>, and Table <a href="#tbl:neuron-tomograms">3</a>).</p>
+<p>In addition to the Dice metric, which is a voxel-wise evaluation, we performed a vesicle-wise evaluation.
+Namely, we quantified vesicle diameter deviation, and center residual(Figure <a href="#fig:dice-improv">3</a>, Table <a href="#tbl:train-tomograms">1</a>, Table <a href="#tbl:test-tomograms">2</a>, and Table <a href="#tbl:neuron-tomograms">3</a>}.
+Results show that our method transfers well across datasets even without fine-tuning which shows robustness and generalization.</p>
 <div id="fig:dice-improv" class="fignos">
 <figure>
-<img src="images/improvment-post-processing-dice.svg" style="width:15cm" alt="Figure 4: Dice developement during post-processing Dice developement at different post processing steps of initial predicted mask (different colors correspond to different tomograms): A) synaptosomal training datasets B) synaptosomal test datasets c) neuron test datasets" />
-<figcaption aria-hidden="true"><span>Figure 4:</span> <strong>Dice developement during post-processing</strong> Dice developement at different post processing steps of initial predicted mask (different colors correspond to different tomograms): A) synaptosomal training datasets B) synaptosomal test datasets c) neuron test datasets</figcaption>
+<img src="images/seaborn_all.svg" style="width:15cm" alt="Figure 3: Dice developement during post-processing. Dice development at different post-processing steps of initially predicted mask (different colors correspond to different tomograms): A) synaptosomal train set B) synaptosomal test set c) neuronal generalization test set" />
+<figcaption aria-hidden="true"><span>Figure 3:</span> <strong>Dice developement during post-processing</strong>. Dice development at different post-processing steps of initially predicted mask (different colors correspond to different tomograms): A) synaptosomal train set B) synaptosomal test set c) neuronal generalization test set</figcaption>
 </figure>
 </div>
 <div id="tbl:train-tomograms" class="tablenos">
 <table id="tbl:train-tomograms">
-<caption><span>Table 1:</span> Evaluation of the segmentation on the synaptosome train set. Mask Dice: Mask Dice coefficient for the predicted mask; Final Label Dice: Dice coefficient after post-processing; δ d: diameter error on correctly detected vesicle; Δ c: average error center (nm); Number of Vesicles: number of expected vesicles; TP: True Positive; FN: False Negative; FP: False Positive
+<caption><span>Table 1:</span> <strong>Evaluation of the segmentation on the synaptosomal train set</strong>. Mask Dice: Mask Dice coefficient for the predicted mask; Final Label Dice: Dice coefficient after post-processing; δ d: average relative diameter deviation over all correctly detected vesicles; Δ c: center residual error average and standard deviation (nm); Number of Vesicles: number of expected vesicles; TP: True Positive; FN: False Negative; FP: False Positive; F1-score: F1-score based on TP, FN, and FP.
 </caption>
 <colgroup>
-<col style="width: 10%" />
-<col style="width: 12%" />
-<col style="width: 17%" />
-<col style="width: 6%" />
 <col style="width: 9%" />
-<col style="width: 19%" />
-<col style="width: 8%" />
-<col style="width: 8%" />
+<col style="width: 10%" />
+<col style="width: 15%" />
 <col style="width: 7%" />
+<col style="width: 10%" />
+<col style="width: 16%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 10%" />
 </colgroup>
 <thead>
 <tr class="header">
 <th><strong><em>Dataset</em></strong></th>
 <th style="text-align: center;"><strong><em>Mask Dice</em></strong></th>
 <th style="text-align: center;"><strong><em>Final Label Dice</em></strong></th>
-<th style="text-align: center;"><strong><em>δ d</em></strong></th>
-<th style="text-align: center;"><strong><em>Δ c (nm)</em></strong></th>
+<th style="text-align: center;"><strong><em><span class="math display">\[\delta_d\]</span></em></strong></th>
+<th style="text-align: center;"><strong><em><span class="math display">\[\Delta_c (nm)\]</span></em></strong></th>
 <th style="text-align: center;"><strong><em>Number of Vesicles</em></strong></th>
 <th style="text-align: center;"><strong><em>TP</em></strong></th>
 <th style="text-align: center;"><strong><em>FN</em></strong></th>
 <th style="text-align: center;"><strong><em>FP</em></strong></th>
+<th style="text-align: center;"><strong><em>F1-score</em></strong></th>
 </tr>
 </thead>
 <tbody>
@@ -299,28 +290,31 @@ The results, visualized in Figure <a href="#fig:dice-improv">4</a>, showcase the
 <td style="text-align: center;">198</td>
 <td style="text-align: center;">26</td>
 <td style="text-align: center;">49</td>
+<td style="text-align: center;">0.841</td>
 </tr>
 <tr class="even">
 <td>SC 2</td>
-<td style="text-align: center;">0.8</td>
-<td style="text-align: center;">0.9</td>
+<td style="text-align: center;">0.80</td>
+<td style="text-align: center;">0.90</td>
 <td style="text-align: center;">0.05</td>
 <td style="text-align: center;">2.12±1.06</td>
 <td style="text-align: center;">105</td>
 <td style="text-align: center;">103</td>
 <td style="text-align: center;">2</td>
 <td style="text-align: center;">1</td>
+<td style="text-align: center;">0.986</td>
 </tr>
 <tr class="odd">
 <td>SC 3</td>
 <td style="text-align: center;">0.67</td>
-<td style="text-align: center;">0.9</td>
+<td style="text-align: center;">0.90</td>
 <td style="text-align: center;">0.05</td>
 <td style="text-align: center;">1.86±1.24</td>
 <td style="text-align: center;">128</td>
 <td style="text-align: center;">127</td>
 <td style="text-align: center;">1</td>
 <td style="text-align: center;">6</td>
+<td style="text-align: center;">0.973</td>
 </tr>
 <tr class="even">
 <td>SC 4</td>
@@ -332,6 +326,7 @@ The results, visualized in Figure <a href="#fig:dice-improv">4</a>, showcase the
 <td style="text-align: center;">141</td>
 <td style="text-align: center;">3</td>
 <td style="text-align: center;">4</td>
+<td style="text-align: center;">0.976</td>
 </tr>
 <tr class="odd">
 <td>SC 5</td>
@@ -343,6 +338,7 @@ The results, visualized in Figure <a href="#fig:dice-improv">4</a>, showcase the
 <td style="text-align: center;">209</td>
 <td style="text-align: center;">5</td>
 <td style="text-align: center;">13</td>
+<td style="text-align: center;">0.959</td>
 </tr>
 <tr class="even">
 <td>SC 6</td>
@@ -354,6 +350,7 @@ The results, visualized in Figure <a href="#fig:dice-improv">4</a>, showcase the
 <td style="text-align: center;">102</td>
 <td style="text-align: center;">2</td>
 <td style="text-align: center;">16</td>
+<td style="text-align: center;">0.919</td>
 </tr>
 <tr class="odd">
 <td>SC 7</td>
@@ -365,17 +362,19 @@ The results, visualized in Figure <a href="#fig:dice-improv">4</a>, showcase the
 <td style="text-align: center;">184</td>
 <td style="text-align: center;">0</td>
 <td style="text-align: center;">16</td>
+<td style="text-align: center;">0.958</td>
 </tr>
 <tr class="even">
 <td>SC 8</td>
 <td style="text-align: center;">0.75</td>
-<td style="text-align: center;">0.9</td>
+<td style="text-align: center;">0.90</td>
 <td style="text-align: center;">0.05</td>
 <td style="text-align: center;">1.70±0.93</td>
 <td style="text-align: center;">132</td>
 <td style="text-align: center;">126</td>
 <td style="text-align: center;">6</td>
 <td style="text-align: center;">1</td>
+<td style="text-align: center;">0.973</td>
 </tr>
 <tr class="odd">
 <td>SC 9</td>
@@ -387,6 +386,7 @@ The results, visualized in Figure <a href="#fig:dice-improv">4</a>, showcase the
 <td style="text-align: center;">132</td>
 <td style="text-align: center;">3</td>
 <td style="text-align: center;">14</td>
+<td style="text-align: center;">0.940</td>
 </tr>
 <tr class="even">
 <td><strong>Average</strong></td>
@@ -398,36 +398,39 @@ The results, visualized in Figure <a href="#fig:dice-improv">4</a>, showcase the
 <td style="text-align: center;"><strong>97.00%</strong></td>
 <td style="text-align: center;"><strong>3.00%</strong></td>
 <td style="text-align: center;"><strong>7.30%</strong></td>
+<td style="text-align: center;"><strong>0.95±0.04</strong></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div id="tbl:test-tomograms" class="tablenos">
 <table id="tbl:test-tomograms">
-<caption><span>Table 2:</span> Evaluation of the segmentation on the synaptosome test set (same sample type as the train set). For the meaning of the columns, see Table <a href="#tbl:train-tomograms">1</a>.
+<caption><span>Table 2:</span> <strong>Evaluation of the segmentation on the synaptosomal test set</strong> (same sample type as the train set). For the meaning of the columns, see Table <a href="#tbl:train-tomograms">1</a>.
 </caption>
 <colgroup>
+<col style="width: 9%" />
 <col style="width: 10%" />
-<col style="width: 12%" />
-<col style="width: 17%" />
+<col style="width: 15%" />
+<col style="width: 7%" />
+<col style="width: 10%" />
+<col style="width: 16%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
 <col style="width: 6%" />
 <col style="width: 10%" />
-<col style="width: 19%" />
-<col style="width: 8%" />
-<col style="width: 7%" />
-<col style="width: 7%" />
 </colgroup>
 <thead>
 <tr class="header">
 <th><strong><em>Dataset</em></strong></th>
 <th style="text-align: center;"><strong><em>Mask Dice</em></strong></th>
 <th style="text-align: center;"><strong><em>Final Label Dice</em></strong></th>
-<th style="text-align: center;"><strong><em>δ d</em></strong></th>
-<th style="text-align: center;"><strong><em>Δ c (nm)</em></strong></th>
+<th style="text-align: center;"><strong><em><span class="math display">\[\delta_d\]</span></em></strong></th>
+<th style="text-align: center;"><strong><em><span class="math display">\[\Delta_c (nm)\]</span></em></strong></th>
 <th style="text-align: center;"><strong><em>Number of Vesicles</em></strong></th>
 <th style="text-align: center;"><strong><em>TP</em></strong></th>
 <th style="text-align: center;"><strong><em>FN</em></strong></th>
 <th style="text-align: center;"><strong><em>FP</em></strong></th>
+<th style="text-align: center;"><strong><em>F1-score</em></strong></th>
 </tr>
 </thead>
 <tbody>
@@ -441,6 +444,7 @@ The results, visualized in Figure <a href="#fig:dice-improv">4</a>, showcase the
 <td style="text-align: center;">123</td>
 <td style="text-align: center;">6</td>
 <td style="text-align: center;">5</td>
+<td style="text-align: center;">0.957</td>
 </tr>
 <tr class="even">
 <td>ST 1</td>
@@ -452,6 +456,7 @@ The results, visualized in Figure <a href="#fig:dice-improv">4</a>, showcase the
 <td style="text-align: center;">687</td>
 <td style="text-align: center;">12</td>
 <td style="text-align: center;">33</td>
+<td style="text-align: center;">0.968</td>
 </tr>
 <tr class="odd">
 <td>ST 2</td>
@@ -463,6 +468,7 @@ The results, visualized in Figure <a href="#fig:dice-improv">4</a>, showcase the
 <td style="text-align: center;">117</td>
 <td style="text-align: center;">5</td>
 <td style="text-align: center;">2</td>
+<td style="text-align: center;">0.971</td>
 </tr>
 <tr class="even">
 <td>ST 3</td>
@@ -474,6 +480,7 @@ The results, visualized in Figure <a href="#fig:dice-improv">4</a>, showcase the
 <td style="text-align: center;">397</td>
 <td style="text-align: center;">37</td>
 <td style="text-align: center;">57</td>
+<td style="text-align: center;">0.894</td>
 </tr>
 <tr class="odd">
 <td>ST 5</td>
@@ -485,10 +492,11 @@ The results, visualized in Figure <a href="#fig:dice-improv">4</a>, showcase the
 <td style="text-align: center;">526</td>
 <td style="text-align: center;">9</td>
 <td style="text-align: center;">25</td>
+<td style="text-align: center;">0.969</td>
 </tr>
 <tr class="even">
 <td>ST 6</td>
-<td style="text-align: center;">0.6</td>
+<td style="text-align: center;">0.60</td>
 <td style="text-align: center;">0.83</td>
 <td style="text-align: center;">0.07</td>
 <td style="text-align: center;">2.02±1.12</td>
@@ -496,10 +504,11 @@ The results, visualized in Figure <a href="#fig:dice-improv">4</a>, showcase the
 <td style="text-align: center;">353</td>
 <td style="text-align: center;">20</td>
 <td style="text-align: center;">42</td>
+<td style="text-align: center;">0.919</td>
 </tr>
 <tr class="odd">
 <td>ST 7</td>
-<td style="text-align: center;">0.8</td>
+<td style="text-align: center;">0.80</td>
 <td style="text-align: center;">0.83</td>
 <td style="text-align: center;">0.06</td>
 <td style="text-align: center;">2.22±1.14</td>
@@ -507,6 +516,7 @@ The results, visualized in Figure <a href="#fig:dice-improv">4</a>, showcase the
 <td style="text-align: center;">107</td>
 <td style="text-align: center;">3</td>
 <td style="text-align: center;">9</td>
+<td style="text-align: center;">0.947</td>
 </tr>
 <tr class="even">
 <td>ST 8</td>
@@ -518,6 +528,7 @@ The results, visualized in Figure <a href="#fig:dice-improv">4</a>, showcase the
 <td style="text-align: center;">99</td>
 <td style="text-align: center;">1</td>
 <td style="text-align: center;">2</td>
+<td style="text-align: center;">0.985</td>
 </tr>
 <tr class="odd">
 <td>ST 10</td>
@@ -529,6 +540,7 @@ The results, visualized in Figure <a href="#fig:dice-improv">4</a>, showcase the
 <td style="text-align: center;">74</td>
 <td style="text-align: center;">3</td>
 <td style="text-align: center;">6</td>
+<td style="text-align: center;">0.943</td>
 </tr>
 <tr class="even">
 <td><strong>Average</strong></td>
@@ -540,36 +552,39 @@ The results, visualized in Figure <a href="#fig:dice-improv">4</a>, showcase the
 <td style="text-align: center;"><strong>96.30%</strong></td>
 <td style="text-align: center;"><strong>3.70%</strong></td>
 <td style="text-align: center;"><strong>6.10%</strong></td>
+<td style="text-align: center;"><strong>0.95±0.03</strong></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div id="tbl:neuron-tomograms" class="tablenos">
-<table id="tbl:neuron-tomograms">
-<caption><span>Table 3:</span> Evaluation of the segmentation on the neuron test set (different sample type as the train set). For the meaning of the columns, see Table <a href="#tbl:train-tomograms">1</a>.
+<table id="tbl:neuron-tomograms" style="width:100%;">
+<caption><span>Table 3:</span> <strong>Evaluation of the segmentation on the neuronal generalization test set</strong> (different sample type as the train set). For the meaning of the columns, see Table <a href="#tbl:train-tomograms">1</a>.
 </caption>
 <colgroup>
-<col style="width: 10%" />
-<col style="width: 12%" />
-<col style="width: 17%" />
-<col style="width: 6%" />
+<col style="width: 8%" />
 <col style="width: 9%" />
-<col style="width: 19%" />
-<col style="width: 8%" />
-<col style="width: 8%" />
-<col style="width: 7%" />
+<col style="width: 13%" />
+<col style="width: 11%" />
+<col style="width: 14%" />
+<col style="width: 15%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 9%" />
 </colgroup>
 <thead>
 <tr class="header">
 <th><strong><em>Dataset</em></strong></th>
 <th style="text-align: center;"><strong><em>Mask Dice</em></strong></th>
 <th style="text-align: center;"><strong><em>Final Label Dice</em></strong></th>
-<th style="text-align: center;"><strong><em>δ d</em></strong></th>
-<th style="text-align: center;"><strong><em>Δ c (nm)</em></strong></th>
+<th style="text-align: center;"><strong><em><span class="math display">\[\delta_d\]</span></em></strong></th>
+<th style="text-align: center;"><strong><em><span class="math display">\[\Delta_c (nm)\]</span></em></strong></th>
 <th style="text-align: center;"><strong><em>Number of Vesicles</em></strong></th>
 <th style="text-align: center;"><strong><em>TP</em></strong></th>
 <th style="text-align: center;"><strong><em>FN</em></strong></th>
 <th style="text-align: center;"><strong><em>FP</em></strong></th>
+<th style="text-align: center;"><strong><em>F1-score</em></strong></th>
 </tr>
 </thead>
 <tbody>
@@ -583,6 +598,7 @@ The results, visualized in Figure <a href="#fig:dice-improv">4</a>, showcase the
 <td style="text-align: center;">467</td>
 <td style="text-align: center;">56</td>
 <td style="text-align: center;">8</td>
+<td style="text-align: center;">0.936</td>
 </tr>
 <tr class="even">
 <td>N 123</td>
@@ -594,6 +610,7 @@ The results, visualized in Figure <a href="#fig:dice-improv">4</a>, showcase the
 <td style="text-align: center;">58</td>
 <td style="text-align: center;">8</td>
 <td style="text-align: center;">2</td>
+<td style="text-align: center;">0.921</td>
 </tr>
 <tr class="odd">
 <td>N 84</td>
@@ -605,6 +622,7 @@ The results, visualized in Figure <a href="#fig:dice-improv">4</a>, showcase the
 <td style="text-align: center;">484</td>
 <td style="text-align: center;">14</td>
 <td style="text-align: center;">1</td>
+<td style="text-align: center;">0.985</td>
 </tr>
 <tr class="even">
 <td>N 134</td>
@@ -616,6 +634,7 @@ The results, visualized in Figure <a href="#fig:dice-improv">4</a>, showcase the
 <td style="text-align: center;">384</td>
 <td style="text-align: center;">254</td>
 <td style="text-align: center;">63</td>
+<td style="text-align: center;">0.708</td>
 </tr>
 <tr class="odd">
 <td>N 115</td>
@@ -627,6 +646,7 @@ The results, visualized in Figure <a href="#fig:dice-improv">4</a>, showcase the
 <td style="text-align: center;">123</td>
 <td style="text-align: center;">47</td>
 <td style="text-align: center;">32</td>
+<td style="text-align: center;">0.757</td>
 </tr>
 <tr class="even">
 <td>N 102</td>
@@ -638,10 +658,11 @@ The results, visualized in Figure <a href="#fig:dice-improv">4</a>, showcase the
 <td style="text-align: center;">86</td>
 <td style="text-align: center;">17</td>
 <td style="text-align: center;">1</td>
+<td style="text-align: center;">0.905</td>
 </tr>
 <tr class="odd">
 <td>N 80</td>
-<td style="text-align: center;">0.7</td>
+<td style="text-align: center;">0.70</td>
 <td style="text-align: center;">0.81</td>
 <td style="text-align: center;">0.07</td>
 <td style="text-align: center;">2.67±2.00</td>
@@ -649,6 +670,7 @@ The results, visualized in Figure <a href="#fig:dice-improv">4</a>, showcase the
 <td style="text-align: center;">102</td>
 <td style="text-align: center;">9</td>
 <td style="text-align: center;">3</td>
+<td style="text-align: center;">0.944</td>
 </tr>
 <tr class="even">
 <td>N 114</td>
@@ -660,6 +682,7 @@ The results, visualized in Figure <a href="#fig:dice-improv">4</a>, showcase the
 <td style="text-align: center;">93</td>
 <td style="text-align: center;">38</td>
 <td style="text-align: center;">9</td>
+<td style="text-align: center;">0.798</td>
 </tr>
 <tr class="odd">
 <td>N 132</td>
@@ -671,6 +694,7 @@ The results, visualized in Figure <a href="#fig:dice-improv">4</a>, showcase the
 <td style="text-align: center;">129</td>
 <td style="text-align: center;">6</td>
 <td style="text-align: center;">32</td>
+<td style="text-align: center;">0.872</td>
 </tr>
 <tr class="even">
 <td>N 73</td>
@@ -682,6 +706,7 @@ The results, visualized in Figure <a href="#fig:dice-improv">4</a>, showcase the
 <td style="text-align: center;">483</td>
 <td style="text-align: center;">43</td>
 <td style="text-align: center;">2</td>
+<td style="text-align: center;">0.955</td>
 </tr>
 <tr class="odd">
 <td>N 128</td>
@@ -693,6 +718,7 @@ The results, visualized in Figure <a href="#fig:dice-improv">4</a>, showcase the
 <td style="text-align: center;">232</td>
 <td style="text-align: center;">20</td>
 <td style="text-align: center;">19</td>
+<td style="text-align: center;">0.922</td>
 </tr>
 <tr class="even">
 <td>N 116</td>
@@ -704,6 +730,7 @@ The results, visualized in Figure <a href="#fig:dice-improv">4</a>, showcase the
 <td style="text-align: center;">207</td>
 <td style="text-align: center;">89</td>
 <td style="text-align: center;">35</td>
+<td style="text-align: center;">0.770</td>
 </tr>
 <tr class="odd">
 <td><strong>Average</strong></td>
@@ -715,302 +742,233 @@ The results, visualized in Figure <a href="#fig:dice-improv">4</a>, showcase the
 <td style="text-align: center;"><strong>83.60%</strong></td>
 <td style="text-align: center;"><strong>16.40%</strong></td>
 <td style="text-align: center;"><strong>7.90%</strong></td>
+<td style="text-align: center;"><strong>0.87±0.09</strong></td>
 </tr>
 </tbody>
 </table>
 </div>
-<p>Our method transfers well across datasets even without fine-tuning which shows robustness and generalization.</p>
-<h3 id="comparison-of-manual-segmentation-with-automatic-deep-learning-based-segmentation">Comparison of manual segmentation with automatic deep-learning based segmentation</h3>
-<p>In the realm of cryo-electron tomography (cryoET), accurate segmentation of synaptic structures is paramount for understanding their spatial organization and function.
-Traditional manual segmentation, while precise, is time-consuming and often limited in scope.
-The advent of deep learning-based segmentation offers a promising alternative, providing both speed and scalability.</p>
-<p>The traditional approach to manual segmentation in cryoET studies often restricted analyses to specific distances from the active zone, typically up to 250 nm.
-This limitation inherently narrows the scope of synaptic or neuronal analyses.
-However, with the integration of deep learning-based segmentation, it’s now feasible to analyze entire synaptasomes or neurons comprehensively.
-Not only does this method expedite the segmentation process, but it also enhances the accuracy and breadth of the analysis.
-Furthermore, interactive tools like Napari significantly augment this process, allowing researchers to swiftly rectify false positives and negatives by adding or removing vesicles as needed, ensuring the highest level of accuracy in the final segmented output.</p>
+<p>Traditional manual segmentation, while precise, is time-consuming and often limited in scope.
+In previous cryo-ET studies of presynaptic terminals, the analysis of spatial organization was restricted within 250 nm of the active zone in order to keep segmentation time reasonable.
+This limitation inherently narrows the scope of synaptic analyses.
+The advent of deep learning-based segmentation offers a promising alternative, providing both speed and scalability.
+We were able to segment full synapses in a fraction of the time that it manual segmentation would take.
+Furthermore, we have implemented an interactive tool with Napari <span class="citation" data-cites="YEMgt2T4">[<a href="#ref-YEMgt2T4" role="doc-biblioref">19</a>]</span> that enables to swiftly rectify false positives and negatives by adding or removing vesicles as needed, ensuring the highest level of accuracy in the final segmented output.
+A comparison of manual and automatic segmentation is shown in Figure <a href="#fig:pipelineontomo">4</a>.</p>
 <div id="fig:pipelineontomo" class="fignos">
 <figure>
-<img src="images/synaptasom-new.png" style="width:15cm" alt="Figure 5: A: A 3D box representation of a synaptasome, visualized in an orthogonal view. The image showcases the intricate details of the structure with a scale bar indicating 100 nm.B: A probability map derived from the 3D U-Net segmentation. The map is presented schematically, with a color gradient ranging from blue (0.9968) to red (1), indicating the likelihood of synaptic vesicle presence.C: A tomogram post optimal global thresholding. This image provides a detailed view of the segmented structures, highlighting the precision of the automated segmentation process.D: The final representation of synaptic vesicle segmentation post-processing. Synaptic vesicles are depicted in light blue, overlaid on the ground truth obtained from expert annotations. The active zone is distinctly marked in red. The scale bar for this image is also set at 100 nm." />
-<figcaption aria-hidden="true"><span>Figure 5:</span> <strong>A: A 3D box representation of a synaptasome, visualized in an orthogonal view. The image showcases the intricate details of the structure with a scale bar indicating 100 nm.B: A probability map derived from the 3D U-Net segmentation. The map is presented schematically, with a color gradient ranging from blue (0.9968) to red (1), indicating the likelihood of synaptic vesicle presence.C: A tomogram post optimal global thresholding. This image provides a detailed view of the segmented structures, highlighting the precision of the automated segmentation process.D: The final representation of synaptic vesicle segmentation post-processing. Synaptic vesicles are depicted in light blue, overlaid on the ground truth obtained from expert annotations. The active zone is distinctly marked in red. The scale bar for this image is also set at 100 nm.</strong></figcaption>
+<img src="images/synaptasome-new.png" style="width:15cm" alt="Figure 4: Comparison of manual and automatic vesicle segmentation. A: 3D representation of a synaptasome density map, visualized in an orthogonal view.B: Probability map output by the neural network. The map is represented with a color gradient ranging from blue (0.9968) to red (1), indicating the likelihood of synaptic vesicle presence. C: Segmentation after global threshold optimization. D: The final representation of synaptic vesicle segmentation post-processing. CryoVesNet segmented vesicles are depicted in light blue, combined with expert annotation in yellow (restricted within 250 nm of the active zone shown in red). Bar, 100 nm." />
+<figcaption aria-hidden="true"><span>Figure 4:</span> <strong>Comparison of manual and automatic vesicle segmentation</strong>. A: 3D representation of a synaptasome density map, visualized in an orthogonal view.B: Probability map output by the neural network. The map is represented with a color gradient ranging from blue (0.9968) to red (1), indicating the likelihood of synaptic vesicle presence. C: Segmentation after global threshold optimization. D: The final representation of synaptic vesicle segmentation post-processing. CryoVesNet segmented vesicles are depicted in light blue, combined with expert annotation in yellow (restricted within 250 nm of the active zone shown in red). Bar, 100 nm.</figcaption>
 </figure>
 </div>
-<p>#!#<a href="images/3d.png" id="fig:3d" width="10cm"><strong>3D model of manual segmented and automatically segmented synaptosome.</strong></a></p>
-<h3 id="hierarchical-connectivity-segmentation-of-presynaptic-terminals">Hierarchical connectivity segmentation of presynaptic terminals</h3>
-<p>Pyto is a software package designed for the analysis of pleomorphic membrane-bound molecular complexes in 3D images, particularly in the context of cryo-electron tomograms of neuronal synapses. A key feature of Pyto is its ability to accurately segment connectors and tethers within the pre-synaptic terminal, a task that requires a high level of precision. This segmentation process is hierarchical and connectivity-based, detecting densities interconnecting vesicles (connectors) and densities connecting vesicles to the active-zone plasma membrane (tethers).</p>
-<p>In the study of synaptic vesicles regulation, the precision of segmentation is crucial. Accurate segmentation of connectors and tethers is essential as these structures play a significant role in the regulation of synaptic vesicles. Software that segments subcellular compartments, such as Pyto, provides a valuable tool in this process.</p>
-<p>We have developed a software that is designed to be compatible with programs like Pyto. This compatibility allows us to extract more detailed information from Cryo-Electron Tomography (Cryo-ET), even in densely populated in situ conditions. By using our software in conjunction with programs like Pyto, we can gain a deeper understanding of synaptic vesicles regulation. Importantly, our software aims to eliminate the need for manual segmentation, enhancing the efficiency and accuracy of the process.</p>
+<p>Pyto is a software package designed for the analysis of pleomorphic membrane-bound molecular complexes in 3D images, particularly in the context of synaptic cryo-ET.
+A key feature of Pyto is its ability to accurately segment connectors and tethers within the pre-synaptic terminal, a task that requires a high level of vesicle segmentation precision.
+This segmentation process is hierarchical and connectivity-based, detecting densities interconnecting vesicles (connectors) and densities connecting vesicles to the active-zone plasma membrane (tethers).
+CryoVesNet has been designed to be compatible with Pyto and an application is demonstrated in Figure {fig:amira}.
+This enables us to extract a wealth of structural information to better understand the structural basis of synaptic vesicle exocytosis regulation.</p>
 <div id="fig:amira" class="fignos">
 <figure>
-<img src="images/amira_all.png" style="width:15cm" alt="Figure 6: 3D Model of Cultured Mouse Neuron: Left - Tomogram; Left Center - Schematic segmentation with cell outline (light blue), mitochondria (dark blue), lysosomes (green), microtubules (dark magenta); Right Center - Vesicles segmented using VesPy and connectors via Pyto; Right - 3D representation of vesicles in the presynaptic terminal.." />
-<figcaption aria-hidden="true"><span>Figure 6:</span> <strong>3D Model of Cultured Mouse Neuron: Left - Tomogram; Left Center - Schematic segmentation with cell outline (light blue), mitochondria (dark blue), lysosomes (green), microtubules (dark magenta); Right Center - Vesicles segmented using VesPy and connectors via Pyto; Right - 3D representation of vesicles in the presynaptic terminal..</strong></figcaption>
+<img src="images/amira_all.png" style="width:15cm" alt="Figure 5: 3D model of a cultured mouse neuron synapse. A: slice through a tomogram. B: Segmentation of plasma membrane (light blue), mitochondria (dark blue), endosomes (green), microtubules (dark magenta). C: Vesicles (yellow) and connectors (pink) segmented with CryoVesNet and Pyto, respectively. D: Combination of B and C. Bar, 100 nm." />
+<figcaption aria-hidden="true"><span>Figure 5:</span> <strong>3D model of a cultured mouse neuron synapse</strong>. A: slice through a tomogram. B: Segmentation of plasma membrane (light blue), mitochondria (dark blue), endosomes (green), microtubules (dark magenta). C: Vesicles (yellow) and connectors (pink) segmented with CryoVesNet and Pyto, respectively. D: Combination of B and C. Bar, 100 nm.</figcaption>
 </figure>
 </div>
 <h2 id="discussion">Discussion</h2>
-<h2 id="old">OLD</h2>
-<p>While the Dice coefficient is a good global measure to assess the predictions in comparison to the ground truth, it is difficult to asses local segmentation accurracy.
-For example, a single generated vesicle label containing several close connected vesicles would not be practical for further analysis for the researcher although it could have almost the same dice value.
-What is important for actual usage of the software would be the number and percentage of true-detected vesicles, false-positive and false-negative rates.</p>
-<p>Center error:
-If we measure each axis error it will reveal that human bias in segmentation is more affected on the Z-axis. [we didn’t show it in number but its checked the hypothesis]
-<code class="green">\_we cannot claim something without showing it. ---&gt; this would belong into results*</code></p>
-<p>3d unet good for 3D processing
-recent Nature methods paper by Ben Engel, DeepFinder -&gt; Relion for STA creates mask to find more using dl
--what are they doing, maybe compare that in the text, different aims; we might compare results we achieve (keep as bonus, revision)
-## SUMMARY
-Synaptic Vesicles: Molecular Interactions and Functions</p>
-<p>Synaptic vesicles (SVs) play a central role in neurotransmission, facilitating the release of neurotransmitters into the synaptic cleft. These vesicles undergo a series of molecular interactions with various protein complexes, transitioning from tethering to priming, and eventually to neurotransmitter release. Proteins such as Munc13 are integral to these processes, aiding in the localization and preparation of vesicles near the plasma membrane. Additionally, synapsins have been identified as key proteins in maintaining the reserve pool of SVs in presynaptic terminals. The mechanisms through which synapsins achieve this, whether by cross-linking vesicles or creating a distinct liquid phase, remain subjects of active research and debate.</p>
-<p>Synaptic Studies and the Need for CryoET</p>
-<p>The intricate nature of synapses and their associated structures has posed numerous challenges for researchers. Cryo-electron tomography (cryoET) emerges as a powerful tool to address these challenges, offering unparalleled insights into the molecular architecture of synapses. Accurate segmentation of structures such as vesicles, connectors, and tethers is essential for a comprehensive understanding of synaptic function. CryoET, however, is not without its challenges. The technique often grapples with issues like noise and the ‘missing wedge’ phenomenon, which can introduce artifacts and reduce the resolution of the reconstructed volume. Addressing these challenges is crucial for obtaining clear and accurate tomographic reconstructions.</p>
-<p>CryoVesSeg: Integrating Deep Learning with CryoET</p>
-<p>Harnessing the capabilities of deep learning, CryoVesSeg represents a synergistic approach to SV studies in cryoET. Deep learning, with its ability to process vast datasets and identify complex patterns, complements the precision of cryoET. The U-Net architecture, central to CryoVesSeg, has been trained on a curated dataset of manually segmented tomograms. This training ensures that the model can effectively segment SVs, connectors, and tethers, even in the presence of the aforementioned challenges like noise and the missing wedge phenomenon.</p>
-<p>Conclusion</p>
-<p>In the realm of cellular biology, the study of synaptic vesicles and their interactions is of paramount importance. With the integration of deep learning and cryoET, tools like CryoVesSeg are poised to revolutionize our understanding of these structures. As we continue to refine our methodologies and address the challenges inherent to cryoET, the promise of deeper insights and a more comprehensive understanding of synaptic function beckons.</p>
-<h3 id="next">NEXT</h3>
-<p>Synaptic Vesicles: Beyond Basic Understanding</p>
-<p>The intricate molecular dynamics of synaptic vesicles (SVs) have long been a focal point in neuroscientific research. Their pivotal role in neurotransmission, particularly in the release of neurotransmitters into the synaptic cleft, necessitates a deeper understanding of their interactions with various protein complexes. As they transition through states from tethering to priming, proteins such as Munc13 play a crucial role in their localization and preparation adjacent to the plasma membrane. Concurrently, the role of synapsins in maintaining the reserve pool of SVs in presynaptic terminals has been a subject of extensive debate, with theories ranging from vesicle cross-linking to the creation of a distinct liquid phase.</p>
-<p>The Imperative of CryoET in Synaptic Studies</p>
-<p>The complexity of synapses and their associated molecular structures has consistently presented challenges that traditional microscopy techniques struggle to address. Cryo-electron tomography (cryoET) emerges as a beacon in this landscape, offering a resolution and depth previously unattainable. However, the inherent challenges of cryoET, such as noise and the ‘missing wedge’ phenomenon, have been significant barriers to obtaining pristine tomographic reconstructions. These challenges underscore the need for advanced methodologies that can navigate the intricacies of cryoET data while preserving the integrity of the molecular structures under study.</p>
-<p>CryoVesSeg: Bridging Deep Learning and CryoET</p>
-<p>In light of the challenges and the pressing need for accurate segmentation, CryoVesSeg integrates the power of deep learning with the precision of cryoET. Drawing inspiration from the methodologies and findings of recent studies, our approach leverages the U-Net architecture, trained on a meticulously curated dataset of manually segmented tomograms. This integration ensures not only the effective segmentation of SVs, connectors, and tethers but also addresses the challenges intrinsic to cryoET, such as noise and the missing wedge phenomenon. The adaptability of CryoVesSeg, as evidenced by its performance across diverse datasets, underscores its potential as a versatile tool in synaptic studies.</p>
-<p>Conclusion</p>
-<p>The journey of understanding synaptic vesicles and their myriad interactions is far from complete. With tools like CryoVesSeg, which seamlessly blend the capabilities of deep learning and cryoET, we are better equipped to delve into the molecular intricacies of synapses. As we continue to refine our approach and draw insights from ongoing research, the promise of unveiling deeper layers of synaptic function and molecular interactions remains an exciting prospect for the future of cellular biology research.</p>
-<h3 id="version-one">Version One:</h3>
-<p>Discussion</p>
-<p>The realm of synaptic vesicles (SVs) and their interactions at the synapse is a fascinating and complex area of study in cellular biology. These vesicles play a pivotal role in neurotransmission, and understanding their behavior, interactions, and associated protein complexes is crucial for a comprehensive grasp of synaptic function.</p>
-<p>Synaptic Vesicles and Their Interactions</p>
-<p>At the heart of synaptic transmission lies the process of neurotransmitter release, which is orchestrated by a series of coordinated actions involving multiple protein complexes. Synaptic vesicles undergo a series of states, from tethering to priming, before they release their neurotransmitter contents into the synaptic cleft. This process is not just about the vesicles themselves but also about the intricate dance of protein complexes that facilitate these states.</p>
-<p>Tethering represents the initial stage where vesicles are held close to the plasma membrane, readying them for the subsequent steps. This is followed by priming, a state where vesicles are molecularly prepared for neurotransmitter release. The transition between these states involves specific protein bridges, with proteins like Munc13 playing a role in localizing vesicles close to the plasma membrane. The orchestration of these transitions is further modulated by other proteins and enzymes, such as protein kinase C, which influences vesicle interactions.</p>
-<p>The Role of Synapsins in Vesicle Clustering</p>
-<p>Beyond the protein complexes that facilitate vesicle states, there are proteins like synapsins that play a crucial role in maintaining the reserve pool of SVs in presynaptic terminals. This reserve pool is essential as it ensures that there are always vesicles available for neurotransmission, especially during heightened synaptic activity. The exact mechanism through which synapsins maintain this reserve pool has been a topic of debate. Some theories suggest that synapsins might cross-link vesicles, anchoring them to each other, while others propose that synapsins create a unique liquid phase, allowing vesicles to float within a synapsin droplet. Both models offer intriguing insights into the potential mechanisms of vesicle clustering and reserve pool maintenance.</p>
-<p>CryoVesSeg: A New Frontier in Synaptic Studies</p>
-<p>Enter CryoVesSeg, our cutting-edge tool that leverages the power of cryo-electron tomography and deep learning. With CryoVesSeg, we can delve deeper into the molecular intricacies of synaptic vesicles and their associated structures. Traditional methods, while precise, often lacked efficiency. CryoVesSeg, with its U-Net architecture, offers a solution that marries precision with speed.</p>
-<p>The ability to accurately segment vesicles, connectors, tethers, and other associated structures in their native environment opens up new avenues for research. By visualizing these structures at a molecular resolution, we can gain insights into their functional dynamics, interactions, and the roles of various protein complexes in the process. Furthermore, the adaptability of CryoVesSeg means that it can be trained on diverse datasets, making it a versatile tool for various cellular biology studies.</p>
-<p>Conclusion</p>
-<p>In conclusion, the world of synaptic vesicles is rich with molecular interactions and processes that are vital for synaptic function. With tools like CryoVesSeg, we are poised to uncover the mysteries of these interactions, offering a deeper understanding of synaptic transmission and the myriad protein complexes that facilitate it. As we continue our journey in this field, the promise of new discoveries and insights beckons, paving the way for a brighter future in cellular biology research.</p>
-<h3 id="version-two">Version two:</h3>
-<p>CryoVesSeg: Harnessing the Power of Deep Learning for Synaptic Studies</p>
-<p>Integration with Deep Learning Paradigms</p>
-<p>Deep learning, a specialized branch of machine learning, has revolutionized the way we approach complex data-driven tasks. Its ability to sift through vast datasets and discern intricate patterns is unparalleled, making it an ideal tool for cellular structure segmentation in cryoET. CryoVesSeg, our innovative tool, is not just about synaptic vesicles (SVs) but a broader testament to the transformative potential of deep learning in cellular biology. By utilizing a meticulously curated set of manually segmented tomograms, our model undergoes rigorous training phases. The result? A segmentation that is both precise and nuanced, going beyond the rudimentary masking often seen in traditional methods.</p>
-<p>Comparative Insights</p>
-<p>Historically, cryoET methodologies have relied heavily on techniques like template matching and subtomogram classification. While effective, these methods often lack the flexibility and adaptability that modern research demands. CryoVesSeg, with its deep learning foundation, introduces a dynamic shift. By integrating post-processing steps such as adaptive thresholding, our approach ensures that segmentation is not just accurate but refined. This adaptability, deeply rooted in machine learning principles, emphasizes the versatility of CryoVesSeg, making it suitable for diverse datasets, including those beyond SVs.</p>
-<p>Applications and Future Directions</p>
-<p>The versatility of deep learning is evident in CryoVesSeg’s potential applications. Beyond SV segmentation, our methodology shows promise in particle picking, a crucial step in cryoET data analysis. This dual functionality, encompassing both segmentation and particle picking, enhances the value of CryoVesSeg in the realm of cellular biology.</p>
-<p>Moreover, drawing from the results and methods you provided, our deep learning approach is poised to make significant strides in synaptic studies. The potential to gain insights into synaptic vesicle pool formation, the interactions of vesicles with connectors and tethers, and the broader synaptic landscape is immense. Given well-annotated tomograms, there’s an exciting possibility to extend CryoVesSeg’s capabilities to other cellular structures, offering a holistic view of the cellular microenvironment.</p>
-<p>Challenges and Adaptations</p>
-<p>Like all machine learning models, deep learning networks are data-hungry. While CryoVesSeg benefits from a comprehensive training regimen, the ever-evolving nature of data and the unique variability inherent to SVs highlight the need for continuous model updates. As we chart our path forward, our primary goal is to enhance the model’s generalizability. By integrating feedback, refining training datasets, and adapting to the latest in machine learning research, we aim to ensure that CryoVesSeg remains a cutting-edge tool in the ever-evolving landscape of cellular biology research.</p>
-<h3 id="version-three">Version three:</h3>
-<p>Discussion</p>
-<p>The intricate world of synaptic vesicles (SVs) and their associated structures has been a central focus in cellular biology. Accurate segmentation of these structures in cryo-electron tomography (cryoET) is essential for delving deeper into their functional dynamics and molecular complexities. Historically, segmentation in cryoET has leaned heavily on manual processes, ensuring precision but often at the cost of efficiency. Our approach, leveraging the capabilities of deep learning and the U-Net architecture, offers a solution that balances precision with efficiency.</p>
-<p>Synaptic Studies and the Need for CryoET
-The study of synapses has raised numerous questions that cryoET is uniquely positioned to answer. Accurate segmentation of vesicles, connectors, and tethers is paramount in this endeavor. Our proposed methodology addresses this need, providing tools that can significantly advance our understanding of synapses, synaptic vesicle pools, and the ongoing debates in the field, such as the liquid phase versus cross-linking theories centered around synapsin.</p>
-<p>Versatility and Applicability
-Many research groups possess vast amounts of manually segmented and annotated data. Our network is designed to be adaptable, allowing these groups to utilize their datasets and train the network for other membranes and organelles. Beyond synaptic studies, the capabilities of our network extend to other areas, such as particle picking, showcasing its versatility.</p>
-<p>Conclusion
-In essence, the methodology and tools we present here serve as a bridge to the biological interpretation of membrane-bound molecular complexes. They pave the way for a deeper understanding of their function and molecular identity, thereby broadening the horizons of quantitative structural methods in cell biology. As we move forward, our focus remains on refining our approach, ensuring it remains both robust and relevant, and continues to contribute significantly to the field.</p>
-<h3 id="sume-up">SUME UP</h3>
-<p>The intricate world of synaptic vesicles (SVs) has long captivated the attention of cellular biologists. These tiny vesicles, pivotal in neurotransmission, are a testament to the complexity and beauty of cellular processes. As we delve deeper into their molecular intricacies, the need for precise and efficient tools becomes paramount. Enter CryoVesSeg, our state-of-the-art solution that marries the precision of cryo-electron tomography (cryoET) with the efficiency and adaptability of deep learning.</p>
-<p>The Synaptic Landscape: A Dance of Vesicles and Proteins</p>
-<p>At the heart of synaptic function lies the SVs and their orchestrated interactions with various protein complexes. From the initial tethering, where vesicles are held in readiness near the plasma membrane, to the primed state, where they are molecularly prepared for neurotransmitter release, every step is a coordinated dance of molecular interactions. Proteins like Munc13 and synapsins play crucial roles in these processes, ensuring that neurotransmission occurs seamlessly. The debates around synapsins, whether they cross-link vesicles or create a unique liquid phase, further underscore the depth of our quest for understanding.</p>
-<p>Harnessing the Power of Deep Learning with CryoVesSeg</p>
-<p>Deep learning, a transformative branch of machine learning, has redefined how we approach data-intensive tasks. CryoVesSeg stands as a testament to this transformation. By leveraging a curated dataset of manually segmented tomograms, our model undergoes intensive training, ensuring that the segmentation of SVs, connectors, and tethers is both nuanced and precise.</p>
-<p>Historical methods in cryoET, while effective, often lacked the dynamism that modern research demands. CryoVesSeg, with its foundation in deep learning, offers a refreshing departure from these traditional methods. Its adaptability ensures that it can be tailored to diverse datasets, making it a versatile tool not just for SVs but for a broader spectrum of cellular structures.</p>
-<p>Applications, Challenges, and the Road Ahead</p>
-<p>The potential applications of CryoVesSeg are vast. Beyond SV segmentation, it shows promise in particle picking, a critical step in cryoET data analysis. This dual functionality amplifies its value in cellular biology research.</p>
-<p>However, like all machine learning models, CryoVesSeg thrives on data. The dynamic nature of data and the inherent variability in SVs necessitate continuous updates to the model. As we navigate this evolving landscape, our goal remains clear: to ensure CryoVesSeg remains at the cutting edge, offering researchers a tool that is both robust and relevant.</p>
-<p>Conclusion</p>
-<p>In the realm of cellular biology, where every molecule tells a story, tools like CryoVesSeg offer a window into these narratives. By combining the precision of cryoET with the efficiency of deep learning, we are poised to uncover the mysteries of synaptic vesicles and their interactions. As we continue this journey, the promise of new discoveries and deeper insights beckons, heralding a new era in our understanding of cellular processes.</p>
-<h3 id="more-technical">More technical</h3>
-<p>Our methodological approach to automatic segmentation in cryoET represents a significant advancement in the field. By utilizing a U-Net architecture trained on manually segmented tomograms, we have developed a system that can efficiently and accurately segment synaptic vesicles, connectors, and tethers in tomographic datasets.</p>
-<p>The results obtained from our method, as evidenced by the Dice coefficient and other evaluation metrics, demonstrate its robustness and accuracy. Notably, our method’s ability to generalize across different datasets, including those from rat synaptosomes and mouse astrocytic and primary neuronal cultures, underscores its versatility and potential for widespread application.</p>
-<p>The segmentation pipeline, which includes steps such as splitting the tomogram into 3D patches, training the U-Net, generating probability masks, and stitching patches back together, has been optimized to ensure high-quality segmentation outcomes. The use of both global and adaptive localized thresholding techniques further refines the segmentation, addressing challenges posed by closely packed vesicles and complex scenarios.</p>
-<p>Our results also highlight the effectiveness of our post-processing steps, including radial profile refinement and the removal of outliers. The radial profile, in particular, ensures that the segmented vesicles closely match their actual structure in the tomogram, providing a more accurate representation.</p>
-<p>Furthermore, our method’s compatibility with software like Pyto, which is designed for the analysis of pleomorphic membrane-bound molecular complexes in 3D images, enhances its utility. By integrating our segmentation approach with tools like Pyto, researchers can gain deeper insights into synaptic vesicle regulation and other cellular processes.</p>
-<p>In terms of dataset preparation and network training, our approach is systematic and comprehensive. The use of different datasets for training, testing, and assessing transfer learning potential ensures that our model is well-trained and capable of handling a variety of tomographic data. The network architecture, based on the CARE framework, has been optimized for vesicle segmentation, and the results obtained validate its effectiveness.</p>
-<p>In conclusion, our method for automatic segmentation in cryoET represents a significant step forward in the study of synaptic vesicles and their associated structures. By combining the power of deep learning with optimized post-processing techniques, we offer a solution that is both efficient and precise. As the field of cellular biology continues to evolve, tools like ours will play a crucial role in advancing our understanding of complex cellular structures and processes.</p>
-<h3 id="outlook">Outlook</h3>
-<p>implement automatic cell-outline and active zone segmentation as deep learning workflow using UNet
-implement automatic connector and tether segmentation as a deep leaning workflow using UNet</p>
+<h3 id="synaptic-vesicles-molecular-interactions-and-functions">Synaptic Vesicles: Molecular Interactions and Functions</h3>
+<p>Synaptic vesicles (SVs) play a central role in neurotransmission, facilitating the release of neurotransmitters into the synaptic cleft.
+These vesicles undergo a series of molecular interactions with various protein complexes, transitioning from a tethered to a primed state, and eventually to neurotransmitter release through exocytosis.
+Synapsins have been identified as key proteins in regulating the availability of SV for exocytosis.
+It has been hypothesized that synapsins cross-link SVs, thereby preventing their premature release.</p>
+<p>CryoET emerges as a powerful tool to address these challenges, offering unparalleled insights into the molecular architecture of synapses.
+Accurate segmentation of structures such as vesicles, connectors, and tethers is essential for a comprehensive understanding of synaptic function.
+CryoET, however, is not without its challenges.
+The technique suffers from a high level of noise and anisotropic resolution (known as the missing wedge phenomenon), which complicates data analysis and interpretation.
+Addressing these challenges is crucial for obtaining clear and accurate tomographic reconstructions.</p>
+<h3 id="cryovesnet-automatic-vesicle-segmentation-in-cryoet">CryoVesNet: Automatic Vesicle Segmentation in CryoET</h3>
+<p>Our methodological approach to automatic segmentation in cryoET represents a significant advancement in the field.
+By utilizing a U-Net architecture trained on manually segmented tomograms and postprocessing steps, we have developed a system that can efficiently and accurately segment synaptic vesicles in tomographic datasets.
+In particular, CryoVesNet is uniquely insensitive to the missing wedge and can segment complete vesicles even if the membrane is not fully visible in the tomogram.
+The results obtained from our method, as evidenced by the Dice coefficient and other evaluation metrics, demonstrate its robustness and accuracy.
+Notably, our method ability to generalize across different datasets, namely from rat synaptosomes and to primary neuronal cultures, underscores its versatility and potential for widespread application.
+It is not restricted to synaptic vesicles but can be applied to any spherical membrane-bound organelle.
+It is interesting to note that the Dice coefficient of the U-Net output (probability mask) was better for the test set and generalization set than the train set.
+Consequently the train set benefited more strongly from the post-processing steps than the test and generalization sets in term of Dice coefficient.</p>
+<p>The use of both global and adaptive localized thresholding techniques further refines the segmentation, addressing challenges posed by closely packed vesicles.
+Our results highlight the effectiveness of our post-processing steps, including radial profile refinement and the removal of outliers.
+The radial profile, in particular, ensures that the segmented vesicles closely match their actual structure in the tomogram, providing a more accurate representation.
+Furthermore, our method compatibility with software like Pyto, which is designed for the analysis of pleomorphic membrane-bound molecular complexes in 3D images, enhances its utility.
+By integrating our segmentation approach with tools like Pyto, researchers can gain deeper insights into vesicle interactions.
+Significantly, with minimal adjustments, our method could be adapted to achieve highly precise segmentation of any membrane-enclosed organelle or the plasma membrane itself.</p>
+<h3 id="conclusion">Conclusion</h3>
+<p>In conclusion, CryoVesNet for automatic segmentation in cryoET represents a significant step forward in the study of synaptic vesicles and their associated structures.
+By combining the power of deep learning with optimized post-processing techniques, we offer a solution that is both efficient and precise.
+As the field of structural cell biology continues to evolve, tools like ours will play a crucial role in advancing our understanding of complex cellular structures and processes.</p>
 <h2 id="materials-and-methods">Materials and methods</h2>
-<h3 id="cryo-electron-tomography-datasets">Cryo-electron Tomography Datasets</h3>
-<p>Two datasets of different origin were used as input and test subjects for the automatic segmentation pipeline, respectively.
-They consisted in rat synaptosomes primary neuron cultures derived from mice.
-The preparation procedure of the samples from which the datasets were obtained as well as the biological analysis of these datasets was previously reported. <span class="citation" data-cites="CERJ8H0p">[<a href="#ref-CERJ8H0p" role="doc-biblioref">17</a>]</span>.</p>
-<p>Synaptosome preparation</p>
-<p>Preparation of astrocytic and neuronal culture</p>
-<p>Plunge freezing and spray mixing (Vitrification)</p>
-<p>Cryo-electron microscopy (Cryo-ET)</p>
-<p>Tomogram reconstruction</p>
-<p>Ground truth annotation for organelles, cytoplasm, and membranes</p>
-<p>Ground truth vesicles annotation</p>
-<p>CNN Preproscessing</p>
-<p>Biniarization of probability masks</p>
-<p>Post Processing on Biniraized map (adaptive threeshold, radial profile, outlier removal)</p>
-<p>Evaluation metrics</p>
-<p>Computational setup</p>
+<h3 id="cryo-electron-tomography-datasets">Cryo-electron tomography datasets</h3>
+<p>They consisted in rat synaptosomes primary neuron cultures derived from mice.
+In this study, we used datasets originating from either rat synaptosomes or mouse primary neuron cultures.
+They represent a total of 30 tomograms with heterogeneous pixel sizes, defocus and resolution and we split them in three groups:
+1. Train set: 9 synaptosome tomograms were used for training.
+2. Test set: 9 independent synaptosome tomograms were used for testing.
+3. Generalization test set: 12 neuron tomograms were used for assessing transfer learning potential.
+The preparation procedure of the samples from which the datasets were obtained as well as the biological analysis of these datasets was previously reported <span class="citation" data-cites="CERJ8H0p">[<a href="#ref-CERJ8H0p" role="doc-biblioref">20</a>]</span>.</p>
 <h3 id="manual-segmentation-and-automatic-interboundary-segment-detection">Manual segmentation and automatic interboundary segment detection</h3>
-<p>Manual segmentation of SVs, mitochondria, the active zone PM, and of the segmentation region was done in IMOD (???Figure S4A&amp;B???) <span class="citation" data-cites="136NHHp17">[<a href="#ref-136NHHp17" role="doc-biblioref">16</a>]</span>. SVs were segmented as spheres.
-The segmentation region marked the region to be analyzed by Pyto <span class="citation" data-cites="1HtRUUZQi">[<a href="#ref-1HtRUUZQi" role="doc-biblioref">6</a>]</span>.
-The analysis by Pyto was essentially the same as described previously <span class="citation" data-cites="XQJ3R1HJ 1HtRUUZQi">[<a href="#ref-XQJ3R1HJ" role="doc-biblioref">5</a>,<a href="#ref-1HtRUUZQi" role="doc-biblioref">6</a>]</span>.
+<p>Manual segmentation of SVs, the presynaptic cytoplasm, and the active zone plasma membrane was done in IMOD <span class="citation" data-cites="136NHHp17">[<a href="#ref-136NHHp17" role="doc-biblioref">18</a>]</span>.
+SVs were segmented as spheres.
+The presynaptic cytoplasm marked the region to be analyzed by Pyto <span class="citation" data-cites="1HtRUUZQi">[<a href="#ref-1HtRUUZQi" role="doc-biblioref">9</a>]</span>.
+Later on, we refer to this region as the cytoplasmic segmentation region.
+It consisted of the volume comprising the active zone and the cluster of SVs.
+The analysis by Pyto was essentially the same as described previously <span class="citation" data-cites="XQJ3R1HJ 1HtRUUZQi">[<a href="#ref-XQJ3R1HJ" role="doc-biblioref">5</a>,<a href="#ref-1HtRUUZQi" role="doc-biblioref">9</a>]</span>.
 In short, the segmented region is divided in 1 voxel thick layers parallel to the active zone for distance calculations.
 A hierarchical connectivity segmentation detects densities interconnecting boundaries.
-The boundaries were synaptic vesicles and the active zone PM. Detected intervesicular segments are termed connectors and segments connecting vesicles to the active zone PM are called tethers (Figure <code class="green">\_add figure number*</code>).
+The boundaries were synaptic vesicles and the active zone plasma membrane.
+Detected intervesicular segments are termed connectors and segments connecting vesicles to the active zone plasma membrane are called tethers.
 Distance calculations respective to SVs were done from SV center.
 The segmentation procedure is conservative and tends to miss some tethers and connectors because of noise.
 Consequently, the numbers of tethers and connectors should not be considered as absolute values, but rather to compare experimental groups.
 As it was done before, an upper limit was set between 2100 and 3200 nm<sup>3</sup> on segment volume.
 The tomograms that were used for this analysis were binned by a factor of 2 to 3, resulting in voxel sizes between 2.1 and 2.4 nm.</p>
-<h3 id="pre-processing-of-manual-segmentation-outputs-from-imod-for-further-use-jupyter-notebook-pre-pyto">Pre-processing of manual segmentation outputs from IMOD for further use (jupyter notebook pre-pyto)</h3>
-<p><code>probably not necessary to mention output from IMOD to prepyto input label file procedure</code></p>
-<p><code class="green">put this somewhere else</code></p>
-<h3 id="dataset-description">Dataset description</h3>
-<p>The used datasets included a total of 30 tomograms with heterogeneous pixel sizes, defocus and resolution.</p>
-<ol type="1">
-<li>9 synaptosome datasets were used for training and validation.</li>
-<li>9 synaptosome datasets was used for test.</li>
-<li>12 Neuron dataset were used for assessing transfer learning potential.</li>
-</ol>
-<h3 id="training-dataset-construction">Training Dataset Construction</h3>
-<p>In the preparation of our training dataset, we utilized segmented 3D image volumes.
-The primary volume was systematically divided into 32x32x32 sub-volumes.
+<h3 id="train-and-validation-set-generation">Train and validation set generation</h3>
+<p>In the preparation of our train set, we utilized segmented 3D image volumes.
+The primary volume was systematically divided into 32^3 cubic sub-volumes.
 To ensure the relevance and richness of the data, only those sub-volumes that were sufficiently occupied by vesicles, specifically containing more than 1000 voxels, were retained.
-This meticulous approach was adopted to ensure that the training set effectively captured the intricate cellular structures, optimizing it for subsequent deep learning analyses.</p>
-<h3 id="stiching-pathces-back-together-building-probability-map">Stiching Pathces Back Together (building probability map?)</h3>
-<p>In deep learning segmentation for cryoET tomograms, smaller patches are segmented for computational efficiency.
-Our U-Net model, trained on 32-voxel patches, utilizes a 24-voxel region of interest (ROI).
+860 sub-volumes were used for training and 100 sub-volumes were used for validation.</p>
+<h3 id="network-architecture-and-training-procedure">Network architecture and training procedure</h3>
+<p>We used a U-Net with two downsampling stages and two convolutional layers per stages, with a kernel size of 3, and ReLU activation function based on the open-source CARE framework (Figure <a href="#fig:pipeline">1</a>) <span class="citation" data-cites="12G712Zky">[<a href="#ref-12G712Zky" role="doc-biblioref">17</a>]</span>.
+We used the Adam optimizer on a binary cross-entropy loss function.
+The learning progress was tracked by calculating the Dice coefficient and the loss value after each training epoch (Figure <a href="#fig:dice">EV2</a>).
+The Dice coefficient for the train set was initially ~0.25 and rose to over 0.9 after approximately 50 epochs, while for the validation set, it increased to 0.8.
+The loss for the train set went from 0.55 and to values below 0.05 after 50 epochs while for the validation set it went from 1 and to slightly below 0.3 after the initial 50 epochs and then rose slightly.
+The training was done for 200 epochs.</p>
+<h3 id="probability-map-construction">Probability map construction</h3>
+<p>Our U-Net model, trained on 32^3-voxel patches, utilizes a 24-voxel region of interest (ROI).
 To mitigate tiling effects during testing, the network input can be expanded to larger volume like 64 voxels.
 The tomogram undergoes padding to align with the ROI, ensuring reduced edge artifacts.
 Segmentation is executed in tiles, where the U-Net predicts the synaptic vesicle probability for each tile.
 Only the central part of the segmented patch, corresponding to the ROI, is retained.
-This approach guarantees consistency in overlapping regions between adjacent tiles.
 Finally, the segmented tiles are reassembled, yielding a continuous synaptic vesicle probability map of the entire volume.</p>
-<h3 id="network-architecture-and-training-procedure">Network architecture and training procedure</h3>
-<p>We used a U-Net with two downsampling stages and two convolutional layers per stages, with a kernel size of 3, and ReLU activation function based on the open-source CARE framework (Figure <a href="#fig:unet">8</a>) <span class="citation" data-cites="12G712Zky">[<a href="#ref-12G712Zky" role="doc-biblioref">12</a>]</span>.
-Datasets were prepared by splitting the 3D tomographic volume of synaptosomes into 32<sup>3</sup>-voxel subvolumes and keeping only subvolumes occupied by a sufficient amount (&gt; 1000 voxels) of binarized vesicle label.
-860 subvolumes were used for training and 100 subvolumes were used for validation.
-We used the Adam optimizer on a binary cross-entropy loss function.</p>
-<p>The learning progress was tracked by calculating the Dice coefficient and the loss value after each training epoch (Figure <a href="#fig:dice">7</a>).
-The Dice coefficient for the training set was initially ~0.25 and rose to over 0.9 after approximately 50 epochs, while for the validation set, it rose to 0.8.
-The loss for the training set went from 0.55 and to values below 0.05 after 50 epochs while for the validation set it went from 1 and to slightly below 0.3 after the initial 50 epochs and then rose slightly.</p>
-<div id="fig:dice" class="fignos">
-<figure>
-<img src="images/traindice.png" style="width:7cm" alt="Figure 7: Dice coefficient and loss value for training and validation set." />
-<figcaption aria-hidden="true"><span>Figure 7:</span> <strong>Dice coefficient and loss value for training and validation set.</strong></figcaption>
-</figure>
-</div>
-<div id="fig:unet" class="fignos">
-<figure>
-<img src="images/unet.png" style="width:10cm" alt="Figure 8: Network architecture used for vesicle segmentation. We used a U-Net based on the CARE framework [12]. The input is a cubic volume of 323 voxels. The output is a per-prix probabilty cube of the same size as the input." />
-<figcaption aria-hidden="true"><span>Figure 8:</span> <strong>Network architecture used for vesicle segmentation.</strong> We used a U-Net based on the CARE framework <span class="citation" data-cites="12G712Zky">[<a href="#ref-12G712Zky" role="doc-biblioref">12</a>]</span>. The input is a cubic volume of 32<sup>3</sup> voxels. The output is a per-prix probabilty cube of the same size as the input.</figcaption>
-</figure>
-</div>
-<h3 id="global-threshold">Global Threshold</h3>
-<p>In the pursuit of refining the output of our deep neural network, a systematic approach was employed to determine the optimal threshold for the probability mask.
-The objective was to ascertain a threshold that minimizes the values at the vesicle borders, ensuring precise delineation.
-By iterating through potential threshold values ranging from 0.8 to 1 in increments of 0.01, a binary mask was generated for each threshold.
-Subsequently, an erosion operation was applied to the binary mask, and the difference between the original and eroded masks produced the vesicle shell. The pixel values of the original image corresponding to this shell were recorded for each threshold.
-This iterative process aids in identifying the threshold that offers the sharpest and most accurate representation of vesicle borders.</p>
-<h3 id="u-net-output-threshold-refinement">U-Net output threshold refinement</h3>
-<p>The probability mask output by the U-Net was first made binary by determining a global threshold value. To this end, the mask was binarized for a range of threshold values comprised between 0.8 and 1. For each probability value a 1-voxel thick label shell was computed.
-The shell mask was then applied on the input data and the average masked voxel intensity was computed.
-Since the shell of correctly segmented vesicles corresponds to the vesicle membrane, we expect low intensity pixels.
-The threshold value resulting in the minimal average intensity of the shell masked voxels was used as the global threshold.<br />
-<code class="green">Amin please write the equations for these steps</code>.
-The probability mask was binarized using the global threshold and was each separate segment was assigned an individual label with <code>scikit-image label</code> method.</p>
-<p>A majority of vesicles were correctly segmented but we noticed some segments included two vesicles.
+<h3 id="global-thresholding">Global thresholding</h3>
+<p>Segmenting implies turning the probability map into a binary mask.
+In order to find the optimal threshold value, we iterated through potential threshold values ranging from 0.8 to 1 in increments of 0.01.
+A binary mask was generated for each threshold.
+Subsequently, an erosion operation was applied to the binary mask, and the difference between the original and eroded masks produced the vesicle shell.
+The voxel intensity values of the original image corresponding to this shell were recorded for each threshold.
+We minimized the average intensity of the shell voxels to determine the optimal threshold value, since the shell of correctly segmented vesicles corresponds to the vesicle membrane, which in cryo-ET appears darker, i.e., with lower intensity values.</p>
+<h3 id="adaptative-local-thresholding">Adaptative local thresholding</h3>
+<p>Each individual segment was given a label using the <code>scikit-image label</code> method <span class="citation" data-cites="stvWEJeu">[<a href="#ref-stvWEJeu" role="doc-biblioref">21</a>]</span>.
+A majority of vesicles were correctly segmented but we noticed some segments included more than one vesicle.
 We therefore evaluated each segment with two criteria based on the fact that synaptic vesicles have a homogenous size and are spherical.
 Firstly we calculated the volume z-score <span class="math inline">\(z\)</span> for each segment:
 <span id="eq:z-score-volume" class="eqnos"><span class="math display">\[z(S_i) = \frac{V(S_i) - \mu}{\sigma}\]</span><span class="eqnos-number">(1)</span></span>
 where <span class="math inline">\(S_i\)</span> is the segment <span class="math inline">\(i\)</span>, <span class="math inline">\(V(S_i)\)</span> is the volume of <span class="math inline">\(S_i\)</span>, <span class="math inline">\(\mu\)</span> the average volume of all segments, and <span class="math inline">\(\sigma\)</span> the standard deviation of the segment volumes.
-Secondly, we computed the segment extent <span class="math inline">\(e\)</span>:
+Secondly, we computed the segment extent <span class="math inline">\(e\)</span> as:
 <span id="eq:extent" class="eqnos"><span class="math display">\[e(S_i) = \frac{V(S_i)}{B(S_i)}\]</span><span class="eqnos-number">(2)</span></span>
 where <span class="math inline">\(B(S_i)\)</span> is the volume of segment <span class="math inline">\(i\)</span> bounding box.
 The extent of a sphere equals <span class="math inline">\(\frac{\pi}{6}\)</span>.
-Segments with both a z-score <span class="math inline">\(z &gt; 1\)</span> and an extent <span class="math inline">\(e &lt; 0.25\)</span> were considered as potentially comprising two vesicles.
-For each of these segments, the probability mask threshold was increased until two distinct segments were generated.
+Segments with both a z-score <span class="math inline">\(z &gt; 1\)</span> and an extent <span class="math inline">\(e &lt; 0.25\)</span> were considered as potentially comprising more than one vesicle.
+For each of these segments, the threshold was increased stepwise until two distinct segments were generated.
 Subsequently, the extent and volume of all segments was evaluated again. Any segment with <span class="math inline">\(e &lt; 0.25\)</span>, or <span class="math inline">\(e &gt; 0.75\)</span>, or <span class="math inline">\(V &lt; k\)</span> was discarded.
+<span class="math inline">\(k\)</span> was defined as the volume of a sphere with a radius of 12 nm.
 This ensured that segments deviating highly from spherical shape and segments with a volume smaller than an acceptable volume <span class="math inline">\(k\)</span> were removed.</p>
+<h3 id="segmentation-refinement-using-radial-profile">Segmentation refinement using radial profile</h3>
 <p>Even if most synaptic vesicles were detected and well segmented, segmentation accuracy was not sufficient for our downstream application.
 To improve accuracy, each segment was converted to a spherical segment and its radius and position was refined.
 Initial spherical conversion was done by setting the center of the sphere <span class="math inline">\(C\)</span> at the position of the centroid of the segment, while the radius <span class="math inline">\(r\)</span> was defined as half the length of the bounding box longest edge.
-The segment position and radius was iteratively refined as follows.
-1. The radial average <span class="math inline">\(\langle I(d)\rangle\)</span> was computed:
+The segment position and radius were iteratively refined as follows.</p>
+<ol type="1">
+<li><p>The radial average <span class="math inline">\(\langle I(d)\rangle\)</span> was computed:
 <span id="eq:radial_average" class="eqnos"><span class="math display">\[\langle I(d)\rangle = \frac{1}{4\pi ^2 r^2} \int_{0}^{2\pi}\int_{0}^{2\pi}I(d,\theta ,\phi) \, d\phi \, d\theta\]</span><span class="eqnos-number">(3)</span></span>
-where <span class="math inline">\(d\)</span> is the radial distance from the segment center, <span class="math inline">\(\theta\)</span> the polar angle, and <span class="math inline">\(\phi\)</span> the azimuthal angle.
-2. The radius of the vesicle <span class="math inline">\(r\)</span> was updated as:
+where <span class="math inline">\(d\)</span> is the radial distance from the segment center, <span class="math inline">\(\theta\)</span> the polar angle, and <span class="math inline">\(\phi\)</span> the azimuthal angle.</p></li>
+<li><p>The radius of the vesicle <span class="math inline">\(r\)</span> was updated as:
 <span id="eq:vesicle_radius" class="eqnos"><span class="math display">\[r = d_m + \frac{t_m}{2}\]</span><span class="eqnos-number">(4)</span></span>
 where <span class="math inline">\(d_m\)</span> is the radial distance of center of the vesicle membrane, and <span class="math inline">\(t_m\)</span> the thickness of the vesicle membrane.
 <span class="math inline">\(d_m\)</span> was defined as the radial distance for which the radial average was minimal.
-<span class="math inline">\(\frac{t_m}{2}\)</span> was calculated as the distance between the center of the vesicle membrane and the minimum of the second derivative of the radial profile in the interval between the center of the vesicle membrane and the maximum of the Fresnel fringe outside the membrane.
-3. The radial average was back projected in 3-dimension:
+<span class="math inline">\(\frac{t_m}{2}\)</span> was calculated as the distance between the center of the vesicle membrane and the minimum of the second derivative of the radial profile in the interval between the center of the vesicle membrane and the maximum of the Fresnel fringe outside the membrane.</p></li>
+<li><p>The radial average was back projected in 3-dimension:
 <span id="eq:3d-average" class="eqnos"><span class="math display">\[I(x,y,z) =  \langle I(\sqrt{x^2+y^2+z^2})\rangle\]</span><span class="eqnos-number">(5)</span></span>
-where <span class="math inline">\((x,y,z)=(0,0,0)\)</span> is the coordinate of the segment center.
-4. We computed by cross-correlation the shift between the obtained 3-D average and the 3-D image in the cubic box with central coordinates <span class="math inline">\(C\)</span> and edge length <span class="math inline">\(l = 2r + c\)</span>, where <span class="math inline">\(c\)</span> is a constant.
-<span class="math inline">\(C\)</span> was updated by subtraction of the shift.
-5. Steps 1 to 4 were repeated for a maximum of 10 iterations until convergence or until a total shift of <span class="math inline">\(\frac{1}{2}\sqrt{3l_o^2}\)</span>, where $l_o is the edge length of the initial box.
+where <span class="math inline">\((x,y,z)=(0,0,0)\)</span> is the coordinate of the segment center.</p></li>
+<li><p>We computed by cross-correlation the shift between the obtained 3-D average and the 3-D image in the cubic box with central coordinates <span class="math inline">\(C\)</span> and edge length <span class="math inline">\(l = 2r + c\)</span>, where <span class="math inline">\(c\)</span> is a constant.
+<span class="math inline">\(C\)</span> was updated by subtraction of the shift.</p></li>
+<li><p>Steps 1 to 4 were repeated for a maximum of 10 iterations until convergence or until a total shift of <span class="math inline">\(\frac{1}{2}\sqrt{3l_o^2}\)</span>, where <span class="math inline">\(l_o\)</span> is the edge length of the initial box.
 The feature space of predicted vesicle labels was computed, containing membrane thickness <span class="math inline">\(t_m\)</span>, membrane intensity <span class="math inline">\(\rho\)</span>, and vesicle radius <span class="math inline">\(r\)</span>.
-<span class="math inline">\(\rho\)</span> was defined as the mean intensity of the radial average within the radial distance interval <span class="math inline">\([d_m - \frac{t_m}{2}\,,\,d_m + \frac{t_m}{2}]\)</span>.</p>
-<h3 id="outlier-detection-and-refinement">Outlier Detection and refinement</h3>
-<p>Based on the radial profile of the data, key features, namely thickness, radius, and membrane density, are extracted.
-Using these criteria, the Mahalanobis Distance is calculated for each data point to quantify its distance from the distribution of these features.
-The significance of the Mahalanobis Distance is interpreted using the chi-squared distribution.
-The p-value is derived by employing the cumulative distribution function (CDF) of the chi-squared distribution, with the Mahalanobis Distance as the input and the length of the criteria as the degrees of freedom.
+<span class="math inline">\(\rho\)</span> was defined as the mean intensity of the radial average within the radial distance interval <span class="math inline">\([d_m - \frac{t_m}{2}\,,\,d_m + \frac{t_m}{2}]\)</span>.</p></li>
+</ol>
+<h3 id="outlier-detection-and-refinement-1">Outlier detection and refinement</h3>
+<p>Following radial profile calculation, key features, namely thickness, radius, and membrane density, were extracted.
+Using these criteria, the Mahalanobis distance <span class="math inline">\(D^2\)</span> was calculated for each data point to quantify its distance from the distribution of these features as follows, using Scipy’s implementation <span class="citation" data-cites="hFc1Q2c">[<a href="#ref-hFc1Q2c" role="doc-biblioref">22</a>]</span>:
+<span id="eq:mahalanobis-distance" class="eqnos"><span class="math display">\[D^2 = (\mathbf{x} - \boldsymbol{\mu})^\top \mathbf{S}^{-1} (\mathbf{x} - \boldsymbol{\mu})\]</span><span class="eqnos-number">(6)</span></span>
+where <span class="math inline">\(\mathbf{x}\)</span> is the vector of the three features, <span class="math inline">\(\boldsymbol{\mu}\)</span> is the mean vector of the features, and <span class="math inline">\(\mathbf{S}^{-1}\)</span> is the inverse covariance matrix of the features.
+The significance of the Mahalanobis distance was interpreted as follows:
+<span id="eq:p-value" class="eqnos"><span class="math display">\[p = 1 - \text{CDF}_{\chi^2}(D^2, \nu)\]</span><span class="eqnos-number">(7)</span></span>
+where <span class="math inline">\(\text{CDF}_{\chi^2}\)</span> is the cumulative distribution function of the chi-squared distribution, and <span class="math inline">\(\nu\)</span> is the number of degrees of freedom, which is equal to the number of features - 1.
 The resulting p-value provides a measure of the statistical significance of each data point’s distance.</p>
-<p>With the computed p-values, outlier detection and refinement are conducted.
-If the p-value of a specific vesicle is not within an acceptable range (0.3), indicating it might be an outlier, its radial profile is recalculated using a broader margin to find the optimal profile.
-We perform this recalculation for up to 10 iterations. Typically, vesicles are either adjusted within the initial iterations or remain unchanged throughout. Vesicles that, even after recalibration, do not meet the p-value criteria are entirely removed from the dataset
-This iterative process, involving recalculating the radial profile and adjusting parameters, continues until all vesicles either conform to the acceptable p-value range or are excluded.
-The refined dataset is then ready for subsequent analyses.
-This iterative approach ensures that all vesicles in the dataset either meet the p-value criteria or are excluded.
-Outlier detection and refinement are initiated based on the computed p-values.</p>
-<p>Using this multivariate feature space, we detect outliers by computing Mahalanobis Distances (MD) on normalized variables using the covariance matrix of observation and obtaining the p-value on MD.</p>
-<p><code class="yellow">The sphere segments with a p-value higher than a defined threshold were discarded and the process was repeated iteratively. If the MD p-value of a specific vesicle was not in a specific margin range (0-10), their radial profile was recalculated, and the label entirely removed if they again failed to pass the margin of the p-value.</code>
-<code class="green">Amin, please check what exactly was done with the outliers.  And p-value cannot be higher than 1, while you wrote (0-10)</code></p>
-<h3 id="evaluation-metrics-analysis-of-results">Evaluation Metrics (Analysis of Results)</h3>
+<p>With the computed p-values, outlier detection and refinement were conducted.
+Each vesicle with a p-value lower than a given threshold was defined as an outlier.
+In this study, we empirically set the threshold to 0.3, but other values can be used, depending on the use case.
+The radial profile and p-value of the outliers was recalculated using a different box size.
+We performed this step iteratively.
+At each iteration the box size was made larger by 2x2x2 voxels.
+For each outlier, the iteration stopped when its p-value was higher than the threshold.
+A maximum of 10 iterations is performed.
+Vesicles that did not meet the p-value criteria were removed from the dataset.</p>
+<div id="fig:amira" class="fignos">
+<figure>
+<img src="images/outlier_figure.png" style="width:15cm" alt="Figure 6: Multidimensional Outlier Detection.. The 3D scatter plot represents vesicle features in the space defined by Membrane Density, Radius, and Thickness, with points colored according to the p-value of their Mahalanobis distance, identifying potential outliers. Outlier 1 (red) is segmented as a non-vesicular membrane-bound structure and is removed after this step. Outlier 2 (green), though correctly segmented, is flagged for its abnormally high radius and subsequently removed. Outlier 3 (blue) is initially detected; however, refinement procedures indicate misplacement, post refinment boundary show the corresponding vesicles in yellow, Bar, 20 nm." />
+<figcaption aria-hidden="true"><span>Figure 6:</span> <strong>Multidimensional Outlier Detection</strong>.. The 3D scatter plot represents vesicle features in the space defined by Membrane Density, Radius, and Thickness, with points colored according to the p-value of their Mahalanobis distance, identifying potential outliers. Outlier 1 (red) is segmented as a non-vesicular membrane-bound structure and is removed after this step. Outlier 2 (green), though correctly segmented, is flagged for its abnormally high radius and subsequently removed. Outlier 3 (blue) is initially detected; however, refinement procedures indicate misplacement, post refinment boundary show the corresponding vesicles in yellow, Bar, 20 nm.</figcaption>
+</figure>
+</div>
+<h3 id="evaluation-metrics">Evaluation Metrics</h3>
 <p>The evaluation framework was designed to assess the capabilities of the proposed toolbox for automatic synaptic vesicle segmentation.
-The framework was not only designed to evaluate quantitatively performance of the neural network, but rather assay the segmentation of vesicles in practice <code class="green">\_unsure what the last part means*</code>. <code class="green">\_I tried to say we develop the software rather than an algorithm paper with ablation study kinda more trasnfer learning but however for tranfer learning we might need add finetunning the network or say this sentence in other way*</code>.
-The pipeline also generates a specific output format, which is necessary to further analyze the presynaptic tomograms via another pre-developed toolbox (Pyto), which segments small molecular filaments associated to the synaptic vesicles, titled tethers and connectors.</p>
-<h4 id="dice">DICE</h4>
-<p>The <code class="green">\_general form??*</code> DICE coefficient for probabilistic subvolume maps was calculated after each epoch as a performance quantification while <code class="green">\_during?*</code> training.
-The probabilistic mask subvolumes were stitched back together, creating a probabilistic map of the whole tomogram.
-The Soft-DICE for the whole tomogram was calculated to evaluate the similarity of the predicted probability mask with ground truth.
-Note that soft-dice is equivalent to dice, when the input is binarized (which we will do at the end of the post-processing).</p>
-<p><span class="math display">\[1-\frac{2\sum_{voxels} y_{true} y_{pred}}{\sum_{voxels} y_{true}^2+\sum_{voxels} y_{pred}^2}\]</span></p>
-<p><code class="green">\_shouln't it be voxels instead of pixels??*</code>
-<code class="green">\_yes voxel is right*</code>
-<code class="green">\_fixed*</code></p>
-<p>THE DICE was also employed to monitor all stages of post-processing on the eventual label file, to observe the effect of each post-processing step.</p>
-<h4 id="vesicle-diameter-deviation-analysis">Vesicle Diameter Deviation Analysis</h4>
-<p>Vesicle Diameter Deviation Analysis</p>
-<p>A critical characteristic of a vesicle is its diameter, predetermined as per specific criteria (refer to the Outlier Exclusion section). To assess the precision of our diameter estimation for accurately identified vesicles, a deviation metric is introduced.</p>
-<p>Denote the diameter of a manually segmented vesicle by <span class="math inline">\(d_{GTi}\)</span> and the estimated diameter of the corresponding vesicle as <span class="math inline">\(d_{Si}\)</span>. The deviation in diameter estimation for each vesicle can be expressed as:</p>
-<p><span id="eq:regular-equation" class="eqnos"><span class="math display">\[\delta d=1-\frac{min(dSi,dGTi)}{max(dSi,dGTi)}\]</span><span class="eqnos-number">(6)</span></span> </p>
-<p>This formula offers an insight into the congruence between our estimated diameter and the manual segmentation, with a diminished value of <span class="math inline">\(\delta d\)</span> signifying a closer approximation.</p>
-<p>The diameter of a vesicle is one of its relevant characterizations, and it is predefined (see Outlier Removal).
-<code class="green">\_which diameters are we using in this evaluation as input, pre- or post-outlier removal?*</code>
-<code class="green">\_after! I meant from that perentesis that radius or dimater we assume as one charectiristic of vesicle we might can write it better *</code>
-The error of diameter estimation of true-detected vesicle is defined as 1 minus the proportion of diameters</p>
-<p><span id="eq:regular-equation" class="eqnos"><span class="math display">\[\delta d=1-\frac{min(dSi,dGTi)}{max(dSi,dGTi)}\]</span><span class="eqnos-number">(7)</span></span> </p>
-<p>where dGTi is the diameter of each true manual segmented vesicle, and dSi is the diameter of its estimation.</p>
-<h4 id="center-error">Center error</h4>
-<p>The center error is an euclidean distance of ground truth and corresponds to true predicted vesicles <code class="green">\_true pos or true neg? True Predicted means true postive*</code>.
-A vesicle was defined as a true-detected vesicle if the predicted center was located inside the hand-segmented vesicle or the other way around the center of prediction was located inside the predicted vesicle.
-<code class="green">\_isn't this a bit too general, shouldn't this be a tighter evaluation?*</code>
-<code class="green">\_we assume this as hard condition to be true postive we could define like some % liek 50% intersection but this condition is generally harder</code>
-This means the volume of intersection of the estimated vesicle with the distance of d to a ground truth vesicle with radius R is:</p>
-<p><span class="math display">\[V=\frac{1}{12}\pi(4R+d)(2R-d)\]</span></p>
+We defined as ground truth the manual segmentation of synaptic vesicles.
+Evaluation was peformed within the cytoplasmic segmentation region (see “Manual segmentation and automatic interboundary segment detection”).
+We performed per vesicle evaluation and voxel-wise evaluation.
+For the former, we defined a vesicle as correctly segmented if the center of the predicted vesicle was located inside the ground truth vesicle.
+Based on that we calculated an F1 score.
+For the voxel-wise evaluation, we calculated the Dice coefficient between prediction and the ground truth.</p>
+<h4 id="voxel-wise-evaluation">Voxel-wise evaluation</h4>
+<p>During training a Dice coefficient for probabilistic subvolume maps was calculated after each epoch as a performance quantification <a href="#fig:dice">EV2</a>.
+After reconstructing the probablility map after training or prediction, we employed the Dice metric for the whole tomogram to evaluate the similarity of the predicted probability mask with ground truth <a href="#tbl:train-tomograms">1</a>,<a href="#tbl:test-tomograms">2</a>, and <a href="#tbl:neuron-tomograms">3</a>.
+The Dice coefficient is defined as:</p>
+<p><span id="eq:dice" class="eqnos"><span class="math display">\[1-\frac{2\sum_{voxels} y_{true} y_{pred}}{\sum_{voxels} y_{true}^2+\sum_{voxels} y_{pred}^2}\]</span><span class="eqnos-number">(8)</span></span> </p>
+<p>where <span class="math inline">\(y_{true}\)</span> and <span class="math inline">\(y_{pred}\)</span> are the ground truth and predicted probability values, respectively, for each voxel.</p>
+<p>The Dice coefficient was also employed to monitor all stages of post-processing of the labels, to observe the effect of each post-processing step.</p>
+<h4 id="vesicle-diameter-and-position-deviation">Vesicle diameter and position deviation</h4>
+<p>In addition to the F1-score, we also evaluated the precision of our segmentation by calculating the deviation of the estimated vesicle diameter and position from the ground truth.
+Given the diameter of a ground-truth manually segmented vesicles <span class="math inline">\(d_{GTi}\)</span> and the predicted diameters of the same vesicles <span class="math inline">\(d_{Pi}\)</span>, the average deviation in diameter estimation across all vesicles can be expressed as <span class="math inline">\(\delta_d\)</span>, where <span class="math inline">\(\delta_d\)</span> is calculated as:
+<span id="eq:delta_d-equation" class="eqnos"><span class="math display">\[\delta_d = \frac{1}{n} \sum_{i=1}^{n} \left( 1 - \frac{\min(dPi, dGTi)}{\max(dPi, dGTi)} \right)\]</span><span class="eqnos-number">(9)</span></span>
+Here, n represents the total number of vesicles, <span class="math inline">\(dPi\)</span> is the diameter of i-th vesicle predicted by the segmentation, and <span class="math inline">\(dGTi\)</span> is the diameter of the i-th vesicle in the ground truth.
+This formula offers an insight into the congruence between our estimated diameter and the manual segmentation, with a diminished value of <span class="math inline">\(\delta d\)</span> signifying a closer approximation.</p>
+<p>Similarly, the average deviation in position estimation across all vesicles can be expressed as <span class="math inline">\(\Delta_c\)</span>.
+It corresponds to the average euclidean distance between the center of ground truth vesicles and the center of predicted vesicles.</p>
+<h3 id="statistical-comparison">Statistical comparison</h3>
+<p>Multiple pairwise ANOVA comparisons with Benjamini-Hochberg correction were performed on the Dice values summarized in <a href="#tbl:dice-statistics">EV1</a> to assess the statistical significance of the differences between the Dice values <span class="citation" data-cites="UeFCwwR7">[<a href="#ref-UeFCwwR7" role="doc-biblioref">23</a>]</span>.
+We performed Benjamini-Hochberg correction with the <em>multipletests</em> function implemented in the Python module <em>statsmodels</em> <span class="citation" data-cites="15kEEkiul">[<a href="#ref-15kEEkiul" role="doc-biblioref">24</a>]</span>.
+A list of P-values resulting form pairwise comparisons was input, and <em>multipletests</em> output a list of corrected P-values.
+The used implementation of the Benjamini-Hochberg correction does not require a false discovery rate to be input.
+This variation of the original Benjamini-Hochberg correction algorithm was proposed by Yekutieli and Benjamini <span class="citation" data-cites="ibSnzEjI">[<a href="#ref-ibSnzEjI" role="doc-biblioref">25</a>]</span>.
+If a corrected P-value is smaller than the defined acceptable false discovery rate, then the null hypothesis is rejected, i.e. the difference is considered statistically significant.
+This algorithm enables to test multiple false discovery rates in one step and its conclusions are exactly the same as the original Benjamini-Hochberg correction algorithm run multiple times with different false discovery rates.</p>
 <h3 id="computational-setup">Computational Setup</h3>
 <p>All experiments were conducted using 4 x NVIDIA 2080 Ti GPUs with CUDA 10.1.
-<code class="green">\_Ioan's Grant Acknowledgement*</code>
 The software environment was set up with Python 3.
-Key libraries and packages utilized include TensorFlow 2.4.1 with GPU support and Keras 2.4.3.
-For visualization neurons with tethers and connectors and regarding video, Amira 2022.2 was employed.
-Image visualizations were achieved using both UCSF Chimera and ChimeraX.
-Surface rendering was performed by the volume tracer and color zone in UCSF ChimeraX.
-For detailed configurations and parameters, users are referred to the accompanying source code.</p>
+Key libraries and packages used include TensorFlow 2.4.1 with GPU support and Keras 2.4.3.
+Image visualization was achieved with UCSF ChimeraX <span class="citation" data-cites="k53Adxgo">[<a href="#ref-k53Adxgo" role="doc-biblioref">26</a>]</span> and Amira 2022.2 (Thermofisher Scientific).
+Surface rendering was performed by the volume tracer and color zone in UCSF ChimeraX.</p>
 <h3 id="manuscript-preparation">Manuscript preparation</h3>
-<p>The manuscript was written with the open and collaborative scientific writing package Manubot <span class="citation" data-cites="YuJbg3zO">[<a href="#ref-YuJbg3zO" role="doc-biblioref">18</a>]</span>.
+<p>The manuscript was written with the open and collaborative scientific writing package Manubot <span class="citation" data-cites="YuJbg3zO">[<a href="#ref-YuJbg3zO" role="doc-biblioref">27</a>]</span>.
 The source code and data for this manuscript are available at <a href="https://github.com/aseedb/synaptic_tomo_ms" class="uri">https://github.com/aseedb/synaptic_tomo_ms</a>.</p>
+<h3 id="code-availability">Code availability</h3>
+<p>CryoVesNet is available on GitHub at…</p>
+<h2 id="author-contributions">Author contributions</h2>
+<p>BZ designed and supervised the study.
+RS and JR prepared samples, and acquired the data, reconstructed tomograms, and performed manual segmentation.
+AK, GW and BZ developed the CryoVesNet package.
+AK performed data analysis.
+JBS provided the SNAP-25 KO and mutant mice.
+RS and AK wrote the initial draft of the manuscript.
+AK, RS wrote the manuscript with contribution from all authors.</p>
+<h2 id="acknowledgments">Acknowledgments</h2>
+<p>This work was supported by the Swiss National Science Foundation (grant number 179520 to BZ), ERA-NET NEURON (NEURON-119 to BZ), and by the University of Bern Research Foundation (to Ioan Iacovache).</p>
+<h2 id="disclosure-and-competing-interests-statement">Disclosure and competing interests statement</h2>
+<p>The authors declare no competing interests.</p>
 <h2 class="page_break_before" id="references">References</h2>
 <!-- Explicitly insert bibliography here -->
 <div id="refs" class="references csl-bib-body" role="doc-bibliography">
@@ -1029,45 +987,219 @@ The source code and data for this manuscript are available at <a href="https://g
 <div id="ref-XQJ3R1HJ" class="csl-entry" role="doc-biblioentry">
 <div class="csl-left-margin">5. </div><div class="csl-right-inline"><strong>Quantitative analysis of the native presynaptic cytomatrix by cryoelectron tomography</strong> <div class="csl-block">Rubén Fernández-Busnadiego, Benoît Zuber, Ulrike Elisabeth Maurer, Marek Cyrklaff, Wolfgang Baumeister, Vladan Lučić</div> <em>Journal of Cell Biology</em> (2010-01-11) <a href="https://doi.org/b9c26b">https://doi.org/b9c26b</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1083/jcb.200908082">10.1083/jcb.200908082</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/20065095">20065095</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2812849">PMC2812849</a></div></div>
 </div>
+<div id="ref-kjMcXSJ3" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">6. </div><div class="csl-right-inline"><strong>Morphofunctional changes at the active zone during synaptic vesicle exocytosis</strong> <div class="csl-block">Julika Radecke, Raphaela Seeger, Anna Kádková, Ulrike Laugks, Amin Khosrozadeh, Kenneth N Goldie, Vladan Lučić, Jakob B Sørensen, Benoît Zuber</div> <em>EMBO reports</em> (2023-03-06) <a href="https://doi.org/gsx7nw">https://doi.org/gsx7nw</a> <div class="csl-block">DOI: <a href="https://doi.org/10.15252/embr.202255719">10.15252/embr.202255719</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/36876590">36876590</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10157379">PMC10157379</a></div></div>
+</div>
+<div id="ref-K10hpz3n" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">7. </div><div class="csl-right-inline"><strong>Molecular architecture of the presynaptic terminal</strong> <div class="csl-block">Benoît Zuber, Vladan Lučić</div> <em>Current Opinion in Structural Biology</em> (2019-02) <a href="https://doi.org/gk8gpd">https://doi.org/gk8gpd</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1016/j.sbi.2019.01.008">10.1016/j.sbi.2019.01.008</a></div></div>
+</div>
+<div id="ref-Lw7FpxSz" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">8. </div><div class="csl-right-inline"><strong>Neurons as a model system for cryo-electron tomography</strong> <div class="csl-block">Benoît Zuber, Vladan Lučić</div> <em>Journal of Structural Biology: X</em> (2022) <a href="https://doi.org/gqc4n2">https://doi.org/gqc4n2</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1016/j.yjsbx.2022.100067">10.1016/j.yjsbx.2022.100067</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/35310407">35310407</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8924422">PMC8924422</a></div></div>
+</div>
 <div id="ref-1HtRUUZQi" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">6. </div><div class="csl-right-inline"><strong>Hierarchical detection and analysis of macromolecular complexes in cryo-electron tomograms using Pyto software</strong> <div class="csl-block">Vladan Lučić, Rubén Fernández-Busnadiego, Ulrike Laugks, Wolfgang Baumeister</div> <em>Journal of Structural Biology</em> (2016-12) <a href="https://doi.org/f9d5t2">https://doi.org/f9d5t2</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1016/j.jsb.2016.10.004">10.1016/j.jsb.2016.10.004</a></div></div>
+<div class="csl-left-margin">9. </div><div class="csl-right-inline"><strong>Hierarchical detection and analysis of macromolecular complexes in cryo-electron tomograms using Pyto software</strong> <div class="csl-block">Vladan Lučić, Rubén Fernández-Busnadiego, Ulrike Laugks, Wolfgang Baumeister</div> <em>Journal of Structural Biology</em> (2016-12) <a href="https://doi.org/f9d5t2">https://doi.org/f9d5t2</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1016/j.jsb.2016.10.004">10.1016/j.jsb.2016.10.004</a></div></div>
 </div>
 <div id="ref-JWuvfT0Z" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">7. </div><div class="csl-right-inline"><strong>Robust membrane detection based on tensor voting for electron tomography</strong> <div class="csl-block">Antonio Martinez-Sanchez, Inmaculada Garcia, Shoh Asano, Vladan Lucic, Jose-Jesus Fernandez</div> <em>Journal of Structural Biology</em> (2014-04) <a href="https://doi.org/f5zkj8">https://doi.org/f5zkj8</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1016/j.jsb.2014.02.015">10.1016/j.jsb.2014.02.015</a></div></div>
+<div class="csl-left-margin">10. </div><div class="csl-right-inline"><strong>Robust membrane detection based on tensor voting for electron tomography</strong> <div class="csl-block">Antonio Martinez-Sanchez, Inmaculada Garcia, Shoh Asano, Vladan Lucic, Jose-Jesus Fernandez</div> <em>Journal of Structural Biology</em> (2014-04) <a href="https://doi.org/f5zkj8">https://doi.org/f5zkj8</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1016/j.jsb.2014.02.015">10.1016/j.jsb.2014.02.015</a></div></div>
 </div>
 <div id="ref-GNLHO53d" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">8. </div><div class="csl-right-inline"><strong>Convolutional neural networks for automated annotation of cellular cryo-electron tomograms</strong> <div class="csl-block">Muyuan Chen, Wei Dai, Stella Y Sun, Darius Jonasch, Cynthia Y He, Michael F Schmid, Wah Chiu, Steven J Ludtke</div> <em>Nature Methods</em> (2017-08-28) <a href="https://doi.org/gkpj62">https://doi.org/gkpj62</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1038/nmeth.4405">10.1038/nmeth.4405</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/28846087">28846087</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5623144">PMC5623144</a></div></div>
+<div class="csl-left-margin">11. </div><div class="csl-right-inline"><strong>Convolutional neural networks for automated annotation of cellular cryo-electron tomograms</strong> <div class="csl-block">Muyuan Chen, Wei Dai, Stella Y Sun, Darius Jonasch, Cynthia Y He, Michael F Schmid, Wah Chiu, Steven J Ludtke</div> <em>Nature Methods</em> (2017-08-28) <a href="https://doi.org/gkpj62">https://doi.org/gkpj62</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1038/nmeth.4405">10.1038/nmeth.4405</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/28846087">28846087</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5623144">PMC5623144</a></div></div>
 </div>
 <div id="ref-RdPTGoZx" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">9. </div><div class="csl-right-inline"><strong>Automated Detection and Localization of Synaptic Vesicles in Electron Microscopy Images</strong> <div class="csl-block">Barbara Imbrosci, Dietmar Schmitz, Marta Orlando</div> <em>eneuro</em> (2022-01) <a href="https://doi.org/gn9n8k">https://doi.org/gn9n8k</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1523/eneuro.0400-20.2021">10.1523/eneuro.0400-20.2021</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/34983830">34983830</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8805189">PMC8805189</a></div></div>
+<div class="csl-left-margin">12. </div><div class="csl-right-inline"><strong>Automated Detection and Localization of Synaptic Vesicles in Electron Microscopy Images</strong> <div class="csl-block">Barbara Imbrosci, Dietmar Schmitz, Marta Orlando</div> <em>eneuro</em> (2022-01) <a href="https://doi.org/gn9n8k">https://doi.org/gn9n8k</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1523/eneuro.0400-20.2021">10.1523/eneuro.0400-20.2021</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/34983830">34983830</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8805189">PMC8805189</a></div></div>
 </div>
 <div id="ref-pMX2OxF7" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">10. </div><div class="csl-right-inline"><strong>A machine learning pipeline for membrane segmentation of cryo-electron tomograms</strong> <div class="csl-block">Li Zhou, Chao Yang, Weiguo Gao, Talita Perciano, Karen M Davies, Nicholas K Sauter</div> <em>Journal of Computational Science</em> (2023-01) <a href="https://doi.org/gsbxkz">https://doi.org/gsbxkz</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1016/j.jocs.2022.101904">10.1016/j.jocs.2022.101904</a></div></div>
-</div>
-<div id="ref-D7hXMn0y" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">11. </div><div class="csl-right-inline"><strong>3D U-Net: Learning Dense Volumetric Segmentation from Sparse Annotation</strong> <div class="csl-block">Özgün Çiçek, Ahmed Abdulkadir, Soeren S Lienkamp, Thomas Brox, Olaf Ronneberger</div> <em>arXiv</em> (2016-06-22) <a href="https://arxiv.org/abs/1606.06650">https://arxiv.org/abs/1606.06650</a></div>
-</div>
-<div id="ref-12G712Zky" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">12. </div><div class="csl-right-inline"><strong>Content-aware image restoration: pushing the limits of fluorescence microscopy</strong> <div class="csl-block">Martin Weigert, Uwe Schmidt, Tobias Boothe, Andreas Müller, Alexandr Dibrov, Akanksha Jain, Benjamin Wilhelm, Deborah Schmidt, Coleman Broaddus, Siân Culley, … Eugene W Myers</div> <em>Nature Methods</em> (2018-11-26) <a href="https://doi.org/gfkkfd">https://doi.org/gfkkfd</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1038/s41592-018-0216-7">10.1038/s41592-018-0216-7</a></div></div>
-</div>
-<div id="ref-vFGVscEl" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">13. </div><div class="csl-right-inline"><strong>Cryo-CARE: Content-Aware Image Restoration for Cryo-Transmission Electron Microscopy Data</strong> <div class="csl-block">Tim-Oliver Buchholz, Mareike Jordan, Gaia Pigino, Florian Jug</div> <em>arXiv</em> (2018-10-17) <a href="https://arxiv.org/abs/1810.05420">https://arxiv.org/abs/1810.05420</a></div>
-</div>
-<div id="ref-VobzV1Lb" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">14. </div><div class="csl-right-inline"><strong>Deep learning improves macromolecule identification in 3D cellular cryo-electron tomograms</strong> <div class="csl-block">Emmanuel Moebel, Antonio Martinez-Sanchez, Lorenz Lamm, Ricardo D Righetto, Wojciech Wietrzynski, Sahradha Albert, Damien Larivière, Eric Fourmentin, Stefan Pfeffer, Julio Ortiz, … Charles Kervrann</div> <em>Nature Methods</em> (2021-10-21) <a href="https://doi.org/gm7d6j">https://doi.org/gm7d6j</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1038/s41592-021-01275-4">10.1038/s41592-021-01275-4</a></div></div>
+<div class="csl-left-margin">13. </div><div class="csl-right-inline"><strong>A machine learning pipeline for membrane segmentation of cryo-electron tomograms</strong> <div class="csl-block">Li Zhou, Chao Yang, Weiguo Gao, Talita Perciano, Karen M Davies, Nicholas K Sauter</div> <em>Journal of Computational Science</em> (2023-01) <a href="https://doi.org/gsbxkz">https://doi.org/gsbxkz</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1016/j.jocs.2022.101904">10.1016/j.jocs.2022.101904</a></div></div>
 </div>
 <div id="ref-xhywoibB" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">15. </div><div class="csl-right-inline"><strong>Convolutional networks for supervised mining of molecular patterns within cellular context</strong> <div class="csl-block">Irene de Teresa-Trueba, Sara K Goetz, Alexander Mattausch, Frosina Stojanovska, Christian E Zimmerli, Mauricio Toro-Nahuelpan, Dorothy WC Cheng, Fergus Tollervey, Constantin Pape, Martin Beck, … Judith B Zaugg</div> <em>Nature Methods</em> (2023-01-23) <a href="https://doi.org/grqqwc">https://doi.org/grqqwc</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1038/s41592-022-01746-2">10.1038/s41592-022-01746-2</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/36690741">36690741</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9911354">PMC9911354</a></div></div>
+<div class="csl-left-margin">14. </div><div class="csl-right-inline"><strong>Convolutional networks for supervised mining of molecular patterns within cellular context</strong> <div class="csl-block">Irene de Teresa-Trueba, Sara K Goetz, Alexander Mattausch, Frosina Stojanovska, Christian E Zimmerli, Mauricio Toro-Nahuelpan, Dorothy WC Cheng, Fergus Tollervey, Constantin Pape, Martin Beck, … Judith B Zaugg</div> <em>Nature Methods</em> (2023-01-23) <a href="https://doi.org/grqqwc">https://doi.org/grqqwc</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1038/s41592-022-01746-2">10.1038/s41592-022-01746-2</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/36690741">36690741</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9911354">PMC9911354</a></div></div>
+</div>
+<div id="ref-VobzV1Lb" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">15. </div><div class="csl-right-inline"><strong>Deep learning improves macromolecule identification in 3D cellular cryo-electron tomograms</strong> <div class="csl-block">Emmanuel Moebel, Antonio Martinez-Sanchez, Lorenz Lamm, Ricardo D Righetto, Wojciech Wietrzynski, Sahradha Albert, Damien Larivière, Eric Fourmentin, Stefan Pfeffer, Julio Ortiz, … Charles Kervrann</div> <em>Nature Methods</em> (2021-10-21) <a href="https://doi.org/gm7d6j">https://doi.org/gm7d6j</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1038/s41592-021-01275-4">10.1038/s41592-021-01275-4</a></div></div>
+</div>
+<div id="ref-NGTzBMdU" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">16. </div><div class="csl-right-inline"><strong>MemBrain: A deep learning-aided pipeline for detection of membrane proteins in Cryo-electron tomograms</strong> <div class="csl-block">Lorenz Lamm, Ricardo D Righetto, Wojciech Wietrzynski, Matthias Pöge, Antonio Martinez-Sanchez, Tingying Peng, Benjamin D Engel</div> <em>Computer Methods and Programs in Biomedicine</em> (2022-09) <a href="https://doi.org/gs3s63">https://doi.org/gs3s63</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1016/j.cmpb.2022.106990">10.1016/j.cmpb.2022.106990</a></div></div>
+</div>
+<div id="ref-12G712Zky" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">17. </div><div class="csl-right-inline"><strong>Content-aware image restoration: pushing the limits of fluorescence microscopy</strong> <div class="csl-block">Martin Weigert, Uwe Schmidt, Tobias Boothe, Andreas Müller, Alexandr Dibrov, Akanksha Jain, Benjamin Wilhelm, Deborah Schmidt, Coleman Broaddus, Siân Culley, … Eugene W Myers</div> <em>Nature Methods</em> (2018-11-26) <a href="https://doi.org/gfkkfd">https://doi.org/gfkkfd</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1038/s41592-018-0216-7">10.1038/s41592-018-0216-7</a></div></div>
 </div>
 <div id="ref-136NHHp17" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">16. </div><div class="csl-right-inline"><strong>Computer Visualization of Three-Dimensional Image Data Using IMOD</strong> <div class="csl-block">James R Kremer, David N Mastronarde, JRichard McIntosh</div> <em>Journal of Structural Biology</em> (1996-01) <a href="https://doi.org/d9nfzw">https://doi.org/d9nfzw</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1006/jsbi.1996.0013">10.1006/jsbi.1996.0013</a></div></div>
+<div class="csl-left-margin">18. </div><div class="csl-right-inline"><strong>Computer Visualization of Three-Dimensional Image Data Using IMOD</strong> <div class="csl-block">James R Kremer, David N Mastronarde, JRichard McIntosh</div> <em>Journal of Structural Biology</em> (1996-01) <a href="https://doi.org/d9nfzw">https://doi.org/d9nfzw</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1006/jsbi.1996.0013">10.1006/jsbi.1996.0013</a></div></div>
+</div>
+<div id="ref-YEMgt2T4" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">19. </div><div class="csl-right-inline"><strong>napari: a multi-dimensional image viewer for Python</strong> <div class="csl-block">Jannis Ahlers, Daniel Althviz Moré, Oren Amsalem, Ashley Anderson, Grzegorz Bokota, Peter Boone, Jordão Bragantini, Genevieve Buckley, Alister Burt, Matthias Bussonnier, … Kevin Yamauchi</div> <em>Zenodo</em> (2023-07-05) <a href="https://doi.org/gjpsxz">https://doi.org/gjpsxz</a> <div class="csl-block">DOI: <a href="https://doi.org/10.5281/zenodo.3555620">10.5281/zenodo.3555620</a></div></div>
 </div>
 <div id="ref-CERJ8H0p" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">17. </div><div class="csl-right-inline"><strong>Morphofunctional changes at the active zone during synaptic vesicle exocytosis</strong> <div class="csl-block">Julika Radecke, Raphaela Seeger, Anna Kádková, Ulrike Laugks, Amin Khosrozadeh, Kenneth N Goldie, Vladan Lučić, Jakob B Sørensen, Benoît Zuber</div> <em>Cold Spring Harbor Laboratory</em> (2022-03-07) <a href="https://doi.org/gpm26v">https://doi.org/gpm26v</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1101/2022.03.07.483217">10.1101/2022.03.07.483217</a></div></div>
+<div class="csl-left-margin">20. </div><div class="csl-right-inline"><strong>Morphofunctional changes at the active zone during synaptic vesicle exocytosis</strong> <div class="csl-block">Julika Radecke, Raphaela Seeger, Anna Kádková, Ulrike Laugks, Amin Khosrozadeh, Kenneth N Goldie, Vladan Lučić, Jakob B Sørensen, Benoît Zuber</div> <em>Cold Spring Harbor Laboratory</em> (2022-03-07) <a href="https://doi.org/gpm26v">https://doi.org/gpm26v</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1101/2022.03.07.483217">10.1101/2022.03.07.483217</a></div></div>
+</div>
+<div id="ref-stvWEJeu" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">21. </div><div class="csl-right-inline"><strong>scikit-image: image processing in Python</strong> <div class="csl-block">Stéfan van der Walt, Johannes L Schönberger, Juan Nunez-Iglesias, François Boulogne, Joshua D Warner, Neil Yager, Emmanuelle Gouillart, Tony Yu</div> <em>PeerJ</em> (2014-06-19) <a href="https://doi.org/gftp3s">https://doi.org/gftp3s</a> <div class="csl-block">DOI: <a href="https://doi.org/10.7717/peerj.453">10.7717/peerj.453</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/25024921">25024921</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4081273">PMC4081273</a></div></div>
+</div>
+<div id="ref-hFc1Q2c" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">22. </div><div class="csl-right-inline"><strong>Author Correction: SciPy 1.0: fundamental algorithms for scientific computing in Python</strong> <div class="csl-block">Pauli Virtanen, Ralf Gommers, Travis E Oliphant, Matt Haberland, Tyler Reddy, David Cournapeau, Evgeni Burovski, Pearu Peterson, Warren Weckesser, … Paul van Mulbregt</div> <em>Nature Methods</em> (2020-02-24) <a href="https://doi.org/gprj73">https://doi.org/gprj73</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1038/s41592-020-0772-5">10.1038/s41592-020-0772-5</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/32094914">32094914</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7056641">PMC7056641</a></div></div>
+</div>
+<div id="ref-UeFCwwR7" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">23. </div><div class="csl-right-inline"><strong>Controlling the False Discovery Rate: A Practical and Powerful Approach to Multiple Testing</strong> <div class="csl-block">Yoav Benjamini, Yosef Hochberg</div> <em>Journal of the Royal Statistical Society: Series B (Methodological)</em> (1995-01) <a href="https://doi.org/gfpkdx">https://doi.org/gfpkdx</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1111/j.2517-6161.1995.tb02031.x">10.1111/j.2517-6161.1995.tb02031.x</a></div></div>
+</div>
+<div id="ref-15kEEkiul" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">24. </div><div class="csl-right-inline"><strong>Statsmodels: Econometric and Statistical Modeling with Python</strong> <div class="csl-block">Skipper Seabold, Josef Perktold</div> <em>Proceedings of the Python in Science Conference</em> (2010) <a href="https://doi.org/ggq6ff">https://doi.org/ggq6ff</a> <div class="csl-block">DOI: <a href="https://doi.org/10.25080/majora-92bf1922-011">10.25080/majora-92bf1922-011</a></div></div>
+</div>
+<div id="ref-ibSnzEjI" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">25. </div><div class="csl-right-inline"><strong>Resampling-based false discovery rate controlling multiple test procedures for correlated test statistics</strong> <div class="csl-block">Daniel Yekutieli, Yoav Benjamini</div> <em>Journal of Statistical Planning and Inference</em> (1999-12) <a href="https://doi.org/ctfdqf">https://doi.org/ctfdqf</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1016/s0378-3758(99)00041-5">10.1016/s0378-3758(99)00041-5</a></div></div>
+</div>
+<div id="ref-k53Adxgo" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">26. </div><div class="csl-right-inline"><strong>&lt;scp&gt;UCSF ChimeraX&lt;/scp&gt;: Tools for structure building and analysis</strong> <div class="csl-block">Elaine C Meng, Thomas D Goddard, Eric F Pettersen, Greg S Couch, Zach J Pearson, John H Morris, Thomas E Ferrin</div> <em>Protein Science</em> (2023-10-20) <a href="https://doi.org/gs72vt">https://doi.org/gs72vt</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1002/pro.4792">10.1002/pro.4792</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/37774136">37774136</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10588335">PMC10588335</a></div></div>
 </div>
 <div id="ref-YuJbg3zO" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">18. </div><div class="csl-right-inline"><strong>Open collaborative writing with Manubot</strong> <div class="csl-block">Daniel S Himmelstein, Vincent Rubinetti, David R Slochower, Dongbo Hu, Venkat S Malladi, Casey S Greene, Anthony Gitter</div> <em>PLOS Computational Biology</em> (2019-06-24) <a href="https://doi.org/c7np">https://doi.org/c7np</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1371/journal.pcbi.1007128">10.1371/journal.pcbi.1007128</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/31233491">31233491</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6611653">PMC6611653</a></div></div>
+<div class="csl-left-margin">27. </div><div class="csl-right-inline"><strong>Open collaborative writing with Manubot</strong> <div class="csl-block">Daniel S Himmelstein, Vincent Rubinetti, David R Slochower, Dongbo Hu, Venkat S Malladi, Casey S Greene, Anthony Gitter</div> <em>PLOS Computational Biology</em> (2019-06-24) <a href="https://doi.org/c7np">https://doi.org/c7np</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1371/journal.pcbi.1007128">10.1371/journal.pcbi.1007128</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/31233491">31233491</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6611653">PMC6611653</a></div></div>
 </div>
+</div>
+<h2 id="expanded-view">Expanded View</h2>
+<h3 id="expanded-view-figures">Expanded View Figures</h3>
+<div id="fig:suppl_tom_slice" class="fignos">
+<figure>
+<img src="images/tomo-scale.svg" style="width:15cm" data-tag="EV1" alt="Figure EV1: A 2D slice of an automatically segmented dataset. A) A section through a presynaptic terminal in a neuron tomogram. B) Predicted probability mask restricted to the segmentation region. Purple corresponds to a low SV probability and yellow to a high SV probability. C) Instance mask of the vesicles after post processing." />
+<figcaption aria-hidden="true"><span>Figure EV1:</span> <strong>A 2D slice of an automatically segmented dataset</strong>. A) A section through a presynaptic terminal in a neuron tomogram. B) Predicted probability mask restricted to the segmentation region. Purple corresponds to a low SV probability and yellow to a high SV probability. C) Instance mask of the vesicles after post processing.</figcaption>
+</figure>
+</div>
+<div id="fig:dice" class="fignos">
+<figure>
+<img src="images/traindice.png" style="width:7cm" data-tag="EV2" alt="Figure EV2: Dice coefficient and loss value for train and validation set." />
+<figcaption aria-hidden="true"><span>Figure EV2:</span> <strong>Dice coefficient and loss value for train and validation set.</strong></figcaption>
+</figure>
+</div>
+<h3 id="expanded-view-tables">Expanded View Tables</h3>
+<div id="tbl:dice-statistics" class="tablenos">
+<table id="tbl:dice-statistics" data-tag="EV1">
+<caption><span>Table EV1:</span> <strong>Dice statistical values</strong>. Mean ± standard deviation is shown at each step of the pipeline (Network Probability Mask, Global Threshold, Adaptative Localized Threshold, Sphere Radial Profile Refinement, and Outlier Removal). </caption>
+<thead>
+<tr class="header">
+<th></th>
+<th>Train set</th>
+<th>Test set</th>
+<th>Generalization set</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Probability</td>
+<td>0.64±0.11</td>
+<td>0.75±0.06</td>
+<td>0.69±0.09</td>
+</tr>
+<tr class="even">
+<td>Global</td>
+<td>0.78±0.04</td>
+<td>0.80±0.04</td>
+<td>0.66±0.09</td>
+</tr>
+<tr class="odd">
+<td>Local</td>
+<td>0.79±0.03</td>
+<td>0.81±0.04</td>
+<td>0.66±0.10</td>
+</tr>
+<tr class="even">
+<td>Sphere</td>
+<td>0.82±0.09</td>
+<td>0.82±0.06</td>
+<td>0.77±0.09</td>
+</tr>
+<tr class="odd">
+<td>Outlier</td>
+<td>0.86±0.05</td>
+<td>0.83±0.05</td>
+<td>0.79±0.09</td>
+</tr>
+<tr class="even">
+<td>N</td>
+<td>9</td>
+<td>9</td>
+<td>12</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="tbl:dice-pvalues" class="tablenos">
+<table id="tbl:dice-pvalues" data-tag="EV2">
+<caption><span>Table EV2:</span> <strong>Corrected P-values of Dice values comparisons</strong>. Multiple, all-against-all ANOVA comparisons were performed with Benjamini-Hochberg correction on the Dice values summarized in <a href="#tbl:dice-statistics">EV1</a>. Corrected P-values smaller than 0.05 are shown in bold. </caption>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 19%" />
+<col style="width: 19%" />
+<col style="width: 27%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Comparison</th>
+<th>Train set</th>
+<th>Test set</th>
+<th>Generalization set</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Probability vs Global</td>
+<td><strong>0.014577</strong></td>
+<td>0.101150</td>
+<td>0.551700</td>
+</tr>
+<tr class="even">
+<td>Probability vs Local</td>
+<td><strong>0.013852</strong></td>
+<td>0.062011</td>
+<td>0.560081</td>
+</tr>
+<tr class="odd">
+<td>Probability vs Sphere</td>
+<td><strong>0.013852</strong></td>
+<td>0.062011</td>
+<td>0.083461</td>
+</tr>
+<tr class="even">
+<td>Probability vs Outlier</td>
+<td><strong>0.008110</strong></td>
+<td><strong>0.037372</strong></td>
+<td><strong>0.037372</strong></td>
+</tr>
+<tr class="odd">
+<td>Global vs Local</td>
+<td>0.668291</td>
+<td>0.670185</td>
+<td>1.000000</td>
+</tr>
+<tr class="even">
+<td>Global vs Sphere</td>
+<td>0.401213</td>
+<td>0.551700</td>
+<td><strong>0.028670</strong></td>
+</tr>
+<tr class="odd">
+<td>Global vs Outlier</td>
+<td>0.062011</td>
+<td>0.401213</td>
+<td><strong>0.013852</strong></td>
+</tr>
+<tr class="even">
+<td>Local vs Sphere</td>
+<td>0.539697</td>
+<td>0.731698</td>
+<td><strong>0.036359</strong></td>
+</tr>
+<tr class="odd">
+<td>Local vs Outlier</td>
+<td>0.083461</td>
+<td>0.551700</td>
+<td><strong>0.014577</strong></td>
+</tr>
+<tr class="even">
+<td>Sphere vs Outlier</td>
+<td>0.539697</td>
+<td>0.753403</td>
+<td>0.670185</td>
+</tr>
+</tbody>
+</table>
 </div>
 <!-- default theme -->
 
