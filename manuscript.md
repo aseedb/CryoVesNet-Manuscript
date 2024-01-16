@@ -9,7 +9,7 @@ keywords:
 - post-processing
 - automation
 lang: en-US
-date-meta: '2024-01-12'
+date-meta: '2024-01-16'
 author-meta:
 - Amin Khosrozadeh
 - Guillaume Witz
@@ -28,11 +28,11 @@ header-includes: |-
   <meta name="citation_title" content="CryoVesNet: A Dedicated Framework for Vesicle Segmentation in Cryo-Tomograms" />
   <meta property="og:title" content="CryoVesNet: A Dedicated Framework for Vesicle Segmentation in Cryo-Tomograms" />
   <meta property="twitter:title" content="CryoVesNet: A Dedicated Framework for Vesicle Segmentation in Cryo-Tomograms" />
-  <meta name="dc.date" content="2024-01-12" />
-  <meta name="citation_publication_date" content="2024-01-12" />
-  <meta property="article:published_time" content="2024-01-12" />
-  <meta name="dc.modified" content="2024-01-12T19:39:21+00:00" />
-  <meta property="article:modified_time" content="2024-01-12T19:39:21+00:00" />
+  <meta name="dc.date" content="2024-01-16" />
+  <meta name="citation_publication_date" content="2024-01-16" />
+  <meta property="article:published_time" content="2024-01-16" />
+  <meta name="dc.modified" content="2024-01-16T17:05:07+00:00" />
+  <meta property="article:modified_time" content="2024-01-16T17:05:07+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -67,9 +67,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://aseedb.github.io/deep-prepyto-paper/" />
   <meta name="citation_pdf_url" content="https://aseedb.github.io/deep-prepyto-paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://aseedb.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://aseedb.github.io/deep-prepyto-paper/v/01edc1a436cf89f5e13b4a01a236f31309907cf7/" />
-  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/deep-prepyto-paper/v/01edc1a436cf89f5e13b4a01a236f31309907cf7/" />
-  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/deep-prepyto-paper/v/01edc1a436cf89f5e13b4a01a236f31309907cf7/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://aseedb.github.io/deep-prepyto-paper/v/c900dcb2647fc7efdda3607b2d4f7cdbca2c8701/" />
+  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/deep-prepyto-paper/v/c900dcb2647fc7efdda3607b2d4f7cdbca2c8701/" />
+  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/deep-prepyto-paper/v/c900dcb2647fc7efdda3607b2d4f7cdbca2c8701/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -91,10 +91,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://aseedb.github.io/deep-prepyto-paper/v/01edc1a436cf89f5e13b4a01a236f31309907cf7/))
+([permalink](https://aseedb.github.io/deep-prepyto-paper/v/c900dcb2647fc7efdda3607b2d4f7cdbca2c8701/))
 was automatically generated
-from [aseedb/deep-prepyto-paper@01edc1a](https://github.com/aseedb/deep-prepyto-paper/tree/01edc1a436cf89f5e13b4a01a236f31309907cf7)
-on January 12, 2024.
+from [aseedb/deep-prepyto-paper@c900dcb](https://github.com/aseedb/deep-prepyto-paper/tree/c900dcb2647fc7efdda3607b2d4f7cdbca2c8701)
+on January 16, 2024.
 </em></small>
 
 

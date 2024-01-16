@@ -11,7 +11,7 @@ Blegdamsvej
 BZ
 centroid
 ChimeraX
-Convolutional
+convolutional
 cryo
 CryoET
 CryoVesNet
@@ -85,7 +85,7 @@ subtomogram
 subvolume
 SV
 SVs
-Synapsins
+synapsins
 synaptasome
 synaptosomal
 synaptosome
