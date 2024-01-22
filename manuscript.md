@@ -31,8 +31,8 @@ header-includes: |-
   <meta name="dc.date" content="2024-01-22" />
   <meta name="citation_publication_date" content="2024-01-22" />
   <meta property="article:published_time" content="2024-01-22" />
-  <meta name="dc.modified" content="2024-01-22T14:35:54+00:00" />
-  <meta property="article:modified_time" content="2024-01-22T14:35:54+00:00" />
+  <meta name="dc.modified" content="2024-01-22T14:46:30+00:00" />
+  <meta property="article:modified_time" content="2024-01-22T14:46:30+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -68,9 +68,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://aseedb.github.io/CryoVesNet-Manuscript/" />
   <meta name="citation_pdf_url" content="https://aseedb.github.io/CryoVesNet-Manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://aseedb.github.io/CryoVesNet-Manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://aseedb.github.io/CryoVesNet-Manuscript/v/e21f89d6730fdb20bd1a8291f0566d4e0d1ec2fc/" />
-  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/e21f89d6730fdb20bd1a8291f0566d4e0d1ec2fc/" />
-  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/e21f89d6730fdb20bd1a8291f0566d4e0d1ec2fc/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://aseedb.github.io/CryoVesNet-Manuscript/v/504184289f9f08574a4b5d0c9f78f699f8e9f555/" />
+  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/504184289f9f08574a4b5d0c9f78f699f8e9f555/" />
+  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/504184289f9f08574a4b5d0c9f78f699f8e9f555/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -92,9 +92,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://aseedb.github.io/CryoVesNet-Manuscript/v/e21f89d6730fdb20bd1a8291f0566d4e0d1ec2fc/))
+([permalink](https://aseedb.github.io/CryoVesNet-Manuscript/v/504184289f9f08574a4b5d0c9f78f699f8e9f555/))
 was automatically generated
-from [aseedb/CryoVesNet-Manuscript@e21f89d](https://github.com/aseedb/CryoVesNet-Manuscript/tree/e21f89d6730fdb20bd1a8291f0566d4e0d1ec2fc)
+from [aseedb/CryoVesNet-Manuscript@5041842](https://github.com/aseedb/CryoVesNet-Manuscript/tree/504184289f9f08574a4b5d0c9f78f699f8e9f555)
 on January 22, 2024.
 </em></small>
 
@@ -652,84 +652,3 @@ Table: **Dice statistical values**. Mean ± standard deviation is shown at each 
 | Local vs Outlier       | 0.083461     | 0.551700     | **0.014577**       |
 | Sphere vs Outlier      | 0.539697     | 0.753403     | 0.670185           |
 Table: **Corrected P-values of Dice values comparisons**. Multiple, all-against-all ANOVA comparisons were performed with Benjamini-Hochberg correction on the Dice values summarized in @tbl:dice-statistics. Corrected P-values smaller than 0.05 are shown in bold. {#tbl:dice-pvalues tag="EV2"}
-
-
-
-## Folder Structure
-<pre><font color="#268BD2"><b>.</b></font>
-├── <font color="#859900"><b>az.mod</b></font>
-├── <font color="#859900"><b>cell_outline.mod</b></font>
-├── <font color="#268BD2"><b>deep</b></font>
-│   ├── <font color="#D33682"><b>Dummy_133_trim.rec_processed.tiff</b></font>
-│   ├── Dummy_133_trim.rec_segUnet.npy
-│   ├── <font color="#D33682"><b>Dummy_133_trim.rec_segUnet.tiff</b></font>
-│   └── <font color="#D33682"><b>Dummy_133_trim.rec_wreal_mask.tiff</b></font>
-├── <font color="#859900"><b>Dummy_133_trim.rec</b></font>
-├── <font color="#859900"><b>Dummy_133_trim.rec.nad *</b></font>
-├── labels_out.mrc
-├── <font color="#859900"><b>merge.mod</b></font>
-├── new_labels_out.mrc
-└── <font color="#268BD2"><b>prepyto</b></font>
-    ├── Dummy_133_trim.rec_azmask.mrc
-    ├── Dummy_133_trim.rec_clean_deep_labels.mrc
-    ├── Dummy_133_trim.rec_convex_labels.mrc
-    ├── Dummy_133_trim.rec_cytomask.mrc
-    ├── Dummy_133_trim.rec_deep_labels.mrc
-    ├── Dummy_133_trim.rec_final_vesicle_labels.mrc
-    ├── Dummy_133_trim.rec_good.mrc
-    ├── Dummy_133_trim.rec_sphere_dataframe.pkl
-    ├── Dummy_133_trim.rec_sphere.mrc
-    ├── Dummy_133_trim.rec_zoomed_mask.mrc
-    ├── full_prepyto.mod
-    ├── labels.mrc
-    └── vesicles.mod
-
-2 directories, 24 files</pre>
-
-## Installation
-
-<pre> conda create -n cryoVesNet python=3.9 tensorflow-2.8.0 </pre>
-<pre>  pip install -r requirements.txt </pre>
-<pre>  pip install -e . </pre>
-
-### Requirements
-<pre>
-from setuptools import setup, find_packages
-
-setup(
-    name='prepyto',
-    version='0.1.1',
-    url='',
-    packages=find_packages(),
-    license='',
-    author='Amin Khosrozadeh',
-    author_email='',
-    description='prepyto - branch pathlib',
-    package_data={'': ['weights/weights.h5']},
-    include_package_data=True,
-    install_requires=['numpy', 'scikit-image', 'scipy', 'jupyter','jupyterlab',
-                      'pandas', 'h5py', 'tifffile','mrcfile','tqdm', 'napari',
-                      'keras'],
-
-)
-</pre>
-## Using pretrained model
-<pre>
-dataset_directory = "/mnt/data/amin/ctrl/"
-pl = prepyto.Pipeline(directory)
-pl.network_size = 64
-pl.setup_prepyto_dir()
-pl.run_deep(force_run=True, rescale=1.0)
-pl.zoom(force_run=True, )
-pl.label_vesicles_simply(within_segmentation_region = True, input_array_name="deep_mask")
-pl.make_spheres()
-pl.repair_spheres()
-pl.make_full_modfile(input_array_name='convex_labels')
-pl.make_full_label_file()
-</pre>
-
-    
-
-
-
-

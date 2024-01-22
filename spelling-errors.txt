@@ -1,6 +1,6 @@
 Adaptative
 Amin
-amira
+Amira
 anisotropic
 ANOVA
 azimuthal
@@ -16,7 +16,7 @@ cryo
 CryoET
 CryoVesNet
 CUDA
-Dataset
+dataset
 datasets
 defocus
 denoising
@@ -49,7 +49,7 @@ julikaradecke
 Keras
 Khosrozadeh
 macromolecule
-mahalanobis
+Mahalanobis
 microtubules
 multipletests
 Napari
@@ -62,7 +62,6 @@ postprocess
 postprocessing
 pre
 presynaptic
-pretrained
 probablility
 pvalues
 Pyto
@@ -94,7 +93,7 @@ synaptosomes
 Thermofisher
 thresholding
 tomogram
-tomograms
+Tomograms
 TP
 UCSF
 untilted
