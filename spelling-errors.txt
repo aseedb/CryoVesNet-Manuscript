@@ -1,6 +1,6 @@
 Adaptative
 Amin
-amira
+Amira
 anisotropic
 ANOVA
 azimuthal
@@ -11,9 +11,9 @@ Blegdamsvej
 BZ
 centroid
 ChimeraX
-Convolutional
+convolutional
 Cryo
-cryoET
+CryoET
 CryoVesNet
 CUDA
 dataset
@@ -86,7 +86,7 @@ subtomogram
 subvolume
 SV
 SVs
-synapsins
+Synapsins
 synaptasome
 synaptosomal
 synaptosome

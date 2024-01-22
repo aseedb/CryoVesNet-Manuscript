@@ -285,6 +285,8 @@ content/05.materials_and_methods.md:166:UCSF
 content/05.materials_and_methods.md:167:ChimeraX
 content/05.materials_and_methods.md:167:UCSF
 content/05.materials_and_methods.md:174:CryoVesNet
+content/05.materials_and_methods.md:174:CryoVesNet
+content/05.materials_and_methods.md:174:Zuber
 content/90.back-matter.md:2:BZ
 content/90.back-matter.md:3:tomograms
 content/90.back-matter.md:4:BZ

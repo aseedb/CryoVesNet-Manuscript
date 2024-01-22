@@ -31,8 +31,8 @@ header-includes: |-
   <meta name="dc.date" content="2024-01-22" />
   <meta name="citation_publication_date" content="2024-01-22" />
   <meta property="article:published_time" content="2024-01-22" />
-  <meta name="dc.modified" content="2024-01-22T14:01:36+00:00" />
-  <meta property="article:modified_time" content="2024-01-22T14:01:36+00:00" />
+  <meta name="dc.modified" content="2024-01-22T14:13:52+00:00" />
+  <meta property="article:modified_time" content="2024-01-22T14:13:52+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -68,9 +68,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://aseedb.github.io/CryoVesNet-Manuscript/" />
   <meta name="citation_pdf_url" content="https://aseedb.github.io/CryoVesNet-Manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://aseedb.github.io/CryoVesNet-Manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://aseedb.github.io/CryoVesNet-Manuscript/v/4bc3178b298d13e61bdd898caef293f7d505d5b6/" />
-  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/4bc3178b298d13e61bdd898caef293f7d505d5b6/" />
-  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/4bc3178b298d13e61bdd898caef293f7d505d5b6/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://aseedb.github.io/CryoVesNet-Manuscript/v/e21f89d6730fdb20bd1a8291f0566d4e0d1ec2fc/" />
+  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/e21f89d6730fdb20bd1a8291f0566d4e0d1ec2fc/" />
+  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/e21f89d6730fdb20bd1a8291f0566d4e0d1ec2fc/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -92,9 +92,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://aseedb.github.io/CryoVesNet-Manuscript/v/4bc3178b298d13e61bdd898caef293f7d505d5b6/))
+([permalink](https://aseedb.github.io/CryoVesNet-Manuscript/v/e21f89d6730fdb20bd1a8291f0566d4e0d1ec2fc/))
 was automatically generated
-from [aseedb/CryoVesNet-Manuscript@4bc3178](https://github.com/aseedb/CryoVesNet-Manuscript/tree/4bc3178b298d13e61bdd898caef293f7d505d5b6)
+from [aseedb/CryoVesNet-Manuscript@e21f89d](https://github.com/aseedb/CryoVesNet-Manuscript/tree/e21f89d6730fdb20bd1a8291f0566d4e0d1ec2fc)
 on January 22, 2024.
 </em></small>
 
@@ -595,7 +595,7 @@ The manuscript was written with the open and collaborative scientific writing pa
 The source code and data for this manuscript are available at <https://github.com/aseedb/synaptic_tomo_ms>.
 
 ### Code availability
-CryoVesNet is available on GitHub at... 
+CryoVesNet is available on GitHub at <https://github.com/Zuber-group/CryoVesNet>
 
 
 ## Author contributions
