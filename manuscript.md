@@ -12,8 +12,8 @@ lang: en-US
 date-meta: '2024-01-22'
 author-meta:
 - Amin Khosrozadeh
-- Guillaume Witz
 - Raphaela Seeger
+- Guillaume Witz
 - Julika Radecke
 - Jakob B. Sørensen
 - Benoît Zuber
@@ -31,8 +31,8 @@ header-includes: |-
   <meta name="dc.date" content="2024-01-22" />
   <meta name="citation_publication_date" content="2024-01-22" />
   <meta property="article:published_time" content="2024-01-22" />
-  <meta name="dc.modified" content="2024-01-22T13:16:52+00:00" />
-  <meta property="article:modified_time" content="2024-01-22T13:16:52+00:00" />
+  <meta name="dc.modified" content="2024-01-22T14:01:36+00:00" />
+  <meta property="article:modified_time" content="2024-01-22T14:01:36+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -43,13 +43,14 @@ header-includes: |-
   <meta name="citation_author_institution" content="Institute of Anatomy, University of Bern, Bern, Switzerland" />
   <meta name="citation_author_institution" content="Graduate School for Cellular and Biomedical Sciences, University of Bern" />
   <meta name="citation_author_orcid" content="0000-0001-9480-5915" />
+  <meta name="citation_author" content="Raphaela Seeger" />
+  <meta name="citation_author_institution" content="Institute of Anatomy, University of Bern, Bern, Switzerland" />
+  <meta name="citation_author_institution" content="Graduate School for Cellular and Biomedical Sciences, University of Bern" />
+  <meta name="citation_author_orcid" content="0000-0003-4461-3741" />
   <meta name="citation_author" content="Guillaume Witz" />
   <meta name="citation_author_institution" content="Science IT Service, University of Bern, Bern, Switzerland" />
   <meta name="citation_author_institution" content="Microscopy Imaging Center, University of Bern, Bern, Switzerland" />
   <meta name="citation_author_orcid" content="0000-0003-1562-4265" />
-  <meta name="citation_author" content="Raphaela Seeger" />
-  <meta name="citation_author_institution" content="Institute of Anatomy, University of Bern, Bern, Switzerland" />
-  <meta name="citation_author_institution" content="Graduate School for Cellular and Biomedical Sciences, University of Bern" />
   <meta name="citation_author" content="Julika Radecke" />
   <meta name="citation_author_institution" content="Institute of Anatomy, University of Bern, Bern, Switzerland" />
   <meta name="citation_author_institution" content="Department of Neuroscience, Faculty of Health and Medical Science , 2200 Copenhagen N, University of Copenhagen, Copenhagen, Denmark" />
@@ -61,15 +62,15 @@ header-includes: |-
   <meta name="citation_author" content="Benoît Zuber" />
   <meta name="citation_author_institution" content="Institute of Anatomy, University of Bern, Bern, Switzerland" />
   <meta name="citation_author_orcid" content="0000-0001-7725-5579" />
-  <link rel="canonical" href="https://aseedb.github.io/deep-prepyto-paper/" />
-  <meta property="og:url" content="https://aseedb.github.io/deep-prepyto-paper/" />
-  <meta property="twitter:url" content="https://aseedb.github.io/deep-prepyto-paper/" />
-  <meta name="citation_fulltext_html_url" content="https://aseedb.github.io/deep-prepyto-paper/" />
-  <meta name="citation_pdf_url" content="https://aseedb.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="application/pdf" href="https://aseedb.github.io/deep-prepyto-paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://aseedb.github.io/deep-prepyto-paper/v/3037aa1e6fe2427b9e8efa322a94b3c6e9d26cf4/" />
-  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/deep-prepyto-paper/v/3037aa1e6fe2427b9e8efa322a94b3c6e9d26cf4/" />
-  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/deep-prepyto-paper/v/3037aa1e6fe2427b9e8efa322a94b3c6e9d26cf4/manuscript.pdf" />
+  <link rel="canonical" href="https://aseedb.github.io/CryoVesNet-Manuscript/" />
+  <meta property="og:url" content="https://aseedb.github.io/CryoVesNet-Manuscript/" />
+  <meta property="twitter:url" content="https://aseedb.github.io/CryoVesNet-Manuscript/" />
+  <meta name="citation_fulltext_html_url" content="https://aseedb.github.io/CryoVesNet-Manuscript/" />
+  <meta name="citation_pdf_url" content="https://aseedb.github.io/CryoVesNet-Manuscript/manuscript.pdf" />
+  <link rel="alternate" type="application/pdf" href="https://aseedb.github.io/CryoVesNet-Manuscript/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://aseedb.github.io/CryoVesNet-Manuscript/v/4bc3178b298d13e61bdd898caef293f7d505d5b6/" />
+  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/4bc3178b298d13e61bdd898caef293f7d505d5b6/" />
+  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/4bc3178b298d13e61bdd898caef293f7d505d5b6/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -91,9 +92,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://aseedb.github.io/deep-prepyto-paper/v/3037aa1e6fe2427b9e8efa322a94b3c6e9d26cf4/))
+([permalink](https://aseedb.github.io/CryoVesNet-Manuscript/v/4bc3178b298d13e61bdd898caef293f7d505d5b6/))
 was automatically generated
-from [aseedb/deep-prepyto-paper@3037aa1](https://github.com/aseedb/deep-prepyto-paper/tree/3037aa1e6fe2427b9e8efa322a94b3c6e9d26cf4)
+from [aseedb/CryoVesNet-Manuscript@4bc3178](https://github.com/aseedb/CryoVesNet-Manuscript/tree/4bc3178b298d13e61bdd898caef293f7d505d5b6)
 on January 22, 2024.
 </em></small>
 
@@ -112,6 +113,15 @@ on January 22, 2024.
      Institute of Anatomy, University of Bern, Bern, Switzerland; Graduate School for Cellular and Biomedical Sciences, University of Bern
   </small>
 
++ **Raphaela Seeger**
+  <br>
+    ![ORCID icon](images/orcid.svg){.inline_icon width=16 height=16}
+    [0000-0003-4461-3741](https://orcid.org/0000-0003-4461-3741)
+    <br>
+  <small>
+     Institute of Anatomy, University of Bern, Bern, Switzerland; Graduate School for Cellular and Biomedical Sciences, University of Bern
+  </small>
+
 + **Guillaume Witz**
   <br>
     ![ORCID icon](images/orcid.svg){.inline_icon width=16 height=16}
@@ -119,12 +129,6 @@ on January 22, 2024.
     <br>
   <small>
      Science IT Service, University of Bern, Bern, Switzerland; Microscopy Imaging Center, University of Bern, Bern, Switzerland
-  </small>
-
-+ **Raphaela Seeger**
-  <br>
-  <small>
-     Institute of Anatomy, University of Bern, Bern, Switzerland; Graduate School for Cellular and Biomedical Sciences, University of Bern
   </small>
 
 + **Julika Radecke**
@@ -285,15 +289,25 @@ The Dice coefficient after this step was 0.82±0.09, 0.82±0.06, and 0.77±0.09,
 ### Outlier detection and refinement
 Despite the  improvement brought by the radial profile refinement, some vesicles were still not segmented accurately.
 By quantifying several parameters of the segmented vesicles, such as radius, membrane thickness, membrane intensity, lumen intensity, we were able to spot outliers using multivariate statistics (see Materials and Methods).
+An example of outlier detection is shown in Figure {@fig:outlier}.
+In this example, three outliers are highlighted.
+Outlier 1 (red, top row) corresponds to the mistaken segmentation of a non-vesicular membrane-bound structure.
+The high mahalanobis distance of this outlier can be explained by a vesicle radius, membrane thickness,  and intensity that are very different from the average of the dataset.
+Outlier 2 (green, middle row) is correctly segmented but is flagged for its abnormally high radius.
+Indeed, both the membrane thickness and intensity are close to the average of the dataset but the highly increased radius leads to a high mahalanobis distance.
+Outlier 3 (blue, bottom row) is initially detected but is misplaced.
+Its radius was not divergent from the average but its membrane thickness and intensity were.
 We could then refine these outliers or remove them if refinement failed.
 This final step led to a Dice coefficient of 0.86±0.05, 0.83±0.05, and 0.79±0.09, respectively (Figure @fig:dice-improv, Table @tbl:train-tomograms, Table @tbl:test-tomograms, and Table @tbl:neuron-tomograms).
+
+![**Multidimensional Outlier Detection**. The scatter plot (left panel) represents vesicle features in the space defined by membrane intensity, radius, and thickness, with points colored according to the p-value of their Mahalanobis distance, identifying potential outliers. Central panels: outliers are highlighted.  Right panels: outliers have been either removed (top and middle row) or fixed by refinement. In addition the right panels show the final vesicle segmentation boundaries. Bars, 100 nm.](images/outlier_intensity_border.png){#fig:outlier width="15cm"}
 
 In addition to the Dice metric, which is a voxel-wise evaluation, we performed a vesicle-wise  evaluation.
 Namely, we quantified vesicle diameter deviation, and center residual(Figure @fig:dice-improv, Table @tbl:train-tomograms, Table @tbl:test-tomograms, and Table @tbl:neuron-tomograms}.
 Results show that our method transfers well across datasets even without fine-tuning which shows robustness and generalization.
 
 
-![**Dice developement during post-processing**. Dice development at different post-processing steps of initially predicted mask (different colors correspond to different tomograms): A) synaptosomal train set B) synaptosomal test set c)  neuronal generalization test set](images/seaborn_all.svg){#fig:dice-improv width="15cm"}
+
 
 | **_Dataset_** | **_Mask Dice_** | **_Final Label Dice_** | **_$$\delta_d$$_** | **_$$\Delta_c (nm)$$_**  | **_Number of Vesicles_** | **_TP_** | **_FN_** | **_FP_** | **_F1-score_** |
 |---------------|:---------------:|:----------------------:|:---------:|:--------------:|:------------------------:|:--------:|:--------:|:--------:|:--------------:|
@@ -346,6 +360,8 @@ Table: **Evaluation of the segmentation on the synaptosomal test set** (same sam
 
 Table: **Evaluation of the segmentation on the neuronal generalization test set** (different sample type as the train set). For the meaning of the columns, see Table @tbl:train-tomograms.
 {#tbl:neuron-tomograms}
+
+![**Dice developement during post-processing**. Dice development at different post-processing steps of initially predicted mask (different colors correspond to different tomograms): A) synaptosomal train set B) synaptosomal test set c)  neuronal generalization test set](images/seaborn_all.svg){#fig:dice-improv width="15cm"}
 
 Traditional manual segmentation, while precise, is time-consuming and often limited in scope. 
 In previous cryo-ET studies of presynaptic terminals, the analysis of spatial organization was restricted within 250 nm of the active zone in order to keep segmentation time reasonable.
@@ -509,14 +525,14 @@ The feature space of predicted vesicle labels was computed, containing membrane 
 $\rho$ was defined as the mean intensity of the radial average within the radial distance interval $[d_m - \frac{t_m}{2}\,,\,d_m + \frac{t_m}{2}]$.
 
 ### Outlier detection and refinement
-Following radial profile calculation, key features, namely thickness, radius, and membrane density, were extracted.
+Following radial profile calculation, key features, namely thickness, radius, and membrane intensity, were extracted.
 Using these criteria, the Mahalanobis distance $D^2$ was calculated for each data point to quantify its distance from the distribution of these features as follows, using Scipy's implementation [@doi:10.1038/s41592-020-0772-5]:
 $$D^2 = (\mathbf{x} - \boldsymbol{\mu})^\top \mathbf{S}^{-1} (\mathbf{x} - \boldsymbol{\mu})$$ {#eq:mahalanobis-distance}
 where $\mathbf{x}$ is the vector of the three features, $\boldsymbol{\mu}$ is the mean vector of the features, and $\mathbf{S}^{-1}$ is the inverse covariance matrix of the features.
 The significance of the Mahalanobis distance was interpreted as follows:
 $$p = 1 - \text{CDF}_{\chi^2}(D^2, \nu)$$ {#eq:p-value}
 where $\text{CDF}_{\chi^2}$ is the cumulative distribution function of the chi-squared distribution, and $\nu$ is the number of degrees of freedom, which is equal to the number of features - 1.
-The resulting p-value provides a measure of the statistical significance of each data point's distance.
+The resulting p-value provides a measure of the statistical significance of each data point's distance (Figure @fig:outlier).
 
 With the computed p-values, outlier detection and refinement were conducted.
 Each vesicle with a p-value lower than a given threshold was defined as an outlier.
@@ -525,10 +541,8 @@ The radial profile and p-value of the outliers was recalculated using a differen
 We performed this step iteratively.
 At each iteration the box size was made larger by 2x2x2 voxels.
 For each outlier, the iteration stopped when its p-value was higher than the threshold.
-A maximum of 10 iterations is performed.
+A maximum of 10 iterations was performed.
 Vesicles that did not meet the p-value criteria were removed from the dataset.
-
-![**Multidimensional Outlier Detection**.. The 3D scatter plot represents vesicle features in the space defined by Membrane Density, Radius, and Thickness, with points colored according to the p-value of their Mahalanobis distance, identifying potential outliers. Outlier 1 (red) is segmented as a non-vesicular membrane-bound structure and is removed after this step. Outlier 2 (green), though correctly segmented, is flagged for its abnormally high radius and subsequently removed. Outlier 3 (blue) is initially detected; however, refinement procedures indicate misplacement, post refinment boundary show the corresponding vesicles in yellow, Bar, 20 nm.](images/outlier_figure.png){#fig:amira width="15cm"}
 
 ### Evaluation Metrics
 The evaluation framework was designed to assess the capabilities of the proposed toolbox for automatic synaptic vesicle segmentation.
@@ -638,3 +652,84 @@ Table: **Dice statistical values**. Mean ± standard deviation is shown at each 
 | Local vs Outlier       | 0.083461     | 0.551700     | **0.014577**       |
 | Sphere vs Outlier      | 0.539697     | 0.753403     | 0.670185           |
 Table: **Corrected P-values of Dice values comparisons**. Multiple, all-against-all ANOVA comparisons were performed with Benjamini-Hochberg correction on the Dice values summarized in @tbl:dice-statistics. Corrected P-values smaller than 0.05 are shown in bold. {#tbl:dice-pvalues tag="EV2"}
+
+
+
+## Folder Structure
+<pre><font color="#268BD2"><b>.</b></font>
+├── <font color="#859900"><b>az.mod</b></font>
+├── <font color="#859900"><b>cell_outline.mod</b></font>
+├── <font color="#268BD2"><b>deep</b></font>
+│   ├── <font color="#D33682"><b>Dummy_133_trim.rec_processed.tiff</b></font>
+│   ├── Dummy_133_trim.rec_segUnet.npy
+│   ├── <font color="#D33682"><b>Dummy_133_trim.rec_segUnet.tiff</b></font>
+│   └── <font color="#D33682"><b>Dummy_133_trim.rec_wreal_mask.tiff</b></font>
+├── <font color="#859900"><b>Dummy_133_trim.rec</b></font>
+├── <font color="#859900"><b>Dummy_133_trim.rec.nad *</b></font>
+├── labels_out.mrc
+├── <font color="#859900"><b>merge.mod</b></font>
+├── new_labels_out.mrc
+└── <font color="#268BD2"><b>prepyto</b></font>
+    ├── Dummy_133_trim.rec_azmask.mrc
+    ├── Dummy_133_trim.rec_clean_deep_labels.mrc
+    ├── Dummy_133_trim.rec_convex_labels.mrc
+    ├── Dummy_133_trim.rec_cytomask.mrc
+    ├── Dummy_133_trim.rec_deep_labels.mrc
+    ├── Dummy_133_trim.rec_final_vesicle_labels.mrc
+    ├── Dummy_133_trim.rec_good.mrc
+    ├── Dummy_133_trim.rec_sphere_dataframe.pkl
+    ├── Dummy_133_trim.rec_sphere.mrc
+    ├── Dummy_133_trim.rec_zoomed_mask.mrc
+    ├── full_prepyto.mod
+    ├── labels.mrc
+    └── vesicles.mod
+
+2 directories, 24 files</pre>
+
+## Installation
+
+<pre> conda create -n cryoVesNet python=3.9 tensorflow-2.8.0 </pre>
+<pre>  pip install -r requirements.txt </pre>
+<pre>  pip install -e . </pre>
+
+### Requirements
+<pre>
+from setuptools import setup, find_packages
+
+setup(
+    name='prepyto',
+    version='0.1.1',
+    url='',
+    packages=find_packages(),
+    license='',
+    author='Amin Khosrozadeh',
+    author_email='',
+    description='prepyto - branch pathlib',
+    package_data={'': ['weights/weights.h5']},
+    include_package_data=True,
+    install_requires=['numpy', 'scikit-image', 'scipy', 'jupyter','jupyterlab',
+                      'pandas', 'h5py', 'tifffile','mrcfile','tqdm', 'napari',
+                      'keras'],
+
+)
+</pre>
+## Using pretrained model
+<pre>
+dataset_directory = "/mnt/data/amin/ctrl/"
+pl = prepyto.Pipeline(directory)
+pl.network_size = 64
+pl.setup_prepyto_dir()
+pl.run_deep(force_run=True, rescale=1.0)
+pl.zoom(force_run=True, )
+pl.label_vesicles_simply(within_segmentation_region = True, input_array_name="deep_mask")
+pl.make_spheres()
+pl.repair_spheres()
+pl.make_full_modfile(input_array_name='convex_labels')
+pl.make_full_label_file()
+</pre>
+
+    
+
+
+
+

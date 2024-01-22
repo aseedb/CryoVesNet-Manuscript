@@ -13,10 +13,10 @@ centroid
 ChimeraX
 Convolutional
 Cryo
-CryoET
+cryoET
 CryoVesNet
 CUDA
-Dataset
+dataset
 datasets
 defocus
 denoising
@@ -62,6 +62,7 @@ postprocess
 postprocessing
 pre
 presynaptic
+pretrained
 probablility
 pvalues
 Pyto
@@ -85,7 +86,7 @@ subtomogram
 subvolume
 SV
 SVs
-Synapsins
+synapsins
 synaptasome
 synaptosomal
 synaptosome
@@ -97,7 +98,7 @@ tomograms
 TP
 UCSF
 untilted
-Voxel
+voxel
 voxels
 Weigert
 Witz
