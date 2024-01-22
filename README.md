@@ -1,8 +1,8 @@
 # Output directory containing the formatted manuscript
 
-The [`gh-pages`](https://github.com/aseedb/deep-prepyto-paper/tree/gh-pages) branch hosts the contents of this directory at <https://aseedb.github.io/deep-prepyto-paper/>.
-The permalink for this webpage version is <https://aseedb.github.io/deep-prepyto-paper/v/3037aa1e6fe2427b9e8efa322a94b3c6e9d26cf4/>.
-To redirect to the permalink for the latest manuscript version at anytime, use the link <https://aseedb.github.io/deep-prepyto-paper/v/freeze/>.
+The [`gh-pages`](https://github.com/aseedb/CryoVesNet-Manuscript/tree/gh-pages) branch hosts the contents of this directory at <https://aseedb.github.io/CryoVesNet-Manuscript/>.
+The permalink for this webpage version is <https://aseedb.github.io/CryoVesNet-Manuscript/v/4bc3178b298d13e61bdd898caef293f7d505d5b6/>.
+To redirect to the permalink for the latest manuscript version at anytime, use the link <https://aseedb.github.io/CryoVesNet-Manuscript/v/freeze/>.
 
 ## Files
 
@@ -35,4 +35,4 @@ Verifying timestamps with the `ots verify` command requires running a local bitc
 ## Source
 
 The manuscripts in this directory were built from
-[`3037aa1e6fe2427b9e8efa322a94b3c6e9d26cf4`](https://github.com/aseedb/deep-prepyto-paper/commit/3037aa1e6fe2427b9e8efa322a94b3c6e9d26cf4).
+[`4bc3178b298d13e61bdd898caef293f7d505d5b6`](https://github.com/aseedb/CryoVesNet-Manuscript/commit/4bc3178b298d13e61bdd898caef293f7d505d5b6).
