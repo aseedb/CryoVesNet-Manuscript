@@ -1,6 +1,6 @@
 Adaptative
 Amin
-Amira
+amira
 anisotropic
 ANOVA
 azimuthal
@@ -12,11 +12,11 @@ BZ
 centroid
 ChimeraX
 convolutional
-Cryo
+cryo
 CryoET
 CryoVesNet
 CUDA
-dataset
+Dataset
 datasets
 defocus
 denoising
