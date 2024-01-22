@@ -31,8 +31,8 @@ header-includes: |-
   <meta name="dc.date" content="2024-01-22" />
   <meta name="citation_publication_date" content="2024-01-22" />
   <meta property="article:published_time" content="2024-01-22" />
-  <meta name="dc.modified" content="2024-01-22T14:46:30+00:00" />
-  <meta property="article:modified_time" content="2024-01-22T14:46:30+00:00" />
+  <meta name="dc.modified" content="2024-01-22T15:03:32+00:00" />
+  <meta property="article:modified_time" content="2024-01-22T15:03:32+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -68,9 +68,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://aseedb.github.io/CryoVesNet-Manuscript/" />
   <meta name="citation_pdf_url" content="https://aseedb.github.io/CryoVesNet-Manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://aseedb.github.io/CryoVesNet-Manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://aseedb.github.io/CryoVesNet-Manuscript/v/504184289f9f08574a4b5d0c9f78f699f8e9f555/" />
-  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/504184289f9f08574a4b5d0c9f78f699f8e9f555/" />
-  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/504184289f9f08574a4b5d0c9f78f699f8e9f555/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://aseedb.github.io/CryoVesNet-Manuscript/v/8276b5c862b8ab9850fbb4e5aa9addcec4f2ab04/" />
+  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/8276b5c862b8ab9850fbb4e5aa9addcec4f2ab04/" />
+  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/8276b5c862b8ab9850fbb4e5aa9addcec4f2ab04/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -92,9 +92,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://aseedb.github.io/CryoVesNet-Manuscript/v/504184289f9f08574a4b5d0c9f78f699f8e9f555/))
+([permalink](https://aseedb.github.io/CryoVesNet-Manuscript/v/8276b5c862b8ab9850fbb4e5aa9addcec4f2ab04/))
 was automatically generated
-from [aseedb/CryoVesNet-Manuscript@5041842](https://github.com/aseedb/CryoVesNet-Manuscript/tree/504184289f9f08574a4b5d0c9f78f699f8e9f555)
+from [aseedb/CryoVesNet-Manuscript@8276b5c](https://github.com/aseedb/CryoVesNet-Manuscript/tree/8276b5c862b8ab9850fbb4e5aa9addcec4f2ab04)
 on January 22, 2024.
 </em></small>
 
@@ -249,7 +249,7 @@ In view of the effort required for the manual segmentation of SVs, we decided to
 Since we had previously manually segmented a number of tomograms with the program IMOD, we could use these segmentations as the ground truth [@doi:10.1006/jsbi.1996.0013].
 We trained a U-Net with a set of 9 segmented tomograms of rat synaptosomes (see Materials and Methods).
 
-We seeked to further improve segmentation accuracy by feeding the probability mask output by the U-Net to a series of postprocess steps (Figure {@fig:pipeline}).
+We sought to further improve segmentation accuracy by feeding the probability mask output by the U-Net to a series of postprocess steps (Figure {@fig:pipeline}).
 Three sets of tomograms were used to assess the performances of the pipeline:
 
 1) Train tomograms : The 9 rat synaptosome tomograms that have been used for U-Net training

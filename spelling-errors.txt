@@ -11,12 +11,12 @@ Blegdamsvej
 BZ
 centroid
 ChimeraX
-convolutional
+Convolutional
 cryo
-CryoET
+cryoET
 CryoVesNet
 CUDA
-dataset
+Dataset
 datasets
 defocus
 denoising
@@ -49,7 +49,7 @@ julikaradecke
 Keras
 Khosrozadeh
 macromolecule
-Mahalanobis
+mahalanobis
 microtubules
 multipletests
 Napari
@@ -73,7 +73,6 @@ ReLU
 ROI
 scalability
 Scipy’s
-seeked
 segmentations
 situ
 Sørensen
@@ -93,7 +92,7 @@ synaptosomes
 Thermofisher
 thresholding
 tomogram
-Tomograms
+tomograms
 TP
 UCSF
 untilted
