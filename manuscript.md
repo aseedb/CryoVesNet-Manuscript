@@ -31,8 +31,8 @@ header-includes: |-
   <meta name="dc.date" content="2024-01-23" />
   <meta name="citation_publication_date" content="2024-01-23" />
   <meta property="article:published_time" content="2024-01-23" />
-  <meta name="dc.modified" content="2024-01-23T12:12:35+00:00" />
-  <meta property="article:modified_time" content="2024-01-23T12:12:35+00:00" />
+  <meta name="dc.modified" content="2024-01-23T12:33:22+00:00" />
+  <meta property="article:modified_time" content="2024-01-23T12:33:22+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -68,9 +68,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://aseedb.github.io/CryoVesNet-Manuscript/" />
   <meta name="citation_pdf_url" content="https://aseedb.github.io/CryoVesNet-Manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://aseedb.github.io/CryoVesNet-Manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://aseedb.github.io/CryoVesNet-Manuscript/v/1c3778e83c668c2ae381d51655f694a28c6c1807/" />
-  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/1c3778e83c668c2ae381d51655f694a28c6c1807/" />
-  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/1c3778e83c668c2ae381d51655f694a28c6c1807/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://aseedb.github.io/CryoVesNet-Manuscript/v/5ac40d0ce3071f3aaa44b97749228164f5ce976c/" />
+  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/5ac40d0ce3071f3aaa44b97749228164f5ce976c/" />
+  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/5ac40d0ce3071f3aaa44b97749228164f5ce976c/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -92,9 +92,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://aseedb.github.io/CryoVesNet-Manuscript/v/1c3778e83c668c2ae381d51655f694a28c6c1807/))
+([permalink](https://aseedb.github.io/CryoVesNet-Manuscript/v/5ac40d0ce3071f3aaa44b97749228164f5ce976c/))
 was automatically generated
-from [aseedb/CryoVesNet-Manuscript@1c3778e](https://github.com/aseedb/CryoVesNet-Manuscript/tree/1c3778e83c668c2ae381d51655f694a28c6c1807)
+from [aseedb/CryoVesNet-Manuscript@5ac40d0](https://github.com/aseedb/CryoVesNet-Manuscript/tree/5ac40d0ce3071f3aaa44b97749228164f5ce976c)
 on January 23, 2024.
 </em></small>
 
@@ -380,7 +380,7 @@ A comparison of manual and automatic segmentation is shown in Figure {@fig:pipel
 Pyto is a software package designed for the analysis of pleomorphic membrane-bound molecular complexes in 3D images, particularly in the context of synaptic cryo-ET. 
 A key feature of Pyto is its ability to accurately segment connectors and tethers within the pre-synaptic terminal, a task that requires a high level of vesicle segmentation precision. 
 This segmentation process is hierarchical and connectivity-based, detecting densities interconnecting vesicles (connectors) and densities connecting vesicles to the active-zone plasma membrane (tethers).
-CryoVesNet has been designed to be compatible with Pyto and an application is demonstrated in Figure {fig:amira}.
+CryoVesNet has been designed to be compatible with Pyto and an application is demonstrated in Figure {@fig:amira}.
 This enables us to extract a wealth of structural information to better understand the structural basis of synaptic vesicle exocytosis regulation.
 
 ![**3D model of a cultured mouse neuron synapse**. A: slice through a tomogram. B: Segmentation of plasma membrane (light blue), mitochondria (dark blue), endosomes (green), microtubules (dark magenta). C: Vesicles (yellow) and connectors (pink) segmented with CryoVesNet and Pyto, respectively. D: Combination of B and C. Bar, 100 nm.](images/amira_all.png){#fig:amira width="15cm"}

@@ -12,11 +12,11 @@ BZ
 centroid
 ChimeraX
 Convolutional
-cryo
+Cryo
 CryoET
 CryoVesNet
 CUDA
-dataset
+Dataset
 datasets
 defocus
 denoising
@@ -50,7 +50,7 @@ julikaradecke
 Keras
 Khosrozadeh
 macromolecule
-mahalanobis
+Mahalanobis
 microtubules
 multipletests
 Napari
