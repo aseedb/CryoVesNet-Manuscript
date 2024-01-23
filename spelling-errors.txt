@@ -13,10 +13,10 @@ centroid
 ChimeraX
 Convolutional
 cryo
-cryoET
+CryoET
 CryoVesNet
 CUDA
-Dataset
+dataset
 datasets
 defocus
 denoising
@@ -35,6 +35,7 @@ GW
 Hochberg
 homogenous
 Iacovache
+Imbrosci
 IMOD
 improv
 interboundary
@@ -49,11 +50,12 @@ julikaradecke
 Keras
 Khosrozadeh
 macromolecule
-mahalanobis
+Mahalanobis
 microtubules
 multipletests
 Napari
 neurotransmission
+outler
 Oxfordshire
 peformed
 pipelineontomo
@@ -101,4 +103,5 @@ voxels
 Weigert
 Witz
 Yekutieli
+Zhou
 Zuber

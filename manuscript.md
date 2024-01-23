@@ -9,7 +9,7 @@ keywords:
 - post-processing
 - automation
 lang: en-US
-date-meta: '2024-01-22'
+date-meta: '2024-01-23'
 author-meta:
 - Amin Khosrozadeh
 - Raphaela Seeger
@@ -28,11 +28,11 @@ header-includes: |-
   <meta name="citation_title" content="CryoVesNet: A Dedicated Framework for Vesicle Segmentation in Cryo-Tomograms" />
   <meta property="og:title" content="CryoVesNet: A Dedicated Framework for Vesicle Segmentation in Cryo-Tomograms" />
   <meta property="twitter:title" content="CryoVesNet: A Dedicated Framework for Vesicle Segmentation in Cryo-Tomograms" />
-  <meta name="dc.date" content="2024-01-22" />
-  <meta name="citation_publication_date" content="2024-01-22" />
-  <meta property="article:published_time" content="2024-01-22" />
-  <meta name="dc.modified" content="2024-01-22T15:03:32+00:00" />
-  <meta property="article:modified_time" content="2024-01-22T15:03:32+00:00" />
+  <meta name="dc.date" content="2024-01-23" />
+  <meta name="citation_publication_date" content="2024-01-23" />
+  <meta property="article:published_time" content="2024-01-23" />
+  <meta name="dc.modified" content="2024-01-23T12:10:08+00:00" />
+  <meta property="article:modified_time" content="2024-01-23T12:10:08+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -68,9 +68,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://aseedb.github.io/CryoVesNet-Manuscript/" />
   <meta name="citation_pdf_url" content="https://aseedb.github.io/CryoVesNet-Manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://aseedb.github.io/CryoVesNet-Manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://aseedb.github.io/CryoVesNet-Manuscript/v/8276b5c862b8ab9850fbb4e5aa9addcec4f2ab04/" />
-  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/8276b5c862b8ab9850fbb4e5aa9addcec4f2ab04/" />
-  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/8276b5c862b8ab9850fbb4e5aa9addcec4f2ab04/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://aseedb.github.io/CryoVesNet-Manuscript/v/a6f498b36ab018848711604a77d5e980cdc90c29/" />
+  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/a6f498b36ab018848711604a77d5e980cdc90c29/" />
+  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/a6f498b36ab018848711604a77d5e980cdc90c29/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -92,10 +92,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://aseedb.github.io/CryoVesNet-Manuscript/v/8276b5c862b8ab9850fbb4e5aa9addcec4f2ab04/))
+([permalink](https://aseedb.github.io/CryoVesNet-Manuscript/v/a6f498b36ab018848711604a77d5e980cdc90c29/))
 was automatically generated
-from [aseedb/CryoVesNet-Manuscript@8276b5c](https://github.com/aseedb/CryoVesNet-Manuscript/tree/8276b5c862b8ab9850fbb4e5aa9addcec4f2ab04)
-on January 22, 2024.
+from [aseedb/CryoVesNet-Manuscript@a6f498b](https://github.com/aseedb/CryoVesNet-Manuscript/tree/a6f498b36ab018848711604a77d5e980cdc90c29)
+on January 23, 2024.
 </em></small>
 
 
@@ -217,15 +217,15 @@ To alleviate this situation, we decided to develop an approach based on deep lea
 
 Convolutional neural networks (CNN) have been successfully employed to segment cryo-ET data [@doi:10.1038/nmeth.4405]. 
 Although entirely satisfying for visualization purposes, this approach has not met the requirements of Pyto.
-A recent publication described accurate SV segmentation of transmission electron microscopy images using CNN, but it is limited to 2-dimensional (2D) images of resin-embedded synapses [@doi:10.1523/ENEURO.0400-20.2021].
+Imbrosci et al. in their publication described accurate SV segmentation of transmission electron microscopy images using CNN, but it is limited to 2-dimensional (2D) images of resin-embedded synapses [@doi:10.1523/ENEURO.0400-20.2021].
 In the first study, cryo-ET data are decomposed in individual 2D slices, which are handed as separate inputs to the CNN. 
 The independent output 2D prediction images are reassembled in a 3-dimensional (3D) stack [@doi:10.1038/nmeth.4405].
 As discussed above, membranes oriented approximately parallel to the plane of the 2D tomographic images are not resolved.
 In the absence of contextual knowledge of the other 2D images, the CNN fails to segment these regions of the vesicles.
 Hence, spherical vesicles appear open, whereas we expect closed spherical objects.
-A recent publication addressed this issue by implementing a downstream fitting step based on the Gaussian process, allowing for the smooth closure of the membranes [@doi:10.1016/j.jocs.2022.101904].
+Recently Zhou et al. publication addressed this issue by implementing a downstream fitting step based on the Gaussian process, allowing for the smooth closure of the membranes [@doi:10.1016/j.jocs.2022.101904].
 Ideally, 3D networks should be used to segment 3D cryo-ET data.
-Recently, several groups have published applications of 3D networks in cryo-ET for other tasks, such as particle picking and classification, in order to perform subtomogram averaging [@10.1038/s41592-022-01746-2;@10.1038/s41592-021-01275-4;@10.1016/j.cmpb.2022.106990]. 
+In this context,, several groups have published applications of 3D networks in cryo-ET for other tasks, such as particle picking and classification, in order to perform subtomogram averaging [@10.1038/s41592-022-01746-2;@10.1038/s41592-021-01275-4;@10.1016/j.cmpb.2022.106990]. 
 However, these papers have not focused on accurately segmenting membranes in cryo-ET data.
 
 We opted to employ a 3D U-Net CNN to process 3D images as input [@arxiv:1606.06650]. 
@@ -244,7 +244,7 @@ Furthermore, with only small modifications it could be extended to extremely acc
 
 ## Results
 
-### U-Net output thresholding
+### Overview of training and workflow
 In view of the effort required for the manual segmentation of SVs, we decided to develop an automatic segmentation procedure.
 Since we had previously manually segmented a number of tomograms with the program IMOD, we could use these segmentations as the ground truth [@doi:10.1006/jsbi.1996.0013].
 We trained a U-Net with a set of 9 segmented tomograms of rat synaptosomes (see Materials and Methods).
@@ -259,9 +259,7 @@ Three sets of tomograms were used to assess the performances of the pipeline:
 Each tomogram was split into patches of 32^3^ voxels.
 These patches were fed in the U-Net, which output a probability mask for those patches.
 To obtain a complete probability mask, the patches are stitched back together (Figure {@fig:pipeline}, Figure {@fig:suppl_tom_slice}).
-The performance of all steps of was quantitatively assessed by comparing the obtained segmentation with the ground truth using the DICE coefficient metric (see Materials and Methods).
-The Dice coefficient of the probability mask was 0.64±0.11 for the train tomograms, 0.75±0.06 for the test tomograms, and 0.69±0.09 for the generalization test tomograms (Table @tbl:train-tomograms, Table @tbl:test-tomograms, Table @tbl:neuron-tomograms, Table @tbl:dice-statistics, Table @tbl:dice-pvalues, and Figure @fig:dice-improv).
-The probability mask was then binarized with a global threshold step, which led to a Dice of 0.78±0.04 and 0.80±0.04 in the train and test datasets, respectively, while it led to a slight decrease dice of 0.66±0.09 in the generalization test dataset.
+The probability mask was then binarized with a global threshold step..
 
 ![**Pipeline of automatic segmentation.** a) Tomograms b) Splitting in 3D patches c) Segmentation Network/ trained U-Net d) probability masks e) stitching patches back together f) thresholding h) radial profile i) outlier removal j)Segmented Vesicles](images/latest_pipline.png){#fig:pipeline width="20cm"}
 
@@ -269,8 +267,7 @@ We noticed that some vesicles were not segmented accurately.
 Indeed, some vesicles that were in close proximity were misidentified as a single entity.
 Separating them necessitated adjusting the detection threshold to a more stringent value.
 Additionally, there were instances where the detection captured only a fraction of a vesicle, which required loosening the threshold for a more accurate segmentation. 
-Overall, the localized thresholding step did not significantly affect the Dice coefficient.
-It changed to 0.79±0.03, 0.81±0.04, and 0.66±0.10.
+
 Yet the assignment of the correct label to each segmented vesicle was essential for the next steps.
 
 ### Sphericalization and radial profile-based refinement
@@ -298,9 +295,16 @@ Indeed, both the membrane thickness and intensity are close to the average of th
 Outlier 3 (blue, bottom row) is initially detected but is misplaced.
 Its radius was not divergent from the average but its membrane thickness and intensity were.
 We could then refine these outliers or remove them if refinement failed.
-This final step led to a Dice coefficient of 0.86±0.05, 0.83±0.05, and 0.79±0.09, respectively (Figure @fig:dice-improv, Table @tbl:train-tomograms, Table @tbl:test-tomograms, and Table @tbl:neuron-tomograms).
+This evaluation metric was used to assess the performance of pipeline in Figure (@fig:dice-improv) and respectively (Table @tbl:train-tomograms, Table @tbl:test-tomograms, Table @tbl:neuron-tomograms, Table @tbl:dice-statistics, Table @tbl:dice-pvalues).
 
 ![**Multidimensional Outlier Detection**. The scatter plot (left panel) represents vesicle features in the space defined by membrane intensity, radius, and thickness, with points colored according to the p-value of their Mahalanobis distance, identifying potential outliers. Central panels: outliers are highlighted.  Right panels: outliers have been either removed (top and middle row) or fixed by refinement. In addition the right panels show the final vesicle segmentation boundaries. Bars, 100 nm.](images/outlier_intensity_border.png){#fig:outlier width="15cm"}
+
+### Performance and generalization
+The performance of all steps was quantitatively assessed by comparing the obtained segmentation with the ground truth using the Dice coefficient metric (see Materials and Methods).
+The Dice coefficient of the probability mask was 0.64±0.11 for the train tomograms, 0.75±0.06 for the test tomograms, and 0.69±0.09 for the generalization test tomograms (Table @tbl:train-tomograms, Table @tbl:test-tomograms, Table @tbl:neuron-tomograms, Table @tbl:dice-statistics, Table @tbl:dice-pvalues, and Figure @fig:dice-improv).
+The probability mask was then binarized with a global threshold step, which led to a Dice of 0.78±0.04 and 0.80±0.04 in the train and test datasets, respectively, while it led to a slight decrease dice of 0.66±0.09 in the generalization test dataset.
+Later on, localized thresholding step did not significantly affect performance instantly however vesicles wise is necessarily to avoid false negative.
+The Radial profile refinement and final outler removal steps led to a Dice coefficient of 0.86±0.05, 0.83±0.05, and 0.79±0.09, respectively.
 
 In addition to the Dice metric, which is a voxel-wise evaluation, we performed a vesicle-wise  evaluation.
 Namely, we quantified vesicle diameter deviation, and center residual(Figure @fig:dice-improv, Table @tbl:train-tomograms, Table @tbl:test-tomograms, and Table @tbl:neuron-tomograms}.
@@ -363,6 +367,7 @@ Table: **Evaluation of the segmentation on the neuronal generalization test set*
 
 ![**Dice developement during post-processing**. Dice development at different post-processing steps of initially predicted mask (different colors correspond to different tomograms): A) synaptosomal train set B) synaptosomal test set c)  neuronal generalization test set](images/seaborn_all.svg){#fig:dice-improv width="15cm"}
 
+### Downstream analysis and application
 Traditional manual segmentation, while precise, is time-consuming and often limited in scope. 
 In previous cryo-ET studies of presynaptic terminals, the analysis of spatial organization was restricted within 250 nm of the active zone in order to keep segmentation time reasonable.
 This limitation inherently narrows the scope of synaptic analyses.
@@ -452,7 +457,7 @@ The tomograms that were used for this analysis were binned by a factor of 2 to 3
 
 ### Train and validation set generation
 In the preparation of our train set, we utilized segmented 3D image volumes.
-The primary volume was systematically divided into 32^3 cubic sub-volumes.
+The primary volume was systematically divided into 32^3^ cubic sub-volumes.
 To ensure the relevance and richness of the data, only those sub-volumes that were sufficiently occupied by vesicles, specifically containing more than 1000 voxels, were retained.
 860 sub-volumes were used for training and 100 sub-volumes were used for validation.
 
@@ -465,7 +470,7 @@ The loss for the train set went from 0.55 and to values below 0.05 after 50 epoc
 The training was done for 200 epochs.
 
 ### Probability map construction
-Our U-Net model, trained on 32^3-voxel patches, utilizes a 24-voxel region of interest (ROI).
+Our U-Net model, trained on 32^3^-voxel patches, utilizes a 24-voxel region of interest (ROI).
 To mitigate tiling effects during testing, the network input can be expanded to larger volume like 64 voxels.
 The tomogram undergoes padding to align with the ROI, ensuring reduced edge artifacts.
 Segmentation is executed in tiles, where the U-Net predicts the synaptic vesicle probability for each tile.
