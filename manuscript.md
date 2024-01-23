@@ -31,8 +31,8 @@ header-includes: |-
   <meta name="dc.date" content="2024-01-23" />
   <meta name="citation_publication_date" content="2024-01-23" />
   <meta property="article:published_time" content="2024-01-23" />
-  <meta name="dc.modified" content="2024-01-23T12:33:22+00:00" />
-  <meta property="article:modified_time" content="2024-01-23T12:33:22+00:00" />
+  <meta name="dc.modified" content="2024-01-23T13:48:23+00:00" />
+  <meta property="article:modified_time" content="2024-01-23T13:48:23+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -68,9 +68,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://aseedb.github.io/CryoVesNet-Manuscript/" />
   <meta name="citation_pdf_url" content="https://aseedb.github.io/CryoVesNet-Manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://aseedb.github.io/CryoVesNet-Manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://aseedb.github.io/CryoVesNet-Manuscript/v/5ac40d0ce3071f3aaa44b97749228164f5ce976c/" />
-  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/5ac40d0ce3071f3aaa44b97749228164f5ce976c/" />
-  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/5ac40d0ce3071f3aaa44b97749228164f5ce976c/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://aseedb.github.io/CryoVesNet-Manuscript/v/8025984bf305e8b89d1a281df4b59ffd731b1c80/" />
+  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/8025984bf305e8b89d1a281df4b59ffd731b1c80/" />
+  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/8025984bf305e8b89d1a281df4b59ffd731b1c80/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -92,9 +92,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://aseedb.github.io/CryoVesNet-Manuscript/v/5ac40d0ce3071f3aaa44b97749228164f5ce976c/))
+([permalink](https://aseedb.github.io/CryoVesNet-Manuscript/v/8025984bf305e8b89d1a281df4b59ffd731b1c80/))
 was automatically generated
-from [aseedb/CryoVesNet-Manuscript@5ac40d0](https://github.com/aseedb/CryoVesNet-Manuscript/tree/5ac40d0ce3071f3aaa44b97749228164f5ce976c)
+from [aseedb/CryoVesNet-Manuscript@8025984](https://github.com/aseedb/CryoVesNet-Manuscript/tree/8025984bf305e8b89d1a281df4b59ffd731b1c80)
 on January 23, 2024.
 </em></small>
 
@@ -259,15 +259,14 @@ Three sets of tomograms were used to assess the performances of the pipeline:
 Each tomogram was split into patches of 32^3^ voxels.
 These patches were fed in the U-Net, which output a probability mask for those patches.
 To obtain a complete probability mask, the patches are stitched back together (Figure {@fig:pipeline}, Figure {@fig:suppl_tom_slice}).
-The probability mask was then binarized with a global threshold step..
+The probability mask was then binarized with a global threshold step.
 
-![**Pipeline of automatic segmentation.** a) Tomograms b) Splitting in 3D patches c) Segmentation Network/ trained U-Net d) probability masks e) stitching patches back together f) thresholding h) radial profile i) outlier removal j)Segmented Vesicles](images/latest_pipline.png){#fig:pipeline width="20cm"}
+![**Pipeline of automatic segmentation.** a) Tomograms b) Splitting in 3D patches c) Segmentation Network/ trained U-Net d) probability masks e) stitching patches back together f) thresholding h) radial profile i) outlier removal j) Segmented Vesicles](images/latest_pipline.png){#fig:pipeline width="20cm"}
 
 We noticed that some vesicles were not segmented accurately.
 Indeed, some vesicles that were in close proximity were misidentified as a single entity.
 Separating them necessitated adjusting the detection threshold to a more stringent value.
-Additionally, there were instances where the detection captured only a fraction of a vesicle, which required loosening the threshold for a more accurate segmentation. 
-
+Additionally, there were instances where the detection captured only a fraction of a vesicle, which required loosening the threshold for a more accurate segmentation.
 Yet the assignment of the correct label to each segmented vesicle was essential for the next steps.
 
 ### Sphericalization and radial profile-based refinement
@@ -302,8 +301,8 @@ This evaluation metric was used to assess the performance of pipeline in Figure 
 The performance of all steps was quantitatively assessed by comparing the obtained segmentation with the ground truth using the Dice coefficient metric (see Materials and Methods).
 The Dice coefficient of the probability mask was 0.64±0.11 for the train tomograms, 0.75±0.06 for the test tomograms, and 0.69±0.09 for the generalization test tomograms (Table @tbl:train-tomograms, Table @tbl:test-tomograms, Table @tbl:neuron-tomograms, Table @tbl:dice-statistics, Table @tbl:dice-pvalues, and Figure @fig:dice-improv).
 The probability mask was then binarized with a global threshold step, which led to a Dice of 0.78±0.04 and 0.80±0.04 in the train and test datasets, respectively, while it led to a slight decrease dice of 0.66±0.09 in the generalization test dataset.
-Later on, localized thresholding step did not significantly affect performance instantly however vesicles wise is necessarily to avoid false negative.
-The Radial profile refinement and final outler removal steps led to a Dice coefficient of 0.86±0.05, 0.83±0.05, and 0.79±0.09, respectively.
+You do not see instantly that localized thresholding step affect the performance significantly however, it is necessarily to avoid false negative vesicles.
+The Radial profile refinement and final outlier removal steps led to a Dice coefficients of 0.86±0.05, 0.83±0.05, and 0.79±0.09, respectively.
 
 In addition to the Dice metric, which is a voxel-wise evaluation, we performed a vesicle-wise  evaluation.
 Namely, we quantified vesicle diameter deviation, and center residual(Figure @fig:dice-improv, Table @tbl:train-tomograms, Table @tbl:test-tomograms, and Table @tbl:neuron-tomograms}.

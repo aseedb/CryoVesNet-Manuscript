@@ -11,12 +11,12 @@ Blegdamsvej
 BZ
 centroid
 ChimeraX
-Convolutional
+convolutional
 Cryo
-CryoET
+cryoET
 CryoVesNet
 CUDA
-Dataset
+dataset
 datasets
 defocus
 denoising
@@ -55,7 +55,6 @@ microtubules
 multipletests
 Napari
 neurotransmission
-outler
 Oxfordshire
 peformed
 pipelineontomo
