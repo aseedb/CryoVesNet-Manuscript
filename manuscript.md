@@ -31,8 +31,8 @@ header-includes: |-
   <meta name="dc.date" content="2024-01-23" />
   <meta name="citation_publication_date" content="2024-01-23" />
   <meta property="article:published_time" content="2024-01-23" />
-  <meta name="dc.modified" content="2024-01-23T12:10:08+00:00" />
-  <meta property="article:modified_time" content="2024-01-23T12:10:08+00:00" />
+  <meta name="dc.modified" content="2024-01-23T12:12:35+00:00" />
+  <meta property="article:modified_time" content="2024-01-23T12:12:35+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -68,9 +68,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://aseedb.github.io/CryoVesNet-Manuscript/" />
   <meta name="citation_pdf_url" content="https://aseedb.github.io/CryoVesNet-Manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://aseedb.github.io/CryoVesNet-Manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://aseedb.github.io/CryoVesNet-Manuscript/v/a6f498b36ab018848711604a77d5e980cdc90c29/" />
-  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/a6f498b36ab018848711604a77d5e980cdc90c29/" />
-  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/a6f498b36ab018848711604a77d5e980cdc90c29/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://aseedb.github.io/CryoVesNet-Manuscript/v/1c3778e83c668c2ae381d51655f694a28c6c1807/" />
+  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/1c3778e83c668c2ae381d51655f694a28c6c1807/" />
+  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/1c3778e83c668c2ae381d51655f694a28c6c1807/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -92,9 +92,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://aseedb.github.io/CryoVesNet-Manuscript/v/a6f498b36ab018848711604a77d5e980cdc90c29/))
+([permalink](https://aseedb.github.io/CryoVesNet-Manuscript/v/1c3778e83c668c2ae381d51655f694a28c6c1807/))
 was automatically generated
-from [aseedb/CryoVesNet-Manuscript@a6f498b](https://github.com/aseedb/CryoVesNet-Manuscript/tree/a6f498b36ab018848711604a77d5e980cdc90c29)
+from [aseedb/CryoVesNet-Manuscript@1c3778e](https://github.com/aseedb/CryoVesNet-Manuscript/tree/1c3778e83c668c2ae381d51655f694a28c6c1807)
 on January 23, 2024.
 </em></small>
 
@@ -279,7 +279,6 @@ To address these issues, we represented each vesicle as a sphere.
 We determined the center and radius of the sphere as described in the Materials and Methods section.
 We then performed a radial averaging of the intensity around the center of the sphere.
 And we adjusted iteratively the position and radius of the sphere to match the actual structure in the tomogram (Figure {@fig:radial_profile}). The radial profile refinement is a pivotal tool as it ensures that the segmented vesicles are a true representation of their form in the tomogram.
-The Dice coefficient after this step was 0.82±0.09, 0.82±0.06, and 0.77±0.09, respectively (Figure @fig:dice-improv).
 
 ![**Vesicle radius and position refinment through radial profile and cross-correlation**. (A) Initial segmentation of a vesicle. (B) Radial Profile. Blue range is from membrane center to outer white halo center. This is defined as the search range for the optimal radius. (C) second derivative of radial profile, used to define the exact edge of the membrane. (D) Central cross-section in the three-dimensional radial average of the vesicle in its initial position. (E-H) Same as (A-D) after refinement.](images/radial_avg_115-139.svg){#fig:radial_profile width="15cm"}
 
