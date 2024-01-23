@@ -11,9 +11,9 @@ Blegdamsvej
 BZ
 centroid
 ChimeraX
-convolutional
-Cryo
-cryoET
+Convolutional
+cryo
+CryoET
 CryoVesNet
 CUDA
 dataset
@@ -85,11 +85,12 @@ subtomogram
 subvolume
 SV
 SVs
-synapsins
+Synapsins
 synaptasome
 synaptosomal
 synaptosome
 synaptosomes
+tetheres
 Thermofisher
 thresholding
 tomogram

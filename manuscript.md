@@ -31,8 +31,8 @@ header-includes: |-
   <meta name="dc.date" content="2024-01-23" />
   <meta name="citation_publication_date" content="2024-01-23" />
   <meta property="article:published_time" content="2024-01-23" />
-  <meta name="dc.modified" content="2024-01-23T13:48:23+00:00" />
-  <meta property="article:modified_time" content="2024-01-23T13:48:23+00:00" />
+  <meta name="dc.modified" content="2024-01-23T14:03:32+00:00" />
+  <meta property="article:modified_time" content="2024-01-23T14:03:32+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -68,9 +68,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://aseedb.github.io/CryoVesNet-Manuscript/" />
   <meta name="citation_pdf_url" content="https://aseedb.github.io/CryoVesNet-Manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://aseedb.github.io/CryoVesNet-Manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://aseedb.github.io/CryoVesNet-Manuscript/v/8025984bf305e8b89d1a281df4b59ffd731b1c80/" />
-  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/8025984bf305e8b89d1a281df4b59ffd731b1c80/" />
-  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/8025984bf305e8b89d1a281df4b59ffd731b1c80/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://aseedb.github.io/CryoVesNet-Manuscript/v/7025d14badaae7c3ab15b377ff77e8652de1f589/" />
+  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/7025d14badaae7c3ab15b377ff77e8652de1f589/" />
+  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/7025d14badaae7c3ab15b377ff77e8652de1f589/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -92,9 +92,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://aseedb.github.io/CryoVesNet-Manuscript/v/8025984bf305e8b89d1a281df4b59ffd731b1c80/))
+([permalink](https://aseedb.github.io/CryoVesNet-Manuscript/v/7025d14badaae7c3ab15b377ff77e8652de1f589/))
 was automatically generated
-from [aseedb/CryoVesNet-Manuscript@8025984](https://github.com/aseedb/CryoVesNet-Manuscript/tree/8025984bf305e8b89d1a281df4b59ffd731b1c80)
+from [aseedb/CryoVesNet-Manuscript@7025d14](https://github.com/aseedb/CryoVesNet-Manuscript/tree/7025d14badaae7c3ab15b377ff77e8652de1f589)
 on January 23, 2024.
 </em></small>
 
@@ -216,8 +216,8 @@ Attempts to perform this task automatically based on classical computer vision a
 To alleviate this situation, we decided to develop an approach based on deep learning.
 
 Convolutional neural networks (CNN) have been successfully employed to segment cryo-ET data [@doi:10.1038/nmeth.4405]. 
-Although entirely satisfying for visualization purposes, this approach has not met the requirements of Pyto.
-Imbrosci et al. in their publication described accurate SV segmentation of transmission electron microscopy images using CNN, but it is limited to 2-dimensional (2D) images of resin-embedded synapses [@doi:10.1523/ENEURO.0400-20.2021].
+Although entirely satisfying for visualization purposes, this approach has not met the requirements of segmenting tetheres and connectors with Pyto.
+Later on, Imbrosci et al. in their publication described accurate SV segmentation of transmission electron microscopy images using CNN, but it is limited to 2-dimensional (2D) images of resin-embedded synapses [@doi:10.1523/ENEURO.0400-20.2021].
 In the first study, cryo-ET data are decomposed in individual 2D slices, which are handed as separate inputs to the CNN. 
 The independent output 2D prediction images are reassembled in a 3-dimensional (3D) stack [@doi:10.1038/nmeth.4405].
 As discussed above, membranes oriented approximately parallel to the plane of the 2D tomographic images are not resolved.
@@ -293,7 +293,6 @@ Indeed, both the membrane thickness and intensity are close to the average of th
 Outlier 3 (blue, bottom row) is initially detected but is misplaced.
 Its radius was not divergent from the average but its membrane thickness and intensity were.
 We could then refine these outliers or remove them if refinement failed.
-This evaluation metric was used to assess the performance of pipeline in Figure (@fig:dice-improv) and respectively (Table @tbl:train-tomograms, Table @tbl:test-tomograms, Table @tbl:neuron-tomograms, Table @tbl:dice-statistics, Table @tbl:dice-pvalues).
 
 ![**Multidimensional Outlier Detection**. The scatter plot (left panel) represents vesicle features in the space defined by membrane intensity, radius, and thickness, with points colored according to the p-value of their Mahalanobis distance, identifying potential outliers. Central panels: outliers are highlighted.  Right panels: outliers have been either removed (top and middle row) or fixed by refinement. In addition the right panels show the final vesicle segmentation boundaries. Bars, 100 nm.](images/outlier_intensity_border.png){#fig:outlier width="15cm"}
 
