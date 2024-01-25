@@ -9,7 +9,7 @@ keywords:
 - post-processing
 - automation
 lang: en-US
-date-meta: '2024-01-23'
+date-meta: '2024-01-25'
 author-meta:
 - Amin Khosrozadeh
 - Raphaela Seeger
@@ -28,11 +28,11 @@ header-includes: |-
   <meta name="citation_title" content="CryoVesNet: A Dedicated Framework for Vesicle Segmentation in Cryo-Tomograms" />
   <meta property="og:title" content="CryoVesNet: A Dedicated Framework for Vesicle Segmentation in Cryo-Tomograms" />
   <meta property="twitter:title" content="CryoVesNet: A Dedicated Framework for Vesicle Segmentation in Cryo-Tomograms" />
-  <meta name="dc.date" content="2024-01-23" />
-  <meta name="citation_publication_date" content="2024-01-23" />
-  <meta property="article:published_time" content="2024-01-23" />
-  <meta name="dc.modified" content="2024-01-23T14:03:32+00:00" />
-  <meta property="article:modified_time" content="2024-01-23T14:03:32+00:00" />
+  <meta name="dc.date" content="2024-01-25" />
+  <meta name="citation_publication_date" content="2024-01-25" />
+  <meta property="article:published_time" content="2024-01-25" />
+  <meta name="dc.modified" content="2024-01-25T22:22:44+00:00" />
+  <meta property="article:modified_time" content="2024-01-25T22:22:44+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -68,9 +68,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://aseedb.github.io/CryoVesNet-Manuscript/" />
   <meta name="citation_pdf_url" content="https://aseedb.github.io/CryoVesNet-Manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://aseedb.github.io/CryoVesNet-Manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://aseedb.github.io/CryoVesNet-Manuscript/v/7025d14badaae7c3ab15b377ff77e8652de1f589/" />
-  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/7025d14badaae7c3ab15b377ff77e8652de1f589/" />
-  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/7025d14badaae7c3ab15b377ff77e8652de1f589/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://aseedb.github.io/CryoVesNet-Manuscript/v/9d7e5990d35c7fe2189f19b4abd954b968a23c76/" />
+  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/9d7e5990d35c7fe2189f19b4abd954b968a23c76/" />
+  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/9d7e5990d35c7fe2189f19b4abd954b968a23c76/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -92,10 +92,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://aseedb.github.io/CryoVesNet-Manuscript/v/7025d14badaae7c3ab15b377ff77e8652de1f589/))
+([permalink](https://aseedb.github.io/CryoVesNet-Manuscript/v/9d7e5990d35c7fe2189f19b4abd954b968a23c76/))
 was automatically generated
-from [aseedb/CryoVesNet-Manuscript@7025d14](https://github.com/aseedb/CryoVesNet-Manuscript/tree/7025d14badaae7c3ab15b377ff77e8652de1f589)
-on January 23, 2024.
+from [aseedb/CryoVesNet-Manuscript@9d7e599](https://github.com/aseedb/CryoVesNet-Manuscript/tree/9d7e5990d35c7fe2189f19b4abd954b968a23c76)
+on January 25, 2024.
 </em></small>
 
 
@@ -294,7 +294,7 @@ Outlier 3 (blue, bottom row) is initially detected but is misplaced.
 Its radius was not divergent from the average but its membrane thickness and intensity were.
 We could then refine these outliers or remove them if refinement failed.
 
-![**Multidimensional Outlier Detection**. The scatter plot (left panel) represents vesicle features in the space defined by membrane intensity, radius, and thickness, with points colored according to the p-value of their Mahalanobis distance, identifying potential outliers. Central panels: outliers are highlighted.  Right panels: outliers have been either removed (top and middle row) or fixed by refinement. In addition the right panels show the final vesicle segmentation boundaries. Bars, 100 nm.](images/outlier_intensity_border.png){#fig:outlier width="15cm"}
+![**Multidimensional Outlier Detection**. The scatter plot (left panel) represents vesicle features in the space defined by membrane intensity, radius, and thickness, with points colored according to the p-value of their Mahalanobis distance, identifying potential outliers. Central panels: outliers are highlighted.  Right panels: outliers have been either removed (top and middle row) or fixed by refinement(bottom row). In addition the right panels show the final vesicle segmentation boundaries. Bars, 100 nm.](images/outlier_intensity_border.png){#fig:outlier width="15cm"}
 
 ### Performance and generalization
 The performance of all steps was quantitatively assessed by comparing the obtained segmentation with the ground truth using the Dice coefficient metric (see Materials and Methods).
@@ -427,7 +427,7 @@ As the field of structural cell biology continues to evolve, tools like ours wil
 ## Materials and methods
 
 ### Cryo-electron tomography datasets
-They consisted in rat synaptosomes primary neuron cultures derived from mice.
+They consisted in rat synaptosomes and primary neuron cultures derived from mice.
 In this study, we used datasets originating from either rat synaptosomes or mouse primary neuron cultures.
 They represent a total of 30 tomograms with heterogeneous pixel sizes, defocus and resolution and we split them in three groups:
 1. Train set: 9 synaptosome tomograms were used for training.
