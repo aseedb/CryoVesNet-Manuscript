@@ -9,7 +9,7 @@ keywords:
 - post-processing
 - automation
 lang: en-US
-date-meta: '2024-01-25'
+date-meta: '2024-02-19'
 author-meta:
 - Amin Khosrozadeh
 - Raphaela Seeger
@@ -28,11 +28,11 @@ header-includes: |-
   <meta name="citation_title" content="CryoVesNet: A Dedicated Framework for Vesicle Segmentation in Cryo-Tomograms" />
   <meta property="og:title" content="CryoVesNet: A Dedicated Framework for Vesicle Segmentation in Cryo-Tomograms" />
   <meta property="twitter:title" content="CryoVesNet: A Dedicated Framework for Vesicle Segmentation in Cryo-Tomograms" />
-  <meta name="dc.date" content="2024-01-25" />
-  <meta name="citation_publication_date" content="2024-01-25" />
-  <meta property="article:published_time" content="2024-01-25" />
-  <meta name="dc.modified" content="2024-01-25T22:22:44+00:00" />
-  <meta property="article:modified_time" content="2024-01-25T22:22:44+00:00" />
+  <meta name="dc.date" content="2024-02-19" />
+  <meta name="citation_publication_date" content="2024-02-19" />
+  <meta property="article:published_time" content="2024-02-19" />
+  <meta name="dc.modified" content="2024-02-19T10:26:58+00:00" />
+  <meta property="article:modified_time" content="2024-02-19T10:26:58+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -68,9 +68,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://aseedb.github.io/CryoVesNet-Manuscript/" />
   <meta name="citation_pdf_url" content="https://aseedb.github.io/CryoVesNet-Manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://aseedb.github.io/CryoVesNet-Manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://aseedb.github.io/CryoVesNet-Manuscript/v/9d7e5990d35c7fe2189f19b4abd954b968a23c76/" />
-  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/9d7e5990d35c7fe2189f19b4abd954b968a23c76/" />
-  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/9d7e5990d35c7fe2189f19b4abd954b968a23c76/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://aseedb.github.io/CryoVesNet-Manuscript/v/03d6f425688ef567a0146dacd62db69d970824c1/" />
+  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/03d6f425688ef567a0146dacd62db69d970824c1/" />
+  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/03d6f425688ef567a0146dacd62db69d970824c1/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -92,10 +92,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://aseedb.github.io/CryoVesNet-Manuscript/v/9d7e5990d35c7fe2189f19b4abd954b968a23c76/))
+([permalink](https://aseedb.github.io/CryoVesNet-Manuscript/v/03d6f425688ef567a0146dacd62db69d970824c1/))
 was automatically generated
-from [aseedb/CryoVesNet-Manuscript@9d7e599](https://github.com/aseedb/CryoVesNet-Manuscript/tree/9d7e5990d35c7fe2189f19b4abd954b968a23c76)
-on January 25, 2024.
+from [aseedb/CryoVesNet-Manuscript@03d6f42](https://github.com/aseedb/CryoVesNet-Manuscript/tree/03d6f425688ef567a0146dacd62db69d970824c1)
+on February 19, 2024.
 </em></small>
 
 
@@ -401,7 +401,6 @@ Addressing these challenges is crucial for obtaining clear and accurate tomograp
 
 ### CryoVesNet: Automatic Vesicle Segmentation in CryoET
 
-Our methodological approach to automatic segmentation in cryoET represents a significant advancement in the field. 
 By utilizing a U-Net architecture trained on manually segmented tomograms and postprocessing steps, we have developed a system that can efficiently and accurately segment synaptic vesicles in tomographic datasets. 
 In particular, CryoVesNet is uniquely insensitive to the missing wedge and can segment complete vesicles even if the membrane is not fully visible in the tomogram.
 The results obtained from our method, as evidenced by the Dice coefficient and other evaluation metrics, demonstrate its robustness and accuracy.

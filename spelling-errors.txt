@@ -1,6 +1,6 @@
 Adaptative
 Amin
-Amira
+amira
 anisotropic
 ANOVA
 azimuthal
@@ -13,10 +13,10 @@ centroid
 ChimeraX
 Convolutional
 cryo
-CryoET
+cryoET
 CryoVesNet
 CUDA
-dataset
+Dataset
 datasets
 defocus
 denoising
@@ -85,7 +85,7 @@ subtomogram
 subvolume
 SV
 SVs
-synapsins
+Synapsins
 synaptasome
 synaptosomal
 synaptosome
