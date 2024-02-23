@@ -16,7 +16,7 @@ cryo
 CryoET
 CryoVesNet
 CUDA
-Dataset
+dataset
 datasets
 defocus
 denoising
@@ -84,7 +84,7 @@ subtomogram
 subvolume
 SV
 SVs
-Synapsins
+synapsins
 synaptasome
 synaptosomal
 synaptosome
