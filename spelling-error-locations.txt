@@ -62,11 +62,12 @@ content/02.Introduction.md:41:cryo
 content/02.Introduction.md:41:denoising
 content/02.Introduction.md:42:datasets
 content/02.Introduction.md:44:Pyto
-content/02.Introduction.md:46:Pyto
-content/02.Introduction.md:46:SV
-content/02.Introduction.md:47:SVs
-content/02.Introduction.md:49:endocytic
-content/02.Introduction.md:49:SV
+content/02.Introduction.md:47:mis
+content/02.Introduction.md:48:Pyto
+content/02.Introduction.md:48:SV
+content/02.Introduction.md:49:SVs
+content/02.Introduction.md:51:endocytic
+content/02.Introduction.md:51:SV
 content/03.results.md:4:SVs
 content/03.results.md:5:IMOD
 content/03.results.md:5:segmentations

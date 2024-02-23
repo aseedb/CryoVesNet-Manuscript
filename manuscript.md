@@ -31,8 +31,8 @@ header-includes: |-
   <meta name="dc.date" content="2024-02-23" />
   <meta name="citation_publication_date" content="2024-02-23" />
   <meta property="article:published_time" content="2024-02-23" />
-  <meta name="dc.modified" content="2024-02-23T12:35:54+00:00" />
-  <meta property="article:modified_time" content="2024-02-23T12:35:54+00:00" />
+  <meta name="dc.modified" content="2024-02-23T12:54:23+00:00" />
+  <meta property="article:modified_time" content="2024-02-23T12:54:23+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -67,9 +67,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://aseedb.github.io/CryoVesNet-Manuscript/" />
   <meta name="citation_pdf_url" content="https://aseedb.github.io/CryoVesNet-Manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://aseedb.github.io/CryoVesNet-Manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://aseedb.github.io/CryoVesNet-Manuscript/v/65b015a07ee3fb3d7b5b7d4cb199c973d3291017/" />
-  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/65b015a07ee3fb3d7b5b7d4cb199c973d3291017/" />
-  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/65b015a07ee3fb3d7b5b7d4cb199c973d3291017/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://aseedb.github.io/CryoVesNet-Manuscript/v/5f79fb0f07387db63c89f8625564944bd08a3da5/" />
+  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/5f79fb0f07387db63c89f8625564944bd08a3da5/" />
+  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/5f79fb0f07387db63c89f8625564944bd08a3da5/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -91,9 +91,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://aseedb.github.io/CryoVesNet-Manuscript/v/65b015a07ee3fb3d7b5b7d4cb199c973d3291017/))
+([permalink](https://aseedb.github.io/CryoVesNet-Manuscript/v/5f79fb0f07387db63c89f8625564944bd08a3da5/))
 was automatically generated
-from [aseedb/CryoVesNet-Manuscript@65b015a](https://github.com/aseedb/CryoVesNet-Manuscript/tree/65b015a07ee3fb3d7b5b7d4cb199c973d3291017)
+from [aseedb/CryoVesNet-Manuscript@5f79fb0](https://github.com/aseedb/CryoVesNet-Manuscript/tree/5f79fb0f07387db63c89f8625564944bd08a3da5)
 on February 23, 2024.
 </em></small>
 
@@ -233,7 +233,9 @@ Such networks have been used in the last couple of years in cryo-ET analysis, ma
 We implemented a 3D U-Net based on CARE building blocks and trained it with manually segmented datasets. 
 This method provided good accuracy and was not strongly affected by the missing wedge artifact. 
 Nevertheless, it was not sufficient for our downstream Pyto analysis.
-Hence, we developed a post-processing method, which transforms the segmented objects into spheres and refines their radius and center location. The workflow includes an outlier detection procedure.
+Hence, we developed a post-processing method, which transforms the segmented objects into spheres and refines their radius and center location.
+The workflow includes outlier detection based on the radial profile features of the segmented objects.
+Then, these mis-segmented vesicles can be either removed or refined.
 This leads to a substantial improvement in accuracy, which is reflected in Pyto performances comparable to those obtained after manual SV segmentation.
 We also introduce a semi-automatic method to quickly fix wrongly segmented or missed SVs.
 
