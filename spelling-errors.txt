@@ -12,7 +12,7 @@ BZ
 centroid
 ChimeraX
 convolutional
-Cryo
+cryo
 CryoET
 CryoVesNet
 CUDA
@@ -85,7 +85,7 @@ subtomogram
 subvolume
 SV
 SVs
-Synapsins
+synapsins
 synaptasome
 synaptosomal
 synaptosome
@@ -97,7 +97,7 @@ tomograms
 TP
 UCSF
 untilted
-voxel
+Voxel
 voxels
 Weigert
 Witz

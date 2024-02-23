@@ -31,8 +31,8 @@ header-includes: |-
   <meta name="dc.date" content="2024-02-23" />
   <meta name="citation_publication_date" content="2024-02-23" />
   <meta property="article:published_time" content="2024-02-23" />
-  <meta name="dc.modified" content="2024-02-23T13:12:35+00:00" />
-  <meta property="article:modified_time" content="2024-02-23T13:12:35+00:00" />
+  <meta name="dc.modified" content="2024-02-23T13:21:17+00:00" />
+  <meta property="article:modified_time" content="2024-02-23T13:21:17+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -67,9 +67,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://aseedb.github.io/CryoVesNet-Manuscript/" />
   <meta name="citation_pdf_url" content="https://aseedb.github.io/CryoVesNet-Manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://aseedb.github.io/CryoVesNet-Manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://aseedb.github.io/CryoVesNet-Manuscript/v/af9b3d80d9fff89644e2c1affe1beb4718adf682/" />
-  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/af9b3d80d9fff89644e2c1affe1beb4718adf682/" />
-  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/af9b3d80d9fff89644e2c1affe1beb4718adf682/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://aseedb.github.io/CryoVesNet-Manuscript/v/38ffb40d39d9b9f57819c82bbd1ad2c1ed3b8061/" />
+  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/38ffb40d39d9b9f57819c82bbd1ad2c1ed3b8061/" />
+  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/38ffb40d39d9b9f57819c82bbd1ad2c1ed3b8061/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -91,9 +91,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://aseedb.github.io/CryoVesNet-Manuscript/v/af9b3d80d9fff89644e2c1affe1beb4718adf682/))
+([permalink](https://aseedb.github.io/CryoVesNet-Manuscript/v/38ffb40d39d9b9f57819c82bbd1ad2c1ed3b8061/))
 was automatically generated
-from [aseedb/CryoVesNet-Manuscript@af9b3d8](https://github.com/aseedb/CryoVesNet-Manuscript/tree/af9b3d80d9fff89644e2c1affe1beb4718adf682)
+from [aseedb/CryoVesNet-Manuscript@38ffb40](https://github.com/aseedb/CryoVesNet-Manuscript/tree/38ffb40d39d9b9f57819c82bbd1ad2c1ed3b8061)
 on February 23, 2024.
 </em></small>
 
@@ -214,9 +214,9 @@ Attempts to perform this task automatically based on classical computer vision a
 To alleviate this situation, we decided to develop an approach based on deep learning.
 
 Convolutional neural networks (CNN) have been successfully employed to segment cryo-ET data [@doi:10.1038/nmeth.4405]. 
-Although sufficient for visualization purposes, this approach does not yield segmentations of tethers and connectors that are accurate enough for further processing in Pyto.
+Although sufficient for visualization purposes, this approach has not met the requirements to segmenting tethers and connectors in Pyto.
 Later on, Imbrosci et al. described accurate SV segmentation of transmission electron microscopy images using CNN, but this approach is limited to 2-dimensional (2D) images of resin-embedded synapses [@doi:10.1523/ENEURO.0400-20.2021].
-In the first study, cryo-ET data are decomposed in individual 2D slices, which are handed as separate inputs to the CNN. 
+In the former study, cryo-ET data are decomposed in individual 2D slices, which are handed as separate inputs to the CNN. 
 The independent output 2D prediction images are then reassembled in a 3-dimensional (3D) stack [@doi:10.1038/nmeth.4405].
 As discussed above, membranes oriented approximately parallel to the plane of the 2D tomographic images are not resolved.
 In the absence of contextual knowledge of the other 2D images, the CNN fails to segment these regions of the vesicles.
