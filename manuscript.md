@@ -9,7 +9,7 @@ keywords:
 - post-processing
 - automation
 lang: en-US
-date-meta: '2024-02-19'
+date-meta: '2024-02-23'
 author-meta:
 - Amin Khosrozadeh
 - Raphaela Seeger
@@ -28,11 +28,11 @@ header-includes: |-
   <meta name="citation_title" content="CryoVesNet: A Dedicated Framework for Vesicle Segmentation in Cryo-Tomograms" />
   <meta property="og:title" content="CryoVesNet: A Dedicated Framework for Vesicle Segmentation in Cryo-Tomograms" />
   <meta property="twitter:title" content="CryoVesNet: A Dedicated Framework for Vesicle Segmentation in Cryo-Tomograms" />
-  <meta name="dc.date" content="2024-02-19" />
-  <meta name="citation_publication_date" content="2024-02-19" />
-  <meta property="article:published_time" content="2024-02-19" />
-  <meta name="dc.modified" content="2024-02-19T12:23:12+00:00" />
-  <meta property="article:modified_time" content="2024-02-19T12:23:12+00:00" />
+  <meta name="dc.date" content="2024-02-23" />
+  <meta name="citation_publication_date" content="2024-02-23" />
+  <meta property="article:published_time" content="2024-02-23" />
+  <meta name="dc.modified" content="2024-02-23T10:52:43+00:00" />
+  <meta property="article:modified_time" content="2024-02-23T10:52:43+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -68,9 +68,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://aseedb.github.io/CryoVesNet-Manuscript/" />
   <meta name="citation_pdf_url" content="https://aseedb.github.io/CryoVesNet-Manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://aseedb.github.io/CryoVesNet-Manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://aseedb.github.io/CryoVesNet-Manuscript/v/03d6f425688ef567a0146dacd62db69d970824c1/" />
-  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/03d6f425688ef567a0146dacd62db69d970824c1/" />
-  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/03d6f425688ef567a0146dacd62db69d970824c1/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://aseedb.github.io/CryoVesNet-Manuscript/v/2024969c15a0de16dbc542e4738d908544190e93/" />
+  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/2024969c15a0de16dbc542e4738d908544190e93/" />
+  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/2024969c15a0de16dbc542e4738d908544190e93/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -92,10 +92,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://aseedb.github.io/CryoVesNet-Manuscript/v/03d6f425688ef567a0146dacd62db69d970824c1/))
+([permalink](https://aseedb.github.io/CryoVesNet-Manuscript/v/2024969c15a0de16dbc542e4738d908544190e93/))
 was automatically generated
-from [aseedb/CryoVesNet-Manuscript@03d6f42](https://github.com/aseedb/CryoVesNet-Manuscript/tree/03d6f425688ef567a0146dacd62db69d970824c1)
-on February 19, 2024.
+from [aseedb/CryoVesNet-Manuscript@2024969](https://github.com/aseedb/CryoVesNet-Manuscript/tree/2024969c15a0de16dbc542e4738d908544190e93)
+on February 23, 2024.
 </em></small>
 
 
@@ -249,7 +249,7 @@ In view of the effort required for the manual segmentation of SVs, we decided to
 Since we had previously manually segmented a number of tomograms with the program IMOD, we could use these segmentations as the ground truth [@doi:10.1006/jsbi.1996.0013].
 We trained a U-Net with a set of 9 segmented tomograms of rat synaptosomes (see Materials and Methods).
 
-We sought to further improve segmentation accuracy by feeding the probability mask output by the U-Net to a series of postprocess steps (Figure {@fig:pipeline}).
+We sought to further improve segmentation accuracy by feeding the probability mask output by the U-Net to a series of post-processing steps (Figure {@fig:pipeline}).
 Three sets of tomograms were used to assess the performances of the pipeline:
 
 1) Train tomograms : The 9 rat synaptosome tomograms that have been used for U-Net training
@@ -257,7 +257,7 @@ Three sets of tomograms were used to assess the performances of the pipeline:
 3) Generalization test tomograms: 12 mouse primary neuronal culture tomograms. 
 
 Each tomogram was split into patches of 32^3^ voxels.
-These patches were fed in the U-Net, which output a probability mask for those patches.
+These patches were fed in the U-Net, which outputs a probability mask for those patches.
 To obtain a complete probability mask, the patches are stitched back together (Figure {@fig:pipeline}, Figure {@fig:suppl_tom_slice}).
 The probability mask was then binarized with a global threshold step.
 

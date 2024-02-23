@@ -11,12 +11,12 @@ Blegdamsvej
 BZ
 centroid
 ChimeraX
-convolutional
+Convolutional
 cryo
 CryoET
 CryoVesNet
 CUDA
-dataset
+Dataset
 datasets
 defocus
 denoising
@@ -50,7 +50,7 @@ julikaradecke
 Keras
 Khosrozadeh
 macromolecule
-Mahalanobis
+mahalanobis
 microtubules
 multipletests
 Napari
@@ -59,7 +59,6 @@ Oxfordshire
 peformed
 pipelineontomo
 pleomorphic
-postprocess
 postprocessing
 pre
 presynaptic

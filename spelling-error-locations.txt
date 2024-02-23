@@ -73,7 +73,6 @@ content/03.results.md:5:segmentations
 content/03.results.md:5:tomograms
 content/03.results.md:6:synaptosomes
 content/03.results.md:6:tomograms
-content/03.results.md:8:postprocess
 content/03.results.md:9:tomograms
 content/03.results.md:11:synaptosome
 content/03.results.md:11:tomograms
