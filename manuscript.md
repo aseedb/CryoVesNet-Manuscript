@@ -31,8 +31,8 @@ header-includes: |-
   <meta name="dc.date" content="2024-02-23" />
   <meta name="citation_publication_date" content="2024-02-23" />
   <meta property="article:published_time" content="2024-02-23" />
-  <meta name="dc.modified" content="2024-02-23T12:22:40+00:00" />
-  <meta property="article:modified_time" content="2024-02-23T12:22:40+00:00" />
+  <meta name="dc.modified" content="2024-02-23T12:26:01+00:00" />
+  <meta property="article:modified_time" content="2024-02-23T12:26:01+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -67,9 +67,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://aseedb.github.io/CryoVesNet-Manuscript/" />
   <meta name="citation_pdf_url" content="https://aseedb.github.io/CryoVesNet-Manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://aseedb.github.io/CryoVesNet-Manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://aseedb.github.io/CryoVesNet-Manuscript/v/8d5c4c975f3f953059f58c56dea694468a74b5a3/" />
-  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/8d5c4c975f3f953059f58c56dea694468a74b5a3/" />
-  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/8d5c4c975f3f953059f58c56dea694468a74b5a3/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://aseedb.github.io/CryoVesNet-Manuscript/v/0d122cf335e1f90643c9dcb857a927459135d4e2/" />
+  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/0d122cf335e1f90643c9dcb857a927459135d4e2/" />
+  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/0d122cf335e1f90643c9dcb857a927459135d4e2/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -91,9 +91,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://aseedb.github.io/CryoVesNet-Manuscript/v/8d5c4c975f3f953059f58c56dea694468a74b5a3/))
+([permalink](https://aseedb.github.io/CryoVesNet-Manuscript/v/0d122cf335e1f90643c9dcb857a927459135d4e2/))
 was automatically generated
-from [aseedb/CryoVesNet-Manuscript@8d5c4c9](https://github.com/aseedb/CryoVesNet-Manuscript/tree/8d5c4c975f3f953059f58c56dea694468a74b5a3)
+from [aseedb/CryoVesNet-Manuscript@0d122cf](https://github.com/aseedb/CryoVesNet-Manuscript/tree/0d122cf335e1f90643c9dcb857a927459135d4e2)
 on February 23, 2024.
 </em></small>
 
@@ -202,7 +202,7 @@ The resolution in the directions close to the axis of the electron beam incident
 This effect, commonly referred to as the missing-wedge artifact, further complicates data analysis. 
 In particular, organelles fully bounded by a membrane appear to have holes at their top and bottom (relative to the electron beam axis) [@doi:10.1146/annurev.biochem.73.011303.074112].
 
-The synapse is a specialized cellular contact at which information is transmitted from a neuron to another, the presynaptic and postsynaptic synapses respectively. 
+The synapse is a specialized cellular contact at which information is transmitted from a neuron to another, the presynaptic and postsynaptic synapses, respectively. 
 In most cases, the signal is transmitted by the release of neurotransmitters into the intercellular space.
 Neurotransmitters are stored in SVs and are released following the fusion of an SV with the presynaptic plasma membrane.
 A synapse contains hundreds of SVs and their mobility and recruitability for neurotransmitter release depends on inter-vesicle interactions through so-called connector structures [@doi:10.1083/jcb.200908082;@doi:10.15252/embr.202255719;@10.1016/j.sbi.2019.01.008;@10.1016/j.yjsbx.2022.100067]. 
