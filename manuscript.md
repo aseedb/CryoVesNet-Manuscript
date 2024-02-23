@@ -31,8 +31,8 @@ header-includes: |-
   <meta name="dc.date" content="2024-02-23" />
   <meta name="citation_publication_date" content="2024-02-23" />
   <meta property="article:published_time" content="2024-02-23" />
-  <meta name="dc.modified" content="2024-02-23T12:26:01+00:00" />
-  <meta property="article:modified_time" content="2024-02-23T12:26:01+00:00" />
+  <meta name="dc.modified" content="2024-02-23T12:35:54+00:00" />
+  <meta property="article:modified_time" content="2024-02-23T12:35:54+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -67,9 +67,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://aseedb.github.io/CryoVesNet-Manuscript/" />
   <meta name="citation_pdf_url" content="https://aseedb.github.io/CryoVesNet-Manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://aseedb.github.io/CryoVesNet-Manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://aseedb.github.io/CryoVesNet-Manuscript/v/0d122cf335e1f90643c9dcb857a927459135d4e2/" />
-  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/0d122cf335e1f90643c9dcb857a927459135d4e2/" />
-  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/0d122cf335e1f90643c9dcb857a927459135d4e2/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://aseedb.github.io/CryoVesNet-Manuscript/v/65b015a07ee3fb3d7b5b7d4cb199c973d3291017/" />
+  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/65b015a07ee3fb3d7b5b7d4cb199c973d3291017/" />
+  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/65b015a07ee3fb3d7b5b7d4cb199c973d3291017/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -91,9 +91,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://aseedb.github.io/CryoVesNet-Manuscript/v/0d122cf335e1f90643c9dcb857a927459135d4e2/))
+([permalink](https://aseedb.github.io/CryoVesNet-Manuscript/v/65b015a07ee3fb3d7b5b7d4cb199c973d3291017/))
 was automatically generated
-from [aseedb/CryoVesNet-Manuscript@0d122cf](https://github.com/aseedb/CryoVesNet-Manuscript/tree/0d122cf335e1f90643c9dcb857a927459135d4e2)
+from [aseedb/CryoVesNet-Manuscript@65b015a](https://github.com/aseedb/CryoVesNet-Manuscript/tree/65b015a07ee3fb3d7b5b7d4cb199c973d3291017)
 on February 23, 2024.
 </em></small>
 
@@ -207,23 +207,23 @@ In most cases, the signal is transmitted by the release of neurotransmitters int
 Neurotransmitters are stored in SVs and are released following the fusion of an SV with the presynaptic plasma membrane.
 A synapse contains hundreds of SVs and their mobility and recruitability for neurotransmitter release depends on inter-vesicle interactions through so-called connector structures [@doi:10.1083/jcb.200908082;@doi:10.15252/embr.202255719;@10.1016/j.sbi.2019.01.008;@10.1016/j.yjsbx.2022.100067]. 
 The characterization of these interactions can be performed automatically with the Pyto software, which implements a hierarchical connectivity approach to segment connectors [@doi:10.1016/j.jsb.2016.10.004]. 
-For accurate connector segmentation, accurate segmentation of SVs is a prerequisite.
+For accurate connector segmentation, precise segmentation of SVs is a prerequisite.
 To date, SV segmentation has been performed manually, but given the large number of SVs per dataset, it is an extremely time-consuming process. 
 Typically, one person spends 3 to 8 working days segmenting a single dataset.
 Attempts to perform this task automatically based on classical computer vision algorithms have not yielded sufficiently accurate results [@doi:10.1016/j.jsb.2014.02.015].  
 To alleviate this situation, we decided to develop an approach based on deep learning.
 
 Convolutional neural networks (CNN) have been successfully employed to segment cryo-ET data [@doi:10.1038/nmeth.4405]. 
-Although entirely satisfying for visualization purposes, this approach has not met the requirements of segmenting tetheres and connectors with Pyto.
+Although sufficient for visualization purposes, this approach has not met the requirements of segmenting tetheres and connectors with Pyto.
 Later on, Imbrosci et al. in their publication described accurate SV segmentation of transmission electron microscopy images using CNN, but it is limited to 2-dimensional (2D) images of resin-embedded synapses [@doi:10.1523/ENEURO.0400-20.2021].
 In the first study, cryo-ET data are decomposed in individual 2D slices, which are handed as separate inputs to the CNN. 
 The independent output 2D prediction images are reassembled in a 3-dimensional (3D) stack [@doi:10.1038/nmeth.4405].
 As discussed above, membranes oriented approximately parallel to the plane of the 2D tomographic images are not resolved.
 In the absence of contextual knowledge of the other 2D images, the CNN fails to segment these regions of the vesicles.
 Hence, spherical vesicles appear open, whereas we expect closed spherical objects.
-Recently Zhou et al. publication addressed this issue by implementing a downstream fitting step based on the Gaussian process, allowing for the smooth closure of the membranes [@doi:10.1016/j.jocs.2022.101904].
+Recently Zhou et al. addressed this issue by implementing a downstream fitting step based on a Gaussian process approach, allowing for the smooth closure of the membranes [@doi:10.1016/j.jocs.2022.101904].
 Ideally, 3D networks should be used to segment 3D cryo-ET data.
-In this context,, several groups have published applications of 3D networks in cryo-ET for other tasks, such as particle picking and classification, in order to perform subtomogram averaging [@10.1038/s41592-022-01746-2;@10.1038/s41592-021-01275-4;@10.1016/j.cmpb.2022.106990]. 
+In this context, several groups have published applications of 3D networks in cryo-ET for other tasks, such as particle picking and classification, in order to perform subtomogram averaging [@10.1038/s41592-022-01746-2;@10.1038/s41592-021-01275-4;@10.1016/j.cmpb.2022.106990]. 
 However, these papers have not focused on accurately segmenting membranes in cryo-ET data.
 
 We opted to employ a 3D U-Net CNN to process 3D images as input [@arxiv:1606.06650]. 
@@ -233,7 +233,7 @@ Such networks have been used in the last couple of years in cryo-ET analysis, ma
 We implemented a 3D U-Net based on CARE building blocks and trained it with manually segmented datasets. 
 This method provided good accuracy and was not strongly affected by the missing wedge artifact. 
 Nevertheless, it was not sufficient for our downstream Pyto analysis.
-Hence, we developed a post-processing method, which transforms the segmented objects into spheres and refines their radius and center location. The procedure includes an outlier detection procedure.
+Hence, we developed a post-processing method, which transforms the segmented objects into spheres and refines their radius and center location. The workflow includes an outlier detection procedure.
 This leads to a substantial improvement in accuracy, which is reflected in Pyto performances comparable to those obtained after manual SV segmentation.
 We also introduce a semi-automatic method to quickly fix wrongly segmented or missed SVs.
 

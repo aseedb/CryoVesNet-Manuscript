@@ -11,12 +11,12 @@ Blegdamsvej
 BZ
 centroid
 ChimeraX
-Convolutional
-Cryo
-cryoET
+convolutional
+cryo
+CryoET
 CryoVesNet
 CUDA
-dataset
+Dataset
 datasets
 defocus
 denoising
@@ -84,7 +84,7 @@ subtomogram
 subvolume
 SV
 SVs
-Synapsins
+synapsins
 synaptasome
 synaptosomal
 synaptosome
@@ -97,7 +97,7 @@ tomograms
 TP
 UCSF
 untilted
-voxel
+Voxel
 voxels
 Weigert
 Witz
