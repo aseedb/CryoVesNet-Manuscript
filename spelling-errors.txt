@@ -12,8 +12,8 @@ BZ
 centroid
 ChimeraX
 Convolutional
-cryo
-CryoET
+Cryo
+cryoET
 CryoVesNet
 CUDA
 dataset
@@ -97,7 +97,7 @@ tomograms
 TP
 UCSF
 untilted
-Voxel
+voxel
 voxels
 Weigert
 Witz
