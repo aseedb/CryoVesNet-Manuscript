@@ -45,6 +45,7 @@ content/02.Introduction.md:21:dataset
 content/02.Introduction.md:25:Convolutional
 content/02.Introduction.md:25:cryo
 content/02.Introduction.md:26:Pyto
+content/02.Introduction.md:26:segmentations
 content/02.Introduction.md:27:Imbrosci
 content/02.Introduction.md:27:SV
 content/02.Introduction.md:28:cryo
