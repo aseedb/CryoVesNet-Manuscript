@@ -13,14 +13,12 @@ centroid
 ChimeraX
 convolutional
 cryo
-CryoET
 CryoVesNet
 CUDA
 dataset
 datasets
 defocus
 denoising
-developement
 Didcot
 downsampling
 endocytic
@@ -85,7 +83,7 @@ subtomogram
 subvolume
 SV
 SVs
-synapsins
+Synapsins
 synaptasome
 synaptosomal
 synaptosome

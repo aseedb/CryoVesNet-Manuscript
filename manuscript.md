@@ -1,5 +1,5 @@
 ---
-title: 'CryoVesNet: A Dedicated Framework for Vesicle Segmentation in Cryo-Tomograms'
+title: 'CryoVesNet: A Dedicated Framework for Vesicle Segmentation in Cryo Electron Tomograms'
 keywords:
 - synapse
 - cryo-electron tomography
@@ -24,15 +24,15 @@ header-includes: |-
   -->
   <meta name="dc.format" content="text/html" />
   <meta property="og:type" content="article" />
-  <meta name="dc.title" content="CryoVesNet: A Dedicated Framework for Vesicle Segmentation in Cryo-Tomograms" />
-  <meta name="citation_title" content="CryoVesNet: A Dedicated Framework for Vesicle Segmentation in Cryo-Tomograms" />
-  <meta property="og:title" content="CryoVesNet: A Dedicated Framework for Vesicle Segmentation in Cryo-Tomograms" />
-  <meta property="twitter:title" content="CryoVesNet: A Dedicated Framework for Vesicle Segmentation in Cryo-Tomograms" />
+  <meta name="dc.title" content="CryoVesNet: A Dedicated Framework for Vesicle Segmentation in Cryo Electron Tomograms" />
+  <meta name="citation_title" content="CryoVesNet: A Dedicated Framework for Vesicle Segmentation in Cryo Electron Tomograms" />
+  <meta property="og:title" content="CryoVesNet: A Dedicated Framework for Vesicle Segmentation in Cryo Electron Tomograms" />
+  <meta property="twitter:title" content="CryoVesNet: A Dedicated Framework for Vesicle Segmentation in Cryo Electron Tomograms" />
   <meta name="dc.date" content="2024-02-23" />
   <meta name="citation_publication_date" content="2024-02-23" />
   <meta property="article:published_time" content="2024-02-23" />
-  <meta name="dc.modified" content="2024-02-23T13:21:17+00:00" />
-  <meta property="article:modified_time" content="2024-02-23T13:21:17+00:00" />
+  <meta name="dc.modified" content="2024-02-23T14:34:11+00:00" />
+  <meta property="article:modified_time" content="2024-02-23T14:34:11+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -67,9 +67,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://aseedb.github.io/CryoVesNet-Manuscript/" />
   <meta name="citation_pdf_url" content="https://aseedb.github.io/CryoVesNet-Manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://aseedb.github.io/CryoVesNet-Manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://aseedb.github.io/CryoVesNet-Manuscript/v/38ffb40d39d9b9f57819c82bbd1ad2c1ed3b8061/" />
-  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/38ffb40d39d9b9f57819c82bbd1ad2c1ed3b8061/" />
-  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/38ffb40d39d9b9f57819c82bbd1ad2c1ed3b8061/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://aseedb.github.io/CryoVesNet-Manuscript/v/31e32ae62f47ed3b2dc6a8cb0b3d5d9b75395031/" />
+  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/31e32ae62f47ed3b2dc6a8cb0b3d5d9b75395031/" />
+  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/31e32ae62f47ed3b2dc6a8cb0b3d5d9b75395031/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -91,9 +91,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://aseedb.github.io/CryoVesNet-Manuscript/v/38ffb40d39d9b9f57819c82bbd1ad2c1ed3b8061/))
+([permalink](https://aseedb.github.io/CryoVesNet-Manuscript/v/31e32ae62f47ed3b2dc6a8cb0b3d5d9b75395031/))
 was automatically generated
-from [aseedb/CryoVesNet-Manuscript@38ffb40](https://github.com/aseedb/CryoVesNet-Manuscript/tree/38ffb40d39d9b9f57819c82bbd1ad2c1ed3b8061)
+from [aseedb/CryoVesNet-Manuscript@31e32ae](https://github.com/aseedb/CryoVesNet-Manuscript/tree/31e32ae62f47ed3b2dc6a8cb0b3d5d9b75395031)
 on February 23, 2024.
 </em></small>
 
@@ -266,7 +266,7 @@ The probability mask was then binarized with a global threshold step.
 
 We noticed that some vesicles were not segmented accurately.
 Indeed, some vesicles that were in close proximity were misidentified as a single entity.
-Separating them necessitated adjusting the detection threshold to a more stringent value.
+Separating them necessitated adjusting the detection threshold to a more stringent value. (see "Adaptative local thresholding" section in Materials and Methods).
 Additionally, there were instances where the detection captured only a fraction of a vesicle, which required loosening the threshold for a more accurate segmentation.
 Yet the assignment of the correct label to each segmented vesicle was essential for the next steps.
 
@@ -305,7 +305,7 @@ You do not see instantly that localized thresholding step affect the performance
 The Radial profile refinement and final outlier removal steps led to a Dice coefficients of 0.86±0.05, 0.83±0.05, and 0.79±0.09, respectively.
 
 In addition to the Dice metric, which is a voxel-wise evaluation, we performed a vesicle-wise  evaluation.
-Namely, we quantified vesicle diameter deviation, and center residual(Figure @fig:dice-improv, Table @tbl:train-tomograms, Table @tbl:test-tomograms, and Table @tbl:neuron-tomograms}.
+Namely, we quantified vesicle diameter deviation, and center residual (Figure @fig:dice-improv, Table @tbl:train-tomograms, Table @tbl:test-tomograms, and Table @tbl:neuron-tomograms).
 Results show that our method transfers well across datasets even without fine-tuning which shows robustness and generalization.
 
 
@@ -363,7 +363,7 @@ Table: **Evaluation of the segmentation on the synaptosomal test set** (same sam
 Table: **Evaluation of the segmentation on the neuronal generalization test set** (different sample type as the train set). For the meaning of the columns, see Table @tbl:train-tomograms.
 {#tbl:neuron-tomograms}
 
-![**Dice developement during post-processing**. Dice development at different post-processing steps of initially predicted mask (different colors correspond to different tomograms): A) synaptosomal train set B) synaptosomal test set c)  neuronal generalization test set](images/seaborn_all.svg){#fig:dice-improv width="15cm"}
+![**Dice development during post-processing**. Dice development at different post-processing steps of initially predicted mask (different colors correspond to different tomograms): A) synaptosomal train set B) synaptosomal test set c)  neuronal generalization test set](images/seaborn_all.svg){#fig:dice-improv width="15cm"}
 
 ### Downstream analysis and application
 Traditional manual segmentation, while precise, is time-consuming and often limited in scope. 
@@ -391,16 +391,16 @@ This enables us to extract a wealth of structural information to better understa
 
 Synaptic vesicles (SVs) play a central role in neurotransmission, facilitating the release of neurotransmitters into the synaptic cleft. 
 These vesicles undergo a series of molecular interactions with various protein complexes, transitioning from a tethered to a primed state, and eventually to neurotransmitter release through exocytosis. 
-Synapsins have been identified as key proteins in regulating the availability of SV for exocytosis.
+Synapsins have been identified as key proteins in regulating the availability of SVs for exocytosis.
 It has been hypothesized that synapsins cross-link SVs, thereby preventing their premature release.
 
-CryoET emerges as a powerful tool to address these challenges, offering unparalleled insights into the molecular architecture of synapses.
+Cryo-ET emerges as a powerful tool to address these challenges, offering unparalleled insights into the molecular architecture of synapses.
 Accurate segmentation of structures such as vesicles, connectors, and tethers is essential for a comprehensive understanding of synaptic function. 
-CryoET, however, is not without its challenges. 
+Cryo-ET, however, is not without its challenges. 
 The technique suffers from a high level of noise and anisotropic resolution (known as the missing wedge phenomenon), which complicates data analysis and interpretation. 
 Addressing these challenges is crucial for obtaining clear and accurate tomographic reconstructions.
 
-### CryoVesNet: Automatic Vesicle Segmentation in CryoET
+### CryoVesNet: Automatic Vesicle Segmentation in Cryo-ET
 
 By utilizing a U-Net architecture trained on manually segmented tomograms and postprocessing steps, we have developed a system that can efficiently and accurately segment synaptic vesicles in tomographic datasets. 
 In particular, CryoVesNet is uniquely insensitive to the missing wedge and can segment complete vesicles even if the membrane is not fully visible in the tomogram.
@@ -418,7 +418,7 @@ By integrating our segmentation approach with tools like Pyto, researchers can g
 Significantly, with minimal adjustments, our method could be adapted to achieve highly precise segmentation of any membrane-enclosed organelle or the plasma membrane itself.
 
 ### Conclusion
-In conclusion, CryoVesNet for automatic segmentation in cryoET represents a significant step forward in the study of synaptic vesicles and their associated structures. 
+In conclusion, CryoVesNet for automatic segmentation in cryo-ET represents a significant step forward in the study of synaptic vesicles and their associated structures. 
 By combining the power of deep learning with optimized post-processing techniques, we offer a solution that is both efficient and precise. 
 As the field of structural cell biology continues to evolve, tools like ours will play a crucial role in advancing our understanding of complex cellular structures and processes.
 
@@ -427,7 +427,6 @@ As the field of structural cell biology continues to evolve, tools like ours wil
 ## Materials and methods
 
 ### Cryo-electron tomography datasets
-They consisted in rat synaptosomes and primary neuron cultures derived from mice.
 In this study, we used datasets originating from either rat synaptosomes or mouse primary neuron cultures.
 They represent a total of 30 tomograms with heterogeneous pixel sizes, defocus and resolution and we split them in three groups:
 1. Train set: 9 synaptosome tomograms were used for training.
@@ -468,7 +467,7 @@ The training was done for 200 epochs.
 
 ### Probability map construction
 Our U-Net model, trained on 32^3^-voxel patches, utilizes a 24-voxel region of interest (ROI).
-To mitigate tiling effects during testing, the network input can be expanded to larger volume like 64 voxels.
+To mitigate tiling effects during testing, the network input can be expanded to accommodate larger volume specifically in this case 64^3^ voxels.
 The tomogram undergoes padding to align with the ROI, ensuring reduced edge artifacts.
 Segmentation is executed in tiles, where the U-Net predicts the synaptic vesicle probability for each tile.
 Only the central part of the segmented patch, corresponding to the ROI, is retained.
