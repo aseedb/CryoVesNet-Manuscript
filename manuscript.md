@@ -31,8 +31,8 @@ header-includes: |-
   <meta name="dc.date" content="2024-02-23" />
   <meta name="citation_publication_date" content="2024-02-23" />
   <meta property="article:published_time" content="2024-02-23" />
-  <meta name="dc.modified" content="2024-02-23T12:05:46+00:00" />
-  <meta property="article:modified_time" content="2024-02-23T12:05:46+00:00" />
+  <meta name="dc.modified" content="2024-02-23T12:11:08+00:00" />
+  <meta property="article:modified_time" content="2024-02-23T12:11:08+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -48,12 +48,11 @@ header-includes: |-
   <meta name="citation_author_institution" content="Graduate School for Cellular and Biomedical Sciences, University of Bern" />
   <meta name="citation_author_orcid" content="0000-0003-4461-3741" />
   <meta name="citation_author" content="Guillaume Witz" />
-  <meta name="citation_author_institution" content="Science IT Service, University of Bern, Bern, Switzerland" />
-  <meta name="citation_author_institution" content="Microscopy Imaging Center, University of Bern, Bern, Switzerland" />
+  <meta name="citation_author_institution" content="Data Science Lab, University of Bern, Bern, Switzerland" />
   <meta name="citation_author_orcid" content="0000-0003-1562-4265" />
   <meta name="citation_author" content="Julika Radecke" />
   <meta name="citation_author_institution" content="Institute of Anatomy, University of Bern, Bern, Switzerland" />
-  <meta name="citation_author_institution" content="Department of Neuroscience, Faculty of Health and Medical Science , 2200 Copenhagen N, University of Copenhagen, Copenhagen, Denmark" />
+  <meta name="citation_author_institution" content="Department of Neuroscience, Faculty of Health and Medical Science, 2200 Copenhagen N, University of Copenhagen, Copenhagen, Denmark" />
   <meta name="citation_author_institution" content="Diamond Light Source Ltd, Didcot, Oxfordshire, United Kingdom" />
   <meta name="citation_author_orcid" content="0000-0002-5815-5537" />
   <meta name="citation_author" content="Jakob B. Sørensen" />
@@ -68,9 +67,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://aseedb.github.io/CryoVesNet-Manuscript/" />
   <meta name="citation_pdf_url" content="https://aseedb.github.io/CryoVesNet-Manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://aseedb.github.io/CryoVesNet-Manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://aseedb.github.io/CryoVesNet-Manuscript/v/4b8984d6d21b330e51bdd8c9e89c7cad54e52f51/" />
-  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/4b8984d6d21b330e51bdd8c9e89c7cad54e52f51/" />
-  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/4b8984d6d21b330e51bdd8c9e89c7cad54e52f51/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://aseedb.github.io/CryoVesNet-Manuscript/v/7c24301a2ce6c9237b346ec8b7b3726e8630d2ff/" />
+  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/7c24301a2ce6c9237b346ec8b7b3726e8630d2ff/" />
+  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/7c24301a2ce6c9237b346ec8b7b3726e8630d2ff/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -92,9 +91,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://aseedb.github.io/CryoVesNet-Manuscript/v/4b8984d6d21b330e51bdd8c9e89c7cad54e52f51/))
+([permalink](https://aseedb.github.io/CryoVesNet-Manuscript/v/7c24301a2ce6c9237b346ec8b7b3726e8630d2ff/))
 was automatically generated
-from [aseedb/CryoVesNet-Manuscript@4b8984d](https://github.com/aseedb/CryoVesNet-Manuscript/tree/4b8984d6d21b330e51bdd8c9e89c7cad54e52f51)
+from [aseedb/CryoVesNet-Manuscript@7c24301](https://github.com/aseedb/CryoVesNet-Manuscript/tree/7c24301a2ce6c9237b346ec8b7b3726e8630d2ff)
 on February 23, 2024.
 </em></small>
 
@@ -128,7 +127,7 @@ on February 23, 2024.
     [0000-0003-1562-4265](https://orcid.org/0000-0003-1562-4265)
     <br>
   <small>
-     Science IT Service, University of Bern, Bern, Switzerland; Microscopy Imaging Center, University of Bern, Bern, Switzerland
+     Data Science Lab, University of Bern, Bern, Switzerland
   </small>
 
 + **Julika Radecke**
@@ -139,7 +138,7 @@ on February 23, 2024.
     [julikaradecke](https://github.com/julikaradecke)
     <br>
   <small>
-     Institute of Anatomy, University of Bern, Bern, Switzerland; Department of Neuroscience, Faculty of Health and Medical Science , 2200 Copenhagen N, University of Copenhagen, Copenhagen, Denmark; Diamond Light Source Ltd, Didcot, Oxfordshire, United Kingdom
+     Institute of Anatomy, University of Bern, Bern, Switzerland; Department of Neuroscience, Faculty of Health and Medical Science, 2200 Copenhagen N, University of Copenhagen, Copenhagen, Denmark; Diamond Light Source Ltd, Didcot, Oxfordshire, United Kingdom
   </small>
 
 + **Jakob B. Sørensen**
@@ -183,7 +182,7 @@ Extremely accurate SV segmentation is a prerequisite to obtaining a faithful rep
 Hundreds to thousands of SVs are present in a typical synapse, and their manual segmentation is a time-consuming exercise, which has been recognized as a bottleneck by the community.
 
 Several attempts to automate vesicle segmentation by classical computer vision or machine learning algorithms have not yielded robust results.
-We addressed this problem by designing a workflow consisting of a U-Net convolutional network followed by post-processing steps.
+We addressed this problem by designing a workflow consisting of a U-Net convolutional segmentation network followed by post-processing steps.
 This combination yields highly accurate results.
 Furthermore, we provide an interactive tool for accurately segmenting spherical vesicles in a fraction of the time required by available manual segmentation methods.
 This tool can be used to segment vesicles that were missed by the fully automatic procedure or to quickly segment a handful of vesicles while bypassing the fully automatic procedure.
