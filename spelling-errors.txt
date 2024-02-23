@@ -1,6 +1,6 @@
 Adaptative
 Amin
-Amira
+amira
 anisotropic
 ANOVA
 azimuthal
@@ -11,9 +11,9 @@ Blegdamsvej
 BZ
 centroid
 ChimeraX
-Convolutional
-Cryo
-cryoET
+convolutional
+cryo
+CryoET
 CryoVesNet
 CUDA
 dataset

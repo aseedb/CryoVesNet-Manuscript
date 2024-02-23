@@ -31,8 +31,8 @@ header-includes: |-
   <meta name="dc.date" content="2024-02-23" />
   <meta name="citation_publication_date" content="2024-02-23" />
   <meta property="article:published_time" content="2024-02-23" />
-  <meta name="dc.modified" content="2024-02-23T12:20:16+00:00" />
-  <meta property="article:modified_time" content="2024-02-23T12:20:16+00:00" />
+  <meta name="dc.modified" content="2024-02-23T12:22:40+00:00" />
+  <meta property="article:modified_time" content="2024-02-23T12:22:40+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -67,9 +67,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://aseedb.github.io/CryoVesNet-Manuscript/" />
   <meta name="citation_pdf_url" content="https://aseedb.github.io/CryoVesNet-Manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://aseedb.github.io/CryoVesNet-Manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://aseedb.github.io/CryoVesNet-Manuscript/v/846436c374cd53a752d52046ed11d2274c0f7fed/" />
-  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/846436c374cd53a752d52046ed11d2274c0f7fed/" />
-  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/846436c374cd53a752d52046ed11d2274c0f7fed/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://aseedb.github.io/CryoVesNet-Manuscript/v/8d5c4c975f3f953059f58c56dea694468a74b5a3/" />
+  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/8d5c4c975f3f953059f58c56dea694468a74b5a3/" />
+  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/8d5c4c975f3f953059f58c56dea694468a74b5a3/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -91,9 +91,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://aseedb.github.io/CryoVesNet-Manuscript/v/846436c374cd53a752d52046ed11d2274c0f7fed/))
+([permalink](https://aseedb.github.io/CryoVesNet-Manuscript/v/8d5c4c975f3f953059f58c56dea694468a74b5a3/))
 was automatically generated
-from [aseedb/CryoVesNet-Manuscript@846436c](https://github.com/aseedb/CryoVesNet-Manuscript/tree/846436c374cd53a752d52046ed11d2274c0f7fed)
+from [aseedb/CryoVesNet-Manuscript@8d5c4c9](https://github.com/aseedb/CryoVesNet-Manuscript/tree/8d5c4c975f3f953059f58c56dea694468a74b5a3)
 on February 23, 2024.
 </em></small>
 
@@ -179,7 +179,7 @@ Communication between neurons relies on neurotransmitter-filled synaptic vesicle
 Recruitment of SVs to the plasma membrane is an important means of regulating exocytosis and is influenced by interactions between SVs.
 Cryo-ET study of the spatial organization of SVs and of their interconnections allows a better understanding of the mechanisms of exocytosis regulation.
 Extremely accurate SV segmentation is a prerequisite to obtaining a faithful representation of SVs state of connectivity.
-Hundreds to thousands of SVs are present in a typical synapse, and their manual segmentation is a time-consuming exercise, which has been recognized as a bottleneck by the community.
+Hundreds to thousands of SVs are present in a typical synapse, and their time-consuming manual segmentation is a bottleneck in this analysis.
 
 Several attempts to automate vesicle segmentation by classical computer vision or machine learning algorithms have not yielded robust results.
 We addressed this problem by designing a workflow consisting of a U-Net convolutional segmentation network followed by post-processing steps.
