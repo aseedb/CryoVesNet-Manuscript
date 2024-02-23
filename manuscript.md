@@ -31,8 +31,8 @@ header-includes: |-
   <meta name="dc.date" content="2024-02-23" />
   <meta name="citation_publication_date" content="2024-02-23" />
   <meta property="article:published_time" content="2024-02-23" />
-  <meta name="dc.modified" content="2024-02-23T12:54:23+00:00" />
-  <meta property="article:modified_time" content="2024-02-23T12:54:23+00:00" />
+  <meta name="dc.modified" content="2024-02-23T13:01:54+00:00" />
+  <meta property="article:modified_time" content="2024-02-23T13:01:54+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -67,9 +67,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://aseedb.github.io/CryoVesNet-Manuscript/" />
   <meta name="citation_pdf_url" content="https://aseedb.github.io/CryoVesNet-Manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://aseedb.github.io/CryoVesNet-Manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://aseedb.github.io/CryoVesNet-Manuscript/v/5f79fb0f07387db63c89f8625564944bd08a3da5/" />
-  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/5f79fb0f07387db63c89f8625564944bd08a3da5/" />
-  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/5f79fb0f07387db63c89f8625564944bd08a3da5/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://aseedb.github.io/CryoVesNet-Manuscript/v/07b58fc42e1d6d256fc3e0c09b1494e84b9e8d9a/" />
+  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/07b58fc42e1d6d256fc3e0c09b1494e84b9e8d9a/" />
+  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/07b58fc42e1d6d256fc3e0c09b1494e84b9e8d9a/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -91,9 +91,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://aseedb.github.io/CryoVesNet-Manuscript/v/5f79fb0f07387db63c89f8625564944bd08a3da5/))
+([permalink](https://aseedb.github.io/CryoVesNet-Manuscript/v/07b58fc42e1d6d256fc3e0c09b1494e84b9e8d9a/))
 was automatically generated
-from [aseedb/CryoVesNet-Manuscript@5f79fb0](https://github.com/aseedb/CryoVesNet-Manuscript/tree/5f79fb0f07387db63c89f8625564944bd08a3da5)
+from [aseedb/CryoVesNet-Manuscript@07b58fc](https://github.com/aseedb/CryoVesNet-Manuscript/tree/07b58fc42e1d6d256fc3e0c09b1494e84b9e8d9a)
 on February 23, 2024.
 </em></small>
 
@@ -214,8 +214,8 @@ Attempts to perform this task automatically based on classical computer vision a
 To alleviate this situation, we decided to develop an approach based on deep learning.
 
 Convolutional neural networks (CNN) have been successfully employed to segment cryo-ET data [@doi:10.1038/nmeth.4405]. 
-Although sufficient for visualization purposes, this approach has not met the requirements of segmenting tetheres and connectors with Pyto.
-Later on, Imbrosci et al. in their publication described accurate SV segmentation of transmission electron microscopy images using CNN, but it is limited to 2-dimensional (2D) images of resin-embedded synapses [@doi:10.1523/ENEURO.0400-20.2021].
+Although sufficient for visualization purposes, this approach has not met the requirements of segmenting tethers and connectors with Pyto.
+Later on, Imbrosci et al. described accurate SV segmentation of transmission electron microscopy images using CNN, but this approach is limited to 2-dimensional (2D) images of resin-embedded synapses [@doi:10.1523/ENEURO.0400-20.2021].
 In the first study, cryo-ET data are decomposed in individual 2D slices, which are handed as separate inputs to the CNN. 
 The independent output 2D prediction images are reassembled in a 3-dimensional (3D) stack [@doi:10.1038/nmeth.4405].
 As discussed above, membranes oriented approximately parallel to the plane of the 2D tomographic images are not resolved.

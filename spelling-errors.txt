@@ -12,7 +12,7 @@ BZ
 centroid
 ChimeraX
 Convolutional
-cryo
+Cryo
 CryoET
 CryoVesNet
 CUDA
@@ -90,11 +90,10 @@ synaptasome
 synaptosomal
 synaptosome
 synaptosomes
-tetheres
 Thermofisher
 thresholding
 tomogram
-Tomograms
+tomograms
 TP
 UCSF
 untilted
