@@ -29,8 +29,7 @@ authors:
     orcid: 0000-0003-1562-4265
     email: guillaume.witz@math.unibe.ch
     affiliations:
-      - Science IT Service, University of Bern, Bern, Switzerland
-      - Microscopy Imaging Center, University of Bern, Bern, Switzerland
+      - Data Science Lab, University of Bern, Bern, Switzerland
   - github: julikaradecke
     name: Julika Radecke
     initials: JR
@@ -38,7 +37,7 @@ authors:
     email: julika.radecke@diamond.ac.uk
     affiliations:
       - Institute of Anatomy, University of Bern, Bern, Switzerland
-      - Department of Neuroscience, Faculty of Health and Medical Science , 2200 Copenhagen N, University of Copenhagen, Copenhagen, Denmark
+      - Department of Neuroscience, Faculty of Health and Medical Science, 2200 Copenhagen N, University of Copenhagen, Copenhagen, Denmark
       - Diamond Light Source Ltd, Didcot, Oxfordshire, United Kingdom
   - name: Jakob B. Sørensen
     initials: JBS
