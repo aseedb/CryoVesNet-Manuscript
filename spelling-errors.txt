@@ -1,6 +1,6 @@
 Adaptative
 Amin
-Amira
+amira
 anisotropic
 ANOVA
 azimuthal
@@ -12,7 +12,7 @@ BZ
 centroid
 ChimeraX
 convolutional
-cryo
+Cryo
 CryoVesNet
 CUDA
 dataset
@@ -95,7 +95,7 @@ tomograms
 TP
 UCSF
 untilted
-Voxel
+voxel
 voxels
 Weigert
 Witz
