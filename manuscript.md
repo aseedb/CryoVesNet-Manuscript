@@ -31,8 +31,8 @@ header-includes: |-
   <meta name="dc.date" content="2024-02-26" />
   <meta name="citation_publication_date" content="2024-02-26" />
   <meta property="article:published_time" content="2024-02-26" />
-  <meta name="dc.modified" content="2024-02-26T09:51:26+00:00" />
-  <meta property="article:modified_time" content="2024-02-26T09:51:26+00:00" />
+  <meta name="dc.modified" content="2024-02-26T12:52:02+00:00" />
+  <meta property="article:modified_time" content="2024-02-26T12:52:02+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -67,9 +67,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://aseedb.github.io/CryoVesNet-Manuscript/" />
   <meta name="citation_pdf_url" content="https://aseedb.github.io/CryoVesNet-Manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://aseedb.github.io/CryoVesNet-Manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://aseedb.github.io/CryoVesNet-Manuscript/v/dc520647787454e4da147fbe4bfbc4a598c46855/" />
-  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/dc520647787454e4da147fbe4bfbc4a598c46855/" />
-  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/dc520647787454e4da147fbe4bfbc4a598c46855/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://aseedb.github.io/CryoVesNet-Manuscript/v/6435f30b98a42d357fe9b80873c0d24d2aae52d2/" />
+  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/6435f30b98a42d357fe9b80873c0d24d2aae52d2/" />
+  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/6435f30b98a42d357fe9b80873c0d24d2aae52d2/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -91,9 +91,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://aseedb.github.io/CryoVesNet-Manuscript/v/dc520647787454e4da147fbe4bfbc4a598c46855/))
+([permalink](https://aseedb.github.io/CryoVesNet-Manuscript/v/6435f30b98a42d357fe9b80873c0d24d2aae52d2/))
 was automatically generated
-from [aseedb/CryoVesNet-Manuscript@dc52064](https://github.com/aseedb/CryoVesNet-Manuscript/tree/dc520647787454e4da147fbe4bfbc4a598c46855)
+from [aseedb/CryoVesNet-Manuscript@6435f30](https://github.com/aseedb/CryoVesNet-Manuscript/tree/6435f30b98a42d357fe9b80873c0d24d2aae52d2)
 on February 26, 2024.
 </em></small>
 
@@ -210,7 +210,7 @@ The characterization of these interactions can be performed automatically with t
 For accurate connector segmentation, precise segmentation of SVs is a prerequisite.
 To date, SV segmentation has been performed manually, but given the large number of SVs per dataset, it is an extremely time-consuming process. 
 Typically, one person spends 3 to 8 working days segmenting a single dataset.
-Attempts to perform this task automatically based on classical computer vision algorithms have not yielded sufficiently accurate results [@doi:10.1016/j.jsb.2014.02.015].  
+Attempts to perform this task automatically based on classical computer vision algorithms have not yielded sufficiently accurate results [@doi:10.1016/j.jsb.2014.02.015].
 To alleviate this situation, we decided to develop an approach based on deep learning.
 
 Convolutional neural networks (CNN) have been successfully employed to segment cryo-ET data [@doi:10.1038/nmeth.4405]. 
