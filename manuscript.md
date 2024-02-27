@@ -9,7 +9,7 @@ keywords:
 - post-processing
 - automation
 lang: en-US
-date-meta: '2024-02-26'
+date-meta: '2024-02-27'
 author-meta:
 - Amin Khosrozadeh
 - Raphaela Seeger
@@ -28,11 +28,11 @@ header-includes: |-
   <meta name="citation_title" content="CryoVesNet: A Dedicated Framework for Synaptic Vesicle Segmentation in Cryo Electron Tomograms" />
   <meta property="og:title" content="CryoVesNet: A Dedicated Framework for Synaptic Vesicle Segmentation in Cryo Electron Tomograms" />
   <meta property="twitter:title" content="CryoVesNet: A Dedicated Framework for Synaptic Vesicle Segmentation in Cryo Electron Tomograms" />
-  <meta name="dc.date" content="2024-02-26" />
-  <meta name="citation_publication_date" content="2024-02-26" />
-  <meta property="article:published_time" content="2024-02-26" />
-  <meta name="dc.modified" content="2024-02-26T16:37:35+00:00" />
-  <meta property="article:modified_time" content="2024-02-26T16:37:35+00:00" />
+  <meta name="dc.date" content="2024-02-27" />
+  <meta name="citation_publication_date" content="2024-02-27" />
+  <meta property="article:published_time" content="2024-02-27" />
+  <meta name="dc.modified" content="2024-02-27T10:19:44+00:00" />
+  <meta property="article:modified_time" content="2024-02-27T10:19:44+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -67,9 +67,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://aseedb.github.io/CryoVesNet-Manuscript/" />
   <meta name="citation_pdf_url" content="https://aseedb.github.io/CryoVesNet-Manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://aseedb.github.io/CryoVesNet-Manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://aseedb.github.io/CryoVesNet-Manuscript/v/a681f0a9f8517cbfe09b2237cb8bfa9618f01e60/" />
-  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/a681f0a9f8517cbfe09b2237cb8bfa9618f01e60/" />
-  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/a681f0a9f8517cbfe09b2237cb8bfa9618f01e60/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://aseedb.github.io/CryoVesNet-Manuscript/v/6435f30b98a42d357fe9b80873c0d24d2aae52d2/" />
+  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/6435f30b98a42d357fe9b80873c0d24d2aae52d2/" />
+  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/6435f30b98a42d357fe9b80873c0d24d2aae52d2/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -91,10 +91,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://aseedb.github.io/CryoVesNet-Manuscript/v/a681f0a9f8517cbfe09b2237cb8bfa9618f01e60/))
+([permalink](https://aseedb.github.io/CryoVesNet-Manuscript/v/6435f30b98a42d357fe9b80873c0d24d2aae52d2/))
 was automatically generated
-from [aseedb/CryoVesNet-Manuscript@a681f0a](https://github.com/aseedb/CryoVesNet-Manuscript/tree/a681f0a9f8517cbfe09b2237cb8bfa9618f01e60)
-on February 26, 2024.
+from [aseedb/CryoVesNet-Manuscript@6435f30](https://github.com/aseedb/CryoVesNet-Manuscript/tree/6435f30b98a42d357fe9b80873c0d24d2aae52d2)
+on February 27, 2024.
 </em></small>
 
 
@@ -588,7 +588,7 @@ This algorithm enables to test multiple false discovery rates in one step and it
 All experiments were conducted using 4 x NVIDIA 2080 Ti GPUs with CUDA 10.1.
 The software environment was set up with Python 3.
 Key libraries and packages used include TensorFlow 2.4.1 with GPU support and Keras 2.4.3.
-Image visualization was achieved with UCSF ChimeraX [@doi:10.1002/pro.4792] and Amira 2022.2 (Thermofisher Scientific).[@doi:10.1016/B978-012387582-2/50040-X]
+Image visualization was achieved with UCSF ChimeraX [@doi:10.1002/pro.4792] and Amira 2022.2 (Thermofisher Scientific).
 Surface rendering was performed by the volume tracer and color zone in UCSF ChimeraX.
 
 ### Manuscript preparation

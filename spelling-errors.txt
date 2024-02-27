@@ -11,7 +11,7 @@ Blegdamsvej
 BZ
 centroid
 ChimeraX
-Convolutional
+convolutional
 cryo
 CryoVesNet
 CUDA
@@ -95,7 +95,7 @@ tomograms
 TP
 UCSF
 untilted
-Voxel
+voxel
 voxels
 Weigert
 Witz
