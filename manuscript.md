@@ -31,8 +31,8 @@ header-includes: |-
   <meta name="dc.date" content="2024-06-09" />
   <meta name="citation_publication_date" content="2024-06-09" />
   <meta property="article:published_time" content="2024-06-09" />
-  <meta name="dc.modified" content="2024-06-09T19:43:06+00:00" />
-  <meta property="article:modified_time" content="2024-06-09T19:43:06+00:00" />
+  <meta name="dc.modified" content="2024-06-09T21:39:22+00:00" />
+  <meta property="article:modified_time" content="2024-06-09T21:39:22+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -67,9 +67,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://aseedb.github.io/CryoVesNet-Manuscript/" />
   <meta name="citation_pdf_url" content="https://aseedb.github.io/CryoVesNet-Manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://aseedb.github.io/CryoVesNet-Manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://aseedb.github.io/CryoVesNet-Manuscript/v/4c44dd077659ea69a2c1d5bd5258aa07bfe226b5/" />
-  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/4c44dd077659ea69a2c1d5bd5258aa07bfe226b5/" />
-  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/4c44dd077659ea69a2c1d5bd5258aa07bfe226b5/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://aseedb.github.io/CryoVesNet-Manuscript/v/06b7f0984a0fd5aefc812284b3c1911495b08c43/" />
+  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/06b7f0984a0fd5aefc812284b3c1911495b08c43/" />
+  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/06b7f0984a0fd5aefc812284b3c1911495b08c43/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -91,9 +91,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://aseedb.github.io/CryoVesNet-Manuscript/v/4c44dd077659ea69a2c1d5bd5258aa07bfe226b5/))
+([permalink](https://aseedb.github.io/CryoVesNet-Manuscript/v/06b7f0984a0fd5aefc812284b3c1911495b08c43/))
 was automatically generated
-from [aseedb/CryoVesNet-Manuscript@4c44dd0](https://github.com/aseedb/CryoVesNet-Manuscript/tree/4c44dd077659ea69a2c1d5bd5258aa07bfe226b5)
+from [aseedb/CryoVesNet-Manuscript@06b7f09](https://github.com/aseedb/CryoVesNet-Manuscript/tree/06b7f0984a0fd5aefc812284b3c1911495b08c43)
 on June 9, 2024.
 </em></small>
 
@@ -629,27 +629,31 @@ The authors declare no competing interests.
 ![**Dice coefficient and loss value for train and validation set.** ](images/traindice.png){#fig:dice width="7cm" tag="EV2"}
 
 ### Expanded View Tables
-|             | Train set | Test set  | Generalization set |
-|-------------|-----------|-----------|--------------------|
-| Probability | 0.64±0.11 | 0.75±0.06 | 0.69±0.09          |
-| Global      | 0.78±0.04 | 0.80±0.04 | 0.66±0.09          |
-| Local       | 0.79±0.03 | 0.81±0.04 | 0.66±0.10          |
-| Sphere      | 0.82±0.09 | 0.82±0.06 | 0.77±0.09          |
-| Outlier     | 0.86±0.05 | 0.83±0.05 | 0.79±0.09          |
-| N           | 9         | 9         | 12                  |
+| Algorithm Step      | Train set   | Test set    | Generalization set |
+|---------------------|-------------|-------------|--------------------|
+| Adaptive Threshold  | 0.80±0.06   | 0.83±0.05   | 0.72±0.11          |
+| Global Threshold    | 0.80±0.05   | 0.83±0.05   | 0.73±0.1           |
+| Outlier Removal     | 0.88±0.04   | 0.85±0.05   | 0.82±0.08          |
+| Radial Profile      | 0.87±0.05   | 0.85±0.05   | 0.82±0.08          |
+| Soft Dice           | 0.80±0.04   | 0.78±0.03   | 0.71±0.08          |
+| N                   | 9           | 9           | 12                 |
+
 
 Table: **Dice statistical values**. Mean ± standard deviation is shown at each step of the pipeline (Network Probability Mask, Global Threshold, Adaptative Localized Threshold, Sphere Radial Profile Refinement, and Outlier Removal). {#tbl:dice-statistics tag="EV1"}
 
-| Comparison             | Train set    | Test set     | Generalization set |
-|------------------------|--------------|--------------|--------------------|
-| Probability vs Global  | **0.014577** | 0.101150     | 0.551700           |
-| Probability vs Local   | **0.013852** | 0.062011     | 0.560081           |
-| Probability vs Sphere  | **0.013852** | 0.062011     | 0.083461           |
-| Probability vs Outlier | **0.008110** | **0.037372** | **0.037372**       |
-| Global vs Local        | 0.668291     | 0.670185     | 1.000000           |
-| Global vs Sphere       | 0.401213     | 0.551700     | **0.028670**       |
-| Global vs Outlier      | 0.062011     | 0.401213     | **0.013852**       |
-| Local vs Sphere        | 0.539697     | 0.731698     | **0.036359**       |
-| Local vs Outlier       | 0.083461     | 0.551700     | **0.014577**       |
-| Sphere vs Outlier      | 0.539697     | 0.753403     | 0.670185           |
+Multiple, all-against-all ANOVA comparisons were performed with Benjamini-Hochberg correction on the Dice values summarized in EV1. Corrected P-values smaller than 0.05 are shown in bold.
+
+| Comparison                          | Train set  | Test set   | Generalization set |
+|-------------------------------------|------------|------------|---------------------|
+| Soft Dice vs Global Threshold       | 0.9360     | **0.0277** | 0.8347              |
+| Soft Dice vs Adaptive Threshold     | 0.9360     | **0.0277** | 0.8347              |
+| Soft Dice vs Radial Profile         | **0.0083** | **0.0137** | **0.0097**          |
+| Soft Dice vs Outlier Removal        | **0.0032** | **0.0239** | **0.0097**          |
+| Global Threshold vs Adaptive Threshold | 0.9361  | 0.9366     | 0.9509              |
+| Global Threshold vs Radial Profile  | **0.0268** | 0.7393     | **0.0370**          |
+| Global Threshold vs Outlier Removal | **0.0083** | 0.7522     | **0.0370**          |
+| Adaptive Threshold vs Radial Profile | **0.0276** | 0.7393     | **0.0370**          |
+| Adaptive Threshold vs Outlier Removal | **0.0083** | 0.7522    | **0.0370**          |
+| Radial Profile vs Outlier Removal   | 0.6328     | 0.9366     | 0.9509              |
+
 Table: **Corrected P-values of Dice values comparisons**. Multiple, all-against-all ANOVA comparisons were performed with Benjamini-Hochberg correction on the Dice values summarized in @tbl:dice-statistics. Corrected P-values smaller than 0.05 are shown in bold. {#tbl:dice-pvalues tag="EV2"}
