@@ -1,7 +1,7 @@
 # Output directory containing the formatted manuscript
 
 The [`gh-pages`](https://github.com/aseedb/CryoVesNet-Manuscript/tree/gh-pages) branch hosts the contents of this directory at <https://aseedb.github.io/CryoVesNet-Manuscript/>.
-The permalink for this webpage version is <https://aseedb.github.io/CryoVesNet-Manuscript/v/e41363fd3a4bde2d16d2ff64e4855df081749967/>.
+The permalink for this webpage version is <https://aseedb.github.io/CryoVesNet-Manuscript/v/7cc28bcd7dac04cff5fb1de0a03c98b4a0268b02/>.
 To redirect to the permalink for the latest manuscript version at anytime, use the link <https://aseedb.github.io/CryoVesNet-Manuscript/v/freeze/>.
 
 ## Files
@@ -35,4 +35,4 @@ Verifying timestamps with the `ots verify` command requires running a local bitc
 ## Source
 
 The manuscripts in this directory were built from
-[`e41363fd3a4bde2d16d2ff64e4855df081749967`](https://github.com/aseedb/CryoVesNet-Manuscript/commit/e41363fd3a4bde2d16d2ff64e4855df081749967).
+[`7cc28bcd7dac04cff5fb1de0a03c98b4a0268b02`](https://github.com/aseedb/CryoVesNet-Manuscript/commit/7cc28bcd7dac04cff5fb1de0a03c98b4a0268b02).
