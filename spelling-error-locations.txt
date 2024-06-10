@@ -308,5 +308,15 @@ content/91.expanded_view_material.md:37:pvalues
 content/statistics.md:2:synaptosomes
 content/statistics.md:3:Dataset
 content/statistics.md:18:Dataset
-content/statistics.md:78:Benjamini
-content/statistics.md:78:Hochberg
+content/statistics.md:63:ANOVA
+content/statistics.md:63:Benjamini
+content/statistics.md:63:Dataset
+content/statistics.md:63:Hochberg
+content/statistics.md:77:ANOVA
+content/statistics.md:77:Benjamini
+content/statistics.md:77:Dataset
+content/statistics.md:77:Hochberg
+content/statistics.md:91:ANOVA
+content/statistics.md:91:Benjamini
+content/statistics.md:91:Dataset
+content/statistics.md:91:Hochberg
