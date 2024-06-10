@@ -31,8 +31,8 @@ header-includes: |-
   <meta name="dc.date" content="2024-06-10" />
   <meta name="citation_publication_date" content="2024-06-10" />
   <meta property="article:published_time" content="2024-06-10" />
-  <meta name="dc.modified" content="2024-06-10T12:23:08+00:00" />
-  <meta property="article:modified_time" content="2024-06-10T12:23:08+00:00" />
+  <meta name="dc.modified" content="2024-06-10T12:26:28+00:00" />
+  <meta property="article:modified_time" content="2024-06-10T12:26:28+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -67,9 +67,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://aseedb.github.io/CryoVesNet-Manuscript/" />
   <meta name="citation_pdf_url" content="https://aseedb.github.io/CryoVesNet-Manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://aseedb.github.io/CryoVesNet-Manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://aseedb.github.io/CryoVesNet-Manuscript/v/75c48a436bb1fa85272a4f8218de191de8cb71d6/" />
-  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/75c48a436bb1fa85272a4f8218de191de8cb71d6/" />
-  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/75c48a436bb1fa85272a4f8218de191de8cb71d6/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://aseedb.github.io/CryoVesNet-Manuscript/v/34407a5595d1673842e5f110b5d9e3f4e05f5c97/" />
+  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/34407a5595d1673842e5f110b5d9e3f4e05f5c97/" />
+  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/34407a5595d1673842e5f110b5d9e3f4e05f5c97/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -91,9 +91,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://aseedb.github.io/CryoVesNet-Manuscript/v/75c48a436bb1fa85272a4f8218de191de8cb71d6/))
+([permalink](https://aseedb.github.io/CryoVesNet-Manuscript/v/34407a5595d1673842e5f110b5d9e3f4e05f5c97/))
 was automatically generated
-from [aseedb/CryoVesNet-Manuscript@75c48a4](https://github.com/aseedb/CryoVesNet-Manuscript/tree/75c48a436bb1fa85272a4f8218de191de8cb71d6)
+from [aseedb/CryoVesNet-Manuscript@34407a5](https://github.com/aseedb/CryoVesNet-Manuscript/tree/34407a5595d1673842e5f110b5d9e3f4e05f5c97)
 on June 10, 2024.
 </em></small>
 
@@ -324,6 +324,7 @@ Results show that our method transfers well across datasets even without fine-tu
 | SC 9          |      0.59       |          0.87          |   0.05    |   1.87±0.91    |           135            |   132    |     3    |    14    |     0.940      |
 | **Average**   |  **0.64±0.11**  |     **0.86±0.05**      | **0.05**  | **1.95±1.08**  |        **152.22**        |**97.00%**| **3.00%**| **7.30%**| **0.95±0.04**  |
 
+### Train Dataset Metrics
 | **_Dataset_** | **_Mask Dice_** | **_Final Label Dice_** | **_δ_d_** | **_Δ_c (nm)_** | **_Number of Vesicles_** | **_TP_** | **_FN_** | **_FP_** | **_F1-score_** |
 |:--------- |:----------- |:------------------ |:----- |:---------- |:-------------------- |:---- |:---- |:---- |:----------:|
 | SC 1 | 0.74 | 0.77 | 0.08 | 2.55±1.91 | 223 | 188 | 35 | 19 | 0.874 |
