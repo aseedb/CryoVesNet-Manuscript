@@ -17,6 +17,7 @@ dependencies:
   - watchdog==2.1.6
   - weasyprint=53.4
   - yamllint=1.26.3
+  - pyrate_limiter
   - pip:
     - cffi==1.15.0
     - errorhandler==2.0.1
