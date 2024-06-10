@@ -9,7 +9,7 @@ keywords:
 - post-processing
 - automation
 lang: en-US
-date-meta: '2024-06-09'
+date-meta: '2024-06-10'
 author-meta:
 - Amin Khosrozadeh
 - Raphaela Seeger
@@ -28,11 +28,11 @@ header-includes: |-
   <meta name="citation_title" content="CryoVesNet: A Dedicated Framework for Synaptic Vesicle Segmentation in Cryo Electron Tomograms" />
   <meta property="og:title" content="CryoVesNet: A Dedicated Framework for Synaptic Vesicle Segmentation in Cryo Electron Tomograms" />
   <meta property="twitter:title" content="CryoVesNet: A Dedicated Framework for Synaptic Vesicle Segmentation in Cryo Electron Tomograms" />
-  <meta name="dc.date" content="2024-06-09" />
-  <meta name="citation_publication_date" content="2024-06-09" />
-  <meta property="article:published_time" content="2024-06-09" />
-  <meta name="dc.modified" content="2024-06-09T21:42:16+00:00" />
-  <meta property="article:modified_time" content="2024-06-09T21:42:16+00:00" />
+  <meta name="dc.date" content="2024-06-10" />
+  <meta name="citation_publication_date" content="2024-06-10" />
+  <meta property="article:published_time" content="2024-06-10" />
+  <meta name="dc.modified" content="2024-06-10T08:44:53+00:00" />
+  <meta property="article:modified_time" content="2024-06-10T08:44:53+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -67,9 +67,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://aseedb.github.io/CryoVesNet-Manuscript/" />
   <meta name="citation_pdf_url" content="https://aseedb.github.io/CryoVesNet-Manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://aseedb.github.io/CryoVesNet-Manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://aseedb.github.io/CryoVesNet-Manuscript/v/fb5032d451abae7fabec2bb222884d396341524b/" />
-  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/fb5032d451abae7fabec2bb222884d396341524b/" />
-  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/fb5032d451abae7fabec2bb222884d396341524b/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://aseedb.github.io/CryoVesNet-Manuscript/v/d4ca232b606f90854930542f4cd054ed6df1eb98/" />
+  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/d4ca232b606f90854930542f4cd054ed6df1eb98/" />
+  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/d4ca232b606f90854930542f4cd054ed6df1eb98/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -91,10 +91,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://aseedb.github.io/CryoVesNet-Manuscript/v/fb5032d451abae7fabec2bb222884d396341524b/))
+([permalink](https://aseedb.github.io/CryoVesNet-Manuscript/v/d4ca232b606f90854930542f4cd054ed6df1eb98/))
 was automatically generated
-from [aseedb/CryoVesNet-Manuscript@fb5032d](https://github.com/aseedb/CryoVesNet-Manuscript/tree/fb5032d451abae7fabec2bb222884d396341524b)
-on June 9, 2024.
+from [aseedb/CryoVesNet-Manuscript@d4ca232](https://github.com/aseedb/CryoVesNet-Manuscript/tree/d4ca232b606f90854930542f4cd054ed6df1eb98)
+on June 10, 2024.
 </em></small>
 
 
