@@ -54,8 +54,12 @@ jobs:
           fetch-depth: 0
       - name: Cleanup Disk Space Before
         run: |
-          docker system prune --all --force
-          sudo rm -rf /home/runner/work/*
+          sudo apt-get clean
+          sudo apt-get autoremove --yes
+          docker system prune --all --force --volumes
+          sudo rm -rf /var/lib/apt/lists/*
+          sudo rm -rf /tmp/*
+          sudo rm -rf /var/tmp/*
       - name: Set Environment Variables (Workflow Dispatch)
         if: github.event_name == 'workflow_dispatch'
         run: |
