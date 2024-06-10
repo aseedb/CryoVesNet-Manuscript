@@ -17,7 +17,6 @@ dependencies:
   - watchdog==2.1.6
   - weasyprint=53.4
   - yamllint=1.26.3
-  - pyrate_limiter
   - pip:
     - cffi==1.15.0
     - errorhandler==2.0.1
@@ -35,4 +34,5 @@ dependencies:
     - pybase62==0.4.3
     - pysha3==1.0.2
     - python-bitcoinlib==0.10.2
+    - pyrate_limiter==2.10.0 
     - pyyaml
