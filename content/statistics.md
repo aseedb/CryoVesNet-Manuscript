@@ -60,31 +60,44 @@
 | N                  | 9         | 9         | 12                 |
 
 
+### Train Dataset ANOVA Results with Benjamini-Hochberg Correction
+| Comparison                          | Original P-Value | Corrected P-Value | Significant |
+|-------------------------------------|------------------|-------------------|-------------|
+| Soft Dice vs Global Threshold       | 0.842403         | 0.9360            | False       |
+| Soft Dice vs Adaptive Threshold     | 0.771617         | 0.9360            | False       |
+| Soft Dice vs Radial Profile         | 0.002580         | **0.0083**        | True        |
+| Soft Dice vs Outlier Removal        | 0.000322         | **0.0032**        | True        |
+| Global Threshold vs Adaptive Threshold | 0.936058      | 0.9361            | False       |
+| Global Threshold vs Radial Profile  | 0.013383         | **0.0268**        | True        |
+| Global Threshold vs Outlier Removal | 0.002629         | **0.0083**        | True        |
+| Adaptive Threshold vs Radial Profile| 0.016572         | **0.0276**        | True        |
+| Adaptive Threshold vs Outlier Removal | 0.003329       | **0.0083**        | True        |
+| Radial Profile vs Outlier Removal   | 0.442988         | 0.6328            | False       |
 
-### Uncorrected p-values of Dice for all steps
-| Comparison             | SC        | ST        | Neuron   |
-|------------------------|-----------|-----------|----------|
-| Probability vs Global  | **0.002459**  | 0.053947  | 0.422970 |
-| Probability vs Local   | **0.001154**  | **0.023858**  | 0.448065 |
-| Probability vs Sphere  | **0.001575**  | **0.024900**  | **0.040463** |
-| Probability vs Outlier | **0.000270**  | **0.012109**  | **0.012457** |
-| Global vs Local        | 0.556909  | 0.603166  | 1.000000 |
-| Global vs Sphere       | 0.240728  | 0.417627  | **0.006690** |
-| Global vs Outlier      | **0.026871**  | 0.229960  | **0.001847** |
-| Local vs Sphere        | 0.356892  | 0.682918  | **0.009696** |
-| Local vs Outlier       | **0.041731**  | 0.417627  | **0.002915** |
-| Sphere vs Outlier      | 0.359798  | 0.728289  | 0.591689 |
+### Test Dataset ANOVA Results with Benjamini-Hochberg Correction
+| Comparison                          | Original P-Value | Corrected P-Value | Significant |
+|-------------------------------------|------------------|-------------------|-------------|
+| Soft Dice vs Global Threshold       | 0.011068         | **0.0277**        | True        |
+| Soft Dice vs Adaptive Threshold     | 0.010323         | **0.0277**        | True        |
+| Soft Dice vs Radial Profile         | 0.001371         | **0.0137**        | True        |
+| Soft Dice vs Outlier Removal        | 0.004778         | **0.0239**        | True        |
+| Global Threshold vs Adaptive Threshold | 0.936559      | 0.9366            | False       |
+| Global Threshold vs Radial Profile  | 0.392195         | 0.7393            | False       |
+| Global Threshold vs Outlier Removal | 0.547109         | 0.7522            | False       |
+| Adaptive Threshold vs Radial Profile| 0.443555         | 0.7393            | False       |
+| Adaptive Threshold vs Outlier Removal | 0.601783       | 0.7522            | False       |
+| Radial Profile vs Outlier Removal   | 0.844485         | 0.9366            | False       |
 
-### Benjamini-Hochberg Corrected p-values of Dice for all steps
-| Comparison             | SC        | ST        | Neuron   |
-|------------------------|-----------|-----------|----------|
-| Probability vs Global  | **0.014577**  | 0.101150  | 0.551700 |
-| Probability vs Local   | **0.013852**  | 0.062011  | 0.560081 |
-| Probability vs Sphere  | **0.013852**  | 0.062011  | 0.083461 |
-| Probability vs Outlier | **0.008110**  | **0.037372**  | **0.037372** |
-| Global vs Local        | 0.668291  | 0.670185  | 1.000000 |
-| Global vs Sphere       | 0.401213  | 0.551700  | **0.028670** |
-| Global vs Outlier      | 0.062011  | 0.401213  | **0.013852** |
-| Local vs Sphere        | 0.539697  | 0.731698  | **0.036359** |
-| Local vs Outlier       | 0.083461  | 0.551700  | **0.014577** |
-| Sphere vs Outlier      | 0.539697  | 0.753403  | 0.670185 |
+### Generalization Dataset ANOVA Results with Benjamini-Hochberg Correction
+| Comparison                          | Original P-Value | Corrected P-Value | Significant |
+|-------------------------------------|------------------|-------------------|-------------|
+| Soft Dice vs Global Threshold       | 0.604268         | 0.8347            | False       |
+| Soft Dice vs Adaptive Threshold     | 0.667768         | 0.8347            | False       |
+| Soft Dice vs Radial Profile         | 0.001950         | **0.0097**        | True        |
+| Soft Dice vs Outlier Removal        | 0.001816         | **0.0097**        | True        |
+| Global Threshold vs Adaptive Threshold | 0.950860      | 0.9509            | False       |
+| Global Threshold vs Radial Profile  | 0.021154         | **0.0370**        | True        |
+| Global Threshold vs Outlier Removal | 0.019223         | **0.0370**        | True        |
+| Adaptive Threshold vs Radial Profile| 0.022216         | **0.0370**        | True        |
+| Adaptive Threshold vs Outlier Removal | 0.020209       | **0.0370**        | True        |
+| Radial Profile vs Outlier Removal   | 0.936368         | 0.9509            | False       |
