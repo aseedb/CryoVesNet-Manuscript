@@ -12,7 +12,7 @@ BZ
 centroid
 ChimeraX
 Convolutional
-Cryo
+cryo
 CryoVesNet
 CUDA
 dataset
@@ -48,7 +48,7 @@ julikaradecke
 Keras
 Khosrozadeh
 macromolecule
-mahalanobis
+Mahalanobis
 microtubules
 mis
 multipletests

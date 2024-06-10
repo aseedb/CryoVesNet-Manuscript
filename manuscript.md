@@ -31,8 +31,8 @@ header-includes: |-
   <meta name="dc.date" content="2024-06-10" />
   <meta name="citation_publication_date" content="2024-06-10" />
   <meta property="article:published_time" content="2024-06-10" />
-  <meta name="dc.modified" content="2024-06-10T12:26:28+00:00" />
-  <meta property="article:modified_time" content="2024-06-10T12:26:28+00:00" />
+  <meta name="dc.modified" content="2024-06-10T16:24:14+00:00" />
+  <meta property="article:modified_time" content="2024-06-10T16:24:14+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -67,9 +67,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://aseedb.github.io/CryoVesNet-Manuscript/" />
   <meta name="citation_pdf_url" content="https://aseedb.github.io/CryoVesNet-Manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://aseedb.github.io/CryoVesNet-Manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://aseedb.github.io/CryoVesNet-Manuscript/v/34407a5595d1673842e5f110b5d9e3f4e05f5c97/" />
-  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/34407a5595d1673842e5f110b5d9e3f4e05f5c97/" />
-  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/34407a5595d1673842e5f110b5d9e3f4e05f5c97/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://aseedb.github.io/CryoVesNet-Manuscript/v/a71d3695e193b8b9663bf28758484964f1a64659/" />
+  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/a71d3695e193b8b9663bf28758484964f1a64659/" />
+  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/a71d3695e193b8b9663bf28758484964f1a64659/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -91,9 +91,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://aseedb.github.io/CryoVesNet-Manuscript/v/34407a5595d1673842e5f110b5d9e3f4e05f5c97/))
+([permalink](https://aseedb.github.io/CryoVesNet-Manuscript/v/a71d3695e193b8b9663bf28758484964f1a64659/))
 was automatically generated
-from [aseedb/CryoVesNet-Manuscript@34407a5](https://github.com/aseedb/CryoVesNet-Manuscript/tree/34407a5595d1673842e5f110b5d9e3f4e05f5c97)
+from [aseedb/CryoVesNet-Manuscript@a71d369](https://github.com/aseedb/CryoVesNet-Manuscript/tree/a71d3695e193b8b9663bf28758484964f1a64659)
 on June 10, 2024.
 </em></small>
 
@@ -310,74 +310,64 @@ Results show that our method transfers well across datasets even without fine-tu
 
 
 
-
-| **_Dataset_** | **_Mask Dice_** | **_Final Label Dice_** | **_$$\delta_d$$_** | **_$$\Delta_c (nm)$$_**  | **_Number of Vesicles_** | **_TP_** | **_FN_** | **_FP_** | **_F1-score_** |
-|---------------|:---------------:|:----------------------:|:---------:|:--------------:|:------------------------:|:--------:|:--------:|:--------:|:--------------:|
-| SC 1          |      0.44       |          0.73          |   0.07    |   2.55±1.56    |           223            |   198    |    26    |    49    |     0.841      |
-| SC 2          |      0.80       |          0.90          |   0.05    |   2.12±1.06    |           105            |   103    |     2    |     1    |     0.986      |
-| SC 3          |      0.67       |          0.90          |   0.05    |   1.86±1.24    |           128            |   127    |     1    |     6    |     0.973      |
-| SC 4          |      0.62       |          0.89          |   0.03    |   1.78±0.92    |           144            |   141    |     3    |     4    |     0.976      |
-| SC 5          |      0.58       |          0.87          |   0.04    |   1.86±1.00    |           214            |   209    |     5    |    13    |     0.959      |
-| SC 6          |      0.56       |          0.84          |   0.04    |   1.92±1.05    |           104            |   102    |     2    |    16    |     0.919      |
-| SC 7          |      0.78       |          0.88          |   0.06    |   1.86±0.90    |           184            |   184    |     0    |    16    |     0.958      |
-| SC 8          |      0.75       |          0.90          |   0.05    |   1.70±0.93    |           132            |   126    |     6    |     1    |     0.973      |
-| SC 9          |      0.59       |          0.87          |   0.05    |   1.87±0.91    |           135            |   132    |     3    |    14    |     0.940      |
-| **Average**   |  **0.64±0.11**  |     **0.86±0.05**      | **0.05**  | **1.95±1.08**  |        **152.22**        |**97.00%**| **3.00%**| **7.30%**| **0.95±0.04**  |
-
 ### Train Dataset Metrics
+
 | **_Dataset_** | **_Mask Dice_** | **_Final Label Dice_** | **_δ_d_** | **_Δ_c (nm)_** | **_Number of Vesicles_** | **_TP_** | **_FN_** | **_FP_** | **_F1-score_** |
-|:--------- |:----------- |:------------------ |:----- |:---------- |:-------------------- |:---- |:---- |:---- |:----------:|
+|:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-:|
 | SC 1 | 0.74 | 0.77 | 0.08 | 2.55±1.91 | 223 | 188 | 35 | 19 | 0.874 |
-| SC 2 | 0.88 | 0.91 | 0.06 | 2.08±1.06 | 105 | 104 | 1  | 1  | 0.990 |
-| SC 3 | 0.87 | 0.90 | 0.05 | 1.77±0.85 | 128 | 128 | 0  | 2  | 0.992 |
-| SC 4 | 0.83 | 0.90 | 0.03 | 1.78±0.9  | 144 | 138 | 6  | 2  | 0.972 |
-| SC 5 | 0.80 | 0.85 | 0.04 | 1.84±1.01 | 214 | 190 | 24 | 3  | 0.934 |
-| SC 6 | 0.81 | 0.82 | 0.04 | 1.86±1.03 | 104 | 102 | 2  | 7  | 0.958 |
-| SC 7 | 0.84 | 0.86 | 0.06 | 1.92±0.94 | 184 | 184 | 0  | 10 | 0.974 |
-| SC 8 | 0.86 | 0.88 | 0.05 | 1.76±1.12 | 132 | 128 | 4  | 1  | 0.981 |
-| SC 9 | 0.83 | 0.89 | 0.05 | 2.0±1.15  | 135 | 132 | 3  | 3  | 0.978 |
+| SC 2 | 0.88 | 0.91 | 0.06 | 2.08±1.06 | 105 | 104 | 1 | 1 | 0.990 |
+| SC 3 | 0.87 | 0.90 | 0.05 | 1.77±0.85 | 128 | 128 | 0 | 2 | 0.992 |
+| SC 4 | 0.83 | 0.90 | 0.03 | 1.78±0.9 | 144 | 138 | 6 | 2 | 0.972 |
+| SC 5 | 0.80 | 0.85 | 0.04 | 1.84±1.01 | 214 | 190 | 24 | 3 | 0.934 |
+| SC 6 | 0.81 | 0.82 | 0.04 | 1.86±1.03 | 104 | 102 | 2 | 7 | 0.958 |
+| SC 7 | 0.84 | 0.86 | 0.06 | 1.92±0.94 | 184 | 184 | 0 | 10 | 0.974 |
+| SC 8 | 0.86 | 0.88 | 0.05 | 1.76±1.12 | 132 | 128 | 4 | 1 | 0.981 |
+| SC 9 | 0.83 | 0.89 | 0.05 | 2.0±1.15 | 135 | 132 | 3 | 3 | 0.978 |
 | **Average** | **0.83±0.04** | **0.86±0.05** | **0.05±0.01** | **1.95±1.11** | **152.11** | **95.64%** | **4.36%** | **3.25%** | **0.961±0.037** |
 
 Table: **Evaluation of the segmentation on the synaptosomal train set**. Mask Dice: Mask Dice coefficient for the predicted mask; Final Label Dice: Dice coefficient after post-processing; δ d: average relative diameter deviation over all correctly detected vesicles; Δ c: center residual error average and standard deviation (nm); Number of Vesicles: number of expected vesicles; TP: True Positive; FN: False Negative; FP: False Positive; F1-score: F1-score based on TP, FN, and FP.
 {#tbl:train-tomograms}
 
+### Test Dataset Metrics
 
-| **_Dataset_** | **_Mask Dice_** | **_Final Label Dice_** | **_$$\delta_d$$_** | **_$$\Delta_c (nm)$$_**  | **_Number of Vesicles_** | **_TP_** | **_FN_** | **_FP_** | **_F1-score_** |
-|---------------|:---------------:|:----------------------:|:---------:|:--------------:|:------------------------:|:--------:|:--------:|:--------:|:--------------:|
-| SC 10         |      0.75       |          0.88          |   0.07    |   1.86±1.18    |           129            |   123    |     6    |     5    |     0.957      |
-| ST 1          |      0.75       |          0.83          |   0.11    |   2.66±1.52    |           699            |   687    |    12    |    33    |     0.968      |
-| ST 2          |      0.74       |          0.77          |   0.11    |   2.27±1.84    |           122            |   117    |     5    |     2    |     0.971      |
-| ST 3          |      0.72       |          0.74          |   0.11    |   3.64±2.22    |           434            |   397    |    37    |    57    |     0.894      |
-| ST 5          |      0.77       |          0.85          |   0.08    |   2.20±1.26    |           535            |   526    |     9    |    25    |     0.969      |
-| ST 6          |       0.60      |          0.83          |   0.07    |   2.02±1.12    |           373            |   353    |    20    |    42    |     0.919      |
-| ST 7          |       0.80      |          0.83          |   0.06    |   2.22±1.14    |           110            |   107    |     3    |     9    |     0.947      |
-| ST 8          |      0.83       |          0.91          |   0.04    |   2.09±1.04    |           100            |    99    |     1    |     2    |     0.985      |
-| ST 10         |      0.77       |          0.86          |   0.05    |   1.96±1.04    |            77            |    74    |     3    |     6    |     0.943      |
-| **Average**   |  **0.75±0.06**  |     **0.83±0.05**      | **0.08**  | **2.32±1.43**  |        **286.56**        |**96.30%**| **3.70%**| **6.10%**| **0.95±0.03**  |
+| **_Dataset_** | **_Mask Dice_** | **_Final Label Dice_** | **_δ_d_** | **_Δ_c (nm)_** | **_Number of Vesicles_** | **_TP_** | **_FN_** | **_FP_** | **_F1-score_** |
+|:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-:|
+| ST 1 | 0.84 | 0.85 | 0.11 | 2.61±1.51 | 699 | 683 | 16 | 2 | 0.987 |
+| ST 2 | 0.80 | 0.82 | 0.11 | 2.31±1.72 | 122 | 117 | 5 | 1 | 0.975 |
+| ST 3 | 0.74 | 0.75 | 0.10 | 3.6±2.28 | 434 | 380 | 54 | 22 | 0.909 |
+| ST 5 | 0.84 | 0.87 | 0.08 | 2.22±1.27 | 535 | 514 | 21 | 15 | 0.966 |
+| ST 6 | 0.81 | 0.83 | 0.06 | 1.98±0.99 | 373 | 355 | 18 | 23 | 0.945 |
+| ST 7 | 0.83 | 0.85 | 0.06 | 2.26±1.23 | 110 | 107 | 3 | 7 | 0.955 |
+| ST 8 | 0.87 | 0.91 | 0.04 | 2.14±1.05 | 100 | 100 | 0 | 1 | 0.995 |
+| SC 10 | 0.86 | 0.89 | 0.07 | 1.92±1.22 | 129 | 127 | 2 | 5 | 0.973 |
+| ST 10 | 0.86 | 0.89 | 0.04 | 1.89±1.0 | 76 | 75 | 1 | 5 | 0.962 |
+| **Average** | **0.83±0.04** | **0.85±0.05** | **0.07±0.03** | **2.33±1.36** | **286.44** | **96.31%** | **3.69%** | **3.63%** | **0.963±0.025** |
 
 Table: **Evaluation of the segmentation on the synaptosomal test set** (same sample type as the train set). For the meaning of the columns, see Table @tbl:train-tomograms.
 {#tbl:test-tomograms}
 
-| **_Dataset_** | **_Mask Dice_** | **_Final Label Dice_** | **_$$\delta_d$$_** | **_$$\Delta_c (nm)$$_** | **_Number of Vesicles_** | **_TP_** | **_FN_** | **_FP_** | **_F1-score_** |
-|---------------|:---------------:|:----------------------:|:------------------:|:-----------------------:|:------------------------:|:--------:|:--------:|:--------:|:--------------:|
-| N 133         |      0.76       |          0.86          |        0.05        |        2.16±1.32        |           523            |   467    |    56    |     8    |     0.936      |
-| N 123         |      0.64       |          0.71          |        0.05        |        2.05±1.18        |            66            |    58    |     8    |     2    |     0.921      |
-| N 84          |      0.86       |          0.89          |        0.06        |        1.44±0.75        |           498            |   484    |    14    |     1    |     0.985      |
-| N 134         |      0.56       |          0.67          |        0.09        |        2.87±2.50        |           638            |   384    |   254    |    63    |     0.708      |
-| N 115         |      0.57       |          0.63          |        0.08        |        3.56±3.23        |           170            |   123    |    47    |    32    |     0.757      |
-| N 102         |      0.73       |          0.86          |        0.05        |        1.47±0.79        |           103            |    86    |    17    |     1    |     0.905      |
-| N 80          |       0.70      |          0.81          |        0.07        |        2.67±2.00        |           111            |   102    |     9    |     3    |     0.944      |
-| N 114         |      0.65       |          0.73          |        0.07        |        2.68±1.79        |           131            |    93    |    38    |     9    |     0.798      |
-| N 132         |      0.69       |          0.87          |        0.03        |        1.65±1.26        |           135            |   129    |     6    |    32    |     0.872      |
-| N 73          |      0.78       |          0.83          |        0.06        |        2.93±2.00        |           526            |   483    |    43    |     2    |     0.955      |
-| N 128         |      0.67       |          0.85          |        0.04        |        2.33±1.70        |           252            |   232    |    20    |    19    |     0.922      |
-| N 116         |      0.62       |          0.73          |        0.07        |        2.38±1.82        |           296            |   207    |    89    |    35    |     0.770      |
-| **Average**   |  **0.69±0.09**  |     **0.79±0.09**      |      **0.06**      |      **2.35±1.83**      |        **287.42**        |**83.60%**|**16.40%**|**7.90%**| **0.87±0.09**  |
+### Generalization Dataset Metrics
+
+| **_Dataset_** | **_Mask Dice_** | **_Final Label Dice_** | **_δ_d_** | **_Δ_c (nm)_** | **_Number of Vesicles_** | **_TP_** | **_FN_** | **_FP_** | **_F1-score_** |
+|:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-:|
+| N 134 | 0.75 | 0.81 | 0.08 | 2.73±2.53 | 629 | 530 | 99 | 79 | 0.856 |
+| N 80 | 0.77 | 0.79 | 0.07 | 2.78±2.73 | 110 | 101 | 9 | 13 | 0.902 |
+| N 73 | 0.77 | 0.83 | 0.08 | 3.14±2.77 | 510 | 480 | 30 | 39 | 0.933 |
+| N 133 | 0.83 | 0.90 | 0.05 | 2.21±2.06 | 516 | 498 | 18 | 12 | 0.971 |
+| N 116 | 0.75 | 0.82 | 0.07 | 2.57±2.59 | 294 | 281 | 13 | 44 | 0.908 |
+| N 84 | 0.87 | 0.90 | 0.07 | 1.6±1.89 | 481 | 464 | 17 | 29 | 0.953 |
+| N 115 | 0.56 | 0.65 | 0.08 | 3.41±3.11 | 163 | 130 | 33 | 62 | 0.732 |
+| N 102 | 0.81 | 0.88 | 0.05 | 1.52±0.83 | 103 | 96 | 7 | 2 | 0.955 |
+| N 123 | 0.63 | 0.68 | 0.05 | 2.3±1.8 | 65 | 59 | 6 | 6 | 0.908 |
+| N 132 | 0.80 | 0.87 | 0.04 | 1.61±1.03 | 135 | 125 | 10 | 17 | 0.903 |
+| N 114 | 0.76 | 0.83 | 0.07 | 2.71±2.07 | 127 | 115 | 12 | 23 | 0.868 |
+| N 128 | 0.82 | 0.89 | 0.04 | 2.11±1.17 | 248 | 239 | 9 | 23 | 0.937 |
+| **Average** | **0.76±0.09** | **0.82±0.08** | **0.06±0.02** | **2.39±2.05** | **281.75** | **91.83%** | **8.17%** | **11.22%** | **0.902±0.064** |
 
 Table: **Evaluation of the segmentation on the neuronal generalization test set** (different sample type as the train set). For the meaning of the columns, see Table @tbl:train-tomograms.
 {#tbl:neuron-tomograms}
 
-![**Dice development during post-processing**. Dice development at different post-processing steps of initially predicted mask (different colors correspond to different tomograms): A) synaptosomal train set B) synaptosomal test set c)  neuronal generalization test set](images/seaborn_all.svg){#fig:dice-improv width="15cm"}
+![**Dice development during post-processing**. Dice development at different post-processing steps of initially predicted mask (different colors correspond to different tomograms): A) synaptosomal train set B) synaptosomal test set c)  neuronal generalization test set](images/multi_panel_plot_vertical_new.png){#fig:dice-improv width="15cm"}
 
 ### Downstream analysis and application
 Traditional manual segmentation, while precise, is time-consuming and often limited in scope. 
@@ -396,7 +386,7 @@ This segmentation process is hierarchical and connectivity-based, detecting dens
 CryoVesNet has been designed to be compatible with Pyto and an application is demonstrated in Figure {@fig:amira}.
 This enables us to extract a wealth of structural information to better understand the structural basis of synaptic vesicle exocytosis regulation.
 
-![**3D model of a cultured mouse neuron synapse**. A: slice through a tomogram. B: Segmentation of plasma membrane (light blue), mitochondria (dark blue), endosomes (green), microtubules (dark magenta). C: Vesicles (yellow) and connectors (pink) segmented with CryoVesNet and Pyto, respectively. D: Combination of B and C. Bar, 100 nm.](images/amira_all.png){#fig:amira width="15cm"}
+![**3D model of a cultured mouse neuron synapse**. A: slice through a tomogram. B: Segmentation of plasma membrane (light blue), mitochondria (dark blue), endosomes (green), microtubules (dark magenta). C: Vesicles (yellow) and connectors (pink) segmented with CryoVesNet and Pyto, respectively. D: Combination of B and C. Bar, 100 nm.](images/neuron_amira_new.png){#fig:amira width="15cm"}
 
 
 ## Discussion
