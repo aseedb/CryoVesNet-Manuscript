@@ -31,8 +31,8 @@ header-includes: |-
   <meta name="dc.date" content="2024-06-10" />
   <meta name="citation_publication_date" content="2024-06-10" />
   <meta property="article:published_time" content="2024-06-10" />
-  <meta name="dc.modified" content="2024-06-10T09:40:28+00:00" />
-  <meta property="article:modified_time" content="2024-06-10T09:40:28+00:00" />
+  <meta name="dc.modified" content="2024-06-10T11:52:07+00:00" />
+  <meta property="article:modified_time" content="2024-06-10T11:52:07+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -67,9 +67,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://aseedb.github.io/CryoVesNet-Manuscript/" />
   <meta name="citation_pdf_url" content="https://aseedb.github.io/CryoVesNet-Manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://aseedb.github.io/CryoVesNet-Manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://aseedb.github.io/CryoVesNet-Manuscript/v/8fd701e606c38a22917dfad9ce626657a7a95933/" />
-  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/8fd701e606c38a22917dfad9ce626657a7a95933/" />
-  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/8fd701e606c38a22917dfad9ce626657a7a95933/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://aseedb.github.io/CryoVesNet-Manuscript/v/3bd85e3feafc2df1b24541767354babb121c812b/" />
+  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/3bd85e3feafc2df1b24541767354babb121c812b/" />
+  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/3bd85e3feafc2df1b24541767354babb121c812b/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -91,9 +91,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://aseedb.github.io/CryoVesNet-Manuscript/v/8fd701e606c38a22917dfad9ce626657a7a95933/))
+([permalink](https://aseedb.github.io/CryoVesNet-Manuscript/v/3bd85e3feafc2df1b24541767354babb121c812b/))
 was automatically generated
-from [aseedb/CryoVesNet-Manuscript@8fd701e](https://github.com/aseedb/CryoVesNet-Manuscript/tree/8fd701e606c38a22917dfad9ce626657a7a95933)
+from [aseedb/CryoVesNet-Manuscript@3bd85e3](https://github.com/aseedb/CryoVesNet-Manuscript/tree/3bd85e3feafc2df1b24541767354babb121c812b)
 on June 10, 2024.
 </em></small>
 
@@ -323,6 +323,19 @@ Results show that our method transfers well across datasets even without fine-tu
 | SC 8          |      0.75       |          0.90          |   0.05    |   1.70±0.93    |           132            |   126    |     6    |     1    |     0.973      |
 | SC 9          |      0.59       |          0.87          |   0.05    |   1.87±0.91    |           135            |   132    |     3    |    14    |     0.940      |
 | **Average**   |  **0.64±0.11**  |     **0.86±0.05**      | **0.05**  | **1.95±1.08**  |        **152.22**        |**97.00%**| **3.00%**| **7.30%**| **0.95±0.04**  |
+
+| **_Dataset_** | **_Mask Dice_** | **_Final Label Dice_** | **_δ_d_** | **_Δ_c (nm)_** | **_Number of Vesicles_** | **_TP_** | **_FN_** | **_FP_** | **_F1-score_** |
+|:--------- |:----------- |:------------------ |:----- |:---------- |:-------------------- |:---- |:---- |:---- |:----------:|
+| SC 1 | 0.74 | 0.77 | 0.08 | 2.55±1.91 | 223 | 188 | 35 | 19 | 0.874 |
+| SC 2 | 0.88 | 0.91 | 0.06 | 2.08±1.06 | 105 | 104 | 1  | 1  | 0.990 |
+| SC 3 | 0.87 | 0.90 | 0.05 | 1.77±0.85 | 128 | 128 | 0  | 2  | 0.992 |
+| SC 4 | 0.83 | 0.90 | 0.03 | 1.78±0.9  | 144 | 138 | 6  | 2  | 0.972 |
+| SC 5 | 0.80 | 0.85 | 0.04 | 1.84±1.01 | 214 | 190 | 24 | 3  | 0.934 |
+| SC 6 | 0.81 | 0.82 | 0.04 | 1.86±1.03 | 104 | 102 | 2  | 7  | 0.958 |
+| SC 7 | 0.84 | 0.86 | 0.06 | 1.92±0.94 | 184 | 184 | 0  | 10 | 0.974 |
+| SC 8 | 0.86 | 0.88 | 0.05 | 1.76±1.12 | 132 | 128 | 4  | 1  | 0.981 |
+| SC 9 | 0.83 | 0.89 | 0.05 | 2.0±1.15  | 135 | 132 | 3  | 3  | 0.978 |
+| **Average** | **0.83±0.04** | **0.86±0.05** | **0.05±0.01** | **1.95±1.11** | **152.11** | **95.64%** | **4.36%** | **3.25%** | **0.961±0.037** |
 
 Table: **Evaluation of the segmentation on the synaptosomal train set**. Mask Dice: Mask Dice coefficient for the predicted mask; Final Label Dice: Dice coefficient after post-processing; δ d: average relative diameter deviation over all correctly detected vesicles; Δ c: center residual error average and standard deviation (nm); Number of Vesicles: number of expected vesicles; TP: True Positive; FN: False Negative; FP: False Positive; F1-score: F1-score based on TP, FN, and FP.
 {#tbl:train-tomograms}
