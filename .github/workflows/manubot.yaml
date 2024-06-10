@@ -48,9 +48,9 @@ jobs:
         shell: bash --login {0}
     steps:
       - name: Cleanup Disk Space
-            run: |
-              docker system prune --all --force
-              sudo rm -rf /home/runner/work/*
+        run: |
+          docker system prune --all --force
+          sudo rm -rf /home/runner/work/*
       - name: Checkout Repository
         uses: actions/checkout@v3
         with:
