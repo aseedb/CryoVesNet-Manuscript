@@ -11,11 +11,11 @@ Blegdamsvej
 BZ
 centroid
 ChimeraX
-Convolutional
+convolutional
 Cryo
 CryoVesNet
 CUDA
-Dataset
+dataset
 datasets
 defocus
 denoising
@@ -83,7 +83,7 @@ subtomogram
 subvolume
 SV
 SVs
-Synapsins
+synapsins
 synaptasome
 synaptosomal
 synaptosome
