@@ -31,8 +31,8 @@ header-includes: |-
   <meta name="dc.date" content="2024-06-11" />
   <meta name="citation_publication_date" content="2024-06-11" />
   <meta property="article:published_time" content="2024-06-11" />
-  <meta name="dc.modified" content="2024-06-11T09:38:32+00:00" />
-  <meta property="article:modified_time" content="2024-06-11T09:38:32+00:00" />
+  <meta name="dc.modified" content="2024-06-11T10:03:50+00:00" />
+  <meta property="article:modified_time" content="2024-06-11T10:03:50+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -67,9 +67,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://aseedb.github.io/CryoVesNet-Manuscript/" />
   <meta name="citation_pdf_url" content="https://aseedb.github.io/CryoVesNet-Manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://aseedb.github.io/CryoVesNet-Manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://aseedb.github.io/CryoVesNet-Manuscript/v/8488e793ec3dce828f943c118278aaa3b579929b/" />
-  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/8488e793ec3dce828f943c118278aaa3b579929b/" />
-  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/8488e793ec3dce828f943c118278aaa3b579929b/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://aseedb.github.io/CryoVesNet-Manuscript/v/57e4df08bc2f43773ef5c386e601239a3732dc74/" />
+  <meta name="manubot_html_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/57e4df08bc2f43773ef5c386e601239a3732dc74/" />
+  <meta name="manubot_pdf_url_versioned" content="https://aseedb.github.io/CryoVesNet-Manuscript/v/57e4df08bc2f43773ef5c386e601239a3732dc74/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -91,9 +91,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://aseedb.github.io/CryoVesNet-Manuscript/v/8488e793ec3dce828f943c118278aaa3b579929b/))
+([permalink](https://aseedb.github.io/CryoVesNet-Manuscript/v/57e4df08bc2f43773ef5c386e601239a3732dc74/))
 was automatically generated
-from [aseedb/CryoVesNet-Manuscript@8488e79](https://github.com/aseedb/CryoVesNet-Manuscript/tree/8488e793ec3dce828f943c118278aaa3b579929b)
+from [aseedb/CryoVesNet-Manuscript@57e4df0](https://github.com/aseedb/CryoVesNet-Manuscript/tree/57e4df08bc2f43773ef5c386e601239a3732dc74)
 on June 11, 2024.
 </em></small>
 
@@ -346,7 +346,7 @@ Table: **Evaluation of the segmentation on the synaptosomal test set** (same sam
 
 ### Out-of-distribution dataset
 | **_Dataset_** | **_Mask Dice_** | **_Final Label Dice_** | **_δ_d_** | **_Δ_c (nm)_** | **_Number of Vesicles_** | **_TP_** | **_FN_** | **_FP_** | **_F1-score_** |
-|:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-::|
+|:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-:|
 | N 134 | 0.73 | 0.80 | 0.08 | 2.73±2.53 | 629 | 530 | 99 | 79 | 0.856 |
 | N 80 | 0.73 | 0.81 | 0.07 | 2.78±2.73 | 110 | 101 | 9 | 13 | 0.902 |
 | N 73 | 0.72 | 0.83 | 0.08 | 3.14±2.77 | 510 | 480 | 30 | 39 | 0.933 |
