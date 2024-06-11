@@ -11,8 +11,8 @@ Blegdamsvej
 BZ
 centroid
 ChimeraX
-Convolutional
-Cryo
+convolutional
+cryo
 CryoVesNet
 CUDA
 dataset
@@ -48,7 +48,7 @@ julikaradecke
 Keras
 Khosrozadeh
 macromolecule
-Mahalanobis
+mahalanobis
 microtubules
 mis
 multipletests
@@ -83,7 +83,7 @@ subtomogram
 subvolume
 SV
 SVs
-synapsins
+Synapsins
 synaptasome
 synaptosomal
 synaptosome
@@ -95,7 +95,7 @@ tomograms
 TP
 UCSF
 untilted
-Voxel
+voxel
 voxels
 Weigert
 Witz
