@@ -11,11 +11,11 @@ Blegdamsvej
 BZ
 centroid
 ChimeraX
-Convolutional
+convolutional
 cryo
 CryoVesNet
 CUDA
-dataset
+Dataset
 datasets
 defocus
 denoising
@@ -95,7 +95,7 @@ tomograms
 TP
 UCSF
 untilted
-voxel
+Voxel
 voxels
 Weigert
 Witz
