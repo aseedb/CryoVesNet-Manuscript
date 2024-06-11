@@ -12,7 +12,7 @@ BZ
 centroid
 ChimeraX
 Convolutional
-cryo
+Cryo
 CryoVesNet
 CUDA
 dataset
