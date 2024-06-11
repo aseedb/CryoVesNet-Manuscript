@@ -56,6 +56,10 @@ git remote set-branches --add origin gh-pages output
 git fetch origin gh-pages:gh-pages output:output || \
   echo >&2 "[INFO] could not fetch gh-pages or output from origin."
 
+# Pull the latest changes from the output branch to avoid conflicts
+git checkout output
+git pull origin output --rebase
+
 # Configure versioned webpage and timestamp
 manubot webpage \
   --timestamp \
