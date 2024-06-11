@@ -13,7 +13,7 @@
 | FP | 19 | 1 | 2 | 2 | 3 | 7 | 10 | 1 | 3 | 5 | **5.30** |
 | F1 | 0.874 | 0.990 | 0.992 | 0.972 | 0.934 | 0.958 | 0.974 | 0.981 | 0.978 | 0.973 | **0.963** |
 
-Dataset 10 is part of the test dataset from control experiment
+Dataset 10 is part of the test dataset from the control experiment
 
 
 ### Treatment Dataset Metrics
