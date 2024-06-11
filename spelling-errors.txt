@@ -12,7 +12,7 @@ BZ
 centroid
 ChimeraX
 Convolutional
-Cryo
+cryo
 CryoVesNet
 CUDA
 dataset
@@ -83,7 +83,7 @@ subtomogram
 subvolume
 SV
 SVs
-synapsins
+Synapsins
 synaptasome
 synaptosomal
 synaptosome
