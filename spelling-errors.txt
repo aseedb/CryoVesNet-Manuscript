@@ -1,6 +1,6 @@
 Adaptative
 Amin
-amira
+Amira
 anisotropic
 ANOVA
 azimuthal
@@ -11,8 +11,8 @@ Blegdamsvej
 BZ
 centroid
 ChimeraX
-convolutional
-Cryo
+Convolutional
+cryo
 CryoVesNet
 CUDA
 dataset
@@ -48,7 +48,7 @@ julikaradecke
 Keras
 Khosrozadeh
 macromolecule
-Mahalanobis
+mahalanobis
 microtubules
 mis
 multipletests
@@ -83,7 +83,7 @@ subtomogram
 subvolume
 SV
 SVs
-Synapsins
+synapsins
 synaptasome
 synaptosomal
 synaptosome
