@@ -11,11 +11,11 @@ Blegdamsvej
 BZ
 centroid
 ChimeraX
-convolutional
-cryo
+Convolutional
+Cryo
 CryoVesNet
 CUDA
-Dataset
+dataset
 datasets
 defocus
 denoising
@@ -48,7 +48,7 @@ julikaradecke
 Keras
 Khosrozadeh
 macromolecule
-mahalanobis
+Mahalanobis
 microtubules
 mis
 multipletests
@@ -83,7 +83,7 @@ subtomogram
 subvolume
 SV
 SVs
-synapsins
+Synapsins
 synaptasome
 synaptosomal
 synaptosome
