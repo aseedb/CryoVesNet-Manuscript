@@ -15,7 +15,7 @@ Convolutional
 Cryo
 CryoVesNet
 CUDA
-dataset
+Dataset
 datasets
 defocus
 denoising
@@ -48,7 +48,7 @@ julikaradecke
 Keras
 Khosrozadeh
 macromolecule
-Mahalanobis
+mahalanobis
 microtubules
 mis
 multipletests
@@ -83,7 +83,7 @@ subtomogram
 subvolume
 SV
 SVs
-Synapsins
+synapsins
 synaptasome
 synaptosomal
 synaptosome
