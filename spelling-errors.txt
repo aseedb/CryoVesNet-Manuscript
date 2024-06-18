@@ -95,7 +95,7 @@ tomograms
 TP
 UCSF
 untilted
-voxel
+Voxel
 voxels
 Weigert
 Witz
