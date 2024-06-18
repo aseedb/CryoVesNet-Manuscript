@@ -1,6 +1,6 @@
 Adaptative
 Amin
-Amira
+amira
 anisotropic
 ANOVA
 azimuthal
@@ -11,11 +11,11 @@ Blegdamsvej
 BZ
 centroid
 ChimeraX
-Convolutional
+convolutional
 cryo
 CryoVesNet
 CUDA
-dataset
+Dataset
 datasets
 defocus
 denoising
@@ -48,7 +48,7 @@ julikaradecke
 Keras
 Khosrozadeh
 macromolecule
-Mahalanobis
+mahalanobis
 microtubules
 mis
 multipletests
@@ -95,7 +95,7 @@ tomograms
 TP
 UCSF
 untilted
-Voxel
+voxel
 voxels
 Weigert
 Witz
