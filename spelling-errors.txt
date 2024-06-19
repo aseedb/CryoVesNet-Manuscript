@@ -12,10 +12,10 @@ BZ
 centroid
 ChimeraX
 Convolutional
-Cryo
+cryo
 CryoVesNet
 CUDA
-Dataset
+dataset
 datasets
 defocus
 denoising
